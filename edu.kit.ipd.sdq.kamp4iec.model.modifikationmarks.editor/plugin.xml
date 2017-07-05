@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Modifikationmarks -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Modifikationmarks.presentation.ModifikationmarksModelWizardID"
+            name="%_UI_ModifikationmarksModelWizard_label"
+            class="Modifikationmarks.presentation.ModifikationmarksModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ModifikationmarksModelFile.gif">
+         <description>%_UI_ModifikationmarksModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Modifikationmarks -->
+      <editor
+            id="Modifikationmarks.presentation.ModifikationmarksEditorID"
+            name="%_UI_ModifikationmarksEditor_label"
+            icon="icons/full/obj16/ModifikationmarksModelFile.gif"
+            extensions="modifikationmarks"
+            class="Modifikationmarks.presentation.ModifikationmarksEditor"
+            contributorClass="Modifikationmarks.presentation.ModifikationmarksActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

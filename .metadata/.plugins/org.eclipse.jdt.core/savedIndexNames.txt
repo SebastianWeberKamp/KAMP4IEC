@@ -1,0 +1,17 @@
+INDEX VERSION 1.130+C:\Users\janni\workspace\KAMP4IECtest\KAMP4IEC\.metadata\.plugins\org.eclipse.jdt.core
+3544847591.index
+3073658775.index
+354106513.index
+2480122277.index
+1236055092.index
+1640871348.index
+1755219988.index
+2774830745.index
+1727365012.index
+2853525095.index
+3401632804.index
+2014178172.index
+2123223162.index
+340164051.index
+1518511936.index
+718925510.index

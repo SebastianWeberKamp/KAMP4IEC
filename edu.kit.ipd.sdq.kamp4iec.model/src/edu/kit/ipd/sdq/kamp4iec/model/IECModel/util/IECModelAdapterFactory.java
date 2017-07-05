@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
@@ -111,6 +112,10 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseEnum(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum object) {
 				return createEnumAdapter();
+			}
+			@Override
+			public Adapter caseElement(Element object) {
+				return createElementAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier(Identifier object) {
@@ -259,6 +264,20 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEnumAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element
+	 * @generated
+	 */
+	public Adapter createElementAdapter() {
 		return null;
 	}
 

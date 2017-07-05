@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Program extends Identifier {
+public interface Program extends Identifier, Element {
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.

@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
@@ -93,6 +94,13 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	private EClass enumEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass elementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -451,6 +459,15 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getElement() {
+		return elementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IECModelFactory getIECModelFactory() {
 		return (IECModelFactory)getEFactoryInstance();
 	}
@@ -514,6 +531,8 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		enumEClass = createEClass(ENUM);
 		createEAttribute(enumEClass, ENUM__NAME);
 		createEReference(enumEClass, ENUM__TYPE);
+
+		elementEClass = createEClass(ELEMENT);
 	}
 
 	/**
@@ -549,13 +568,22 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		// Add supertypes to classes
 		functionBlockEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		functionBlockEClass.getESuperTypes().add(this.getElement());
 		functionEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		functionEClass.getESuperTypes().add(this.getElement());
 		programEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		programEClass.getESuperTypes().add(this.getElement());
 		spsSystemEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		spsSystemEClass.getESuperTypes().add(this.getElement());
 		iecInterfaceEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		iecInterfaceEClass.getESuperTypes().add(this.getElement());
 		globalVariableEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		globalVariableEClass.getESuperTypes().add(this.getElement());
 		iecMethodImplementationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		iecMethodImplementationEClass.getESuperTypes().add(this.getElement());
 		iecPropertyImplementationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		iecPropertyImplementationEClass.getESuperTypes().add(this.getElement());
+		enumEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -598,6 +626,8 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEClass(enumEClass, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, "Enum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnum_Name(), ecorePackage.getEString(), "Name", null, 0, 1, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnum_Type(), theIECRepositoryPackage.getEnum(), null, "Type", null, 1, 1, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
