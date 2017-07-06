@@ -1,9 +1,9 @@
-package edu.kit.ipd.sdq.kamp4aps.ui;
+package edu.kit.ipd.sdq.kamp4iec.ui;
 
 import edu.kit.ipd.sdq.kamp.ui.AbstractCreateEmptyBaseModelAction;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureModelFactoryFacade;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureModelFactoryFacade;
+import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersionPersistency;
 
 public class CreateEmptyBaseModelAction  extends AbstractCreateEmptyBaseModelAction<ArchitectureVersion> {
 	

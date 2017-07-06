@@ -1,0 +1,61 @@
+package edu.kit.ipd.sdq.kamp4iec.core;
+
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion.ArchitectureVersionParams;
+
+public class ArchitectureModelFactoryFacade {
+	
+	private static ArchitectureVersionParams archParams = new ArchitectureVersionParams();
+	
+	public static ArchitectureVersion createEmptyModel(String name) {
+		archParams.name = name;
+
+		archParams.modificationMarkRepository = ArchitectureModelFactoryFacade.createKAMP4IECModificationMarkRepository()();
+
+		return new ArchitectureVersion(archParams);
+	}
+	
+	public static KAMP4IECModificationRepository createKAMP4IECModificationMarkRepository() {
+		KAMP4IECModificationRepository repository = ModificationmarksFactory.eINSTANCE.create();
+
+		KAPSSeedModifications seedModifications = modificationmarksFactory.eINSTANCE.createKAPSSeedModifications();
+		repository.setSeedModifications(seedModifications);
+		
+		return repository;
+	}
+	
+	public static DeploymentContextRepository createDeploymentContextRepository() {
+		DeploymentContextRepository repository = DeploymentContextFactory.eINSTANCE.createDeploymentContextRepository();
+		return repository;
+	}
+
+	public static FieldOfActivityAnnotationRepository createFieldOfActivityAnnotationsRepository() {
+		FieldOfActivityAnnotationRepository repository =  FieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();
+		
+		TestSpecification testSpec = FieldofactivityannotationsFactory.eINSTANCE.createTestSpecification();
+		repository.setTestSpecification(testSpec);
+		
+		StockSpecification stockSpec = FieldofactivityannotationsFactory.eINSTANCE.createStockSpecification();
+		repository.setStockSpecification(stockSpec);
+		
+		HMISpecification hmiSpec = FieldofactivityannotationsFactory.eINSTANCE.createHMISpecification();
+		repository.setHmiSpecification(hmiSpec);
+		
+		ECADSpecification ecadSpec = FieldofactivityannotationsFactory.eINSTANCE.createECADSpecification();
+		repository.setEcadSpecification(ecadSpec);
+		
+		DocumentationSpecification docSpec = FieldofactivityannotationsFactory.eINSTANCE.createDocumentationSpecification();
+		repository.setDocumentationSpecification(docSpec);
+
+		StaffSpecification staffSpec = FieldofactivityannotationsFactory.eINSTANCE.createStaffSpecification();
+		repository.setStaffSpecification(staffSpec);
+		staffSpec.setPersonList(FieldofactivityannotationsFactory.eINSTANCE.createPersonList());
+		staffSpec.setRoleList(FieldofactivityannotationsFactory.eINSTANCE.createRoleList());
+		
+		CalibrationSpecification calSpec = FieldofactivityannotationsFactory.eINSTANCE.createCalibrationSpecification();
+		repository.setCalibrationSpecification(calSpec);
+		
+		return repository;
+	}
+
+}

@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="Modifikationmarks.presentation.ModifikationmarksModelWizardID"
+            id="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.presentation.ModifikationmarksModelWizardID"
             name="%_UI_ModifikationmarksModelWizard_label"
-            class="Modifikationmarks.presentation.ModifikationmarksModelWizard"
+            class="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.presentation.ModifikationmarksModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/ModifikationmarksModelFile.gif">
          <description>%_UI_ModifikationmarksModelWizard_description</description>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated Modifikationmarks -->
       <editor
-            id="Modifikationmarks.presentation.ModifikationmarksEditorID"
+            id="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.presentation.ModifikationmarksEditorID"
             name="%_UI_ModifikationmarksEditor_label"
             icon="icons/full/obj16/ModifikationmarksModelFile.gif"
             extensions="modifikationmarks"
-            class="Modifikationmarks.presentation.ModifikationmarksEditor"
-            contributorClass="Modifikationmarks.presentation.ModifikationmarksActionBarContributor">
+            class="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.presentation.ModifikationmarksEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.presentation.ModifikationmarksActionBarContributor">
       </editor>
    </extension>
 

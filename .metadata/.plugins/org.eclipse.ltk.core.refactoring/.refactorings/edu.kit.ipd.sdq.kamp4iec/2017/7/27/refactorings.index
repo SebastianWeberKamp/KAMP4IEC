@@ -1,1 +1,7 @@
 1499260852518	Delete elements
+1499330953033	Delete element
+1499331646978	Delete elements
+1499338027864	Rename type 'AbstractKAPSArchitectureVersionPersistency'
+1499338035082	Rename type 'AbstractKAPSChangePropagationAnalysis'
+1499338051146	Rename type 'AbstractKAPSDifferenceCalculation'
+1499338059286	Rename type 'AbstractKAPSEnrichedWorkplanDerivation'

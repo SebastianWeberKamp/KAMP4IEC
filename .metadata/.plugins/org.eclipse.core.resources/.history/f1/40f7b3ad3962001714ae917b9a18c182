@@ -1,0 +1,29 @@
+package edu.kit.ipd.sdq.kamp4iec.core;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+
+import edu.kit.ipd.sdq.kamp.util.MapUtil;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
+import xPPU.BusComponents.BusBox;
+import xPPU.BusComponents.BusCable;
+import xPPU.BusComponents.BusMaster;
+import xPPU.BusComponents.BusSlave;
+import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.Controller;
+import xPPU.ComponentRepository.PowerSupply;
+import xPPU.ComponentRepository.Sensor;
+import xPPU.Identifier.Identifier;
+import xPPU.InterfaceRepository.Interface;
+import xPPU.InterfaceRepository.SignalInterface;
+
+public class ArchitectureModelLookup {
+
+	
+}

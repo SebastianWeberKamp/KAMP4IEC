@@ -1,7 +1,7 @@
-package edu.kit.ipd.sdq.kamp4aps.core;
+package edu.kit.ipd.sdq.kamp4iec.core;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ChangePropagationDueToDataDeploy;
+import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ModifikationmarksFactory;
 
 /**
  * The change propagation analysis of KAPS
@@ -17,23 +17,20 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory
  * @author stammel
  *
  */
-public class ChangePropagationAnalysis  extends AbstractKAPSChangePropagationAnalysis<ArchitectureVersion, ChangePropagationDueToHardwareChange> {
+public class ChangePropagationAnalysis  extends AbstractKAMP4IECChangePropagationAnalysis<ArchitectureVersion, ChangePropagationDueToDataDeploy> {
 	
 	@Override
 	public void runChangePropagationAnalysis(ArchitectureVersion version) {
 		long timeBefore = System.currentTimeMillis();
 		// Setup
-		setChangePropagationDueToHardwareChange(modificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
+
 		
 		// Calculate
-		calculateAndMarkFromSensorPropagration(version);
-		calculateAndMarkReplacementOfMicroSwitch(version);
-		calculateAndMarkBusBoxChange(version);
-		calculateAndMarkSignalInterfaceChangen(version);
+
 		
 			
 		// Update
-		addAllChangePropagations(version);
+
 		System.out.println("Time: " + (System.currentTimeMillis() - timeBefore));
 		
 	}

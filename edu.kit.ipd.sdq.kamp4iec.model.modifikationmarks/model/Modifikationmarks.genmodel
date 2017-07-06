@@ -3,10 +3,11 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4iec.model.modifikationmarks/src"
     modelPluginID="edu.kit.ipd.sdq.kamp4iec.model.modifikationmarks" modelName="Modifikationmarks"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel#//ComponentInternalDependencies ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel#//ComponentInternalDependencies ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.genmodel#//modificationmarks"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Modifikationmarks.ecore</foreignModel>
-  <genPackages prefix="Modifikationmarks" disposableProviderFactory="true" ecorePackage="Modifikationmarks.ecore#/">
+  <genPackages prefix="Modifikationmarks" basePackage="edu.kit.ipd.sdq.kamp4iec.model"
+      disposableProviderFactory="true" ecorePackage="Modifikationmarks.ecore#/">
     <genClasses image="false" ecoreClass="Modifikationmarks.ecore#//AbstractKAMP4IECModificationRepository">
       <genTypeParameters ecoreTypeParameter="Modifikationmarks.ecore#//AbstractKAMP4IECModificationRepository/T"/>
     </genClasses>

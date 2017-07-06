@@ -10,7 +10,7 @@
       <!-- @generated Modifikationmarks -->
       <factory
             uri="http://www.example.org/Modifikationmarks"
-            class="Modifikationmarks.provider.ModifikationmarksItemProviderAdapterFactory"
+            class="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.provider.ModifikationmarksItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

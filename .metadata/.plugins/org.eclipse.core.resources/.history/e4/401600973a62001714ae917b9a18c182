@@ -1,0 +1,19 @@
+package edu.kit.ipd.sdq.kamp4iec.core.derivation;
+
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.MicroswitchModule;
+import xPPU.ComponentRepository.TurningTable;
+import xPPU.Identifier.Identifier;
+import xPPU.InterfaceRepository.Interface;
+import xPPU.ModuleRepository.Module;
+import xPPU.StructureRepository.Structure;
+
+public class SubactivityDerivation {
+
+}

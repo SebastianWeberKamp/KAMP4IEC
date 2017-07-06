@@ -1,7 +1,17 @@
-package edu.kit.ipd.sdq.kamp4aps.core.derivation;
+package edu.kit.ipd.sdq.kamp4iec.core.derivation;
 
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import java.util.List;
 
-public class EnrichedWorkplanDerivation extends AbstractKAPSEnrichedWorkplanDerivation<ArchitectureVersion> {
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion;
+
+public class EnrichedWorkplanDerivation extends AbstractKAMP4IECEnrichedWorkplanDerivation<ArchitectureVersion> {
+
+	@Override
+	public List<Activity> deriveEnrichedWorkplan(ArchitectureVersion baseArchitectureVersion,
+			ArchitectureVersion subVersion, List<Activity> activityList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
