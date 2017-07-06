@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Modifikationmarks.AbstractKAMP4IECModificationRepository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion.ArchitectureVersionParams"/>
+<fullyQualifiedTypeName name="Modifikationmarks.KAMP4IECModificationRepository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureModelFactoryFacade"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksFactory"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.KAMP4IECSeedModifications"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ModifikationmarksPackage"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.AbstractKAMP4IECModificationRepository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ChangePropagationDueToDataDeploy"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.KAMP4IECModificationRepository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ModifikationmarksFactory"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.BasicActivity"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.AbstractEnrichedWorkplanDerivation"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion"/>
+</qualifiedTypeNameHistroy>

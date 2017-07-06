@@ -1,7 +1,7 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.AbstractKAMP4IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.AbstractKAMP4IECModificationRepository;
 
 
 public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAMP4IECModificationRepository<?>> {

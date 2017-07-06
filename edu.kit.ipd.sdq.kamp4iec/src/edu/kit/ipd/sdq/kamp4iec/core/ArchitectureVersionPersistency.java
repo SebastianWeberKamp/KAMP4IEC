@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 //import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 import edu.kit.ipd.sdq.kamp.util.FileAndFolderManagement;
 import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion.ArchitectureVersionParams;
-import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.AbstractKAMP4IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.AbstractKAMP4IECModificationRepository;
 
 public class ArchitectureVersionPersistency extends AbstractKAMP4IECArchitectureVersionPersistency<ArchitectureVersion> {	
 	

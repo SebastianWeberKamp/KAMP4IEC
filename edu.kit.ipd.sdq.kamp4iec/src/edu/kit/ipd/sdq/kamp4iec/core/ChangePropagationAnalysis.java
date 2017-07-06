@@ -1,7 +1,6 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
-import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ChangePropagationDueToDataDeploy;
-import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ModifikationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy;
 
 /**
  * The change propagation analysis of KAPS

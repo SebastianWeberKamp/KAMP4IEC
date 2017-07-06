@@ -3,12 +3,8 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1499319667206_1" label="MainProjects" name="MainProjects">
 <item elementID="=edu.kit.ipd.sdq.kamp4iec" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model.modifikationmarks" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=edu.kit.ipd.sdq.kamp4iec.model.repo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=edu.kit.ipd.sdq.kamp4iec.model" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model.modifikationmarks.edit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model.modifikationmarks.editor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model.modifikationmarks.tests" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1499257995294_0" label="Window Working Set" name="Aggregate for window 1499257995293"/>
 <mruList name="MainProjects"/>

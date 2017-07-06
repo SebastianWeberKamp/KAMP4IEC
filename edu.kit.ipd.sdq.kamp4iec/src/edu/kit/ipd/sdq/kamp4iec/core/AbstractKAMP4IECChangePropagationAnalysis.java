@@ -1,7 +1,7 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
-import edu.kit.ipd.sdq.kamp4iec.model.Modifikationmarks.ChangePropagationDueToDataDeploy;
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy;
 
 /**
  * Abstract super class, parameterized to enable covariant attributes for
