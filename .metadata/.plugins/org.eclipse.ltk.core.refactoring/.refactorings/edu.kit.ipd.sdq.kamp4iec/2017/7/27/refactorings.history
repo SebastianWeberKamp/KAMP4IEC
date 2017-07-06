@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 6 elements from project &apos;edu.kit.ipd.sdq.kamp4iec&apos;&#x0D;&#x0A;- Original project: &apos;edu.kit.ipd.sdq.kamp4iec&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     edu.kit.ipd.sdq.kamp4iec/src/(default package)&#x0D;&#x0A;     edu.kit.ipd.sdq.kamp4iec/src/activator&#x0D;&#x0A;     edu.kit.ipd.sdq.kamp4iec/src/core&#x0D;&#x0A;     edu.kit.ipd.sdq.kamp4iec/src/derivation&#x0D;&#x0A;     edu.kit.ipd.sdq.kamp4iec/src/scenarios&#x0D;&#x0A;     edu.kit.ipd.sdq.kamp4iec/src/ui" description="Delete elements" element1="/src&lt;ui" element2="/src&lt;scenarios" element3="/src&lt;derivation" element4="/src&lt;core" element5="/src&lt;activator" element6="/src&lt;" elements="6" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1499260852518" subPackages="false" version="1.0"/>
+</session>
