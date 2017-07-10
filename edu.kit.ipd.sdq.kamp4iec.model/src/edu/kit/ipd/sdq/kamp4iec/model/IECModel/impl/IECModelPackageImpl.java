@@ -197,7 +197,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionBlock_HasMethod() {
+	public EReference getFunctionBlock_AccessesGlobalVariable() {
 		return (EReference)functionBlockEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -206,8 +206,17 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunctionBlock_HasProperty() {
+	public EReference getFunctionBlock_HasMethod() {
 		return (EReference)functionBlockEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionBlock_HasProperty() {
+		return (EReference)functionBlockEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -493,6 +502,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		functionBlockEClass = createEClass(FUNCTION_BLOCK);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__TYPE);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__ACCESSES_PROPERTY);
+		createEReference(functionBlockEClass, FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__HAS_METHOD);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__HAS_PROPERTY);
 
@@ -588,6 +598,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunctionBlock_Type(), theIECRepositoryPackage.getFunctionBlock(), null, "Type", null, 1, 1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_AccessesProperty(), this.getIECPropertyImplementation(), null, "AccessesProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_HasMethod(), this.getIECMethodImplementation(), null, "HasMethod", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_HasProperty(), this.getIECPropertyImplementation(), null, "HasProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -605,7 +616,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEReference(getProgram_CallsMethod(), this.getIECMethodImplementation(), null, "CallsMethod", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(spsSystemEClass, SPSSystem.class, "SPSSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSPSSystem_ContainsProgram(), this.getProgram(), null, "ContainsProgram", null, 0, -1, SPSSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSPSSystem_ContainsProgram(), this.getProgram(), null, "ContainsProgram", null, 0, 1, SPSSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSPSSystem_ComponentInternalDependencies(), theComponentInternalDependenciesPackage.getComponentInternalDependenciesRepository(), null, "ComponentInternalDependencies", null, 0, -1, SPSSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecInterfaceEClass, IECInterface.class, "IECInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

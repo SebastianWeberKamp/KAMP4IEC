@@ -2,3 +2,6 @@
 1499669884157	Rename field 'iECRepository'
 1499670145614	Rename local variable '_IECRepository'
 1499670153603	Rename local variable '_componentInternalDependencyRepository'
+1499682156739	Rename local variable 'dataTypeToBeMarkedEntry'
+1499682190809	Rename local variable 'dataTypesToBeMarked'
+1499682889237	Rename method 'lookUpCompositeAndCollectionDataTypesOfDataTypes'

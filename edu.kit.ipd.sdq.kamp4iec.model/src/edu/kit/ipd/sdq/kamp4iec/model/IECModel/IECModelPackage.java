@@ -104,13 +104,22 @@ public interface IECModelPackage extends EPackage {
 	int FUNCTION_BLOCK__ACCESSES_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Accesses Global Variable</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
+
+	/**
 	 * The feature id for the '<em><b>Has Method</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__HAS_METHOD = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
+	int FUNCTION_BLOCK__HAS_METHOD = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Has Property</b></em>' containment reference list.
@@ -119,7 +128,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__HAS_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
+	int FUNCTION_BLOCK__HAS_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Function Block</em>' class.
@@ -128,7 +137,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 4;
+	int FUNCTION_BLOCK_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Function Block</em>' class.
@@ -341,7 +350,7 @@ public interface IECModelPackage extends EPackage {
 	int SPS_SYSTEM__NAME = IECRepositoryPackage.IDENTIFIER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Contains Program</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Contains Program</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -722,6 +731,17 @@ public interface IECModelPackage extends EPackage {
 	EReference getFunctionBlock_AccessesProperty();
 
 	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getAccessesGlobalVariable <em>Accesses Global Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Accesses Global Variable</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getAccessesGlobalVariable()
+	 * @see #getFunctionBlock()
+	 * @generated
+	 */
+	EReference getFunctionBlock_AccessesGlobalVariable();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getHasMethod <em>Has Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -873,10 +893,10 @@ public interface IECModelPackage extends EPackage {
 	EClass getSPSSystem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram <em>Contains Program</em>}'.
+	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram <em>Contains Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Contains Program</em>'.
+	 * @return the meta object for the containment reference '<em>Contains Program</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram()
 	 * @see #getSPSSystem()
 	 * @generated
@@ -1092,6 +1112,14 @@ public interface IECModelPackage extends EPackage {
 		EReference FUNCTION_BLOCK__ACCESSES_PROPERTY = eINSTANCE.getFunctionBlock_AccessesProperty();
 
 		/**
+		 * The meta object literal for the '<em><b>Accesses Global Variable</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE = eINSTANCE.getFunctionBlock_AccessesGlobalVariable();
+
+		/**
 		 * The meta object literal for the '<em><b>Has Method</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1210,7 +1238,7 @@ public interface IECModelPackage extends EPackage {
 		EClass SPS_SYSTEM = eINSTANCE.getSPSSystem();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains Program</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Contains Program</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

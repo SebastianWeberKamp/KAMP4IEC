@@ -1,0 +1,10 @@
+package edu.kit.ipd.sdq.kamp4iec.core;
+
+import java.util.Map;
+import java.util.Set;
+
+import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
+
+public class ArchitectureModelLookup {
+	
+}

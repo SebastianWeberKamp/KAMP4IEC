@@ -202,6 +202,15 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getChangePropagationDueToDataDependency_FunctionBlockModifications() {
+		return (EReference)changePropagationDueToDataDependencyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getModifyElement() {
 		return modifyElementEClass;
 	}
@@ -261,6 +270,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 		createEReference(kamp4IECSeedModificationsEClass, KAMP4IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS);
 
 		changePropagationDueToDataDependencyEClass = createEClass(CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY);
+		createEReference(changePropagationDueToDataDependencyEClass, CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS);
 
 		modifyElementEClass = createEClass(MODIFY_ELEMENT);
 
@@ -344,6 +354,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 		initEReference(getKAMP4IECSeedModifications_FunctionblockModifications(), this.getModifyFunctionBlock(), null, "functionblockModifications", null, 0, -1, KAMP4IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(changePropagationDueToDataDependencyEClass, ChangePropagationDueToDataDependency.class, "ChangePropagationDueToDataDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChangePropagationDueToDataDependency_FunctionBlockModifications(), this.getModifyFunctionBlock(), null, "functionBlockModifications", null, 0, -1, ChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modifyElementEClass, ModifyElement.class, "ModifyElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

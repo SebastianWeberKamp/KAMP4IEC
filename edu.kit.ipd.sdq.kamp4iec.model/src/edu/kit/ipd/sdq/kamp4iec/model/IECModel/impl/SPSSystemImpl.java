@@ -10,15 +10,15 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import java.util.Collection;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,14 +36,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	/**
-	 * The cached value of the '{@link #getContainsProgram() <em>Contains Program</em>}' containment reference list.
+	 * The cached value of the '{@link #getContainsProgram() <em>Contains Program</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContainsProgram()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Program> containsProgram;
+	protected Program containsProgram;
 
 	/**
 	 * The cached value of the '{@link #getComponentInternalDependencies() <em>Component Internal Dependencies</em>}' reference list.
@@ -79,11 +79,42 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Program> getContainsProgram() {
-		if (containsProgram == null) {
-			containsProgram = new EObjectContainmentEList<Program>(Program.class, this, IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM);
-		}
+	public Program getContainsProgram() {
 		return containsProgram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetContainsProgram(Program newContainsProgram, NotificationChain msgs) {
+		Program oldContainsProgram = containsProgram;
+		containsProgram = newContainsProgram;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM, oldContainsProgram, newContainsProgram);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContainsProgram(Program newContainsProgram) {
+		if (newContainsProgram != containsProgram) {
+			NotificationChain msgs = null;
+			if (containsProgram != null)
+				msgs = ((InternalEObject)containsProgram).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM, null, msgs);
+			if (newContainsProgram != null)
+				msgs = ((InternalEObject)newContainsProgram).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM, null, msgs);
+			msgs = basicSetContainsProgram(newContainsProgram, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM, newContainsProgram, newContainsProgram));
 	}
 
 	/**
@@ -107,7 +138,7 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
-				return ((InternalEList<?>)getContainsProgram()).basicRemove(otherEnd, msgs);
+				return basicSetContainsProgram(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -138,8 +169,7 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
-				getContainsProgram().clear();
-				getContainsProgram().addAll((Collection<? extends Program>)newValue);
+				setContainsProgram((Program)newValue);
 				return;
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
 				getComponentInternalDependencies().clear();
@@ -158,7 +188,7 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
-				getContainsProgram().clear();
+				setContainsProgram((Program)null);
 				return;
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
 				getComponentInternalDependencies().clear();
@@ -176,7 +206,7 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
-				return containsProgram != null && !containsProgram.isEmpty();
+				return containsProgram != null;
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
 				return componentInternalDependencies != null && !componentInternalDependencies.isEmpty();
 		}

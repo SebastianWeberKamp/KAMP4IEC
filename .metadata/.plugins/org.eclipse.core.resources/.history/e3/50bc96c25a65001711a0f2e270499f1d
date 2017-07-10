@@ -1,0 +1,30 @@
+#
+
+pluginName = Modificationmarks Edit Support
+providerName = www.example.org
+
+_UI_CreateChild_text = {0}
+_UI_CreateChild_text2 = {1} {0}
+_UI_CreateChild_text3 = {1}
+_UI_CreateChild_tooltip = Create New {0} Under {1} Feature
+_UI_CreateChild_description = Create a new child of type {0} for the {1} feature of the selected {2}.
+_UI_CreateSibling_description = Create a new sibling of type {0} for the selected {2}, under the {1} feature of their parent.
+
+_UI_PropertyDescriptor_description = The {0} of the {1}
+
+_UI_AbstractKAMP4IECModificationRepository_type = Abstract KAMP4IEC Modification Repository
+_UI_KAMP4IECModificationRepository_type = KAMP4IEC Modification Repository
+_UI_KAMP4IECSeedModifications_type = KAMP4IEC Seed Modifications
+_UI_ChangePropagationDueToDataDeploy_type = Change Propagation Due To Data Deploy
+_UI_ModifyElement_type = Modify Element
+_UI_ModifyGlobalVariable_type = Modify Global Variable
+_UI_ModifyFunctionBlock_type = Modify Function Block
+_UI_Unknown_type = Object
+
+_UI_Unknown_datatype= Value
+
+_UI_KAMP4IECSeedModifications_globalVariableModifications_feature = Global Variable Modifications
+_UI_KAMP4IECSeedModifications_functionblockModifications_feature = Functionblock Modifications
+_UI_Unknown_feature = Unspecified
+
+_UI_ChangePropagationDueToDataDependency_type = Change Propagation Due To Data Dependency

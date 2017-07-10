@@ -204,13 +204,22 @@ public interface ModificationmarksPackage extends EPackage {
 	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY = 3;
 
 	/**
+	 * The feature id for the '<em><b>Function Block Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Change Propagation Due To Data Dependency</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY_FEATURE_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 0;
+	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY_FEATURE_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Change Propagation Due To Data Dependency</em>' class.
@@ -504,6 +513,17 @@ public interface ModificationmarksPackage extends EPackage {
 	EClass getChangePropagationDueToDataDependency();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency#getFunctionBlockModifications <em>Function Block Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Function Block Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency#getFunctionBlockModifications()
+	 * @see #getChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getChangePropagationDueToDataDependency_FunctionBlockModifications();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModifyElement <em>Modify Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -611,6 +631,14 @@ public interface ModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY = eINSTANCE.getChangePropagationDueToDataDependency();
+
+		/**
+		 * The meta object literal for the '<em><b>Function Block Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS = eINSTANCE.getChangePropagationDueToDataDependency_FunctionBlockModifications();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModifyElementImpl <em>Modify Element</em>}' class.

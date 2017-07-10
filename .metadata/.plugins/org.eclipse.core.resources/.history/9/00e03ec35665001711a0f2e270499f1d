@@ -1,0 +1,21 @@
+package edu.kit.ipd.sdq.kamp4iec.core;
+
+import java.util.Map;
+import java.util.Set;
+
+import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
+
+public class ArchitectureModelLookup {
+
+	/**
+	 * Finds all objects of a certain <code>objectClass</code> or sub-class with 
+	 * modification marks by searching all {@link ModifyArchitectureElement}s in
+	 * the modificationmarks repository of the <code>version</code>.
+	 */
+	public static <T> Set<T> lookUpMarkedObjectsOfAType(AbstractArchitectureVersion<?> version, 
+			Class<T> objectClass) {
+		return lookUpMarkedObjectsOfATypeInAnIterator(version.getModificationMarkRepository().
+				eAllContents(), objectClass);
+	}
+	
+}

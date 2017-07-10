@@ -53,6 +53,7 @@ public class FunctionBlockItemProvider
 
 			addTypePropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
+			addAccessesGlobalVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,6 +94,28 @@ public class FunctionBlockItemProvider
 				 getString("_UI_FunctionBlock_AccessesProperty_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_AccessesProperty_feature", "_UI_FunctionBlock_type"),
 				 IECModelPackage.Literals.FUNCTION_BLOCK__ACCESSES_PROPERTY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accesses Global Variable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccessesGlobalVariablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_AccessesGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_AccessesGlobalVariable_feature", "_UI_FunctionBlock_type"),
+				 IECModelPackage.Literals.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE,
 				 true,
 				 false,
 				 true,

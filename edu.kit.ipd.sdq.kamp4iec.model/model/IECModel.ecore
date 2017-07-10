@@ -5,6 +5,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//FunctionBlock"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
         eType="#//IECPropertyImplementation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
+        upperBound="-1" eType="#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethod" upperBound="-1"
         eType="#//IECMethodImplementation" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasProperty" upperBound="-1"
@@ -31,8 +33,8 @@
         eType="#//IECMethodImplementation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SPSSystem" eSuperTypes="../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Identifier #//IECComponent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgram" upperBound="-1"
-        eType="#//Program" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgram" eType="#//Program"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ComponentInternalDependencies"
         upperBound="-1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.ecore#//ComponentInternalDependenciesRepository"/>
   </eClassifiers>

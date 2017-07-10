@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getAccessesProperty <em>Accesses Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getHasMethod <em>Has Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getHasProperty <em>Has Property</em>}</li>
  * </ul>
@@ -59,6 +61,16 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @ordered
 	 */
 	protected EList<IECPropertyImplementation> accessesProperty;
+
+	/**
+	 * The cached value of the '{@link #getAccessesGlobalVariable() <em>Accesses Global Variable</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccessesGlobalVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GlobalVariable> accessesGlobalVariable;
 
 	/**
 	 * The cached value of the '{@link #getHasMethod() <em>Has Method</em>}' containment reference list.
@@ -154,6 +166,18 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GlobalVariable> getAccessesGlobalVariable() {
+		if (accessesGlobalVariable == null) {
+			accessesGlobalVariable = new EObjectResolvingEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE);
+		}
+		return accessesGlobalVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<IECMethodImplementation> getHasMethod() {
 		if (hasMethod == null) {
 			hasMethod = new EObjectContainmentEList<IECMethodImplementation>(IECMethodImplementation.class, this, IECModelPackage.FUNCTION_BLOCK__HAS_METHOD);
@@ -202,6 +226,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return basicGetType();
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				return getAccessesProperty();
+			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE:
+				return getAccessesGlobalVariable();
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 				return getHasMethod();
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
@@ -225,6 +251,10 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
 				getAccessesProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
+				return;
+			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE:
+				getAccessesGlobalVariable().clear();
+				getAccessesGlobalVariable().addAll((Collection<? extends GlobalVariable>)newValue);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 				getHasMethod().clear();
@@ -252,6 +282,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
 				return;
+			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE:
+				getAccessesGlobalVariable().clear();
+				return;
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 				getHasMethod().clear();
 				return;
@@ -274,6 +307,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return type != null;
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				return accessesProperty != null && !accessesProperty.isEmpty();
+			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE:
+				return accessesGlobalVariable != null && !accessesGlobalVariable.isEmpty();
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 				return hasMethod != null && !hasMethod.isEmpty();
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
