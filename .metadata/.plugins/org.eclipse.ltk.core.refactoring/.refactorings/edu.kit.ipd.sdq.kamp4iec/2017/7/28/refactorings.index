@@ -1,1 +1,4 @@
 1499668675349	Delete element
+1499669884157	Rename field 'iECRepository'
+1499670145614	Rename local variable '_IECRepository'
+1499670153603	Rename local variable '_componentInternalDependencyRepository'
