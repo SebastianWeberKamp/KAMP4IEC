@@ -194,32 +194,32 @@ public interface ModificationmarksPackage extends EPackage {
 	int KAMP4IEC_SEED_MODIFICATIONS_OPERATION_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDeployImpl <em>Change Propagation Due To Data Deploy</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDependencyImpl <em>Change Propagation Due To Data Dependency</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDeployImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModificationmarksPackageImpl#getChangePropagationDueToDataDeploy()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDependencyImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModificationmarksPackageImpl#getChangePropagationDueToDataDependency()
 	 * @generated
 	 */
-	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY = 3;
+	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY = 3;
 
 	/**
-	 * The number of structural features of the '<em>Change Propagation Due To Data Deploy</em>' class.
+	 * The number of structural features of the '<em>Change Propagation Due To Data Dependency</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY_FEATURE_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 0;
+	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY_FEATURE_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Change Propagation Due To Data Deploy</em>' class.
+	 * The number of operations of the '<em>Change Propagation Due To Data Dependency</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY_OPERATION_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_OPERATION_COUNT + 0;
+	int CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY_OPERATION_COUNT = edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage.CHANGE_PROPAGATION_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModifyElementImpl <em>Modify Element</em>}' class.
@@ -494,14 +494,14 @@ public interface ModificationmarksPackage extends EPackage {
 	EReference getKAMP4IECSeedModifications_FunctionblockModifications();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy <em>Change Propagation Due To Data Deploy</em>}'.
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency <em>Change Propagation Due To Data Dependency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Change Propagation Due To Data Deploy</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy
+	 * @return the meta object for class '<em>Change Propagation Due To Data Dependency</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency
 	 * @generated
 	 */
-	EClass getChangePropagationDueToDataDeploy();
+	EClass getChangePropagationDueToDataDependency();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModifyElement <em>Modify Element</em>}'.
@@ -603,14 +603,14 @@ public interface ModificationmarksPackage extends EPackage {
 		EReference KAMP4IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS = eINSTANCE.getKAMP4IECSeedModifications_FunctionblockModifications();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDeployImpl <em>Change Propagation Due To Data Deploy</em>}' class.
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDependencyImpl <em>Change Propagation Due To Data Dependency</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDeployImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModificationmarksPackageImpl#getChangePropagationDueToDataDeploy()
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDependencyImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModificationmarksPackageImpl#getChangePropagationDueToDataDependency()
 		 * @generated
 		 */
-		EClass CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY = eINSTANCE.getChangePropagationDueToDataDeploy();
+		EClass CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY = eINSTANCE.getChangePropagationDueToDataDependency();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ModifyElementImpl <em>Modify Element</em>}' class.

@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
-<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1499319667206_1" label="MainProjects" name="MainProjects">
-<item elementID="=edu.kit.ipd.sdq.kamp4iec" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model.repo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=edu.kit.ipd.sdq.kamp4iec.model" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1499319667206_1" label="MainProjects" name="MainProjects"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1499257995294_0" label="Window Working Set" name="Aggregate for window 1499257995293"/>
 <mruList name="MainProjects"/>
 </workingSetManager>

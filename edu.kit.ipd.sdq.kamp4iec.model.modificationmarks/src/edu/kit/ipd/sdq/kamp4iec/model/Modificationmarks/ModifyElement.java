@@ -3,8 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -18,5 +17,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ModifyElement<T extends Element> extends AbstractModification<T, EObject> {
+public interface ModifyElement<T extends IECComponent> extends AbstractModification<T, EObject> {
 } // ModifyElement

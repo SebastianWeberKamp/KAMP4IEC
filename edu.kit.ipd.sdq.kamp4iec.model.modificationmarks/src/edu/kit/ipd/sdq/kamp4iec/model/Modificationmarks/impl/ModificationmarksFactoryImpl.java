@@ -2,8 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.*;
 
 import org.eclipse.emf.ecore.EClass;
@@ -60,7 +59,7 @@ public class ModificationmarksFactoryImpl extends EFactoryImpl implements Modifi
 		switch (eClass.getClassifierID()) {
 			case ModificationmarksPackage.KAMP4IEC_MODIFICATION_REPOSITORY: return createKAMP4IECModificationRepository();
 			case ModificationmarksPackage.KAMP4IEC_SEED_MODIFICATIONS: return createKAMP4IECSeedModifications();
-			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY: return createChangePropagationDueToDataDeploy();
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY: return createChangePropagationDueToDataDependency();
 			case ModificationmarksPackage.MODIFY_ELEMENT: return createModifyElement();
 			case ModificationmarksPackage.MODIFY_GLOBAL_VARIABLE: return createModifyGlobalVariable();
 			case ModificationmarksPackage.MODIFY_FUNCTION_BLOCK: return createModifyFunctionBlock();
@@ -94,9 +93,9 @@ public class ModificationmarksFactoryImpl extends EFactoryImpl implements Modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ChangePropagationDueToDataDeploy createChangePropagationDueToDataDeploy() {
-		ChangePropagationDueToDataDeployImpl changePropagationDueToDataDeploy = new ChangePropagationDueToDataDeployImpl();
-		return changePropagationDueToDataDeploy;
+	public ChangePropagationDueToDataDependency createChangePropagationDueToDataDependency() {
+		ChangePropagationDueToDataDependencyImpl changePropagationDueToDataDependency = new ChangePropagationDueToDataDependencyImpl();
+		return changePropagationDueToDataDependency;
 	}
 
 	/**
@@ -104,7 +103,7 @@ public class ModificationmarksFactoryImpl extends EFactoryImpl implements Modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public <T extends Element> ModifyElement<T> createModifyElement() {
+	public <T extends IECComponent> ModifyElement<T> createModifyElement() {
 		ModifyElementImpl<T> modifyElement = new ModifyElementImpl<T>();
 		return modifyElement;
 	}

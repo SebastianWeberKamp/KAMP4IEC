@@ -2,10 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
@@ -80,7 +80,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				FunctionBlock functionBlock = (FunctionBlock)theEObject;
 				T result = caseFunctionBlock(functionBlock);
 				if (result == null) result = caseIdentifier(functionBlock);
-				if (result == null) result = caseElement(functionBlock);
+				if (result == null) result = caseIECComponent(functionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,7 +88,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				Function function = (Function)theEObject;
 				T result = caseFunction(function);
 				if (result == null) result = caseIdentifier(function);
-				if (result == null) result = caseElement(function);
+				if (result == null) result = caseIECComponent(function);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,7 +96,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				Program program = (Program)theEObject;
 				T result = caseProgram(program);
 				if (result == null) result = caseIdentifier(program);
-				if (result == null) result = caseElement(program);
+				if (result == null) result = caseIECComponent(program);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -104,7 +104,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				SPSSystem spsSystem = (SPSSystem)theEObject;
 				T result = caseSPSSystem(spsSystem);
 				if (result == null) result = caseIdentifier(spsSystem);
-				if (result == null) result = caseElement(spsSystem);
+				if (result == null) result = caseIECComponent(spsSystem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -112,7 +112,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
 				if (result == null) result = caseIdentifier(iecInterface);
-				if (result == null) result = caseElement(iecInterface);
+				if (result == null) result = caseIECComponent(iecInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,7 +120,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				GlobalVariable globalVariable = (GlobalVariable)theEObject;
 				T result = caseGlobalVariable(globalVariable);
 				if (result == null) result = caseIdentifier(globalVariable);
-				if (result == null) result = caseElement(globalVariable);
+				if (result == null) result = caseIECComponent(globalVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -128,7 +128,7 @@ public class IECModelSwitch<T> extends Switch<T> {
 				IECMethodImplementation iecMethodImplementation = (IECMethodImplementation)theEObject;
 				T result = caseIECMethodImplementation(iecMethodImplementation);
 				if (result == null) result = caseIdentifier(iecMethodImplementation);
-				if (result == null) result = caseElement(iecMethodImplementation);
+				if (result == null) result = caseIECComponent(iecMethodImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -136,20 +136,20 @@ public class IECModelSwitch<T> extends Switch<T> {
 				IECPropertyImplementation iecPropertyImplementation = (IECPropertyImplementation)theEObject;
 				T result = caseIECPropertyImplementation(iecPropertyImplementation);
 				if (result == null) result = caseIdentifier(iecPropertyImplementation);
-				if (result == null) result = caseElement(iecPropertyImplementation);
+				if (result == null) result = caseIECComponent(iecPropertyImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.ENUM: {
 				edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum enum_ = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum)theEObject;
 				T result = caseEnum(enum_);
-				if (result == null) result = caseElement(enum_);
+				if (result == null) result = caseIECComponent(enum_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECModelPackage.ELEMENT: {
-				Element element = (Element)theEObject;
-				T result = caseElement(element);
+			case IECModelPackage.IEC_COMPONENT: {
+				IECComponent iecComponent = (IECComponent)theEObject;
+				T result = caseIECComponent(iecComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -293,17 +293,17 @@ public class IECModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>IEC Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>IEC Component</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElement(Element object) {
+	public T caseIECComponent(IECComponent object) {
 		return null;
 	}
 

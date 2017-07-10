@@ -615,32 +615,32 @@ public interface IECModelPackage extends EPackage {
 	int IEC_PROPERTY_IMPLEMENTATION_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element <em>Element</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent <em>IEC Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getElement()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECComponent()
 	 * @generated
 	 */
-	int ELEMENT = 9;
+	int IEC_COMPONENT = 9;
 
 	/**
-	 * The number of structural features of the '<em>Element</em>' class.
+	 * The number of structural features of the '<em>IEC Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_FEATURE_COUNT = 0;
+	int IEC_COMPONENT_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Element</em>' class.
+	 * The number of operations of the '<em>IEC Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_OPERATION_COUNT = 0;
+	int IEC_COMPONENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumImpl <em>Enum</em>}' class.
@@ -659,7 +659,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__NAME = ELEMENT_FEATURE_COUNT + 0;
+	int ENUM__NAME = IEC_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -668,7 +668,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__TYPE = ELEMENT_FEATURE_COUNT + 1;
+	int ENUM__TYPE = IEC_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Enum</em>' class.
@@ -677,7 +677,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 2;
+	int ENUM_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Enum</em>' class.
@@ -686,7 +686,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_OPERATION_COUNT = ELEMENT_OPERATION_COUNT + 0;
+	int ENUM_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1033,14 +1033,14 @@ public interface IECModelPackage extends EPackage {
 	EReference getEnum_Type();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element <em>Element</em>}'.
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent <em>IEC Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Element</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element
+	 * @return the meta object for class '<em>IEC Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent
 	 * @generated
 	 */
-	EClass getElement();
+	EClass getIECComponent();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1340,14 +1340,14 @@ public interface IECModelPackage extends EPackage {
 		EReference ENUM__TYPE = eINSTANCE.getEnum_Type();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element <em>Element</em>}' class.
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent <em>IEC Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getElement()
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECComponent()
 		 * @generated
 		 */
-		EClass ELEMENT = eINSTANCE.getElement();
+		EClass IEC_COMPONENT = eINSTANCE.getIECComponent();
 
 	}
 

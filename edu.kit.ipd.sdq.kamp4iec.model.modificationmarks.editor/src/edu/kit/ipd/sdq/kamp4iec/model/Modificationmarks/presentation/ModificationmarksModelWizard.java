@@ -108,7 +108,7 @@ public class ModificationmarksModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		ModificationmarksEditorPlugin.INSTANCE.getString("_UI_ModificationmarksEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+			ModificationmarksEditorPlugin.INSTANCE.getString("_UI_ModificationmarksEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.

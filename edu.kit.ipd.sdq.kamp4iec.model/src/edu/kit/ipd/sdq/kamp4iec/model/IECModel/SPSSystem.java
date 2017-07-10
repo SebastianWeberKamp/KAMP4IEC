@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface SPSSystem extends Identifier, Element {
+public interface SPSSystem extends Identifier, IECComponent {
 	/**
 	 * Returns the value of the '<em><b>Contains Program</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program}.

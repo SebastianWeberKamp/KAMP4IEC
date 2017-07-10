@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xmi:id="_-qaEsGJCEeeqnuCaQWBjGA" version="11.1.0.201608251200">
+  <semanticResources>model/Modificationmarks.ecore</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore</semanticResources>
+  <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.ecore</semanticResources>
+  <semanticResources>model/Modificationmarks.genmodel</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel</semanticResources>
+  <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.genmodel</semanticResources>
+</viewpoint:DAnalysis>

@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.AbstractKAMP4IECModificationRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy;
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.KAMP4IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.KAMP4IECSeedModifications;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksFactory;
@@ -55,7 +55,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass changePropagationDueToDataDeployEClass = null;
+	private EClass changePropagationDueToDataDependencyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,8 +193,8 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getChangePropagationDueToDataDeploy() {
-		return changePropagationDueToDataDeployEClass;
+	public EClass getChangePropagationDueToDataDependency() {
+		return changePropagationDueToDataDependencyEClass;
 	}
 
 	/**
@@ -260,7 +260,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 		createEReference(kamp4IECSeedModificationsEClass, KAMP4IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS);
 		createEReference(kamp4IECSeedModificationsEClass, KAMP4IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS);
 
-		changePropagationDueToDataDeployEClass = createEClass(CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY);
+		changePropagationDueToDataDependencyEClass = createEClass(CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY);
 
 		modifyElementEClass = createEClass(MODIFY_ELEMENT);
 
@@ -303,7 +303,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 		// Set bounds for type parameters
 		EGenericType g1 = createEGenericType(this.getKAMP4IECSeedModifications());
 		abstractKAMP4IECModificationRepositoryEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theIECModelPackage.getElement());
+		g1 = createEGenericType(theIECModelPackage.getIECComponent());
 		modifyElementEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
@@ -318,7 +318,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 		g1.getETypeArguments().add(g2);
 		kamp4IECModificationRepositoryEClass.getEGenericSuperTypes().add(g1);
 		kamp4IECSeedModificationsEClass.getESuperTypes().add(theModificationmarksPackage_1.getAbstractSeedModifications());
-		changePropagationDueToDataDeployEClass.getESuperTypes().add(theModificationmarksPackage_1.getChangePropagationStep());
+		changePropagationDueToDataDependencyEClass.getESuperTypes().add(theModificationmarksPackage_1.getChangePropagationStep());
 		g1 = createEGenericType(theModificationmarksPackage_1.getAbstractModification());
 		g2 = createEGenericType(modifyElementEClass_T);
 		g1.getETypeArguments().add(g2);
@@ -343,7 +343,7 @@ public class ModificationmarksPackageImpl extends EPackageImpl implements Modifi
 		initEReference(getKAMP4IECSeedModifications_GlobalVariableModifications(), this.getModifyGlobalVariable(), null, "globalVariableModifications", null, 0, -1, KAMP4IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKAMP4IECSeedModifications_FunctionblockModifications(), this.getModifyFunctionBlock(), null, "functionblockModifications", null, 0, -1, KAMP4IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(changePropagationDueToDataDeployEClass, ChangePropagationDueToDataDeploy.class, "ChangePropagationDueToDataDeploy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(changePropagationDueToDataDependencyEClass, ChangePropagationDueToDataDependency.class, "ChangePropagationDueToDataDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyElementEClass, ModifyElement.class, "ModifyElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

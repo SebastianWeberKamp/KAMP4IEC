@@ -20,3 +20,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
 Import-Package: edu.kit.ipd.sdq.kamp4iec.model.IECModel,
  edu.kit.ipd.sdq.kamp4iec.model.IECRepository
+Export-Package: edu.kit.ipd.sdq.kamp4iec.activator,
+ edu.kit.ipd.sdq.kamp4iec.core,
+ edu.kit.ipd.sdq.kamp4iec.core.derivation,
+ edu.kit.ipd.sdq.kamp4iec.ui

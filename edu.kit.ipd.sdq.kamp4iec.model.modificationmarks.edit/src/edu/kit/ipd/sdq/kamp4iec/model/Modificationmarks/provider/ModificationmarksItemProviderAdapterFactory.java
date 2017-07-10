@@ -118,26 +118,26 @@ public class ModificationmarksItemProviderAdapterFactory extends Modificationmar
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy} instances.
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ChangePropagationDueToDataDeployItemProvider changePropagationDueToDataDeployItemProvider;
+	protected ChangePropagationDueToDataDependencyItemProvider changePropagationDueToDataDependencyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy}.
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createChangePropagationDueToDataDeployAdapter() {
-		if (changePropagationDueToDataDeployItemProvider == null) {
-			changePropagationDueToDataDeployItemProvider = new ChangePropagationDueToDataDeployItemProvider(this);
+	public Adapter createChangePropagationDueToDataDependencyAdapter() {
+		if (changePropagationDueToDataDependencyItemProvider == null) {
+			changePropagationDueToDataDependencyItemProvider = new ChangePropagationDueToDataDependencyItemProvider(this);
 		}
 
-		return changePropagationDueToDataDeployItemProvider;
+		return changePropagationDueToDataDependencyItemProvider;
 	}
 
 	/**
@@ -310,7 +310,7 @@ public class ModificationmarksItemProviderAdapterFactory extends Modificationmar
 	public void dispose() {
 		if (kamp4IECModificationRepositoryItemProvider != null) kamp4IECModificationRepositoryItemProvider.dispose();
 		if (kamp4IECSeedModificationsItemProvider != null) kamp4IECSeedModificationsItemProvider.dispose();
-		if (changePropagationDueToDataDeployItemProvider != null) changePropagationDueToDataDeployItemProvider.dispose();
+		if (changePropagationDueToDataDependencyItemProvider != null) changePropagationDueToDataDependencyItemProvider.dispose();
 		if (modifyElementItemProvider != null) modifyElementItemProvider.dispose();
 		if (modifyGlobalVariableItemProvider != null) modifyGlobalVariableItemProvider.dispose();
 		if (modifyFunctionBlockItemProvider != null) modifyFunctionBlockItemProvider.dispose();

@@ -23,10 +23,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="functionblockModifications"
         upperBound="-1" eType="#//ModifyFunctionBlock" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToDataDeploy" eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToDataDependency"
+      eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep"/>
   <eClassifiers xsi:type="ecore:EClass" name="ModifyElement">
     <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//Element"/>
+      <eBounds eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
     </eTypeParameters>
     <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractModification">
       <eTypeArguments eTypeParameter="#//ModifyElement/T"/>

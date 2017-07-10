@@ -2,8 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import org.eclipse.emf.ecore.EFactory;
 
 /**
@@ -42,13 +41,13 @@ public interface ModificationmarksFactory extends EFactory {
 	KAMP4IECSeedModifications createKAMP4IECSeedModifications();
 
 	/**
-	 * Returns a new object of class '<em>Change Propagation Due To Data Deploy</em>'.
+	 * Returns a new object of class '<em>Change Propagation Due To Data Dependency</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Change Propagation Due To Data Deploy</em>'.
+	 * @return a new object of class '<em>Change Propagation Due To Data Dependency</em>'.
 	 * @generated
 	 */
-	ChangePropagationDueToDataDeploy createChangePropagationDueToDataDeploy();
+	ChangePropagationDueToDataDependency createChangePropagationDueToDataDependency();
 
 	/**
 	 * Returns a new object of class '<em>Modify Element</em>'.
@@ -57,7 +56,7 @@ public interface ModificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Element</em>'.
 	 * @generated
 	 */
-	<T extends Element> ModifyElement<T> createModifyElement();
+	<T extends IECComponent> ModifyElement<T> createModifyElement();
 
 	/**
 	 * Returns a new object of class '<em>Modify Global Variable</em>'.

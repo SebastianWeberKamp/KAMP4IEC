@@ -7,9 +7,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -96,11 +94,11 @@ public class ModificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPLOY: {
-				ChangePropagationDueToDataDeploy changePropagationDueToDataDeploy = (ChangePropagationDueToDataDeploy)theEObject;
-				T1 result = caseChangePropagationDueToDataDeploy(changePropagationDueToDataDeploy);
-				if (result == null) result = caseChangePropagationStep(changePropagationDueToDataDeploy);
-				if (result == null) result = caseAbstractChangePropagationStep(changePropagationDueToDataDeploy);
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY: {
+				ChangePropagationDueToDataDependency changePropagationDueToDataDependency = (ChangePropagationDueToDataDependency)theEObject;
+				T1 result = caseChangePropagationDueToDataDependency(changePropagationDueToDataDependency);
+				if (result == null) result = caseChangePropagationStep(changePropagationDueToDataDependency);
+				if (result == null) result = caseAbstractChangePropagationStep(changePropagationDueToDataDependency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -177,17 +175,17 @@ public class ModificationmarksSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Change Propagation Due To Data Deploy</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Change Propagation Due To Data Dependency</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Change Propagation Due To Data Deploy</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Change Propagation Due To Data Dependency</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T1 caseChangePropagationDueToDataDeploy(ChangePropagationDueToDataDeploy object) {
+	public T1 caseChangePropagationDueToDataDependency(ChangePropagationDueToDataDependency object) {
 		return null;
 	}
 
@@ -202,7 +200,7 @@ public class ModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends Element> T1 caseModifyElement(ModifyElement<T> object) {
+	public <T extends IECComponent> T1 caseModifyElement(ModifyElement<T> object) {
 		return null;
 	}
 

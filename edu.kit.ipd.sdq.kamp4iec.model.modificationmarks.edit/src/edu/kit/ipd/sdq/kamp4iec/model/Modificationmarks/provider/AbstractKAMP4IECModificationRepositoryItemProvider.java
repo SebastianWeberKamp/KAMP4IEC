@@ -95,7 +95,7 @@ public class AbstractKAMP4IECModificationRepositoryItemProvider extends Abstract
 		newChildDescriptors.add
 			(createChildParameter
 				(ModificationmarksPackage.Literals.ABSTRACT_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS,
-				 ModificationmarksFactory.eINSTANCE.createChangePropagationDueToDataDeploy()));
+				 ModificationmarksFactory.eINSTANCE.createChangePropagationDueToDataDependency()));
 	}
 
 	/**

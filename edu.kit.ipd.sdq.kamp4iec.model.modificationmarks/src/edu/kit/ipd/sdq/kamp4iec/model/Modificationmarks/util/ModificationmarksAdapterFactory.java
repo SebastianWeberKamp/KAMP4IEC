@@ -7,9 +7,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -88,11 +86,11 @@ public class ModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createKAMP4IECSeedModificationsAdapter();
 			}
 			@Override
-			public Adapter caseChangePropagationDueToDataDeploy(ChangePropagationDueToDataDeploy object) {
-				return createChangePropagationDueToDataDeployAdapter();
+			public Adapter caseChangePropagationDueToDataDependency(ChangePropagationDueToDataDependency object) {
+				return createChangePropagationDueToDataDependencyAdapter();
 			}
 			@Override
-			public <T extends Element> Adapter caseModifyElement(ModifyElement<T> object) {
+			public <T extends IECComponent> Adapter caseModifyElement(ModifyElement<T> object) {
 				return createModifyElementAdapter();
 			}
 			@Override
@@ -186,16 +184,16 @@ public class ModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy <em>Change Propagation Due To Data Deploy</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency <em>Change Propagation Due To Data Dependency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDeploy
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency
 	 * @generated
 	 */
-	public Adapter createChangePropagationDueToDataDeployAdapter() {
+	public Adapter createChangePropagationDueToDataDependencyAdapter() {
 		return null;
 	}
 

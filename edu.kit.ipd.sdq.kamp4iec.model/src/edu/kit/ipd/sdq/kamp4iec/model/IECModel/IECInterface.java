@@ -20,7 +20,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
  * @model
  * @generated
  */
-public interface IECInterface extends Identifier, Element {
+public interface IECInterface extends Identifier, IECComponent {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

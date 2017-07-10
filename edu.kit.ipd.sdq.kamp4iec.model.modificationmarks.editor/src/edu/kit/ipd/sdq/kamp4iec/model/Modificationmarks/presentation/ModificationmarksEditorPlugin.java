@@ -3,13 +3,9 @@
 package edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.presentation;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.ui.EclipseUIPlugin;

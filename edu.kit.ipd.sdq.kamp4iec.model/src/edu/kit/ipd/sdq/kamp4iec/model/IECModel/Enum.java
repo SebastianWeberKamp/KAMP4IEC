@@ -19,7 +19,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
  * @model
  * @generated
  */
-public interface Enum extends Element {
+public interface Enum extends IECComponent {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

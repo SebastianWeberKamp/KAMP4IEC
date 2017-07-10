@@ -2,10 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
@@ -114,8 +114,8 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 				return createEnumAdapter();
 			}
 			@Override
-			public Adapter caseElement(Element object) {
-				return createElementAdapter();
+			public Adapter caseIECComponent(IECComponent object) {
+				return createIECComponentAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier(Identifier object) {
@@ -268,16 +268,16 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent <em>IEC Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Element
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent
 	 * @generated
 	 */
-	public Adapter createElementAdapter() {
+	public Adapter createIECComponentAdapter() {
 		return null;
 	}
 
