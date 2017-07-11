@@ -5,3 +5,6 @@
 1499682156739	Rename local variable 'dataTypeToBeMarkedEntry'
 1499682190809	Rename local variable 'dataTypesToBeMarked'
 1499682889237	Rename method 'lookUpCompositeAndCollectionDataTypesOfDataTypes'
+1499756057395	Rename field 'spsSystem'
+1499756064406	Rename field '_SPSSystem'
+1499756100908	Rename local variable '_konfiguration'

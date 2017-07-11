@@ -141,26 +141,26 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem} instances.
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SPSSystemItemProvider spsSystemItemProvider;
+	protected KonfigurationItemProvider konfigurationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem}.
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createSPSSystemAdapter() {
-		if (spsSystemItemProvider == null) {
-			spsSystemItemProvider = new SPSSystemItemProvider(this);
+	public Adapter createKonfigurationAdapter() {
+		if (konfigurationItemProvider == null) {
+			konfigurationItemProvider = new KonfigurationItemProvider(this);
 		}
 
-		return spsSystemItemProvider;
+		return konfigurationItemProvider;
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 		if (functionBlockItemProvider != null) functionBlockItemProvider.dispose();
 		if (functionItemProvider != null) functionItemProvider.dispose();
 		if (programItemProvider != null) programItemProvider.dispose();
-		if (spsSystemItemProvider != null) spsSystemItemProvider.dispose();
+		if (konfigurationItemProvider != null) konfigurationItemProvider.dispose();
 		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
 		if (globalVariableItemProvider != null) globalVariableItemProvider.dispose();
 		if (iecMethodImplementationItemProvider != null) iecMethodImplementationItemProvider.dispose();

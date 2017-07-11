@@ -10,9 +10,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -100,11 +99,11 @@ public class IECModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECModelPackage.SPS_SYSTEM: {
-				SPSSystem spsSystem = (SPSSystem)theEObject;
-				T result = caseSPSSystem(spsSystem);
-				if (result == null) result = caseIdentifier(spsSystem);
-				if (result == null) result = caseIECComponent(spsSystem);
+			case IECModelPackage.KONFIGURATION: {
+				Konfiguration konfiguration = (Konfiguration)theEObject;
+				T result = caseKonfiguration(konfiguration);
+				if (result == null) result = caseIdentifier(konfiguration);
+				if (result == null) result = caseIECComponent(konfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -203,17 +202,17 @@ public class IECModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>SPS System</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Konfiguration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>SPS System</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Konfiguration</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSPSSystem(SPSSystem object) {
+	public T caseKonfiguration(Konfiguration object) {
 		return null;
 	}
 

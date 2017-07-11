@@ -10,9 +10,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -90,8 +89,8 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 				return createProgramAdapter();
 			}
 			@Override
-			public Adapter caseSPSSystem(SPSSystem object) {
-				return createSPSSystemAdapter();
+			public Adapter caseKonfiguration(Konfiguration object) {
+				return createKonfigurationAdapter();
 			}
 			@Override
 			public Adapter caseIECInterface(IECInterface object) {
@@ -184,16 +183,16 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem <em>SPS System</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration <em>Konfiguration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration
 	 * @generated
 	 */
-	public Adapter createSPSSystemAdapter() {
+	public Adapter createKonfigurationAdapter() {
 		return null;
 	}
 

@@ -54,6 +54,7 @@ public class ProgramItemProvider
 			addTypePropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
+			addAccessesGlobalVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -116,6 +117,28 @@ public class ProgramItemProvider
 				 getString("_UI_Program_CallsMethod_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Program_CallsMethod_feature", "_UI_Program_type"),
 				 IECModelPackage.Literals.PROGRAM__CALLS_METHOD,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accesses Global Variable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccessesGlobalVariablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Program_AccessesGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_AccessesGlobalVariable_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__ACCESSES_GLOBAL_VARIABLE,
 				 true,
 				 false,
 				 true,

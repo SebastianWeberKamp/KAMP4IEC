@@ -4,7 +4,7 @@ import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.AbstractKAMP4IECModificationRepository;
@@ -13,14 +13,14 @@ import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.AbstractKAMP4IECModifica
 public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAMP4IECModificationRepository<?>> {
 	private ComponentInternalDependenciesRepository _componentInternalDependencyRepository;
 	private Repository _IECRepository;
-	private SPSSystem _SPSSystem;
+	private Konfiguration _konfiguration;
 	
 	public static class ArchitectureVersionParams{
 		public String name;
 		public AbstractKAMP4IECModificationRepository<?> modificationMarkRepository;
 		public ComponentInternalDependenciesRepository componentInternalDependencyRepository;
 		public Repository iecRepository;
-		public SPSSystem spsSystem;
+		public Konfiguration konfiguration;
 	}
 	
 	public ArchitectureVersion(ArchitectureVersionParams params) {
@@ -38,11 +38,11 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAM
 					createRepository();
 		}
 		this._IECRepository = params.iecRepository;
-		if (params.spsSystem == null) {
-			_SPSSystem = IECModelFactory.eINSTANCE.
-					createSPSSystem();
+		if (params.konfiguration == null) {
+			_konfiguration = IECModelFactory.eINSTANCE.
+					createKonfiguration();
 		}
-		this._SPSSystem = params.spsSystem;
+		this._konfiguration = params.konfiguration;
 		
 	}
 	
@@ -63,11 +63,11 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAM
 		this._IECRepository = iecRepository;
 	}
 
-	public SPSSystem getSPSSystem() {
-		return _SPSSystem;
+	public Konfiguration getKonfiguration() {
+		return _konfiguration;
 	}
 
-	public void setSPSSystem(SPSSystem spsSystem) {
-		this._SPSSystem = spsSystem;
+	public void setKonfiguration(Konfiguration konfiguration) {
+		this._konfiguration = konfiguration;
 	}
 }

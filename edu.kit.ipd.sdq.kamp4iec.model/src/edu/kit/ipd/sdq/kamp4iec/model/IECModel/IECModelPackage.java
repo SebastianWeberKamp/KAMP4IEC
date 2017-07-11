@@ -304,13 +304,22 @@ public interface IECModelPackage extends EPackage {
 	int PROGRAM__CALLS_METHOD = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Accesses Global Variable</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM__ACCESSES_GLOBAL_VARIABLE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Program</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 8;
+	int PROGRAM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Program</em>' class.
@@ -322,14 +331,14 @@ public interface IECModelPackage extends EPackage {
 	int PROGRAM_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl <em>SPS System</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl <em>Konfiguration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getSPSSystem()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getKonfiguration()
 	 * @generated
 	 */
-	int SPS_SYSTEM = 3;
+	int KONFIGURATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -338,7 +347,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__ID = IECRepositoryPackage.IDENTIFIER__ID;
+	int KONFIGURATION__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -347,16 +356,16 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__NAME = IECRepositoryPackage.IDENTIFIER__NAME;
+	int KONFIGURATION__NAME = IECRepositoryPackage.IDENTIFIER__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Contains Program</b></em>' containment reference.
+	 * The feature id for the '<em><b>Contains Program</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__CONTAINS_PROGRAM = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int KONFIGURATION__CONTAINS_PROGRAM = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Component Internal Dependencies</b></em>' reference list.
@@ -365,25 +374,52 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>SPS System</em>' class.
+	 * The feature id for the '<em><b>Declares Variable</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
+	int KONFIGURATION__DECLARES_VARIABLE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>SPS System</em>' class.
+	 * The feature id for the '<em><b>Accesses Property</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int KONFIGURATION__ACCESSES_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Accesses Global Variable</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KONFIGURATION__ACCESSES_GLOBAL_VARIABLE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Konfiguration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KONFIGURATION_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Konfiguration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int KONFIGURATION_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl <em>IEC Interface</em>}' class.
@@ -883,36 +919,80 @@ public interface IECModelPackage extends EPackage {
 	EReference getProgram_CallsMethod();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem <em>SPS System</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getAccessesGlobalVariable <em>Accesses Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>SPS System</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem
+	 * @return the meta object for the reference list '<em>Accesses Global Variable</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getAccessesGlobalVariable()
+	 * @see #getProgram()
 	 * @generated
 	 */
-	EClass getSPSSystem();
+	EReference getProgram_AccessesGlobalVariable();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram <em>Contains Program</em>}'.
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration <em>Konfiguration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Contains Program</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram()
-	 * @see #getSPSSystem()
+	 * @return the meta object for class '<em>Konfiguration</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration
 	 * @generated
 	 */
-	EReference getSPSSystem_ContainsProgram();
+	EClass getKonfiguration();
 
 	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getComponentInternalDependencies <em>Component Internal Dependencies</em>}'.
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getContainsProgram <em>Contains Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contains Program</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getContainsProgram()
+	 * @see #getKonfiguration()
+	 * @generated
+	 */
+	EReference getKonfiguration_ContainsProgram();
+
+	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getComponentInternalDependencies <em>Component Internal Dependencies</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Component Internal Dependencies</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getComponentInternalDependencies()
-	 * @see #getSPSSystem()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getComponentInternalDependencies()
+	 * @see #getKonfiguration()
 	 * @generated
 	 */
-	EReference getSPSSystem_ComponentInternalDependencies();
+	EReference getKonfiguration_ComponentInternalDependencies();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getDeclaresVariable <em>Declares Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Declares Variable</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getDeclaresVariable()
+	 * @see #getKonfiguration()
+	 * @generated
+	 */
+	EReference getKonfiguration_DeclaresVariable();
+
+	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getAccessesProperty <em>Accesses Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Accesses Property</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getAccessesProperty()
+	 * @see #getKonfiguration()
+	 * @generated
+	 */
+	EReference getKonfiguration_AccessesProperty();
+
+	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getAccessesGlobalVariable <em>Accesses Global Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Accesses Global Variable</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getAccessesGlobalVariable()
+	 * @see #getKonfiguration()
+	 * @generated
+	 */
+	EReference getKonfiguration_AccessesGlobalVariable();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface <em>IEC Interface</em>}'.
@@ -1228,22 +1308,30 @@ public interface IECModelPackage extends EPackage {
 		EReference PROGRAM__CALLS_METHOD = eINSTANCE.getProgram_CallsMethod();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl <em>SPS System</em>}' class.
+		 * The meta object literal for the '<em><b>Accesses Global Variable</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getSPSSystem()
 		 * @generated
 		 */
-		EClass SPS_SYSTEM = eINSTANCE.getSPSSystem();
+		EReference PROGRAM__ACCESSES_GLOBAL_VARIABLE = eINSTANCE.getProgram_AccessesGlobalVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Contains Program</b></em>' containment reference feature.
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl <em>Konfiguration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getKonfiguration()
+		 * @generated
+		 */
+		EClass KONFIGURATION = eINSTANCE.getKonfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Contains Program</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SPS_SYSTEM__CONTAINS_PROGRAM = eINSTANCE.getSPSSystem_ContainsProgram();
+		EReference KONFIGURATION__CONTAINS_PROGRAM = eINSTANCE.getKonfiguration_ContainsProgram();
 
 		/**
 		 * The meta object literal for the '<em><b>Component Internal Dependencies</b></em>' reference list feature.
@@ -1251,7 +1339,31 @@ public interface IECModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES = eINSTANCE.getSPSSystem_ComponentInternalDependencies();
+		EReference KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES = eINSTANCE.getKonfiguration_ComponentInternalDependencies();
+
+		/**
+		 * The meta object literal for the '<em><b>Declares Variable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KONFIGURATION__DECLARES_VARIABLE = eINSTANCE.getKonfiguration_DeclaresVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Accesses Property</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KONFIGURATION__ACCESSES_PROPERTY = eINSTANCE.getKonfiguration_AccessesProperty();
+
+		/**
+		 * The meta object literal for the '<em><b>Accesses Global Variable</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference KONFIGURATION__ACCESSES_GLOBAL_VARIABLE = eINSTANCE.getKonfiguration_AccessesGlobalVariable();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl <em>IEC Interface</em>}' class.

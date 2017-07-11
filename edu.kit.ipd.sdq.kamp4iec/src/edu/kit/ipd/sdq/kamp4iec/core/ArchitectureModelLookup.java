@@ -8,6 +8,7 @@ import java.util.Set;
 import edu.kit.ipd.sdq.kamp.util.MapUtil;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 public class ArchitectureModelLookup {
 	/**
@@ -18,10 +19,12 @@ public class ArchitectureModelLookup {
 			ArchitectureVersion version, Collection<GlobalVariable> globalVariables) {
 		Map<FunctionBlock, Set<GlobalVariable>> results = new HashMap<FunctionBlock, Set<GlobalVariable>>();
 		
-		for (FunctionBlock functionBlock: version.getSPSSystem().getContainsProgram().getCallsFunctionBlock()) {
-			if (functionBlock.getAccessesGlobalVariable().contains(globalVariables)) {
-				MapUtil.putOrAddToMap(results, functionBlock, globalVariables);
-			}
+		for (Program program : version.getKonfiguration().getContainsProgram()) {
+			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+				if (functionBlock.getAccessesGlobalVariable().contains(globalVariables)) {
+					MapUtil.putOrAddToMap(results, functionBlock, globalVariables);
+				}
+			} 
 		}
 		return results;
 	}

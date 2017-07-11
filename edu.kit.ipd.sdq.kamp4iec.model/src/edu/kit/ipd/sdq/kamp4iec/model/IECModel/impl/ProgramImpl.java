@@ -43,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsMethod <em>Calls Method</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -127,6 +128,16 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @ordered
 	 */
 	protected EList<IECMethodImplementation> callsMethod;
+
+	/**
+	 * The cached value of the '{@link #getAccessesGlobalVariable() <em>Accesses Global Variable</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccessesGlobalVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GlobalVariable> accessesGlobalVariable;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -274,6 +285,18 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GlobalVariable> getAccessesGlobalVariable() {
+		if (accessesGlobalVariable == null) {
+			accessesGlobalVariable = new EObjectResolvingEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.PROGRAM__ACCESSES_GLOBAL_VARIABLE);
+		}
+		return accessesGlobalVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -316,6 +339,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return getAccessesProperty();
 			case IECModelPackage.PROGRAM__CALLS_METHOD:
 				return getCallsMethod();
+			case IECModelPackage.PROGRAM__ACCESSES_GLOBAL_VARIABLE:
+				return getAccessesGlobalVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -360,6 +385,10 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				getCallsMethod().clear();
 				getCallsMethod().addAll((Collection<? extends IECMethodImplementation>)newValue);
 				return;
+			case IECModelPackage.PROGRAM__ACCESSES_GLOBAL_VARIABLE:
+				getAccessesGlobalVariable().clear();
+				getAccessesGlobalVariable().addAll((Collection<? extends GlobalVariable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -396,6 +425,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			case IECModelPackage.PROGRAM__CALLS_METHOD:
 				getCallsMethod().clear();
 				return;
+			case IECModelPackage.PROGRAM__ACCESSES_GLOBAL_VARIABLE:
+				getAccessesGlobalVariable().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -424,6 +456,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return accessesProperty != null && !accessesProperty.isEmpty();
 			case IECModelPackage.PROGRAM__CALLS_METHOD:
 				return callsMethod != null && !callsMethod.isEmpty();
+			case IECModelPackage.PROGRAM__ACCESSES_GLOBAL_VARIABLE:
+				return accessesGlobalVariable != null && !accessesGlobalVariable.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

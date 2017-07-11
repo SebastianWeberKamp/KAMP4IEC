@@ -10,9 +10,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -68,7 +67,7 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 			case IECModelPackage.FUNCTION_BLOCK: return createFunctionBlock();
 			case IECModelPackage.FUNCTION: return createFunction();
 			case IECModelPackage.PROGRAM: return createProgram();
-			case IECModelPackage.SPS_SYSTEM: return createSPSSystem();
+			case IECModelPackage.KONFIGURATION: return createKonfiguration();
 			case IECModelPackage.IEC_INTERFACE: return createIECInterface();
 			case IECModelPackage.GLOBAL_VARIABLE: return createGlobalVariable();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION: return createIECMethodImplementation();
@@ -114,9 +113,9 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SPSSystem createSPSSystem() {
-		SPSSystemImpl spsSystem = new SPSSystemImpl();
-		return spsSystem;
+	public Konfiguration createKonfiguration() {
+		KonfigurationImpl konfiguration = new KonfigurationImpl();
+		return konfiguration;
 	}
 
 	/**
