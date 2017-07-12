@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.EventObject;
@@ -16,6 +17,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -140,11 +142,7 @@ import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory
 import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
 
 import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
-
-import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
 import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
-import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
-
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
@@ -934,7 +932,7 @@ public class ModificationmarksEditor
 	 * This creates a context menu for the viewer and adds a listener as well registering the menu for extension.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void createContextMenuFor(StructuredViewer viewer) {
 		MenuManager contextMenu = new MenuManager("#PopUp");
@@ -947,15 +945,17 @@ public class ModificationmarksEditor
 
 		int dndOperations = DND.DROP_COPY | DND.DROP_MOVE | DND.DROP_LINK;
 		Transfer[] transfers = new Transfer[] { LocalTransfer.getInstance(), LocalSelectionTransfer.getTransfer(), FileTransfer.getInstance() };
-		viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
-		viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(editingDomain, viewer));
+		// --Start manually commented out code
+		//viewer.addDragSupport(dndOperations, transfers, new ViewerDragAdapter(viewer));
+		//viewer.addDropSupport(dndOperations, transfers, new EditingDomainViewerDropAdapter(editingDomain, viewer));
+		// --End manually commented out code
 	}
 
 	/**
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createModel() {
 		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
@@ -970,6 +970,35 @@ public class ModificationmarksEditor
 			exception = e;
 			resource = editingDomain.getResourceSet().getResource(resourceURI, false);
 		}
+		
+
+
+		// --Start manually added code
+		// Try to load some resources that can be referenced from the
+		// modificationsmarks
+		String folderPath = resourceURI.trimSegments(1).toPlatformString(false);
+		IResource containerResource = ResourcesPlugin.getWorkspace().getRoot().findMember(folderPath);
+		Collection<String> fileExtensionsToLoad = Arrays.asList("repository", "system", "usagemodel", "bpusagemodel",
+				"datamodel", "organizationenvironmentmodel");
+
+		if (containerResource instanceof IContainer) {
+			try {
+				for (IResource member : ((IContainer) containerResource).members()) {
+					if (member instanceof IFile && fileExtensionsToLoad.contains(member.getFileExtension())) {
+						URI URIToLoad = URI.createPlatformResourceURI(member.getFullPath().toString(), false);
+						try {
+							resource = editingDomain.getResourceSet().getResource(URIToLoad, true);
+						} catch (Exception e) {
+							exception = e;
+							resource = editingDomain.getResourceSet().getResource(URIToLoad, false);
+						}
+					}
+				}
+			} catch (CoreException e) {
+				e.printStackTrace();
+			}
+		}
+		// --End manually added code
 
 		Diagnostic diagnostic = analyzeResourceProblems(resource, exception);
 		if (diagnostic.getSeverity() != Diagnostic.OK) {

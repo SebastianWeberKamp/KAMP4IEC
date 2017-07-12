@@ -39,4 +39,8 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.util.MapUtil"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

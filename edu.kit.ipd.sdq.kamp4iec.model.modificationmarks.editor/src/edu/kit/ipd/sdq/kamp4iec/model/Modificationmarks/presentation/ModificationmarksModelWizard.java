@@ -68,7 +68,6 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
-
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.provider.ModificationmarksEditPlugin;
@@ -395,8 +394,7 @@ public class ModificationmarksModelWizard extends Wizard implements INewWizard {
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE);
-			{
+			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
