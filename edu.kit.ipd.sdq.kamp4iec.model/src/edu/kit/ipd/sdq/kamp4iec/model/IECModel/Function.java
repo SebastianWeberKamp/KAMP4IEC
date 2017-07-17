@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Function</b></em>'.
@@ -20,7 +18,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
  * @model
  * @generated
  */
-public interface Function extends Identifier, IECComponent {
+public interface Function extends IECComponent {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

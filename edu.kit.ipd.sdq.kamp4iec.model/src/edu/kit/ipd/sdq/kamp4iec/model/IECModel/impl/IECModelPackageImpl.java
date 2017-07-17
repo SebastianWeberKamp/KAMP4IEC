@@ -15,8 +15,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-
-import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -484,17 +482,8 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEnum_Name() {
-		return (EAttribute)enumEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getEnum_Type() {
-		return (EReference)enumEClass.getEStructuralFeatures().get(1);
+		return (EReference)enumEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -577,7 +566,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		createEReference(iecPropertyImplementationEClass, IEC_PROPERTY_IMPLEMENTATION__TYPE);
 
 		enumEClass = createEClass(ENUM);
-		createEAttribute(enumEClass, ENUM__NAME);
 		createEReference(enumEClass, ENUM__TYPE);
 
 		iecComponentEClass = createEClass(IEC_COMPONENT);
@@ -615,23 +603,16 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		functionBlockEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		functionBlockEClass.getESuperTypes().add(this.getIECComponent());
-		functionEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		functionEClass.getESuperTypes().add(this.getIECComponent());
-		programEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		programEClass.getESuperTypes().add(this.getIECComponent());
-		konfigurationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		konfigurationEClass.getESuperTypes().add(this.getIECComponent());
-		iecInterfaceEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		iecInterfaceEClass.getESuperTypes().add(this.getIECComponent());
-		globalVariableEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		globalVariableEClass.getESuperTypes().add(this.getIECComponent());
-		iecMethodImplementationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		iecMethodImplementationEClass.getESuperTypes().add(this.getIECComponent());
-		iecPropertyImplementationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		iecPropertyImplementationEClass.getESuperTypes().add(this.getIECComponent());
 		enumEClass.getESuperTypes().add(this.getIECComponent());
+		iecComponentEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -677,7 +658,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEReference(getIECPropertyImplementation_Type(), theIECRepositoryPackage.getIECPropertyImplementation(), null, "Type", null, 1, 1, IECPropertyImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumEClass, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, "Enum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEnum_Name(), ecorePackage.getEString(), "Name", null, 0, 1, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnum_Type(), theIECRepositoryPackage.getEnum(), null, "Type", null, 1, 1, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecComponentEClass, IECComponent.class, "IECComponent", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

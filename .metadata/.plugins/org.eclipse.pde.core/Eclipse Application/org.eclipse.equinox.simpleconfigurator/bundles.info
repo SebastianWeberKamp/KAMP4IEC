@@ -126,6 +126,10 @@ edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies.editor,1.0.0.qualif
 edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies.tests,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies.tests/,4,false
 edu.kit.ipd.sdq.kamp4iec.model.edit,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.edit/,4,false
 edu.kit.ipd.sdq.kamp4iec.model.editor,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.editor/,4,false
+edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations,0.1.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations/,4,false
+edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations.edit,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations.edit/,4,false
+edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations.editor,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations.editor/,4,false
+edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations.tests,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations.tests/,4,false
 edu.kit.ipd.sdq.kamp4iec.model.modificationmarks,0.1.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks/,4,false
 edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/,4,false
 edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.editor,1.0.0.qualifier,file:/C:/Users/janni/workspace/KAMP4IEC/KAMP4IEC/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.editor/,4,false

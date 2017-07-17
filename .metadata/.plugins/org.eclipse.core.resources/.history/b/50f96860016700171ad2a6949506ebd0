@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Modificationmarks" nsURI="http://sdq.ipd.kit.edu/Modificationmarks"
+    nsPrefix="Modificationmarks">
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractKAMP4IECModificationRepository"
+      abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//KAMP4IECSeedModifications"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractModificationRepository">
+      <eTypeArguments eTypeParameter="#//AbstractKAMP4IECModificationRepository/T"/>
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KAMP4IECModificationRepository">
+    <eGenericSuperTypes eClassifier="#//AbstractKAMP4IECModificationRepository">
+      <eTypeArguments eClassifier="#//KAMP4IECSeedModifications"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KAMP4IECSeedModifications" eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractSeedModifications">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariableModifications"
+        upperBound="-1" eType="#//ModifyGlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionblockModifications"
+        upperBound="-1" eType="#//ModifyFunctionBlock" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToDataDependency"
+      eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionBlockModifications"
+        upperBound="-1" eType="#//ModifyFunctionBlock" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyElement">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractModification">
+      <eTypeArguments eTypeParameter="#//ModifyElement/T"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyGlobalVariable">
+    <eGenericSuperTypes eClassifier="#//ModifyElement">
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//GlobalVariable"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyFunctionBlock">
+    <eGenericSuperTypes eClassifier="#//ModifyElement">
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//FunctionBlock"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+</ecore:EPackage>

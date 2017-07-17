@@ -38,19 +38,19 @@
    <extension point="org.eclipse.ui.popupMenus">
       <objectContribution
             adaptable="false"
-            id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.objectContributionkamp1"
-            objectClass="edu.kit.ipd.sdq.kamp.model.modificationmarks.KAMPModificationRepository">
+            id="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.editor.KAMP4IECModificationRepositoryID"
+            objectClass="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.KAMP4IECModificationRepository">
          <action
-               class="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.ArchitectureBasedWorkplanDerivationAction"
-               icon="../edu.kit.ipd.sdq.amp/icons/run.png"
-               id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.actionArchitectureBasedWorkplanDerivation"
+               class="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.editor.ArchitectureBasedWorkplanDerivationAction"
+               icon="../edu.kit.ipd.sdq.kamp/icons/run.png"
+               id="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.editor.actionArchitectureBasedWorkplanDerivation"
                label="Step 5: Calculate activities"
                menubarPath="edit">
          </action>
          <action
-               class="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.ChangePropagationAction"
-               icon="../edu.kit.ipd.sdq.amp/icons/run.png"
-               id="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.actionChangePropagation"
+               class="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.editor.ChangePropagationAction"
+               icon="../edu.kit.ipd.sdq.kamp/icons/run.png"
+               id="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.editor.actionChangePropagation"
                label="Step 3: Calculate change propagation"
                menubarPath="edit">
          </action>

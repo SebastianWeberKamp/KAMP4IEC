@@ -2,7 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -25,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface FunctionBlock extends Identifier, IECComponent {
+public interface FunctionBlock extends IECComponent {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

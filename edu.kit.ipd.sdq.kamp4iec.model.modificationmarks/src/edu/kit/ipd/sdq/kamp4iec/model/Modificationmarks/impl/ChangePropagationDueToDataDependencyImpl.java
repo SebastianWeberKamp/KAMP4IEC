@@ -8,6 +8,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDa
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModifyFunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModifyGlobalVariable;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDependencyImpl#getFunctionBlockModifications <em>Function Block Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.impl.ChangePropagationDueToDataDependencyImpl#getGlobalVariableModifications <em>Global Variable Modifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,6 +41,16 @@ public class ChangePropagationDueToDataDependencyImpl extends ChangePropagationS
 	 * @ordered
 	 */
 	protected EList<ModifyFunctionBlock> functionBlockModifications;
+
+	/**
+	 * The cached value of the '{@link #getGlobalVariableModifications() <em>Global Variable Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGlobalVariableModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ModifyGlobalVariable> globalVariableModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,11 +88,25 @@ public class ChangePropagationDueToDataDependencyImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ModifyGlobalVariable> getGlobalVariableModifications() {
+		if (globalVariableModifications == null) {
+			globalVariableModifications = new EObjectContainmentEList<ModifyGlobalVariable>(ModifyGlobalVariable.class, this, ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS);
+		}
+		return globalVariableModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS:
 				return ((InternalEList<?>)getFunctionBlockModifications()).basicRemove(otherEnd, msgs);
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS:
+				return ((InternalEList<?>)getGlobalVariableModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -95,6 +121,8 @@ public class ChangePropagationDueToDataDependencyImpl extends ChangePropagationS
 		switch (featureID) {
 			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS:
 				return getFunctionBlockModifications();
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS:
+				return getGlobalVariableModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,6 +140,10 @@ public class ChangePropagationDueToDataDependencyImpl extends ChangePropagationS
 				getFunctionBlockModifications().clear();
 				getFunctionBlockModifications().addAll((Collection<? extends ModifyFunctionBlock>)newValue);
 				return;
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS:
+				getGlobalVariableModifications().clear();
+				getGlobalVariableModifications().addAll((Collection<? extends ModifyGlobalVariable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -127,6 +159,9 @@ public class ChangePropagationDueToDataDependencyImpl extends ChangePropagationS
 			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS:
 				getFunctionBlockModifications().clear();
 				return;
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS:
+				getGlobalVariableModifications().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -141,6 +176,8 @@ public class ChangePropagationDueToDataDependencyImpl extends ChangePropagationS
 		switch (featureID) {
 			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS:
 				return functionBlockModifications != null && !functionBlockModifications.isEmpty();
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS:
+				return globalVariableModifications != null && !globalVariableModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

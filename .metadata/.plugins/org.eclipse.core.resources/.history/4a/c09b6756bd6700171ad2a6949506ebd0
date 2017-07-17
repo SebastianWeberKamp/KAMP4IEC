@@ -1,0 +1,87 @@
+package edu.kit.ipd.sdq.kamp4iec.core.derivation;
+
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+
+public class SubactivityDerivation {
+	
+	protected void deriveSubacitvities(IECComponent architectureElement, AbstractActivityElementType activity) {
+		if (architectureElement instanceof CollectionDataObject) {
+			this.deriveCollectionDataObjectSubacitvities(
+					(CollectionDataObject) architectureElement, activity);
+		} else if (architectureElement instanceof CompositeDataObject) {
+			this.deriveCompositeDataObjectSubacitvities(
+					(CompositeDataObject) architectureElement, activity);	
+		} else if (architectureElement instanceof EntryLevelSystemCall) {
+			this.deriveELSCSubacitvities((EntryLevelSystemCall) architectureElement, activity);		
+		} else if (architectureElement instanceof ActorStep) {
+			this.deriveActorStepSubactivities((ActorStep) architectureElement, activity);
+		} else if (architectureElement instanceof AcquireDeviceResourceAction) {
+			this.deriveAcquireDeviceResourceActionSubactivities((AcquireDeviceResourceAction)
+					architectureElement, activity);
+		} else if (architectureElement instanceof ReleaseDeviceResourceAction) {
+			this.deriveReleaseDeviceResourceActionSubactivities((ReleaseDeviceResourceAction)
+					architectureElement, activity);
+		}
+	}
+
+	protected void deriveCollectionDataObjectSubacitvities(CollectionDataObject dataObject, 
+			Activity dataObjectActivity) {
+		for(DataObject<?> innerDataObject: dataObject.getInnerDataObjects()) {
+			ISSubactivityDerivation.addSubActivity(innerDataObject, 
+					BPActivityElementType.COLLECTIONDATAOBJECT_INNEROBJECT, 
+					dataObject, dataObjectActivity);
+		}
+	}
+	
+	protected void deriveCompositeDataObjectSubacitvities(CompositeDataObject dataObject, 
+			Activity dataObjectActivity) {
+		for(InnerDataObjectDeclaration innerDataObjectDeclaration: dataObject.getInnerDataObjectDeclarations()) {
+			ISSubactivityDerivation.addSubActivity(innerDataObjectDeclaration, BPActivityElementType.COMPOSITEDATAOBJECT_INNERDECLARATION, dataObject, dataObjectActivity);
+		}
+	}
+	
+	protected void deriveELSCSubacitvities(EntryLevelSystemCall elsc, Activity elscActivity) {
+		OperationSignature signature = elsc.getOperationSignature__EntryLevelSystemCall();
+		if (signature != null) {
+			ISSubactivityDerivation.addSubActivity(signature, 
+					BPActivityElementType.ENTRYLEVELSYSTEMCALL_OPERATION, 
+					elsc, elscActivity);
+		}
+	}
+	
+	protected void deriveActorStepSubactivities(ActorStep actorStep, Activity actorActivity) {
+		List<DataObject<?>> dataObjects = new LinkedList<DataObject<?>>();
+		dataObjects.addAll(actorStep.getInputDataObjects());
+		dataObjects.addAll(actorStep.getOutputDataObjects());
+		for (DataObject<?> dataObject: dataObjects) {
+			ISSubactivityDerivation.addSubActivity(dataObject, 
+					BPActivityElementType.ACTORSTEP_DATAOBJECT, actorStep, actorActivity);
+		}
+		Role role = actorStep.getResponsibleRole();
+		if (role != null) {
+			ISSubactivityDerivation.addSubActivity(role, BPActivityElementType.ACTORSTEP_ROLE, 
+					actorStep, actorActivity);
+		}
+	}
+	
+	protected void deriveAcquireDeviceResourceActionSubactivities(AcquireDeviceResourceAction acquireAction,
+			Activity acquireActivity) {
+		DeviceResource deviceResource = acquireAction.getPassiveresource_AcquireAction();
+		if (deviceResource != null) {
+			ISSubactivityDerivation.addSubActivity(deviceResource, 
+					BPActivityElementType.DEVICERESOURCE, acquireAction, acquireActivity);
+		}
+	}
+	
+	protected void deriveReleaseDeviceResourceActionSubactivities(ReleaseDeviceResourceAction releaseAction,
+			Activity releaseActivity) {
+		DeviceResource deviceResource = releaseAction.getPassiveresource_ReleaseAction();
+		if (deviceResource != null) {
+			ISSubactivityDerivation.addSubActivity(deviceResource, 
+					BPActivityElementType.DEVICERESOURCE, releaseAction, releaseActivity);
+		}
+	}
+
+}

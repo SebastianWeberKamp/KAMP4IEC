@@ -3,9 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Konfiguration extends Identifier, IECComponent {
+public interface Konfiguration extends IECComponent {
 	/**
 	 * Returns the value of the '<em><b>Contains Program</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program}.

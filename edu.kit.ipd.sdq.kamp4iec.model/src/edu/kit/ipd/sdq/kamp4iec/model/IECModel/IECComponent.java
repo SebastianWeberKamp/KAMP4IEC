@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import org.eclipse.emf.ecore.EObject;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated
  */
-public interface IECComponent extends EObject {
+public interface IECComponent extends Identifier {
 } // IECComponent

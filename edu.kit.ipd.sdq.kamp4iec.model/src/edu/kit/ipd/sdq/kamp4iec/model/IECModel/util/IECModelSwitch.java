@@ -78,64 +78,64 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.FUNCTION_BLOCK: {
 				FunctionBlock functionBlock = (FunctionBlock)theEObject;
 				T result = caseFunctionBlock(functionBlock);
-				if (result == null) result = caseIdentifier(functionBlock);
 				if (result == null) result = caseIECComponent(functionBlock);
+				if (result == null) result = caseIdentifier(functionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.FUNCTION: {
 				Function function = (Function)theEObject;
 				T result = caseFunction(function);
-				if (result == null) result = caseIdentifier(function);
 				if (result == null) result = caseIECComponent(function);
+				if (result == null) result = caseIdentifier(function);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.PROGRAM: {
 				Program program = (Program)theEObject;
 				T result = caseProgram(program);
-				if (result == null) result = caseIdentifier(program);
 				if (result == null) result = caseIECComponent(program);
+				if (result == null) result = caseIdentifier(program);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.KONFIGURATION: {
 				Konfiguration konfiguration = (Konfiguration)theEObject;
 				T result = caseKonfiguration(konfiguration);
-				if (result == null) result = caseIdentifier(konfiguration);
 				if (result == null) result = caseIECComponent(konfiguration);
+				if (result == null) result = caseIdentifier(konfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.IEC_INTERFACE: {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
-				if (result == null) result = caseIdentifier(iecInterface);
 				if (result == null) result = caseIECComponent(iecInterface);
+				if (result == null) result = caseIdentifier(iecInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.GLOBAL_VARIABLE: {
 				GlobalVariable globalVariable = (GlobalVariable)theEObject;
 				T result = caseGlobalVariable(globalVariable);
-				if (result == null) result = caseIdentifier(globalVariable);
 				if (result == null) result = caseIECComponent(globalVariable);
+				if (result == null) result = caseIdentifier(globalVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION: {
 				IECMethodImplementation iecMethodImplementation = (IECMethodImplementation)theEObject;
 				T result = caseIECMethodImplementation(iecMethodImplementation);
-				if (result == null) result = caseIdentifier(iecMethodImplementation);
 				if (result == null) result = caseIECComponent(iecMethodImplementation);
+				if (result == null) result = caseIdentifier(iecMethodImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION: {
 				IECPropertyImplementation iecPropertyImplementation = (IECPropertyImplementation)theEObject;
 				T result = caseIECPropertyImplementation(iecPropertyImplementation);
-				if (result == null) result = caseIdentifier(iecPropertyImplementation);
 				if (result == null) result = caseIECComponent(iecPropertyImplementation);
+				if (result == null) result = caseIdentifier(iecPropertyImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -143,12 +143,14 @@ public class IECModelSwitch<T> extends Switch<T> {
 				edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum enum_ = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum)theEObject;
 				T result = caseEnum(enum_);
 				if (result == null) result = caseIECComponent(enum_);
+				if (result == null) result = caseIdentifier(enum_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModelPackage.IEC_COMPONENT: {
 				IECComponent iecComponent = (IECComponent)theEObject;
 				T result = caseIECComponent(iecComponent);
+				if (result == null) result = caseIdentifier(iecComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

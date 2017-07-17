@@ -27,6 +27,8 @@
       eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functionBlockModifications"
         upperBound="-1" eType="#//ModifyFunctionBlock" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariableModifications"
+        upperBound="-1" eType="#//ModifyGlobalVariable" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModifyElement">
     <eTypeParameters name="T">

@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4iec;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Bundle-Activator: edu.kit.ipd.sdq.kamp4aps.activator.Activator
+Bundle-Activator: edu.kit.ipd.sdq.kamp4iec.activator.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit,

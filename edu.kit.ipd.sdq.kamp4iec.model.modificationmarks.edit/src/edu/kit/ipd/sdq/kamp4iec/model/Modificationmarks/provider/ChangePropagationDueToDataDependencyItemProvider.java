@@ -65,6 +65,7 @@ public class ChangePropagationDueToDataDependencyItemProvider extends ChangeProp
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ModificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -118,6 +119,7 @@ public class ChangePropagationDueToDataDependencyItemProvider extends ChangeProp
 
 		switch (notification.getFeatureID(ChangePropagationDueToDataDependency.class)) {
 			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS:
+			case ModificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,6 +141,11 @@ public class ChangePropagationDueToDataDependencyItemProvider extends ChangeProp
 			(createChildParameter
 				(ModificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS,
 				 ModificationmarksFactory.eINSTANCE.createModifyFunctionBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyGlobalVariable()));
 	}
 
 	/**
