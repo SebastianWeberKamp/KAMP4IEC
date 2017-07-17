@@ -5,8 +5,8 @@ package edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 
 import org.eclipse.emf.common.notify.Notification;
 

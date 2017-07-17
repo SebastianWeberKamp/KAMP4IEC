@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
@@ -34,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl#getContainsProgram <em>Contains Program</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl#getComponentInternalDependencies <em>Component Internal Dependencies</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl#getDeclaresVariable <em>Declares Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.KonfigurationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
@@ -52,16 +49,6 @@ public class KonfigurationImpl extends IdentifierImpl implements Konfiguration {
 	 * @ordered
 	 */
 	protected EList<Program> containsProgram;
-
-	/**
-	 * The cached value of the '{@link #getComponentInternalDependencies() <em>Component Internal Dependencies</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComponentInternalDependencies()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ComponentInternalDependenciesRepository> componentInternalDependencies;
 
 	/**
 	 * The cached value of the '{@link #getDeclaresVariable() <em>Declares Variable</em>}' containment reference list.
@@ -129,18 +116,6 @@ public class KonfigurationImpl extends IdentifierImpl implements Konfiguration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ComponentInternalDependenciesRepository> getComponentInternalDependencies() {
-		if (componentInternalDependencies == null) {
-			componentInternalDependencies = new EObjectResolvingEList<ComponentInternalDependenciesRepository>(ComponentInternalDependenciesRepository.class, this, IECModelPackage.KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES);
-		}
-		return componentInternalDependencies;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<GlobalVariable> getDeclaresVariable() {
 		if (declaresVariable == null) {
 			declaresVariable = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.KONFIGURATION__DECLARES_VARIABLE);
@@ -198,8 +173,6 @@ public class KonfigurationImpl extends IdentifierImpl implements Konfiguration {
 		switch (featureID) {
 			case IECModelPackage.KONFIGURATION__CONTAINS_PROGRAM:
 				return getContainsProgram();
-			case IECModelPackage.KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES:
-				return getComponentInternalDependencies();
 			case IECModelPackage.KONFIGURATION__DECLARES_VARIABLE:
 				return getDeclaresVariable();
 			case IECModelPackage.KONFIGURATION__ACCESSES_PROPERTY:
@@ -222,10 +195,6 @@ public class KonfigurationImpl extends IdentifierImpl implements Konfiguration {
 			case IECModelPackage.KONFIGURATION__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
 				getContainsProgram().addAll((Collection<? extends Program>)newValue);
-				return;
-			case IECModelPackage.KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES:
-				getComponentInternalDependencies().clear();
-				getComponentInternalDependencies().addAll((Collection<? extends ComponentInternalDependenciesRepository>)newValue);
 				return;
 			case IECModelPackage.KONFIGURATION__DECLARES_VARIABLE:
 				getDeclaresVariable().clear();
@@ -254,9 +223,6 @@ public class KonfigurationImpl extends IdentifierImpl implements Konfiguration {
 			case IECModelPackage.KONFIGURATION__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
 				return;
-			case IECModelPackage.KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES:
-				getComponentInternalDependencies().clear();
-				return;
 			case IECModelPackage.KONFIGURATION__DECLARES_VARIABLE:
 				getDeclaresVariable().clear();
 				return;
@@ -280,8 +246,6 @@ public class KonfigurationImpl extends IdentifierImpl implements Konfiguration {
 		switch (featureID) {
 			case IECModelPackage.KONFIGURATION__CONTAINS_PROGRAM:
 				return containsProgram != null && !containsProgram.isEmpty();
-			case IECModelPackage.KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES:
-				return componentInternalDependencies != null && !componentInternalDependencies.isEmpty();
 			case IECModelPackage.KONFIGURATION__DECLARES_VARIABLE:
 				return declaresVariable != null && !declaresVariable.isEmpty();
 			case IECModelPackage.KONFIGURATION__ACCESSES_PROPERTY:

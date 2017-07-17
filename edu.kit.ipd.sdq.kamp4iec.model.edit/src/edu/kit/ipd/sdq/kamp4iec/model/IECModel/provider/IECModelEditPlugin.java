@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider;
 
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -42,7 +40,6 @@ public final class IECModelEditPlugin extends EMFPlugin {
 	public IECModelEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ComponentInternalDependenciesEditPlugin.INSTANCE,
 		     IECRepositoryEditPlugin.INSTANCE,
 		   });
 	}

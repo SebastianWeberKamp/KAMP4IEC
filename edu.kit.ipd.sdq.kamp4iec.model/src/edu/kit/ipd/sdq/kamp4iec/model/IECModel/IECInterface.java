@@ -18,7 +18,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
  * @model
  * @generated
  */
-public interface IECInterface extends IECComponent {
+public interface IECInterface extends IECComponent, FunctionblockResource {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

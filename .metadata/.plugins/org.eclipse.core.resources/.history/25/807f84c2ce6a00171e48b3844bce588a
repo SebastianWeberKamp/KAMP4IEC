@@ -1,0 +1,18 @@
+/**
+ */
+package IECModel;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Method Resource</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see IECModel.IECModelPackage#getMethodResource()
+ * @model interface="true" abstract="true"
+ * @generated
+ */
+public interface MethodResource extends EObject {
+} // MethodResource

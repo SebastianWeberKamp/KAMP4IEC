@@ -1,0 +1,3 @@
+1500277746992	Rename local variable '_fieldOfActivityRepository'
+1500277844848	Rename method 'determineRelevantBPAnnotationRepository'
+1500278131316	Rename method 'deriveBPUserActionAnnotationActivities'

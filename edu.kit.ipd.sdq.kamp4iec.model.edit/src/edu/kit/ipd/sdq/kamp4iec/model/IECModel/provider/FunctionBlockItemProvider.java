@@ -8,6 +8,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -28,8 +29,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionBlockItemProvider 
-	extends IdentifierItemProvider {
+public class FunctionBlockItemProvider extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

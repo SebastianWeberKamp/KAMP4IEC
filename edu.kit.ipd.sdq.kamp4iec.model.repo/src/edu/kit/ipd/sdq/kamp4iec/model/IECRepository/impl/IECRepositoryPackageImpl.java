@@ -4,7 +4,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
@@ -15,7 +14,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType;
@@ -104,20 +102,6 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * @generated
 	 */
 	private EClass iecMethodEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass functionblockResourceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass methodResourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -582,24 +566,6 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getFunctionblockResource() {
-		return functionblockResourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMethodResource() {
-		return methodResourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getEnum() {
 		return enumEClass;
 	}
@@ -746,10 +712,6 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		iecMethodEClass = createEClass(IEC_METHOD);
 		createEReference(iecMethodEClass, IEC_METHOD__USES_ENUM);
 
-		functionblockResourceEClass = createEClass(FUNCTIONBLOCK_RESOURCE);
-
-		methodResourceEClass = createEClass(METHOD_RESOURCE);
-
 		enumEClass = createEClass(ENUM);
 		createEAttribute(enumEClass, ENUM__NAME);
 
@@ -793,16 +755,12 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 
 		// Add supertypes to classes
 		functionBlockEClass.getESuperTypes().add(this.getIdentifier());
-		functionBlockEClass.getESuperTypes().add(this.getFunctionblockResource());
 		globalVariableEClass.getESuperTypes().add(this.getIdentifier());
 		iecInterfaceEClass.getESuperTypes().add(this.getIdentifier());
-		iecInterfaceEClass.getESuperTypes().add(this.getFunctionblockResource());
 		iecMethodImplementationEClass.getESuperTypes().add(this.getIdentifier());
-		iecMethodImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		functionEClass.getESuperTypes().add(this.getIdentifier());
 		programEClass.getESuperTypes().add(this.getIdentifier());
 		iecPropertyImplementationEClass.getESuperTypes().add(this.getIdentifier());
-		iecPropertyImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		iecPropertyEClass.getESuperTypes().add(this.getIdentifier());
 		iecMethodEClass.getESuperTypes().add(this.getIdentifier());
 
@@ -857,10 +815,6 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 
 		initEClass(iecMethodEClass, IECMethod.class, "IECMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECMethod_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(functionblockResourceEClass, FunctionblockResource.class, "FunctionblockResource", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(methodResourceEClass, MethodResource.class, "MethodResource", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(enumEClass, edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, "Enum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEnum_Name(), ecorePackage.getEString(), "Name", null, 0, 1, edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

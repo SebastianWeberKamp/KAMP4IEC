@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/src"
     modelPluginID="edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies" modelName="ComponentInternalDependencies"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
     operationReflection="true" importOrganizing="true">
   <foreignModel>ComponentInternalDependencies.ecore</foreignModel>
   <genPackages prefix="ComponentInternalDependencies" basePackage="edu.kit.ipd.sdq.kamp4iec.model"

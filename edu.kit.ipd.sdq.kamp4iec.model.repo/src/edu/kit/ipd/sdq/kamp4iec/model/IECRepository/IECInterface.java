@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IECInterface extends Identifier, FunctionblockResource {
+public interface IECInterface extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Defines Iec Method</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.

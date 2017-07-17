@@ -8,15 +8,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionblockDependency">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ProvidedFunctionBlock"
-        lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//FunctionBlock"/>
+        lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//FunctionBlock"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredResource" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//FunctionblockResource"/>
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//FunctionblockResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethodDependency" upperBound="-1"
         eType="#//MethodDependency" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MethodDependency">
     <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredResource" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//MethodResource"/>
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//MethodResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ProvidedMethod" lowerBound="1"
         eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECMethodImplementation"/>
   </eClassifiers>

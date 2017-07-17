@@ -4,7 +4,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.util;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
@@ -14,7 +13,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 
@@ -84,7 +82,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				FunctionBlock functionBlock = (FunctionBlock)theEObject;
 				T result = caseFunctionBlock(functionBlock);
 				if (result == null) result = caseIdentifier(functionBlock);
-				if (result == null) result = caseFunctionblockResource(functionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -99,7 +96,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
 				if (result == null) result = caseIdentifier(iecInterface);
-				if (result == null) result = caseFunctionblockResource(iecInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,7 +103,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECMethodImplementation iecMethodImplementation = (IECMethodImplementation)theEObject;
 				T result = caseIECMethodImplementation(iecMethodImplementation);
 				if (result == null) result = caseIdentifier(iecMethodImplementation);
-				if (result == null) result = caseMethodResource(iecMethodImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -135,7 +130,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECPropertyImplementation iecPropertyImplementation = (IECPropertyImplementation)theEObject;
 				T result = caseIECPropertyImplementation(iecPropertyImplementation);
 				if (result == null) result = caseIdentifier(iecPropertyImplementation);
-				if (result == null) result = caseMethodResource(iecPropertyImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,18 +144,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECMethod iecMethod = (IECMethod)theEObject;
 				T result = caseIECMethod(iecMethod);
 				if (result == null) result = caseIdentifier(iecMethod);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECRepositoryPackage.FUNCTIONBLOCK_RESOURCE: {
-				FunctionblockResource functionblockResource = (FunctionblockResource)theEObject;
-				T result = caseFunctionblockResource(functionblockResource);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECRepositoryPackage.METHOD_RESOURCE: {
-				MethodResource methodResource = (MethodResource)theEObject;
-				T result = caseMethodResource(methodResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -334,36 +316,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIECMethod(IECMethod object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Functionblock Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Functionblock Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFunctionblockResource(FunctionblockResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Method Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Method Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMethodResource(MethodResource object) {
 		return null;
 	}
 

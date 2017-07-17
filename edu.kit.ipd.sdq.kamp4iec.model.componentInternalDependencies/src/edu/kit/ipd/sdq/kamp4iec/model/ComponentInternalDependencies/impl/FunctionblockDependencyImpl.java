@@ -6,9 +6,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInt
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

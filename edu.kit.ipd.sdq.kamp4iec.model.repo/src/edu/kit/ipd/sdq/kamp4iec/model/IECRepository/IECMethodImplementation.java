@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IECMethodImplementation extends Identifier, MethodResource {
+public interface IECMethodImplementation extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference.
 	 * <!-- begin-user-doc -->

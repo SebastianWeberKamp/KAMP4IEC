@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface FunctionBlock extends Identifier, FunctionblockResource {
+public interface FunctionBlock extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Has Iec Method</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation}.

@@ -156,8 +156,6 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelItemProviderAdapterFactory;
 
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -706,7 +704,6 @@ public class IECModelEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECModelItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ComponentInternalDependenciesItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 

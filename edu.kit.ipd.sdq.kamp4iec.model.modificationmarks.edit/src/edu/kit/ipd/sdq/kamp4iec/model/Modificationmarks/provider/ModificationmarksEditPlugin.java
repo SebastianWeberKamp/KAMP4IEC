@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.provider;
 
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelEditPlugin;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
@@ -44,7 +42,6 @@ public final class ModificationmarksEditPlugin extends EMFPlugin {
 	public ModificationmarksEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     ComponentInternalDependenciesEditPlugin.INSTANCE,
 		     IECModelEditPlugin.INSTANCE,
 		     IECRepositoryEditPlugin.INSTANCE,
 		     edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksEditPlugin.INSTANCE,

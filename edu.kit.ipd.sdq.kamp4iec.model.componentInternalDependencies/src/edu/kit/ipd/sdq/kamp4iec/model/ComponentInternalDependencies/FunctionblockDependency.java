@@ -2,9 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;

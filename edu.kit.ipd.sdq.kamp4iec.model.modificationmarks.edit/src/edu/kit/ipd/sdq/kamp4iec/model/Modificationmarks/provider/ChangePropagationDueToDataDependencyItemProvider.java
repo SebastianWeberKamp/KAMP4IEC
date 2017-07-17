@@ -8,6 +8,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ChangePropagationSt
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -17,6 +18,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 

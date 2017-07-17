@@ -2,7 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -15,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getContainsProgram <em>Contains Program</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getComponentInternalDependencies <em>Component Internal Dependencies</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getDeclaresVariable <em>Declares Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
@@ -41,22 +39,6 @@ public interface Konfiguration extends IECComponent {
 	 * @generated
 	 */
 	EList<Program> getContainsProgram();
-
-	/**
-	 * Returns the value of the '<em><b>Component Internal Dependencies</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Component Internal Dependencies</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Component Internal Dependencies</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getKonfiguration_ComponentInternalDependencies()
-	 * @model
-	 * @generated
-	 */
-	EList<ComponentInternalDependenciesRepository> getComponentInternalDependencies();
 
 	/**
 	 * Returns the value of the '<em><b>Declares Variable</b></em>' containment reference list.

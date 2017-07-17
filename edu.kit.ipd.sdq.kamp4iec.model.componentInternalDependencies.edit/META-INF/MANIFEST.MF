@@ -12,6 +12,8 @@ Export-Package: edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.pro
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

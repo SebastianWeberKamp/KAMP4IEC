@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -24,8 +25,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalVariableItemProvider 
-	extends IdentifierItemProvider {
+public class GlobalVariableItemProvider extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

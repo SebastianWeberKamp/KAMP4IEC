@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4iec.model/src" modelPluginID="edu.kit.ipd.sdq.kamp4iec.model"
     modelName="IECModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel#//ComponentInternalDependencies ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
+    usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
     operationReflection="true" importOrganizing="true">
   <foreignModel>IECModel.ecore</foreignModel>
   <genPackages prefix="IECModel" basePackage="edu.kit.ipd.sdq.kamp4iec.model" disposableProviderFactory="true"
@@ -31,7 +31,6 @@
     </genClasses>
     <genClasses ecoreClass="IECModel.ecore#//Konfiguration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Konfiguration/ContainsProgram"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Konfiguration/ComponentInternalDependencies"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Konfiguration/DeclaresVariable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Konfiguration/AccessesProperty"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Konfiguration/AccessesGlobalVariable"/>
@@ -54,5 +53,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Enum/Type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="IECModel.ecore#//IECComponent"/>
+    <genClasses image="false" ecoreClass="IECModel.ecore#//FunctionblockResource"/>
+    <genClasses image="false" ecoreClass="IECModel.ecore#//MethodResource"/>
   </genPackages>
 </genmodel:GenModel>

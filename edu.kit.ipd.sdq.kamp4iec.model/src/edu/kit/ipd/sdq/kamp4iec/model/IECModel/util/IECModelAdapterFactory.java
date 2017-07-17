@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
@@ -11,6 +12,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.common.notify.Adapter;
@@ -115,6 +117,14 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIECComponent(IECComponent object) {
 				return createIECComponentAdapter();
+			}
+			@Override
+			public Adapter caseFunctionblockResource(FunctionblockResource object) {
+				return createFunctionblockResourceAdapter();
+			}
+			@Override
+			public Adapter caseMethodResource(MethodResource object) {
+				return createMethodResourceAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier(Identifier object) {
@@ -277,6 +287,34 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIECComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource <em>Functionblock Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource
+	 * @generated
+	 */
+	public Adapter createFunctionblockResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource <em>Method Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource
+	 * @generated
+	 */
+	public Adapter createMethodResourceAdapter() {
 		return null;
 	}
 

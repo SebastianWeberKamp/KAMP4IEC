@@ -10,6 +10,7 @@ import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
@@ -56,7 +57,7 @@ public class InternalModificationDerivation {
 				getChangePropagationDueToDataDependency().getFunctionBlockModifications());
 		for (ModifyFunctionBlock modifyFunctionBlock : functionBlockModifications) {
 			activityList.add(InternalModificationDerivation.createModificationActivity(
-					modifyFunctionBlock, IECActivityType.MODIFY_FUNCTIONBLOCK));
+					modifyFunctionBlock, getCausingElementsNames(modifyFunctionBlock), IECActivityElementType.FUNCTIONBLOCK));
 		}
 	}
 
@@ -65,7 +66,7 @@ public class InternalModificationDerivation {
 				getChangePropagationDueToDataDependency().getGlobalVariableModifications());
 		for (ModifyGlobalVariable modifyGlobalVariable : globalVariableModifications) {
 			activityList.add(InternalModificationDerivation.createModificationActivity(
-					modifyGlobalVariable, IECActivityType.MODIFY_GLOBALVARIABLE));
+					modifyGlobalVariable, getCausingElementsNames(modifyGlobalVariable), IECActivityElementType.GLOBALVARIABLE));
 		}
 	}
 

@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
@@ -13,6 +13,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import org.eclipse.emf.ecore.EClass;
@@ -99,6 +100,20 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	private EClass iecComponentEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionblockResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass methodResourceEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -145,7 +160,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		isInited = true;
 
 		// Initialize simple dependencies
-		ComponentInternalDependenciesPackage.eINSTANCE.eClass();
+		IECRepositoryPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theIECModelPackage.createPackageContents();
@@ -347,7 +362,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKonfiguration_ComponentInternalDependencies() {
+	public EReference getKonfiguration_DeclaresVariable() {
 		return (EReference)konfigurationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -356,7 +371,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKonfiguration_DeclaresVariable() {
+	public EReference getKonfiguration_AccessesProperty() {
 		return (EReference)konfigurationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -365,17 +380,8 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getKonfiguration_AccessesProperty() {
-		return (EReference)konfigurationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getKonfiguration_AccessesGlobalVariable() {
-		return (EReference)konfigurationEClass.getEStructuralFeatures().get(4);
+		return (EReference)konfigurationEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -500,6 +506,24 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFunctionblockResource() {
+		return functionblockResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMethodResource() {
+		return methodResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IECModelFactory getIECModelFactory() {
 		return (IECModelFactory)getEFactoryInstance();
 	}
@@ -546,7 +570,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		konfigurationEClass = createEClass(KONFIGURATION);
 		createEReference(konfigurationEClass, KONFIGURATION__CONTAINS_PROGRAM);
-		createEReference(konfigurationEClass, KONFIGURATION__COMPONENT_INTERNAL_DEPENDENCIES);
 		createEReference(konfigurationEClass, KONFIGURATION__DECLARES_VARIABLE);
 		createEReference(konfigurationEClass, KONFIGURATION__ACCESSES_PROPERTY);
 		createEReference(konfigurationEClass, KONFIGURATION__ACCESSES_GLOBAL_VARIABLE);
@@ -569,6 +592,10 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		createEReference(enumEClass, ENUM__TYPE);
 
 		iecComponentEClass = createEClass(IEC_COMPONENT);
+
+		functionblockResourceEClass = createEClass(FUNCTIONBLOCK_RESOURCE);
+
+		methodResourceEClass = createEClass(METHOD_RESOURCE);
 	}
 
 	/**
@@ -596,7 +623,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		// Obtain other dependent packages
 		IECRepositoryPackage theIECRepositoryPackage = (IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(IECRepositoryPackage.eNS_URI);
-		ComponentInternalDependenciesPackage theComponentInternalDependenciesPackage = (ComponentInternalDependenciesPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentInternalDependenciesPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -604,13 +630,17 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		// Add supertypes to classes
 		functionBlockEClass.getESuperTypes().add(this.getIECComponent());
+		functionBlockEClass.getESuperTypes().add(this.getFunctionblockResource());
 		functionEClass.getESuperTypes().add(this.getIECComponent());
 		programEClass.getESuperTypes().add(this.getIECComponent());
 		konfigurationEClass.getESuperTypes().add(this.getIECComponent());
 		iecInterfaceEClass.getESuperTypes().add(this.getIECComponent());
+		iecInterfaceEClass.getESuperTypes().add(this.getFunctionblockResource());
 		globalVariableEClass.getESuperTypes().add(this.getIECComponent());
 		iecMethodImplementationEClass.getESuperTypes().add(this.getIECComponent());
+		iecMethodImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		iecPropertyImplementationEClass.getESuperTypes().add(this.getIECComponent());
+		iecPropertyImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		enumEClass.getESuperTypes().add(this.getIECComponent());
 		iecComponentEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 
@@ -638,7 +668,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		initEClass(konfigurationEClass, Konfiguration.class, "Konfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getKonfiguration_ContainsProgram(), this.getProgram(), null, "ContainsProgram", null, 0, -1, Konfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getKonfiguration_ComponentInternalDependencies(), theComponentInternalDependenciesPackage.getComponentInternalDependenciesRepository(), null, "ComponentInternalDependencies", null, 0, -1, Konfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKonfiguration_DeclaresVariable(), this.getGlobalVariable(), null, "DeclaresVariable", null, 0, -1, Konfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKonfiguration_AccessesProperty(), this.getIECPropertyImplementation(), null, "AccessesProperty", null, 0, -1, Konfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getKonfiguration_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, Konfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -661,6 +690,10 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEReference(getEnum_Type(), theIECRepositoryPackage.getEnum(), null, "Type", null, 1, 1, edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecComponentEClass, IECComponent.class, "IECComponent", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(functionblockResourceEClass, FunctionblockResource.class, "FunctionblockResource", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(methodResourceEClass, MethodResource.class, "MethodResource", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

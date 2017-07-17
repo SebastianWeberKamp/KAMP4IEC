@@ -3,6 +3,7 @@ package edu.kit.ipd.sdq.kamp4iec.core;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.FieldOfActivityAnnotations.FieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
@@ -14,6 +15,7 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAM
 	private ComponentInternalDependenciesRepository _componentInternalDependencyRepository;
 	private Repository _IECRepository;
 	private Konfiguration _konfiguration;
+	private FieldOfActivityAnnotationsRepository _fieldOfActivityRepository;
 	
 	public static class ArchitectureVersionParams{
 		public String name;
@@ -21,6 +23,7 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAM
 		public ComponentInternalDependenciesRepository componentInternalDependencyRepository;
 		public Repository iecRepository;
 		public Konfiguration konfiguration;
+		public FieldOfActivityAnnotationsRepository fieldOfActivityRepository;
 	}
 	
 	public ArchitectureVersion(ArchitectureVersionParams params) {
@@ -69,5 +72,13 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAM
 
 	public void setKonfiguration(Konfiguration konfiguration) {
 		this._konfiguration = konfiguration;
+	}
+
+	public FieldOfActivityAnnotationsRepository getFieldOfActivityRepository() {
+		return _fieldOfActivityRepository;
+	}
+
+	public void setFieldOfActivityRepository(FieldOfActivityAnnotationsRepository fieldOfActivityRepository) {
+		this._fieldOfActivityRepository = fieldOfActivityRepository;
 	}
 }

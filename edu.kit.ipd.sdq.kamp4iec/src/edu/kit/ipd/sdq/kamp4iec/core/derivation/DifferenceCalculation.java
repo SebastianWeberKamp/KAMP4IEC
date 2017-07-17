@@ -49,21 +49,21 @@ public class DifferenceCalculation extends AbstractDifferenceCalculation<Archite
 	public void checkForDifferencesAndAddToWorkplan(Diff diffElement, List<Activity> workplan) {
 		for (IECActivityElementType elementType: IECActivityElementType.getTopLevelArchitectureActivityElementTypes()) {
 			if (detectionRuleAdded(diffElement, elementType.getClass())) {
-				IECComponent architectureElement = (IECComponent)(((ReferenceChange)diffElement).getValue());
+				Identifier architectureElement = (IECComponent)(((ReferenceChange)diffElement).getValue());
 				Activity newActivity = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, 
 						architectureElement, architectureElement.getName(), null, BasicActivity.ADD, 
 						DifferenceCalculation.createAddElementDescription(architectureElement));
 				workplan.add(newActivity);
-				this.architectureSubactivityDerivation.deriveSubacitvities(architectureElement, newActivity);
+				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
 				break;
 			} 
 			if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
-				NamedElement architectureElement = (NamedElement)(((ReferenceChange)diffElement).getValue());
-				Activity newActivity = new Activity(ISActivityType.ARCHITECTUREMODELDIFF, elementType,
-						architectureElement, architectureElement.getEntityName(), null, BasicActivity.REMOVE, 
-						ISDifferenceCalculation.createRemoveElementDescription(architectureElement));
+				Identifier architectureElement = (Identifier)(((ReferenceChange)diffElement).getValue());
+				Activity newActivity = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType,
+						architectureElement, architectureElement.getName(), null, BasicActivity.REMOVE, 
+						DifferenceCalculation.createRemoveElementDescription(architectureElement));
 				workplan.add(newActivity);
-				this.bpSubactivityDerivation.deriveSubacitvities(architectureElement, newActivity);
+				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
 				break;
 			}
 		}

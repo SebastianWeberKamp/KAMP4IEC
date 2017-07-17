@@ -65,7 +65,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getIdentifier()
 	 * @generated
 	 */
-	int IDENTIFIER = 13;
+	int IDENTIFIER = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -825,62 +825,6 @@ public interface IECRepositoryPackage extends EPackage {
 	int IEC_METHOD_OPERATION_COUNT = IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource <em>Functionblock Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getFunctionblockResource()
-	 * @generated
-	 */
-	int FUNCTIONBLOCK_RESOURCE = 10;
-
-	/**
-	 * The number of structural features of the '<em>Functionblock Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Functionblock Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONBLOCK_RESOURCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource <em>Method Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getMethodResource()
-	 * @generated
-	 */
-	int METHOD_RESOURCE = 11;
-
-	/**
-	 * The number of structural features of the '<em>Method Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD_RESOURCE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Method Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD_RESOURCE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.EnumImpl <em>Enum</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -888,7 +832,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getEnum()
 	 * @generated
 	 */
-	int ENUM = 12;
+	int ENUM = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -925,7 +869,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getImplementsInterface()
 	 * @generated
 	 */
-	int IMPLEMENTS_INTERFACE = 14;
+	int IMPLEMENTS_INTERFACE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Interface</b></em>' reference.
@@ -962,7 +906,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 15;
+	int VARIABLE_TYPE = 13;
 
 
 	/**
@@ -1405,26 +1349,6 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIECMethod_UsesEnum();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource <em>Functionblock Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Functionblock Resource</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource
-	 * @generated
-	 */
-	EClass getFunctionblockResource();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource <em>Method Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Method Resource</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource
-	 * @generated
-	 */
-	EClass getMethodResource();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum <em>Enum</em>}'.
@@ -1880,26 +1804,6 @@ public interface IECRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_METHOD__USES_ENUM = eINSTANCE.getIECMethod_UsesEnum();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource <em>Functionblock Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getFunctionblockResource()
-		 * @generated
-		 */
-		EClass FUNCTIONBLOCK_RESOURCE = eINSTANCE.getFunctionblockResource();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource <em>Method Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getMethodResource()
-		 * @generated
-		 */
-		EClass METHOD_RESOURCE = eINSTANCE.getMethodResource();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.EnumImpl <em>Enum</em>}' class.
