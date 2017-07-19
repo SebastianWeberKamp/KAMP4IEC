@@ -1,0 +1,17 @@
+package edu.kit.ipd.sdq.kamp4iec.ui;
+
+import edu.kit.ipd.sdq.kamp.ui.AbstractDeriveWorkplanAction;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4iec.core.derivation.DifferenceCalculation;
+import edu.kit.ipd.sdq.kamp4iec.core.derivation.EnrichedWorkplanDerivation;
+
+public class DeriveWorkplanAction extends AbstractDeriveWorkplanAction<IECArchitectureVersion> {
+
+	public DeriveWorkplanAction() {
+		this.setWorkplanDerivation(new DifferenceCalculation());
+		this.setEnrichedWorkplanDerivation(new EnrichedWorkplanDerivation());
+		this.setArchitectureVersionPersistency(new IECArchitectureVersionPersistency());
+	}
+
+}

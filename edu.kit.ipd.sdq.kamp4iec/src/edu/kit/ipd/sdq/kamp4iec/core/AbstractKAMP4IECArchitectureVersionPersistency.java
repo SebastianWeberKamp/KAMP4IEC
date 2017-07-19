@@ -7,9 +7,9 @@ import org.palladiosimulator.pcm.system.SystemPackage;
 
 //import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesPackage;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksPackage;
 
-public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends ArchitectureVersion> 
+public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends IECArchitectureVersion> 
 		extends AbstractArchitectureVersionPersistency<T> {
 
 	public static final String FILEEXTENSION_REPOSITORY = "repository";
@@ -20,7 +20,7 @@ public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends A
 		savePCMAndKAPSModels(targetDirectoryPath, filename, version);
 	}
 	
-	public static void savePCMAndKAPSModels(String targetDirectoryPath, String filename, ArchitectureVersion version) {
+	public static void savePCMAndKAPSModels(String targetDirectoryPath, String filename, IECArchitectureVersion version) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARK;
 		
@@ -36,7 +36,7 @@ public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends A
 	public static void registerKAPSPackages(ResourceSet resourceSet) {
     	resourceSet.getPackageRegistry().put(RepositoryPackage.eNS_URI, RepositoryPackage.eINSTANCE);
         resourceSet.getPackageRegistry().put(SystemPackage.eNS_URI, SystemPackage.eINSTANCE);
-        resourceSet.getPackageRegistry().put(ModificationmarksPackage.eNS_URI, ModificationmarksPackage.eINSTANCE);
+        resourceSet.getPackageRegistry().put(IECModificationmarksPackage.eNS_URI, IECModificationmarksPackage.eINSTANCE);
     }
 
 }

@@ -7,10 +7,10 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated Modificationmarks -->
+      <!-- @generated IECModificationmarks -->
       <factory
-            uri="http://sdq.ipd.kit.edu/Modificationmarks"
-            class="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.provider.ModificationmarksItemProviderAdapterFactory"
+            uri="http://sdq.ipd.kit.edu/IECModificationmarks"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.provider.IECModificationmarksItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

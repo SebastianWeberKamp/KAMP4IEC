@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated FieldOfActivityAnnotations -->
+      <!-- @generated IECFieldOfActivityAnnotations -->
       <package
-            uri="http://sdq.ipd.kit.edu/FieldOfActivityAnnotations"
-            class="edu.kit.ipd.sdq.kamp4iec.model.FieldOfActivityAnnotations.FieldOfActivityAnnotationsPackage"
-            genModel="model/FieldOfActivityAnnotations.genmodel"/>
+            uri="http://sdq.ipd.kit.edu/IECFieldOfActivityAnnotations"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage"
+            genModel="model/IECFieldOfActivityAnnotations.genmodel"/>
    </extension>
 
 </plugin>
