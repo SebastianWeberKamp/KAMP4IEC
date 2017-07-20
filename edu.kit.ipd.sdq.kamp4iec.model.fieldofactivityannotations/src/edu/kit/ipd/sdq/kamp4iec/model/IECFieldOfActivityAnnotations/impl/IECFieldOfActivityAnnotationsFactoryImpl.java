@@ -5,7 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -63,12 +62,7 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 			case IECFieldOfActivityAnnotationsPackage.IEC_SOURCE_FILE_AGGREGATION: return createIECSourceFileAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE: return createIECMetadataFile();
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE_AGGREGATION: return createIECMetadataFileAggregation();
-			case IECFieldOfActivityAnnotationsPackage.IEC_BUILD_SPECIFICATION: return createIECBuildSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_BUILD_CONFIGURATION: return createIECBuildConfiguration();
-			case IECFieldOfActivityAnnotationsPackage.IEC_THIRD_PARTY_COMPONENT_OR_LIBRARY: return createIECThirdPartyComponentOrLibrary();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION: return createIECTestSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_RELEASE_SPECIFICATION: return createIECReleaseSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_RELEASE_CONFIGURATION: return createIECReleaseConfiguration();
 			case IECFieldOfActivityAnnotationsPackage.IEC_DEPLOYMENT_SPECIFICATION: return createIECDeploymentSpecification();
 			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE: return createIECRuntimeInstance();
 			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE_AGGREGATION: return createIECRuntimeInstanceAggregation();
@@ -83,47 +77,11 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 			case IECFieldOfActivityAnnotationsPackage.IEC_PERSON: return createIECPerson();
 			case IECFieldOfActivityAnnotationsPackage.IEC_ROLE_LIST: return createIECRoleList();
 			case IECFieldOfActivityAnnotationsPackage.IEC_DEVELOPER: return createIECDeveloper();
-			case IECFieldOfActivityAnnotationsPackage.IEC_BUILD_CONFIGURATOR: return createIECBuildConfigurator();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_DEVELOPER: return createIECTestDeveloper();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TESTER: return createIECTester();
-			case IECFieldOfActivityAnnotationsPackage.IEC_RELEASE_CONFIGURATOR: return createIECReleaseConfigurator();
 			case IECFieldOfActivityAnnotationsPackage.IEC_DEPLOYER: return createIECDeployer();
-			case IECFieldOfActivityAnnotationsPackage.IEC_DESIGN_PATTERN_SPECIFICATION: return createIECDesignPatternSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_DESIGN_PATTERN_ROLE: return createIECDesignPatternRole();
-			case IECFieldOfActivityAnnotationsPackage.IEC_TECHNOLOGY_SPECIFICATION: return createIECTechnologySpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_TECHNOLOGICAL_CORRESPONDENCE: return createIECTechnologicalCorrespondence();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
-			case IECFieldOfActivityAnnotationsPackage.IEC_TECHNOLOGICAL_CORRESPONDENCE_TYPES:
-				return createIECTechnologicalCorrespondenceTypesFromString(eDataType, initialValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
-			case IECFieldOfActivityAnnotationsPackage.IEC_TECHNOLOGICAL_CORRESPONDENCE_TYPES:
-				return convertIECTechnologicalCorrespondenceTypesToString(eDataType, instanceValue);
-			default:
-				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -192,59 +150,9 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECBuildSpecification createIECBuildSpecification() {
-		IECBuildSpecificationImpl iecBuildSpecification = new IECBuildSpecificationImpl();
-		return iecBuildSpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECBuildConfiguration createIECBuildConfiguration() {
-		IECBuildConfigurationImpl iecBuildConfiguration = new IECBuildConfigurationImpl();
-		return iecBuildConfiguration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECThirdPartyComponentOrLibrary createIECThirdPartyComponentOrLibrary() {
-		IECThirdPartyComponentOrLibraryImpl iecThirdPartyComponentOrLibrary = new IECThirdPartyComponentOrLibraryImpl();
-		return iecThirdPartyComponentOrLibrary;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IECTestSpecification createIECTestSpecification() {
 		IECTestSpecificationImpl iecTestSpecification = new IECTestSpecificationImpl();
 		return iecTestSpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECReleaseSpecification createIECReleaseSpecification() {
-		IECReleaseSpecificationImpl iecReleaseSpecification = new IECReleaseSpecificationImpl();
-		return iecReleaseSpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECReleaseConfiguration createIECReleaseConfiguration() {
-		IECReleaseConfigurationImpl iecReleaseConfiguration = new IECReleaseConfigurationImpl();
-		return iecReleaseConfiguration;
 	}
 
 	/**
@@ -392,16 +300,6 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECBuildConfigurator createIECBuildConfigurator() {
-		IECBuildConfiguratorImpl iecBuildConfigurator = new IECBuildConfiguratorImpl();
-		return iecBuildConfigurator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IECTestDeveloper createIECTestDeveloper() {
 		IECTestDeveloperImpl iecTestDeveloper = new IECTestDeveloperImpl();
 		return iecTestDeveloper;
@@ -422,79 +320,9 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECReleaseConfigurator createIECReleaseConfigurator() {
-		IECReleaseConfiguratorImpl iecReleaseConfigurator = new IECReleaseConfiguratorImpl();
-		return iecReleaseConfigurator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IECDeployer createIECDeployer() {
 		IECDeployerImpl iecDeployer = new IECDeployerImpl();
 		return iecDeployer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECDesignPatternSpecification createIECDesignPatternSpecification() {
-		IECDesignPatternSpecificationImpl iecDesignPatternSpecification = new IECDesignPatternSpecificationImpl();
-		return iecDesignPatternSpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECDesignPatternRole createIECDesignPatternRole() {
-		IECDesignPatternRoleImpl iecDesignPatternRole = new IECDesignPatternRoleImpl();
-		return iecDesignPatternRole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECTechnologySpecification createIECTechnologySpecification() {
-		IECTechnologySpecificationImpl iecTechnologySpecification = new IECTechnologySpecificationImpl();
-		return iecTechnologySpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECTechnologicalCorrespondence createIECTechnologicalCorrespondence() {
-		IECTechnologicalCorrespondenceImpl iecTechnologicalCorrespondence = new IECTechnologicalCorrespondenceImpl();
-		return iecTechnologicalCorrespondence;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECTechnologicalCorrespondenceTypes createIECTechnologicalCorrespondenceTypesFromString(EDataType eDataType, String initialValue) {
-		IECTechnologicalCorrespondenceTypes result = IECTechnologicalCorrespondenceTypes.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertIECTechnologicalCorrespondenceTypesToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

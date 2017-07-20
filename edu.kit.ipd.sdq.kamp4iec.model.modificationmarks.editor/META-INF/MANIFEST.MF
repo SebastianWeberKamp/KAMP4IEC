@@ -17,9 +17,9 @@ Require-Bundle: edu.kit.ipd.sdq.kamp;bundle-version="1.0.0",
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec;bundle-version="0.1.0",
  edu.kit.ipd.sdq.kamp4iec.model.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp.model.modificationmarks.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec;bundle-version="0.1.0",
  edu.kit.ipd.sdq.kamp.model.modificationmarks.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

@@ -1,0 +1,16 @@
+package edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.editor;
+
+
+public class ChangePropagationAction extends AbstractChangePropagationAction<IECArchitectureVersion> {
+
+	@Override
+	protected AbstractChangePropagationAnalysis<IECArchitectureVersion> createChangePropagationAnalysis() {
+		return new IECChangePropagationAnalysis();
+	}
+
+	@Override
+	protected AbstractArchitectureVersionPersistency<IECArchitectureVersion> createArchitectureVersionPersistency() {
+		return new IECArchitectureVersionPersistency();
+	}
+
+}

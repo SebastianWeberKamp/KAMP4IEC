@@ -9,11 +9,16 @@ import java.util.Set;
 
 import org.eclipse.emf.ecore.EObject;
 
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunctionBlock;
@@ -73,6 +78,9 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep = 
 				new HashMap<EObject, AbstractModification<?,EObject>>();
 		
+		// Add seed modifications
+		calculateAndMarkGlobalVariableSeedModifications(version);
+		
 		// 1 GlobalVariable -> FunctionBlock
 		calculateAndMarkGlobalVariableToFunctionBlockPropagation(version, elementsMarkedInThisStep);
 		
@@ -83,11 +91,15 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		}
 	}
 	
+	protected void calculateAndMarkGlobalVariableSeedModifications(IECArchitectureVersion version) {
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, GlobalVariable.class));
+	}
+	
 	protected void calculateAndMarkGlobalVariableToFunctionBlockPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
 		List<GlobalVariable> markedGlobalVariables = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked.getClass().equals(GlobalVariable.class)) {
+			if(marked instanceof GlobalVariable) {
 				markedGlobalVariables.add((GlobalVariable) marked);
 			}
 		}

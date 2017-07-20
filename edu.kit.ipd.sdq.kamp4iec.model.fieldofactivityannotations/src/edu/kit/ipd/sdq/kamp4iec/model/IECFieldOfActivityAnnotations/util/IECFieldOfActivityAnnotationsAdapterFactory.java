@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.util;
 
-import de.uka.ipd.sdq.identifier.Identifier;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -94,28 +92,8 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 				return createIECMetadataFileAggregationAdapter();
 			}
 			@Override
-			public Adapter caseIECBuildSpecification(IECBuildSpecification object) {
-				return createIECBuildSpecificationAdapter();
-			}
-			@Override
-			public Adapter caseIECBuildConfiguration(IECBuildConfiguration object) {
-				return createIECBuildConfigurationAdapter();
-			}
-			@Override
-			public Adapter caseIECThirdPartyComponentOrLibrary(IECThirdPartyComponentOrLibrary object) {
-				return createIECThirdPartyComponentOrLibraryAdapter();
-			}
-			@Override
 			public Adapter caseIECTestSpecification(IECTestSpecification object) {
 				return createIECTestSpecificationAdapter();
-			}
-			@Override
-			public Adapter caseIECReleaseSpecification(IECReleaseSpecification object) {
-				return createIECReleaseSpecificationAdapter();
-			}
-			@Override
-			public Adapter caseIECReleaseConfiguration(IECReleaseConfiguration object) {
-				return createIECReleaseConfigurationAdapter();
 			}
 			@Override
 			public Adapter caseIECDeploymentSpecification(IECDeploymentSpecification object) {
@@ -178,20 +156,12 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 				return createIECDeveloperAdapter();
 			}
 			@Override
-			public Adapter caseIECBuildConfigurator(IECBuildConfigurator object) {
-				return createIECBuildConfiguratorAdapter();
-			}
-			@Override
 			public Adapter caseIECTestDeveloper(IECTestDeveloper object) {
 				return createIECTestDeveloperAdapter();
 			}
 			@Override
 			public Adapter caseIECTester(IECTester object) {
 				return createIECTesterAdapter();
-			}
-			@Override
-			public Adapter caseIECReleaseConfigurator(IECReleaseConfigurator object) {
-				return createIECReleaseConfiguratorAdapter();
 			}
 			@Override
 			public Adapter caseIECDeployer(IECDeployer object) {
@@ -212,26 +182,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 			@Override
 			public Adapter caseIECTestCaseAggregation(IECTestCaseAggregation object) {
 				return createIECTestCaseAggregationAdapter();
-			}
-			@Override
-			public Adapter caseIECDesignPatternSpecification(IECDesignPatternSpecification object) {
-				return createIECDesignPatternSpecificationAdapter();
-			}
-			@Override
-			public Adapter caseIECDesignPatternRole(IECDesignPatternRole object) {
-				return createIECDesignPatternRoleAdapter();
-			}
-			@Override
-			public Adapter caseIECTechnologySpecification(IECTechnologySpecification object) {
-				return createIECTechnologySpecificationAdapter();
-			}
-			@Override
-			public Adapter caseIECTechnologicalCorrespondence(IECTechnologicalCorrespondence object) {
-				return createIECTechnologicalCorrespondenceAdapter();
-			}
-			@Override
-			public Adapter caseIdentifier(Identifier object) {
-				return createIdentifierAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -338,48 +288,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildSpecification <em>IEC Build Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildSpecification
-	 * @generated
-	 */
-	public Adapter createIECBuildSpecificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfiguration <em>IEC Build Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfiguration
-	 * @generated
-	 */
-	public Adapter createIECBuildConfigurationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECThirdPartyComponentOrLibrary <em>IEC Third Party Component Or Library</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECThirdPartyComponentOrLibrary
-	 * @generated
-	 */
-	public Adapter createIECThirdPartyComponentOrLibraryAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification <em>IEC Test Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -390,34 +298,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	 * @generated
 	 */
 	public Adapter createIECTestSpecificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseSpecification <em>IEC Release Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseSpecification
-	 * @generated
-	 */
-	public Adapter createIECReleaseSpecificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfiguration <em>IEC Release Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfiguration
-	 * @generated
-	 */
-	public Adapter createIECReleaseConfigurationAdapter() {
 		return null;
 	}
 
@@ -632,20 +512,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfigurator <em>IEC Build Configurator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfigurator
-	 * @generated
-	 */
-	public Adapter createIECBuildConfiguratorAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestDeveloper <em>IEC Test Developer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -670,20 +536,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	 * @generated
 	 */
 	public Adapter createIECTesterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfigurator <em>IEC Release Configurator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfigurator
-	 * @generated
-	 */
-	public Adapter createIECReleaseConfiguratorAdapter() {
 		return null;
 	}
 
@@ -754,76 +606,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	 * @generated
 	 */
 	public Adapter createIECTestCaseAggregationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternSpecification <em>IEC Design Pattern Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternSpecification
-	 * @generated
-	 */
-	public Adapter createIECDesignPatternSpecificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternRole <em>IEC Design Pattern Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternRole
-	 * @generated
-	 */
-	public Adapter createIECDesignPatternRoleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologySpecification <em>IEC Technology Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologySpecification
-	 * @generated
-	 */
-	public Adapter createIECTechnologySpecificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologicalCorrespondence <em>IEC Technological Correspondence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologicalCorrespondence
-	 * @generated
-	 */
-	public Adapter createIECTechnologicalCorrespondenceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link de.uka.ipd.sdq.identifier.Identifier <em>Identifier</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see de.uka.ipd.sdq.identifier.Identifier
-	 * @generated
-	 */
-	public Adapter createIdentifierAdapter() {
 		return null;
 	}
 

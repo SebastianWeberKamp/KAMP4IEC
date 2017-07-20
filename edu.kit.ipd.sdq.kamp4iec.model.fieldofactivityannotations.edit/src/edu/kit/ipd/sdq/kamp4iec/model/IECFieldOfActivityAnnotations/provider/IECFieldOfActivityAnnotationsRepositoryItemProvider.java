@@ -78,13 +78,9 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEVELOPMENT_ARTEFACT_SPECIFICATION);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__BUILD_SPECIFICATION);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__RELEASE_SPECIFICATION);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TECHNOLOGY_SPECIFICATION);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DESIGN_PATTERN_SPECIFICATION);
 		}
 		return childrenFeatures;
 	}
@@ -138,13 +134,9 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 
 		switch (notification.getFeatureID(IECFieldOfActivityAnnotationsRepository.class)) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEVELOPMENT_ARTEFACT_SPECIFICATION:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__BUILD_SPECIFICATION:
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__RELEASE_SPECIFICATION:
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TECHNOLOGY_SPECIFICATION:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DESIGN_PATTERN_SPECIFICATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -169,18 +161,8 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__BUILD_SPECIFICATION,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECBuildSpecification()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECTestSpecification()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__RELEASE_SPECIFICATION,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECReleaseSpecification()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -191,16 +173,6 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECStaffSpecification()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TECHNOLOGY_SPECIFICATION,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECTechnologySpecification()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DESIGN_PATTERN_SPECIFICATION,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECDesignPatternSpecification()));
 	}
 
 	/**

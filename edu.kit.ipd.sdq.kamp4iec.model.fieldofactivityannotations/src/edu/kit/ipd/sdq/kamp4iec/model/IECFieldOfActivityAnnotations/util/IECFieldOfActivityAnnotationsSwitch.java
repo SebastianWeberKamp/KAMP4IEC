@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.util;
 
-import de.uka.ipd.sdq.identifier.Identifier;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -108,41 +106,9 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_BUILD_SPECIFICATION: {
-				IECBuildSpecification iecBuildSpecification = (IECBuildSpecification)theEObject;
-				T result = caseIECBuildSpecification(iecBuildSpecification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_BUILD_CONFIGURATION: {
-				IECBuildConfiguration iecBuildConfiguration = (IECBuildConfiguration)theEObject;
-				T result = caseIECBuildConfiguration(iecBuildConfiguration);
-				if (result == null) result = caseIECFile(iecBuildConfiguration);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_THIRD_PARTY_COMPONENT_OR_LIBRARY: {
-				IECThirdPartyComponentOrLibrary iecThirdPartyComponentOrLibrary = (IECThirdPartyComponentOrLibrary)theEObject;
-				T result = caseIECThirdPartyComponentOrLibrary(iecThirdPartyComponentOrLibrary);
-				if (result == null) result = caseIECFile(iecThirdPartyComponentOrLibrary);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION: {
 				IECTestSpecification iecTestSpecification = (IECTestSpecification)theEObject;
 				T result = caseIECTestSpecification(iecTestSpecification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_RELEASE_SPECIFICATION: {
-				IECReleaseSpecification iecReleaseSpecification = (IECReleaseSpecification)theEObject;
-				T result = caseIECReleaseSpecification(iecReleaseSpecification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_RELEASE_CONFIGURATION: {
-				IECReleaseConfiguration iecReleaseConfiguration = (IECReleaseConfiguration)theEObject;
-				T result = caseIECReleaseConfiguration(iecReleaseConfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -243,13 +209,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_BUILD_CONFIGURATOR: {
-				IECBuildConfigurator iecBuildConfigurator = (IECBuildConfigurator)theEObject;
-				T result = caseIECBuildConfigurator(iecBuildConfigurator);
-				if (result == null) result = caseIECRole(iecBuildConfigurator);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_DEVELOPER: {
 				IECTestDeveloper iecTestDeveloper = (IECTestDeveloper)theEObject;
 				T result = caseIECTestDeveloper(iecTestDeveloper);
@@ -261,13 +220,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 				IECTester iecTester = (IECTester)theEObject;
 				T result = caseIECTester(iecTester);
 				if (result == null) result = caseIECRole(iecTester);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_RELEASE_CONFIGURATOR: {
-				IECReleaseConfigurator iecReleaseConfigurator = (IECReleaseConfigurator)theEObject;
-				T result = caseIECReleaseConfigurator(iecReleaseConfigurator);
-				if (result == null) result = caseIECRole(iecReleaseConfigurator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -299,32 +251,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_CASE_AGGREGATION: {
 				IECTestCaseAggregation iecTestCaseAggregation = (IECTestCaseAggregation)theEObject;
 				T result = caseIECTestCaseAggregation(iecTestCaseAggregation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_DESIGN_PATTERN_SPECIFICATION: {
-				IECDesignPatternSpecification iecDesignPatternSpecification = (IECDesignPatternSpecification)theEObject;
-				T result = caseIECDesignPatternSpecification(iecDesignPatternSpecification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_DESIGN_PATTERN_ROLE: {
-				IECDesignPatternRole iecDesignPatternRole = (IECDesignPatternRole)theEObject;
-				T result = caseIECDesignPatternRole(iecDesignPatternRole);
-				if (result == null) result = caseIdentifier(iecDesignPatternRole);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_TECHNOLOGY_SPECIFICATION: {
-				IECTechnologySpecification iecTechnologySpecification = (IECTechnologySpecification)theEObject;
-				T result = caseIECTechnologySpecification(iecTechnologySpecification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_TECHNOLOGICAL_CORRESPONDENCE: {
-				IECTechnologicalCorrespondence iecTechnologicalCorrespondence = (IECTechnologicalCorrespondence)theEObject;
-				T result = caseIECTechnologicalCorrespondence(iecTechnologicalCorrespondence);
-				if (result == null) result = caseIdentifier(iecTechnologicalCorrespondence);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -423,51 +349,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Build Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Build Specification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECBuildSpecification(IECBuildSpecification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Build Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Build Configuration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECBuildConfiguration(IECBuildConfiguration object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Third Party Component Or Library</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Third Party Component Or Library</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECThirdPartyComponentOrLibrary(IECThirdPartyComponentOrLibrary object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IEC Test Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -479,36 +360,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIECTestSpecification(IECTestSpecification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Release Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Release Specification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECReleaseSpecification(IECReleaseSpecification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Release Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Release Configuration</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECReleaseConfiguration(IECReleaseConfiguration object) {
 		return null;
 	}
 
@@ -738,21 +589,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Build Configurator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Build Configurator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECBuildConfigurator(IECBuildConfigurator object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IEC Test Developer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -779,21 +615,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIECTester(IECTester object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Release Configurator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Release Configurator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECReleaseConfigurator(IECReleaseConfigurator object) {
 		return null;
 	}
 
@@ -869,81 +690,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIECTestCaseAggregation(IECTestCaseAggregation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Design Pattern Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Design Pattern Specification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECDesignPatternSpecification(IECDesignPatternSpecification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Design Pattern Role</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Design Pattern Role</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECDesignPatternRole(IECDesignPatternRole object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Technology Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Technology Specification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECTechnologySpecification(IECTechnologySpecification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Technological Correspondence</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Technological Correspondence</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECTechnologicalCorrespondence(IECTechnologicalCorrespondence object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIdentifier(Identifier object) {
 		return null;
 	}
 

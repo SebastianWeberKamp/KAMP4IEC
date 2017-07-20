@@ -76,33 +76,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	IECMetadataFileAggregation createIECMetadataFileAggregation();
 
 	/**
-	 * Returns a new object of class '<em>IEC Build Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Build Specification</em>'.
-	 * @generated
-	 */
-	IECBuildSpecification createIECBuildSpecification();
-
-	/**
-	 * Returns a new object of class '<em>IEC Build Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Build Configuration</em>'.
-	 * @generated
-	 */
-	IECBuildConfiguration createIECBuildConfiguration();
-
-	/**
-	 * Returns a new object of class '<em>IEC Third Party Component Or Library</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Third Party Component Or Library</em>'.
-	 * @generated
-	 */
-	IECThirdPartyComponentOrLibrary createIECThirdPartyComponentOrLibrary();
-
-	/**
 	 * Returns a new object of class '<em>IEC Test Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,24 +83,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	 * @generated
 	 */
 	IECTestSpecification createIECTestSpecification();
-
-	/**
-	 * Returns a new object of class '<em>IEC Release Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Release Specification</em>'.
-	 * @generated
-	 */
-	IECReleaseSpecification createIECReleaseSpecification();
-
-	/**
-	 * Returns a new object of class '<em>IEC Release Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Release Configuration</em>'.
-	 * @generated
-	 */
-	IECReleaseConfiguration createIECReleaseConfiguration();
 
 	/**
 	 * Returns a new object of class '<em>IEC Deployment Specification</em>'.
@@ -256,15 +211,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	IECDeveloper createIECDeveloper();
 
 	/**
-	 * Returns a new object of class '<em>IEC Build Configurator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Build Configurator</em>'.
-	 * @generated
-	 */
-	IECBuildConfigurator createIECBuildConfigurator();
-
-	/**
 	 * Returns a new object of class '<em>IEC Test Developer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -283,15 +229,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	IECTester createIECTester();
 
 	/**
-	 * Returns a new object of class '<em>IEC Release Configurator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Release Configurator</em>'.
-	 * @generated
-	 */
-	IECReleaseConfigurator createIECReleaseConfigurator();
-
-	/**
 	 * Returns a new object of class '<em>IEC Deployer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,42 +236,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	 * @generated
 	 */
 	IECDeployer createIECDeployer();
-
-	/**
-	 * Returns a new object of class '<em>IEC Design Pattern Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Design Pattern Specification</em>'.
-	 * @generated
-	 */
-	IECDesignPatternSpecification createIECDesignPatternSpecification();
-
-	/**
-	 * Returns a new object of class '<em>IEC Design Pattern Role</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Design Pattern Role</em>'.
-	 * @generated
-	 */
-	IECDesignPatternRole createIECDesignPatternRole();
-
-	/**
-	 * Returns a new object of class '<em>IEC Technology Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Technology Specification</em>'.
-	 * @generated
-	 */
-	IECTechnologySpecification createIECTechnologySpecification();
-
-	/**
-	 * Returns a new object of class '<em>IEC Technological Correspondence</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Technological Correspondence</em>'.
-	 * @generated
-	 */
-	IECTechnologicalCorrespondence createIECTechnologicalCorrespondence();
 
 	/**
 	 * Returns the package supported by this factory.

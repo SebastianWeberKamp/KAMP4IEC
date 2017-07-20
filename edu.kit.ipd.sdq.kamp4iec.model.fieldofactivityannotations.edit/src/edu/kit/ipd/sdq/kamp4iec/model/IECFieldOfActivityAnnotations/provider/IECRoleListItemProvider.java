@@ -156,22 +156,12 @@ public class IECRoleListItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_ROLE_LIST__ROLES,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECBuildConfigurator()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_ROLE_LIST__ROLES,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECTestDeveloper()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_ROLE_LIST__ROLES,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECTester()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_ROLE_LIST__ROLES,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECReleaseConfigurator()));
 
 		newChildDescriptors.add
 			(createChildParameter

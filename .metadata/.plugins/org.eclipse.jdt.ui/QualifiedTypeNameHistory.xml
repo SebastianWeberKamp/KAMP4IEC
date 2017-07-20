@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.AbstractEnrichedWorkplanDerivation"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModifyFunctionBlock"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.Modificationmarks.ModificationmarksFactory"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureModelLookup"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.util.MapUtil"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.FieldOfActivityAnnotations.FieldOfActivityAnnotationsRepository"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.BasicActivity"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -26,8 +12,6 @@
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureAnnotationLookup"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.Activity"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.IECActivityType"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.FieldOfActivityAnnotations.SourceFile"/>
@@ -43,15 +27,11 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersionPersistency"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.provider.IECModificationmarksItemProviderAdapterFactory"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesFactory"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksPackage"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationRepository"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksFactory"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECSeedModifications"/>
@@ -60,4 +40,24 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.AbstractKAMP4IECModificationRepository"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunctionBlock"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyGlobalVariable"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.Activity"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.workplan.AbstractActivityType"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractChangePropagationAction"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.IECChangePropagationAnalysis"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.derivation.IECDifferenceCalculation"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.derivation.IECEnrichedWorkplanDerivation"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersionPersistency"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksFactory"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable"/>
 </qualifiedTypeNameHistroy>

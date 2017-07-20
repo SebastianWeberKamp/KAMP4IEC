@@ -5,20 +5,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECFieldOfActivityAnnotationsRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="developmentArtefactSpecification"
         eType="#//IECDevelopmentArtefactSpecification" containment="true" eOpposite="#//IECDevelopmentArtefactSpecification/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="buildSpecification" eType="#//IECBuildSpecification"
-        containment="true" eOpposite="#//IECBuildSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testSpecification" eType="#//IECTestSpecification"
         containment="true" eOpposite="#//IECTestSpecification/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="releaseSpecification" eType="#//IECReleaseSpecification"
-        containment="true" eOpposite="#//IECReleaseSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="deploymentSpecification"
         eType="#//IECDeploymentSpecification" containment="true" eOpposite="#//IECDeploymentSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="staffSpecification" eType="#//IECStaffSpecification"
         containment="true" eOpposite="#//IECStaffSpecification/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="technologySpecification"
-        eType="#//IECTechnologySpecification" containment="true" eOpposite="#//IECTechnologySpecification/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="designPatternSpecification"
-        eType="#//IECDesignPatternSpecification" containment="true" eOpposite="#//IECDesignPatternSpecification/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECDevelopmentArtefactSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -52,26 +44,6 @@
         eType="#//IECDevelopmentArtefactSpecification" eOpposite="#//IECDevelopmentArtefactSpecification/metadataFileAggregations"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECBuildSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECFieldOfActivityAnnotationsRepository" eOpposite="#//IECFieldOfActivityAnnotationsRepository/buildSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="buildConfigurations" upperBound="-1"
-        eType="#//IECBuildConfiguration" containment="true" eOpposite="#//IECBuildConfiguration/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="thirdPartyComponentOrLibraries"
-        upperBound="-1" eType="#//IECThirdPartyComponentOrLibrary" containment="true"
-        eOpposite="#//IECThirdPartyComponentOrLibrary/parent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECBuildConfiguration" eSuperTypes="#//IECFile">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECBuildSpecification" eOpposite="#//IECBuildSpecification/buildConfigurations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECThirdPartyComponentOrLibrary" eSuperTypes="#//IECFile">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECBuildSpecification" eOpposite="#//IECBuildSpecification/thirdPartyComponentOrLibraries"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECTestSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECFieldOfActivityAnnotationsRepository" eOpposite="#//IECFieldOfActivityAnnotationsRepository/testSpecification"/>
@@ -89,20 +61,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="integrationTestCaseAggregations"
         upperBound="-1" eType="#//IECIntegrationTestCaseAggregation" containment="true"
         eOpposite="#//IECIntegrationTestCaseAggregation/parent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECReleaseSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="releaseConfigurations"
-        upperBound="-1" eType="#//IECReleaseConfiguration" containment="true" eOpposite="#//IECReleaseConfiguration/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECFieldOfActivityAnnotationsRepository" eOpposite="#//IECFieldOfActivityAnnotationsRepository/releaseSpecification"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECReleaseConfiguration">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECReleaseSpecification" eOpposite="#//IECReleaseSpecification/releaseConfigurations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pathname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECDeploymentSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="runtimeInstances" upperBound="-1"
@@ -198,10 +156,8 @@
         eType="#//IECRole" containment="true" eOpposite="#//IECRole/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECDeveloper" eSuperTypes="#//IECRole"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IECBuildConfigurator" eSuperTypes="#//IECRole"/>
   <eClassifiers xsi:type="ecore:EClass" name="IECTestDeveloper" eSuperTypes="#//IECRole"/>
   <eClassifiers xsi:type="ecore:EClass" name="IECTester" eSuperTypes="#//IECRole"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IECReleaseConfigurator" eSuperTypes="#//IECRole"/>
   <eClassifiers xsi:type="ecore:EClass" name="IECDeployer" eSuperTypes="#//IECRole"/>
   <eClassifiers xsi:type="ecore:EClass" name="IECFile" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -217,40 +173,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECTestCaseAggregation" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfTestcases" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameOfTestSuite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECDesignPatternSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECFieldOfActivityAnnotationsRepository" eOpposite="#//IECFieldOfActivityAnnotationsRepository/designPatternSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="designPatternRoles" ordered="false"
-        upperBound="-1" eType="#//IECDesignPatternRole" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECDesignPatternRole" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedRole" ordered="false"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/ProvidedRole"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" ordered="false"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECTechnologySpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECFieldOfActivityAnnotationsRepository" eOpposite="#//IECFieldOfActivityAnnotationsRepository/technologySpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="technologicalCorrespondences"
-        ordered="false" upperBound="-1" eType="#//IECTechnologicalCorrespondence"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECTechnologicalCorrespondence" eSuperTypes="../../de.uka.ipd.sdq.identifier/model/identifier.ecore#//Identifier">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="technologicalCorrespondenceType"
-        ordered="false" eType="#//IECTechnologicalCorrespondenceTypes"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" ordered="false"
-        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="IECTechnologicalCorrespondenceTypes">
-    <eLiterals name="SetOfClasses"/>
-    <eLiterals name="JavaPackages" value="1"/>
-    <eLiterals name="Plugins" value="2"/>
-    <eLiterals name="EclipsePlugins" value="3"/>
-    <eLiterals name="EJB" value="4"/>
-    <eLiterals name="Packages" value="5"/>
-    <eLiterals name="Namespaces" value="6"/>
-    <eLiterals name="Directories" value="7"/>
   </eClassifiers>
 </ecore:EPackage>

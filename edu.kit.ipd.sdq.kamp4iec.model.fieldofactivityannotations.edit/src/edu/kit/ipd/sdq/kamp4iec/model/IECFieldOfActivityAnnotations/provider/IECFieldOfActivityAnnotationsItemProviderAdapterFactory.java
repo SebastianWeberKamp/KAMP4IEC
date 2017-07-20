@@ -210,75 +210,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildSpecification} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECBuildSpecificationItemProvider iecBuildSpecificationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildSpecification}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECBuildSpecificationAdapter() {
-		if (iecBuildSpecificationItemProvider == null) {
-			iecBuildSpecificationItemProvider = new IECBuildSpecificationItemProvider(this);
-		}
-
-		return iecBuildSpecificationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfiguration} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECBuildConfigurationItemProvider iecBuildConfigurationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfiguration}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECBuildConfigurationAdapter() {
-		if (iecBuildConfigurationItemProvider == null) {
-			iecBuildConfigurationItemProvider = new IECBuildConfigurationItemProvider(this);
-		}
-
-		return iecBuildConfigurationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECThirdPartyComponentOrLibrary} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECThirdPartyComponentOrLibraryItemProvider iecThirdPartyComponentOrLibraryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECThirdPartyComponentOrLibrary}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECThirdPartyComponentOrLibraryAdapter() {
-		if (iecThirdPartyComponentOrLibraryItemProvider == null) {
-			iecThirdPartyComponentOrLibraryItemProvider = new IECThirdPartyComponentOrLibraryItemProvider(this);
-		}
-
-		return iecThirdPartyComponentOrLibraryItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,52 +230,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		}
 
 		return iecTestSpecificationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseSpecification} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECReleaseSpecificationItemProvider iecReleaseSpecificationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseSpecification}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECReleaseSpecificationAdapter() {
-		if (iecReleaseSpecificationItemProvider == null) {
-			iecReleaseSpecificationItemProvider = new IECReleaseSpecificationItemProvider(this);
-		}
-
-		return iecReleaseSpecificationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfiguration} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECReleaseConfigurationItemProvider iecReleaseConfigurationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfiguration}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECReleaseConfigurationAdapter() {
-		if (iecReleaseConfigurationItemProvider == null) {
-			iecReleaseConfigurationItemProvider = new IECReleaseConfigurationItemProvider(this);
-		}
-
-		return iecReleaseConfigurationItemProvider;
 	}
 
 	/**
@@ -670,29 +555,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfigurator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECBuildConfiguratorItemProvider iecBuildConfiguratorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfigurator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECBuildConfiguratorAdapter() {
-		if (iecBuildConfiguratorItemProvider == null) {
-			iecBuildConfiguratorItemProvider = new IECBuildConfiguratorItemProvider(this);
-		}
-
-		return iecBuildConfiguratorItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestDeveloper} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -739,29 +601,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfigurator} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECReleaseConfiguratorItemProvider iecReleaseConfiguratorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfigurator}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECReleaseConfiguratorAdapter() {
-		if (iecReleaseConfiguratorItemProvider == null) {
-			iecReleaseConfiguratorItemProvider = new IECReleaseConfiguratorItemProvider(this);
-		}
-
-		return iecReleaseConfiguratorItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeployer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -782,98 +621,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		}
 
 		return iecDeployerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternSpecification} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECDesignPatternSpecificationItemProvider iecDesignPatternSpecificationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternSpecification}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECDesignPatternSpecificationAdapter() {
-		if (iecDesignPatternSpecificationItemProvider == null) {
-			iecDesignPatternSpecificationItemProvider = new IECDesignPatternSpecificationItemProvider(this);
-		}
-
-		return iecDesignPatternSpecificationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternRole} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECDesignPatternRoleItemProvider iecDesignPatternRoleItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDesignPatternRole}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECDesignPatternRoleAdapter() {
-		if (iecDesignPatternRoleItemProvider == null) {
-			iecDesignPatternRoleItemProvider = new IECDesignPatternRoleItemProvider(this);
-		}
-
-		return iecDesignPatternRoleItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologySpecification} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECTechnologySpecificationItemProvider iecTechnologySpecificationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologySpecification}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECTechnologySpecificationAdapter() {
-		if (iecTechnologySpecificationItemProvider == null) {
-			iecTechnologySpecificationItemProvider = new IECTechnologySpecificationItemProvider(this);
-		}
-
-		return iecTechnologySpecificationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologicalCorrespondence} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECTechnologicalCorrespondenceItemProvider iecTechnologicalCorrespondenceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTechnologicalCorrespondence}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECTechnologicalCorrespondenceAdapter() {
-		if (iecTechnologicalCorrespondenceItemProvider == null) {
-			iecTechnologicalCorrespondenceItemProvider = new IECTechnologicalCorrespondenceItemProvider(this);
-		}
-
-		return iecTechnologicalCorrespondenceItemProvider;
 	}
 
 	/**
@@ -981,12 +728,7 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		if (iecSourceFileAggregationItemProvider != null) iecSourceFileAggregationItemProvider.dispose();
 		if (iecMetadataFileItemProvider != null) iecMetadataFileItemProvider.dispose();
 		if (iecMetadataFileAggregationItemProvider != null) iecMetadataFileAggregationItemProvider.dispose();
-		if (iecBuildSpecificationItemProvider != null) iecBuildSpecificationItemProvider.dispose();
-		if (iecBuildConfigurationItemProvider != null) iecBuildConfigurationItemProvider.dispose();
-		if (iecThirdPartyComponentOrLibraryItemProvider != null) iecThirdPartyComponentOrLibraryItemProvider.dispose();
 		if (iecTestSpecificationItemProvider != null) iecTestSpecificationItemProvider.dispose();
-		if (iecReleaseSpecificationItemProvider != null) iecReleaseSpecificationItemProvider.dispose();
-		if (iecReleaseConfigurationItemProvider != null) iecReleaseConfigurationItemProvider.dispose();
 		if (iecDeploymentSpecificationItemProvider != null) iecDeploymentSpecificationItemProvider.dispose();
 		if (iecRuntimeInstanceItemProvider != null) iecRuntimeInstanceItemProvider.dispose();
 		if (iecRuntimeInstanceAggregationItemProvider != null) iecRuntimeInstanceAggregationItemProvider.dispose();
@@ -1001,15 +743,9 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		if (iecPersonItemProvider != null) iecPersonItemProvider.dispose();
 		if (iecRoleListItemProvider != null) iecRoleListItemProvider.dispose();
 		if (iecDeveloperItemProvider != null) iecDeveloperItemProvider.dispose();
-		if (iecBuildConfiguratorItemProvider != null) iecBuildConfiguratorItemProvider.dispose();
 		if (iecTestDeveloperItemProvider != null) iecTestDeveloperItemProvider.dispose();
 		if (iecTesterItemProvider != null) iecTesterItemProvider.dispose();
-		if (iecReleaseConfiguratorItemProvider != null) iecReleaseConfiguratorItemProvider.dispose();
 		if (iecDeployerItemProvider != null) iecDeployerItemProvider.dispose();
-		if (iecDesignPatternSpecificationItemProvider != null) iecDesignPatternSpecificationItemProvider.dispose();
-		if (iecDesignPatternRoleItemProvider != null) iecDesignPatternRoleItemProvider.dispose();
-		if (iecTechnologySpecificationItemProvider != null) iecTechnologySpecificationItemProvider.dispose();
-		if (iecTechnologicalCorrespondenceItemProvider != null) iecTechnologicalCorrespondenceItemProvider.dispose();
 	}
 
 }

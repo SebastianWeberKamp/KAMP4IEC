@@ -21,8 +21,12 @@ public class IECArchitectureModelLookup {
 		
 		for (Program program : version.getKonfiguration().getContainsProgram()) {
 			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
-				if (functionBlock.getAccessesGlobalVariable().contains(globalVariables)) {
-					MapUtil.putOrAddToMap(results, functionBlock, globalVariables);
+				for(GlobalVariable globVar : globalVariables) {
+					for(GlobalVariable accessed : functionBlock.getAccessesGlobalVariable()) {
+						if (accessed.getId().equals(globVar.getId())) {
+							MapUtil.putOrAddToMap(results, functionBlock, globVar);
+						}
+					}
 				}
 			} 
 		}

@@ -12,3 +12,6 @@
 1500451235328	Rename type 'EnrichedWorkplanDerivation'
 1500451239637	Rename type 'InternalModificationDerivation'
 1500451243828	Rename type 'SubactivityDerivation'
+1500453212296	Rename method 'savePCMAndKAMPModels'
+1500453284839	Rename local variable 'systemfilePath'
+1500453348907	Rename method 'registerKAPSPackages'

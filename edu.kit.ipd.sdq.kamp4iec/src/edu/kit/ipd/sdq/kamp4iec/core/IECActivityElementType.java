@@ -1,10 +1,8 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECBuildConfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECReleaseConfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
@@ -17,9 +15,7 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	// annotation-related
 	SOURCECODEFILES(IECSourceFile.class),
 	METADATAFILES(IECMetadataFile.class),
-	BUILDCONFIGURATION(IECBuildConfiguration.class),
 	TESTCASE(IECTestCase.class), 
-	RELEASECONFIGURATION(IECReleaseConfiguration.class),
 	DEPLOYMENTCONFIGURATION(IECDeploymentSpecification.class);
 	private final Class<?> clazz;
 	private final String name;
