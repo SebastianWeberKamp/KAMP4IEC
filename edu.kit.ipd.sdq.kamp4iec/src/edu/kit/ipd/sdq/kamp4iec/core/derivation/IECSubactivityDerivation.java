@@ -35,7 +35,7 @@ public class IECSubactivityDerivation {
 		}
 	}
 
-	private void deriveSubactivity(FunctionBlock globalVariable, Activity parentActivity, IECArchitectureVersion version) {
+	private void deriveSubactivity(FunctionBlock functionBlock, Activity parentActivity, IECArchitectureVersion version) {
 		//TODO
 	}
 
