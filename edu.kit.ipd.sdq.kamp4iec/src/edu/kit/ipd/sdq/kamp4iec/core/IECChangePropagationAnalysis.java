@@ -44,7 +44,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 
 	@Override
 	public void runChangePropagationAnalysis(IECArchitectureVersion version) {
-		long timeBefore = System.currentTimeMillis();
 		// Setup
 		this.prepareAnalysis(version);
 		
@@ -53,7 +52,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			
 		// Update
 
-		System.out.println("Time: " + (System.currentTimeMillis() - timeBefore));
 		
 	}
 	

@@ -1,9 +1,11 @@
 package edu.kit.ipd.sdq.kamp4iec.core.derivation;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
@@ -12,12 +14,14 @@ import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.AbstractKAMP4IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyElement;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyGlobalVariable;
 
@@ -32,6 +36,7 @@ public class IECInternalModificationDerivation {
 		if (targetVersion.getModificationMarkRepository() != null) {
 			this.findRelevantPropagationSteps(targetVersion.getModificationMarkRepository());
 			this.deriveFunctionBlockModifications(activityList);
+			this.deriveGlobalVariableModifications(targetVersion, activityList);
 			this.deriveGlobalVariableModifications(activityList);
 		}
 		return activityList;
@@ -62,12 +67,40 @@ public class IECInternalModificationDerivation {
 	}
 
 	private void deriveGlobalVariableModifications(List<Activity> activityList) {
-		List<IECModifyGlobalVariable> globalVariableModifications = new ArrayList<IECModifyGlobalVariable>(this.
-				getIECChangePropagationDueToDataDependency().getGlobalVariableModifications());
+		List<IECModifyGlobalVariable> globalVariableModifications = new ArrayList<IECModifyGlobalVariable>(this.getIECChangePropagationDueToDataDependency().getGlobalVariableModifications());
 		for (IECModifyGlobalVariable modifyGlobalVariable : globalVariableModifications) {
 			activityList.add(IECInternalModificationDerivation.createModificationActivity(
 					modifyGlobalVariable, getCausingElementsNames(modifyGlobalVariable), IECActivityElementType.GLOBALVARIABLE));
 		}
+	}
+	
+	private void deriveGlobalVariableModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
+		Collection<IECModifyGlobalVariable> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyGlobalVariable.class);
+		for (IECModifyGlobalVariable modifyComponent : modifyComponents) {
+			Activity componentActivity = createModificationActivity(modifyComponent, 
+					   IECActivityElementType.GLOBALVARIABLE);
+			activityList.add(componentActivity);
+			this.deriveSubActivities(modifyComponent, componentActivity);
+		}
+	}
+
+	private void deriveSubActivities(IECModifyElement<?> modifyComponent, Activity componentActivity) {
+//		for (ISModifyProvidedRole modifyProvidedRole : modifyComponent.getAffectedElement()) {			
+//		    Activity providedRoleActivity = addModificationSubActivity(modifyProvidedRole, 
+//						ISActivityElementType.PROVIDEDROLE, componentActivity);
+//		    for (ISModifySignature modifySignature : modifyProvidedRole.getSignatureModifications()) {	
+//				addModificationSubActivity(modifySignature, ISActivityElementType.PROVIDEDOPERATION, 
+//							providedRoleActivity);
+//			}
+//		}
+//		for (ISModifyRequiredRole modifyRequiredRole : modifyComponent.getRequiredRoleModifications()) {			
+//		    Activity requiredRoleActivity = addModificationSubActivity(modifyRequiredRole, 
+//						ISActivityElementType.REQUIREDROLE, componentActivity);
+//		    for (ISModifySignature modifySignature : modifyRequiredRole.getSignatureModifications()) {
+//				addModificationSubActivity(modifySignature, ISActivityElementType.REQUIREDOPERATION, 
+//							requiredRoleActivity);
+//			}
+//		}
 	}
 
 	public static List<String> getCausingElementsNames(AbstractModification<?, ?> modification) {

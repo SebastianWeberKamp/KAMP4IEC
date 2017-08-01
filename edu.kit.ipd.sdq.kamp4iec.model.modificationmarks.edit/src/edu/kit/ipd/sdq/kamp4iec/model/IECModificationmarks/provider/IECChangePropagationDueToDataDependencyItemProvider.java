@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.IChildCreationExtender;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -158,7 +159,7 @@ public class IECChangePropagationDueToDataDependencyItemProvider extends ChangeP
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return IECModificationmarksEditPlugin.INSTANCE;
+		return ((IChildCreationExtender)adapterFactory).getResourceLocator();
 	}
 
 }

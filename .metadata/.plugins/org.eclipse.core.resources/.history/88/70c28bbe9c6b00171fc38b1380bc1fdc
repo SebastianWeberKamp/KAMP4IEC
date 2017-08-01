@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks/src"
-    modelPluginID="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks" modelName="IECModificationmarks"
-    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
-  <foreignModel>IECModificationmarks.ecore</foreignModel>
-  <genPackages prefix="IECModificationmarks" disposableProviderFactory="true" ecorePackage="IECModificationmarks.ecore#/"/>
-</genmodel:GenModel>

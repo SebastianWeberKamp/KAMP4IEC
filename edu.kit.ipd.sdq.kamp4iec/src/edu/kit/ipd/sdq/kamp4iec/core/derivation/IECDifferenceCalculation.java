@@ -28,8 +28,8 @@ public class IECDifferenceCalculation extends AbstractDifferenceCalculation<IECA
 		
 		List<Diff> konfigurationDiff = calculateDiffModel(baseVersion.getKonfiguration(), targetVersion.getKonfiguration());
 		
-		List<Activity> plantActivities = deriveAddAndRemoveActivities(konfigurationDiff);
-		activityList.addAll(plantActivities);		
+		List<Activity> activities = deriveAddAndRemoveActivities(konfigurationDiff);
+		activityList.addAll(activities);		
 		
 		List<Activity> internalModificationActivities = this.architectureInternalModificationDerivation.deriveInternalModifications(targetVersion);
 		activityList.addAll(internalModificationActivities);

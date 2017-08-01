@@ -19,4 +19,11 @@
                org.eclipse.emf.edit.provider.IItemPropertySource"/>
    </extension>
 
+   <extension point="org.eclipse.emf.edit.childCreationExtenders">
+      <!-- @generated IECModificationmarks -->
+      <extender
+            uri="http://sdq.ipd.kit.edu/Modificationmarks/1.0"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.provider.IECModificationmarksItemProviderAdapterFactory$ModificationmarksChildCreationExtender"/>
+   </extension>
+
 </plugin>
