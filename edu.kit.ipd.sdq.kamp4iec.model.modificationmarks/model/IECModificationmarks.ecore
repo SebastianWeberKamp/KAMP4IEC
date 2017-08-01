@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="IECModificationmarks" nsURI="http://sdq.ipd.kit.edu/IECModificationmarks"
-    nsPrefix="IECModificationmarks">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modificationmarks" nsURI="http://sdq.ipd.kit.edu/modificationmarks"
+    nsPrefix="modificationmarks">
   <eClassifiers xsi:type="ecore:EClass" name="AbstractKAMP4IECModificationRepository"
       abstract="true">
     <eTypeParameters name="T">

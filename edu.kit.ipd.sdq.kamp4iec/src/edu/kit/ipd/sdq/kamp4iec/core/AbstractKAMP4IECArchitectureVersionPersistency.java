@@ -13,7 +13,6 @@ public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends I
 	public static final String FILEEXTENSION_CONFIGURATION = "iecmodel";
 	public static final String FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS = "iecfieldofactivityannotations";
 	public static final String FILEEXTENSION_COMPONENTINTERNALDEPENDENCIES = "componentinternaldependencies";
-	public static final String FILEEXTENSION_MODIFICATIONMARK = "iecmodificationmarks";
 
 	@Override
 	public void save(String targetDirectoryPath, String filename, T version) {

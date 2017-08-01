@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated IECModificationmarks -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.presentation.IECModificationmarksModelWizardID"
+            name="%_UI_IECModificationmarksModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.presentation.IECModificationmarksModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IECModificationmarksModelFile.gif">
+         <description>%_UI_IECModificationmarksModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated IECModificationmarks -->
+      <editor
+            id="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.presentation.IECModificationmarksEditorID"
+            name="%_UI_IECModificationmarksEditor_label"
+            icon="icons/full/obj16/IECModificationmarksModelFile.gif"
+            extensions="modificationmarks"
+            class="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.presentation.IECModificationmarksEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.presentation.IECModificationmarksActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

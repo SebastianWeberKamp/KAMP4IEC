@@ -7,7 +7,7 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>IECModificationmarks.ecore</foreignModel>
   <genPackages prefix="IECModificationmarks" basePackage="edu.kit.ipd.sdq.kamp4iec.model"
-      disposableProviderFactory="true" extensibleProviderFactory="true" childCreationExtenders="true"
+      disposableProviderFactory="true" contentTypeIdentifier="" fileExtensions="modificationmarks"
       ecorePackage="IECModificationmarks.ecore#/">
     <genClasses image="false" ecoreClass="IECModificationmarks.ecore#//AbstractKAMP4IECModificationRepository">
       <genTypeParameters ecoreTypeParameter="IECModificationmarks.ecore#//AbstractKAMP4IECModificationRepository/T"/>

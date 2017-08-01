@@ -1,9 +1,9 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion.ArchitectureVersionParams;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECSeedModifications;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
 
 public class IECArchitectureModelFactoryFacade {
 	
