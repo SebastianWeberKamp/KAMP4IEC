@@ -30,8 +30,8 @@ public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends I
 		
 		if (version.getIECRepository()!=null)
 			saveEmfModelToResource(version.getIECRepository(), targetDirectoryPath, repositoryfilePath, resourceSet);		
-		if (version.getKonfiguration()!=null)
-			saveEmfModelToResource(version.getKonfiguration(), targetDirectoryPath, configurationFilePath, resourceSet);		
+		if (version.getConfiguration()!=null)
+			saveEmfModelToResource(version.getConfiguration(), targetDirectoryPath, configurationFilePath, resourceSet);		
 		if (version.getModificationMarkRepository()!=null)
 			saveEmfModelToResource(version.getModificationMarkRepository(), targetDirectoryPath, internalModFilePath, resourceSet);		
 		if (version.getFieldOfActivityRepository()!=null)

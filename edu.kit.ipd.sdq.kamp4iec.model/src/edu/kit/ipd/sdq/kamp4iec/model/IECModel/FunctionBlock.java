@@ -18,6 +18,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getHasMethod <em>Has Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getHasProperty <em>Has Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsFunction <em>Calls Function</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock()
@@ -114,5 +116,37 @@ public interface FunctionBlock extends IECComponent, FunctionblockResource {
 	 * @generated
 	 */
 	EList<IECPropertyImplementation> getHasProperty();
+
+	/**
+	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uses Enum</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uses Enum</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock_UsesEnum()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
+
+	/**
+	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calls Function</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calls Function</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock_CallsFunction()
+	 * @model
+	 * @generated
+	 */
+	EList<Function> getCallsFunction();
 
 } // FunctionBlock

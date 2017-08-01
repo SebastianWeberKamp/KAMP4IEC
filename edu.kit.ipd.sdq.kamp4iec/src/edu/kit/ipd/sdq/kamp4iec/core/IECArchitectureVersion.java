@@ -5,7 +5,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInt
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.AbstractKAMP4IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
@@ -13,7 +13,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 public class IECArchitectureVersion extends AbstractArchitectureVersion<AbstractKAMP4IECModificationRepository<?>> {
 	private ComponentInternalDependenciesRepository _componentInternalDependencyRepository;
 	private Repository _IECRepository;
-	private Konfiguration _konfiguration;
+	private Configuration _configuration;
 	private IECFieldOfActivityAnnotationsRepository _fieldOfActivityRepository;
 	
 	public static class ArchitectureVersionParams{
@@ -21,7 +21,7 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		public AbstractKAMP4IECModificationRepository<?> modificationMarkRepository;
 		public ComponentInternalDependenciesRepository componentInternalDependencyRepository;
 		public Repository iecRepository;
-		public Konfiguration konfiguration;
+		public Configuration configuration;
 		public IECFieldOfActivityAnnotationsRepository fieldOfActivityRepository;
 	}
 	
@@ -40,11 +40,11 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 					createRepository();
 		}
 		this._IECRepository = params.iecRepository;
-		if (params.konfiguration == null) {
-			_konfiguration = IECModelFactory.eINSTANCE.
-					createKonfiguration();
+		if (params.configuration == null) {
+			_configuration = IECModelFactory.eINSTANCE.
+					createConfiguration();
 		}
-		this._konfiguration = params.konfiguration;
+		this._configuration = params.configuration;
 		
 	}
 	
@@ -65,12 +65,12 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		this._IECRepository = iecRepository;
 	}
 
-	public Konfiguration getKonfiguration() {
-		return _konfiguration;
+	public Configuration getConfiguration() {
+		return _configuration;
 	}
 
-	public void setKonfiguration(Konfiguration konfiguration) {
-		this._konfiguration = konfiguration;
+	public void setKonfiguration(Configuration configuration) {
+		this._configuration = configuration;
 	}
 
 	public IECFieldOfActivityAnnotationsRepository getFieldOfActivityRepository() {

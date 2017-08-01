@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
@@ -11,7 +12,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
@@ -102,11 +102,11 @@ public class IECModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECModelPackage.KONFIGURATION: {
-				Konfiguration konfiguration = (Konfiguration)theEObject;
-				T result = caseKonfiguration(konfiguration);
-				if (result == null) result = caseIECComponent(konfiguration);
-				if (result == null) result = caseIdentifier(konfiguration);
+			case IECModelPackage.CONFIGURATION: {
+				Configuration configuration = (Configuration)theEObject;
+				T result = caseConfiguration(configuration);
+				if (result == null) result = caseIECComponent(configuration);
+				if (result == null) result = caseIdentifier(configuration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -222,17 +222,17 @@ public class IECModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Konfiguration</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Configuration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Konfiguration</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Configuration</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseKonfiguration(Konfiguration object) {
+	public T caseConfiguration(Configuration object) {
 		return null;
 	}
 

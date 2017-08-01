@@ -23,7 +23,7 @@ public class IECSubactivityDerivation {
 
 	private void deriveSubactivity(GlobalVariable globalVariable, Activity parentActivity, IECArchitectureVersion version) {
 		if (globalVariable instanceof GlobalVariable) {
-			for(Program program : version.getKonfiguration().getContainsProgram()) {
+			for(Program program : version.getConfiguration().getContainsProgram()) {
 				for(FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
 					for(GlobalVariable globVar : functionBlock.getAccessesGlobalVariable()) {
 						if(globalVariable.getId() == globVar.getId()) {

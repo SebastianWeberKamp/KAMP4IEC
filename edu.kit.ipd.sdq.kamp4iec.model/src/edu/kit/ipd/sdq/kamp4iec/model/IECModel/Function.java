@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Function</b></em>'.
@@ -12,6 +14,8 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getCallsFunction <em>Calls Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunction()
@@ -44,5 +48,37 @@ public interface Function extends IECComponent {
 	 * @generated
 	 */
 	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function value);
+
+	/**
+	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calls Function</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calls Function</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunction_CallsFunction()
+	 * @model
+	 * @generated
+	 */
+	EList<Function> getCallsFunction();
+
+	/**
+	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uses Enum</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uses Enum</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunction_UsesEnum()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
 
 } // Function

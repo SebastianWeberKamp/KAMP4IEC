@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getAccessesProperty <em>Accesses Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethodImplementation()
@@ -80,5 +81,21 @@ public interface IECMethodImplementation extends IECComponent, MethodResource {
 	 * @generated
 	 */
 	EList<IECPropertyImplementation> getAccessesProperty();
+
+	/**
+	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uses Enum</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uses Enum</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethodImplementation_UsesEnum()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
 
 } // IECMethodImplementation

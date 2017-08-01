@@ -2777,3 +2777,6 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-08-01 10:35:27.696
+!MESSAGE No repository found at http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/neon.

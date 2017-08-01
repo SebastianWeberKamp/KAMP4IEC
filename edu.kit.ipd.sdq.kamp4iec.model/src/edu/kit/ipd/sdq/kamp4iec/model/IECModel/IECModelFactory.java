@@ -49,13 +49,13 @@ public interface IECModelFactory extends EFactory {
 	Program createProgram();
 
 	/**
-	 * Returns a new object of class '<em>Konfiguration</em>'.
+	 * Returns a new object of class '<em>Configuration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Konfiguration</em>'.
+	 * @return a new object of class '<em>Configuration</em>'.
 	 * @generated
 	 */
-	Konfiguration createKonfiguration();
+	Configuration createConfiguration();
 
 	/**
 	 * Returns a new object of class '<em>IEC Interface</em>'.

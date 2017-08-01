@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
@@ -11,7 +12,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
@@ -91,8 +91,8 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 				return createProgramAdapter();
 			}
 			@Override
-			public Adapter caseKonfiguration(Konfiguration object) {
-				return createKonfigurationAdapter();
+			public Adapter caseConfiguration(Configuration object) {
+				return createConfigurationAdapter();
 			}
 			@Override
 			public Adapter caseIECInterface(IECInterface object) {
@@ -193,16 +193,16 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration <em>Konfiguration</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration <em>Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration
 	 * @generated
 	 */
-	public Adapter createKonfigurationAdapter() {
+	public Adapter createConfigurationAdapter() {
 		return null;
 	}
 

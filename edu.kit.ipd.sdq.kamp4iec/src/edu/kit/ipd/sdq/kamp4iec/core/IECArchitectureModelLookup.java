@@ -21,7 +21,7 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<GlobalVariable> globalVariables) {
 		Map<FunctionBlock, Set<GlobalVariable>> results = new HashMap<FunctionBlock, Set<GlobalVariable>>();
 		
-		for (Program program : version.getKonfiguration().getContainsProgram()) {
+		for (Program program : version.getConfiguration().getContainsProgram()) {
 			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
 				for(GlobalVariable globVar : globalVariables) {
 					for(GlobalVariable accessed : functionBlock.getAccessesGlobalVariable()) {

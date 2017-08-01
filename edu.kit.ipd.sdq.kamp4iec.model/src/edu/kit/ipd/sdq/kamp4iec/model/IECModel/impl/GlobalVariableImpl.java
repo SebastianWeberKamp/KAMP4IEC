@@ -6,12 +6,17 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,6 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
  * @generated
@@ -36,6 +42,16 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * @ordered
 	 */
 	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable type;
+
+	/**
+	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsesEnum()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,12 +115,40 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum() {
+		if (usesEnum == null) {
+			usesEnum = new EObjectContainmentEList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, this, IECModelPackage.GLOBAL_VARIABLE__USES_ENUM);
+		}
+		return usesEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
+				return ((InternalEList<?>)getUsesEnum()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
+				return getUsesEnum();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,11 +158,16 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)newValue);
+				return;
+			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
+				getUsesEnum().clear();
+				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,6 +184,9 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)null);
 				return;
+			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
+				getUsesEnum().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -149,6 +201,8 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 		switch (featureID) {
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
 				return type != null;
+			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
+				return usesEnum != null && !usesEnum.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

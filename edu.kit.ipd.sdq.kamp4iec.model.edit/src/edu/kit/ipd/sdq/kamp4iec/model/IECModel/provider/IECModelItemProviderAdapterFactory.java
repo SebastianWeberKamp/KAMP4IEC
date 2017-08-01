@@ -141,26 +141,26 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration} instances.
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected KonfigurationItemProvider konfigurationItemProvider;
+	protected ConfigurationItemProvider configurationItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration}.
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createKonfigurationAdapter() {
-		if (konfigurationItemProvider == null) {
-			konfigurationItemProvider = new KonfigurationItemProvider(this);
+	public Adapter createConfigurationAdapter() {
+		if (configurationItemProvider == null) {
+			configurationItemProvider = new ConfigurationItemProvider(this);
 		}
 
-		return konfigurationItemProvider;
+		return configurationItemProvider;
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 		if (functionBlockItemProvider != null) functionBlockItemProvider.dispose();
 		if (functionItemProvider != null) functionItemProvider.dispose();
 		if (programItemProvider != null) programItemProvider.dispose();
-		if (konfigurationItemProvider != null) konfigurationItemProvider.dispose();
+		if (configurationItemProvider != null) configurationItemProvider.dispose();
 		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
 		if (globalVariableItemProvider != null) globalVariableItemProvider.dispose();
 		if (iecMethodImplementationItemProvider != null) iecMethodImplementationItemProvider.dispose();

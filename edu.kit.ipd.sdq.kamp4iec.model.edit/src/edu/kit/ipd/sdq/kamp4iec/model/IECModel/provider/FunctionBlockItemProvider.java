@@ -54,6 +54,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			addTypePropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
 			addAccessesGlobalVariablePropertyDescriptor(object);
+			addCallsFunctionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -125,6 +126,28 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Calls Function feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsFunctionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_CallsFunction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsFunction_feature", "_UI_FunctionBlock_type"),
+				 IECModelPackage.Literals.FUNCTION_BLOCK__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -138,6 +161,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_METHOD);
 			childrenFeatures.add(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY);
+			childrenFeatures.add(IECModelPackage.Literals.FUNCTION_BLOCK__USES_ENUM);
 		}
 		return childrenFeatures;
 	}
@@ -195,6 +219,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		switch (notification.getFeatureID(FunctionBlock.class)) {
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
+			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -221,6 +246,11 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY,
 				 IECModelFactory.eINSTANCE.createIECPropertyImplementation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModelPackage.Literals.FUNCTION_BLOCK__USES_ENUM,
+				 IECModelFactory.eINSTANCE.createEnum()));
 	}
 
 	/**

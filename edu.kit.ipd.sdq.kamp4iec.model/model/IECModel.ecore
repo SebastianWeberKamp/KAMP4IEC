@@ -42,7 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Konfiguration" eSuperTypes="#//IECComponent">
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgram" upperBound="-1"
         eType="#//Program" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresVariable" upperBound="-1"

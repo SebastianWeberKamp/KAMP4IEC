@@ -1,25 +1,15 @@
 package edu.kit.ipd.sdq.kamp4iec.core.derivation;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
-import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.pcm.usagemodel.AbstractUserAction;
 
 import edu.kit.ipd.sdq.kamp.workplan.AbstractEnrichedWorkplanDerivation;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Konfiguration;
 
 public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDerivation<IECArchitectureVersion> {
 	

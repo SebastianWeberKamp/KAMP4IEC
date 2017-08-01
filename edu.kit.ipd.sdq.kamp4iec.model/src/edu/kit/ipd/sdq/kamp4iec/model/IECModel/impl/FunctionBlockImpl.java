@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
@@ -37,6 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getHasMethod <em>Has Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getHasProperty <em>Has Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getCallsFunction <em>Calls Function</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,6 +94,26 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @ordered
 	 */
 	protected EList<IECPropertyImplementation> hasProperty;
+
+	/**
+	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsesEnum()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+
+	/**
+	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallsFunction()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Function> callsFunction;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,6 +225,30 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum() {
+		if (usesEnum == null) {
+			usesEnum = new EObjectContainmentEList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, this, IECModelPackage.FUNCTION_BLOCK__USES_ENUM);
+		}
+		return usesEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Function> getCallsFunction() {
+		if (callsFunction == null) {
+			callsFunction = new EObjectResolvingEList<Function>(Function.class, this, IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION);
+		}
+		return callsFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -209,6 +256,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return ((InternalEList<?>)getHasMethod()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				return ((InternalEList<?>)getHasProperty()).basicRemove(otherEnd, msgs);
+			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
+				return ((InternalEList<?>)getUsesEnum()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -232,6 +281,10 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return getHasMethod();
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				return getHasProperty();
+			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
+				return getUsesEnum();
+			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
+				return getCallsFunction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -264,6 +317,14 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				getHasProperty().clear();
 				getHasProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
 				return;
+			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
+				getUsesEnum().clear();
+				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
+				return;
+			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
+				getCallsFunction().clear();
+				getCallsFunction().addAll((Collection<? extends Function>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -291,6 +352,12 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				getHasProperty().clear();
 				return;
+			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
+				getUsesEnum().clear();
+				return;
+			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
+				getCallsFunction().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -313,6 +380,10 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return hasMethod != null && !hasMethod.isEmpty();
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				return hasProperty != null && !hasProperty.isEmpty();
+			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
+				return usesEnum != null && !usesEnum.isEmpty();
+			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
+				return callsFunction != null && !callsFunction.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
