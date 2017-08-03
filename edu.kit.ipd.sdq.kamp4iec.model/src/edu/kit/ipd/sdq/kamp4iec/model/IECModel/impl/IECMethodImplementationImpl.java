@@ -2,7 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
@@ -35,6 +38,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getCallsFunction <em>Calls Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getCallsMethod <em>Calls Method</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,6 +86,46 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	 * @ordered
 	 */
 	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+
+	/**
+	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallsFunction()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Function> callsFunction;
+
+	/**
+	 * The cached value of the '{@link #getCallsMethod() <em>Calls Method</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallsMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECMethodImplementation> callsMethod;
+
+	/**
+	 * The cached value of the '{@link #getCallsFunctionBlock() <em>Calls Function Block</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallsFunctionBlock()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionBlock> callsFunctionBlock;
+
+	/**
+	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplements()
+	 * @generated
+	 * @ordered
+	 */
+	protected IECMethod implements_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,6 +225,80 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Function> getCallsFunction() {
+		if (callsFunction == null) {
+			callsFunction = new EObjectResolvingEList<Function>(Function.class, this, IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION);
+		}
+		return callsFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<IECMethodImplementation> getCallsMethod() {
+		if (callsMethod == null) {
+			callsMethod = new EObjectResolvingEList<IECMethodImplementation>(IECMethodImplementation.class, this, IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_METHOD);
+		}
+		return callsMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<FunctionBlock> getCallsFunctionBlock() {
+		if (callsFunctionBlock == null) {
+			callsFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK);
+		}
+		return callsFunctionBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECMethod getImplements() {
+		if (implements_ != null && implements_.eIsProxy()) {
+			InternalEObject oldImplements = (InternalEObject)implements_;
+			implements_ = (IECMethod)eResolveProxy(oldImplements);
+			if (implements_ != oldImplements) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_METHOD_IMPLEMENTATION__IMPLEMENTS, oldImplements, implements_));
+			}
+		}
+		return implements_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECMethod basicGetImplements() {
+		return implements_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImplements(IECMethod newImplements) {
+		IECMethod oldImplements = implements_;
+		implements_ = newImplements;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_METHOD_IMPLEMENTATION__IMPLEMENTS, oldImplements, implements_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -204,6 +325,15 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 				return getAccessesProperty();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__USES_ENUM:
 				return getUsesEnum();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION:
+				return getCallsFunction();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_METHOD:
+				return getCallsMethod();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK:
+				return getCallsFunctionBlock();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__IMPLEMENTS:
+				if (resolve) return getImplements();
+				return basicGetImplements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -232,6 +362,21 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 				getUsesEnum().clear();
 				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
 				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION:
+				getCallsFunction().clear();
+				getCallsFunction().addAll((Collection<? extends Function>)newValue);
+				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_METHOD:
+				getCallsMethod().clear();
+				getCallsMethod().addAll((Collection<? extends IECMethodImplementation>)newValue);
+				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK:
+				getCallsFunctionBlock().clear();
+				getCallsFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
+				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__IMPLEMENTS:
+				setImplements((IECMethod)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -256,6 +401,18 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__USES_ENUM:
 				getUsesEnum().clear();
 				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION:
+				getCallsFunction().clear();
+				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_METHOD:
+				getCallsMethod().clear();
+				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK:
+				getCallsFunctionBlock().clear();
+				return;
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__IMPLEMENTS:
+				setImplements((IECMethod)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -276,6 +433,14 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 				return accessesProperty != null && !accessesProperty.isEmpty();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__USES_ENUM:
 				return usesEnum != null && !usesEnum.isEmpty();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION:
+				return callsFunction != null && !callsFunction.isEmpty();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_METHOD:
+				return callsMethod != null && !callsMethod.isEmpty();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK:
+				return callsFunctionBlock != null && !callsFunctionBlock.isEmpty();
+			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__IMPLEMENTS:
+				return implements_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

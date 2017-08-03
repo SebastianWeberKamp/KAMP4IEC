@@ -88,7 +88,7 @@ public interface Program extends IECComponent {
 	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program value);
 
 	/**
-	 * Returns the value of the '<em><b>Implements Interface</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Implements Interface</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -96,9 +96,9 @@ public interface Program extends IECComponent {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implements Interface</em>' containment reference list.
+	 * @return the value of the '<em>Implements Interface</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_ImplementsInterface()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<IECInterface> getImplementsInterface();

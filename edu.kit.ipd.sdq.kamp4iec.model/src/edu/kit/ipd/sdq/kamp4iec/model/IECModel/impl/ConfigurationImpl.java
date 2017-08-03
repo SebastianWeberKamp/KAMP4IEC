@@ -6,12 +6,14 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -19,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -36,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +94,16 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * @ordered
 	 */
 	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+
+	/**
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterfaces()
+	 * @generated
+	 * @ordered
+	 */
+	protected Interfaces interfaces;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +189,44 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Interfaces getInterfaces() {
+		if (interfaces != null && interfaces.eIsProxy()) {
+			InternalEObject oldInterfaces = (InternalEObject)interfaces;
+			interfaces = (Interfaces)eResolveProxy(oldInterfaces);
+			if (interfaces != oldInterfaces) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.CONFIGURATION__INTERFACES, oldInterfaces, interfaces));
+			}
+		}
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Interfaces basicGetInterfaces() {
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInterfaces(Interfaces newInterfaces) {
+		Interfaces oldInterfaces = interfaces;
+		interfaces = newInterfaces;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__INTERFACES, oldInterfaces, interfaces));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -206,6 +258,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				return getAccessesGlobalVariable();
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				return getUsesEnum();
+			case IECModelPackage.CONFIGURATION__INTERFACES:
+				if (resolve) return getInterfaces();
+				return basicGetInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -239,6 +294,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				getUsesEnum().clear();
 				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
 				return;
+			case IECModelPackage.CONFIGURATION__INTERFACES:
+				setInterfaces((Interfaces)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -266,6 +324,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				getUsesEnum().clear();
 				return;
+			case IECModelPackage.CONFIGURATION__INTERFACES:
+				setInterfaces((Interfaces)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -288,6 +349,8 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				return accessesGlobalVariable != null && !accessesGlobalVariable.isEmpty();
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				return usesEnum != null && !usesEnum.isEmpty();
+			case IECModelPackage.CONFIGURATION__INTERFACES:
+				return interfaces != null;
 		}
 		return super.eIsSet(featureID);
 	}

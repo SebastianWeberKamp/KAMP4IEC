@@ -103,6 +103,33 @@ public interface IECModelFactory extends EFactory {
 	Enum createEnum();
 
 	/**
+	 * Returns a new object of class '<em>IEC Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Property</em>'.
+	 * @generated
+	 */
+	IECProperty createIECProperty();
+
+	/**
+	 * Returns a new object of class '<em>IEC Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Method</em>'.
+	 * @generated
+	 */
+	IECMethod createIECMethod();
+
+	/**
+	 * Returns a new object of class '<em>Interfaces</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interfaces</em>'.
+	 * @generated
+	 */
+	Interfaces createInterfaces();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

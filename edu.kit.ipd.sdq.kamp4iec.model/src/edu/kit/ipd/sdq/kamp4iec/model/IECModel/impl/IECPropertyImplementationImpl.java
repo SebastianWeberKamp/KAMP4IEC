@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,6 +54,16 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	 * @ordered
 	 */
 	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+
+	/**
+	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getImplements()
+	 * @generated
+	 * @ordered
+	 */
+	protected IECProperty implements_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,6 +139,44 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IECProperty getImplements() {
+		if (implements_ != null && implements_.eIsProxy()) {
+			InternalEObject oldImplements = (InternalEObject)implements_;
+			implements_ = (IECProperty)eResolveProxy(oldImplements);
+			if (implements_ != oldImplements) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS, oldImplements, implements_));
+			}
+		}
+		return implements_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECProperty basicGetImplements() {
+		return implements_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImplements(IECProperty newImplements) {
+		IECProperty oldImplements = implements_;
+		implements_ = newImplements;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS, oldImplements, implements_));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -149,6 +199,9 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 				return basicGetType();
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__USES_ENUM:
 				return getUsesEnum();
+			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
+				if (resolve) return getImplements();
+				return basicGetImplements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,6 +222,9 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 				getUsesEnum().clear();
 				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
 				return;
+			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
+				setImplements((IECProperty)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -187,6 +243,9 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__USES_ENUM:
 				getUsesEnum().clear();
 				return;
+			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
+				setImplements((IECProperty)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,6 +262,8 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 				return type != null;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__USES_ENUM:
 				return usesEnum != null && !usesEnum.isEmpty();
+			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
+				return implements_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

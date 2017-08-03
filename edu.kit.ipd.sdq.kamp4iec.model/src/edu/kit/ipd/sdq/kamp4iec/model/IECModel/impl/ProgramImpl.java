@@ -80,7 +80,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program type;
 
 	/**
-	 * The cached value of the '{@link #getImplementsInterface() <em>Implements Interface</em>}' containment reference list.
+	 * The cached value of the '{@link #getImplementsInterface() <em>Implements Interface</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getImplementsInterface()
@@ -227,7 +227,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 */
 	public EList<IECInterface> getImplementsInterface() {
 		if (implementsInterface == null) {
-			implementsInterface = new EObjectContainmentEList<IECInterface>(IECInterface.class, this, IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE);
+			implementsInterface = new EObjectResolvingEList<IECInterface>(IECInterface.class, this, IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE);
 		}
 		return implementsInterface;
 	}
@@ -304,8 +304,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return ((InternalEList<?>)getCallsFunction()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				return ((InternalEList<?>)getCallsFunctionBlock()).basicRemove(otherEnd, msgs);
-			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
-				return ((InternalEList<?>)getImplementsInterface()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__DECLARES_VARIABLE:
 				return ((InternalEList<?>)getDeclaresVariable()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__USES_ENUM:

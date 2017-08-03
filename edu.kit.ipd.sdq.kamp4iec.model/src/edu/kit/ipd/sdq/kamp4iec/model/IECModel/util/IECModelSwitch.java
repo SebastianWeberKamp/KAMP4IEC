@@ -9,9 +9,12 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
@@ -169,6 +172,28 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.METHOD_RESOURCE: {
 				MethodResource methodResource = (MethodResource)theEObject;
 				T result = caseMethodResource(methodResource);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECModelPackage.IEC_PROPERTY: {
+				IECProperty iecProperty = (IECProperty)theEObject;
+				T result = caseIECProperty(iecProperty);
+				if (result == null) result = caseIECComponent(iecProperty);
+				if (result == null) result = caseIdentifier(iecProperty);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECModelPackage.IEC_METHOD: {
+				IECMethod iecMethod = (IECMethod)theEObject;
+				T result = caseIECMethod(iecMethod);
+				if (result == null) result = caseIECComponent(iecMethod);
+				if (result == null) result = caseIdentifier(iecMethod);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECModelPackage.INTERFACES: {
+				Interfaces interfaces = (Interfaces)theEObject;
+				T result = caseInterfaces(interfaces);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -353,6 +378,51 @@ public class IECModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMethodResource(MethodResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IEC Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IEC Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIECProperty(IECProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IEC Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IEC Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIECMethod(IECMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interfaces</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interfaces</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterfaces(Interfaces object) {
 		return null;
 	}
 

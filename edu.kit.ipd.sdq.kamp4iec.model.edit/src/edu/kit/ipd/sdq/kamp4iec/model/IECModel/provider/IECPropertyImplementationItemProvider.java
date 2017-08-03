@@ -51,6 +51,7 @@ public class IECPropertyImplementationItemProvider extends IdentifierItemProvide
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,6 +70,28 @@ public class IECPropertyImplementationItemProvider extends IdentifierItemProvide
 				 getString("_UI_IECPropertyImplementation_Type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECPropertyImplementation_Type_feature", "_UI_IECPropertyImplementation_type"),
 				 IECModelPackage.Literals.IEC_PROPERTY_IMPLEMENTATION__TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implements feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplementsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECPropertyImplementation_Implements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECPropertyImplementation_Implements_feature", "_UI_IECPropertyImplementation_type"),
+				 IECModelPackage.Literals.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS,
 				 true,
 				 false,
 				 true,

@@ -1,0 +1,41 @@
+package edu.kit.ipd.sdq.kamp4iec.core;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
+import edu.kit.ipd.sdq.kamp.util.MapUtil;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+
+public class IECArchitectureModelLookup {
+
+	/**
+	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link GlobalVariable}s.
+	 * @param version The current {@link IECArchitectureVersion}.
+	 * @param globalVariables The {@link GlobalVariable}s to look up.
+	 * @return A map of all {@link FunctionBlock}s and which {@link GlobalVariable}s they are accessing.
+	 */
+	public static Map<FunctionBlock, Set<GlobalVariable>> lookUpFunctionBlocksOfGlobalVariable(
+			IECArchitectureVersion version, Collection<GlobalVariable> globalVariables) {
+		Map<FunctionBlock, Set<GlobalVariable>> results = new HashMap<FunctionBlock, Set<GlobalVariable>>();
+		
+		for (Program program : version.getConfiguration().getContainsProgram()) {
+			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+				for(GlobalVariable globVar : globalVariables) {
+					for(GlobalVariable accessed : functionBlock.getAccessesGlobalVariable()) {
+						if (accessed.getId().equals(globVar.getId())) {
+							MapUtil.putOrAddToMap(results, functionBlock, globVar);
+						}
+					}
+				}
+			} 
+		}
+		return results;
+	}
+}

@@ -20,6 +20,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getHasProperty <em>Has Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsFunction <em>Calls Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsMethod <em>Calls Method</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock()
@@ -148,5 +151,53 @@ public interface FunctionBlock extends IECComponent, FunctionblockResource {
 	 * @generated
 	 */
 	EList<Function> getCallsFunction();
+
+	/**
+	 * Returns the value of the '<em><b>Calls Function Block</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calls Function Block</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calls Function Block</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock_CallsFunctionBlock()
+	 * @model
+	 * @generated
+	 */
+	EList<FunctionBlock> getCallsFunctionBlock();
+
+	/**
+	 * Returns the value of the '<em><b>Calls Method</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calls Method</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calls Method</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock_CallsMethod()
+	 * @model
+	 * @generated
+	 */
+	EList<IECMethodImplementation> getCallsMethod();
+
+	/**
+	 * Returns the value of the '<em><b>Implements</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Implements</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Implements</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getFunctionBlock_Implements()
+	 * @model
+	 * @generated
+	 */
+	EList<IECInterface> getImplements();
 
 } // FunctionBlock

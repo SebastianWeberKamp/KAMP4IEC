@@ -17,6 +17,7 @@ import junit.textui.TestRunner;
  * The following features are tested:
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getType() <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getImplements() <em>Implements</em>}</li>
  * </ul>
  * </p>
  * @generated
@@ -113,6 +114,32 @@ public class IECMethodImplementationTest extends TestCase {
 	 * @generated
 	 */
 	public void testSetType() {
+		// TODO: implement this feature setter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getImplements() <em>Implements</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getImplements()
+	 * @generated
+	 */
+	public void testGetImplements() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod) <em>Implements</em>}' feature setter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod)
+	 * @generated
+	 */
+	public void testSetImplements() {
 		// TODO: implement this feature setter test method
 		// Ensure that you remove @generated or mark it @generated NOT
 		fail();

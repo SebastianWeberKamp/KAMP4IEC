@@ -279,6 +279,75 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECPropertyItemProvider iecPropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECPropertyAdapter() {
+		if (iecPropertyItemProvider == null) {
+			iecPropertyItemProvider = new IECPropertyItemProvider(this);
+		}
+
+		return iecPropertyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECMethodItemProvider iecMethodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECMethodAdapter() {
+		if (iecMethodItemProvider == null) {
+			iecMethodItemProvider = new IECMethodItemProvider(this);
+		}
+
+		return iecMethodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InterfacesItemProvider interfacesItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInterfacesAdapter() {
+		if (interfacesItemProvider == null) {
+			interfacesItemProvider = new InterfacesItemProvider(this);
+		}
+
+		return interfacesItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -386,6 +455,9 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 		if (iecMethodImplementationItemProvider != null) iecMethodImplementationItemProvider.dispose();
 		if (iecPropertyImplementationItemProvider != null) iecPropertyImplementationItemProvider.dispose();
 		if (enumItemProvider != null) enumItemProvider.dispose();
+		if (iecPropertyItemProvider != null) iecPropertyItemProvider.dispose();
+		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
+		if (interfacesItemProvider != null) interfacesItemProvider.dispose();
 	}
 
 }

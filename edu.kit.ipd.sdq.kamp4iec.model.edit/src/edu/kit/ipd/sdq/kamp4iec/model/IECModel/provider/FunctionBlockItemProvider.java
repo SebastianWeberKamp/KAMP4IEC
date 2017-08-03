@@ -55,6 +55,9 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			addAccessesPropertyPropertyDescriptor(object);
 			addAccessesGlobalVariablePropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
+			addCallsFunctionBlockPropertyDescriptor(object);
+			addCallsMethodPropertyDescriptor(object);
+			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -139,6 +142,72 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 				 getString("_UI_FunctionBlock_CallsFunction_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsFunction_feature", "_UI_FunctionBlock_type"),
 				 IECModelPackage.Literals.FUNCTION_BLOCK__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Calls Function Block feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsFunctionBlockPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_CallsFunctionBlock_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsFunctionBlock_feature", "_UI_FunctionBlock_type"),
+				 IECModelPackage.Literals.FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Calls Method feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsMethodPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_CallsMethod_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsMethod_feature", "_UI_FunctionBlock_type"),
+				 IECModelPackage.Literals.FUNCTION_BLOCK__CALLS_METHOD,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implements feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplementsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_Implements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_Implements_feature", "_UI_FunctionBlock_type"),
+				 IECModelPackage.Literals.FUNCTION_BLOCK__IMPLEMENTS,
 				 true,
 				 false,
 				 true,

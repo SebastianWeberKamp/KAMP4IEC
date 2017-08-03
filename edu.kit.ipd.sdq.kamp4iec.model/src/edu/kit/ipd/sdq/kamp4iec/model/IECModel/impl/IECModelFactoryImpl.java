@@ -7,10 +7,13 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -73,6 +76,9 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION: return createIECMethodImplementation();
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION: return createIECPropertyImplementation();
 			case IECModelPackage.ENUM: return createEnum();
+			case IECModelPackage.IEC_PROPERTY: return createIECProperty();
+			case IECModelPackage.IEC_METHOD: return createIECMethod();
+			case IECModelPackage.INTERFACES: return createInterfaces();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +172,36 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum createEnum() {
 		EnumImpl enum_ = new EnumImpl();
 		return enum_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECProperty createIECProperty() {
+		IECPropertyImpl iecProperty = new IECPropertyImpl();
+		return iecProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECMethod createIECMethod() {
+		IECMethodImpl iecMethod = new IECMethodImpl();
+		return iecMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Interfaces createInterfaces() {
+		InterfacesImpl interfaces = new InterfacesImpl();
+		return interfaces;
 	}
 
 	/**
