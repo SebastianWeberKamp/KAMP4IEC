@@ -78,6 +78,69 @@ public interface IECModificationmarksFactory extends EFactory {
 	IECModifyFunctionBlock createIECModifyFunctionBlock();
 
 	/**
+	 * Returns a new object of class '<em>IEC Modify Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Function</em>'.
+	 * @generated
+	 */
+	IECModifyFunction createIECModifyFunction();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Interface</em>'.
+	 * @generated
+	 */
+	IECModifyInterface createIECModifyInterface();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Method</em>'.
+	 * @generated
+	 */
+	IECModifyMethod createIECModifyMethod();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Property</em>'.
+	 * @generated
+	 */
+	IECModifyProperty createIECModifyProperty();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Program</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Program</em>'.
+	 * @generated
+	 */
+	IECModifyProgram createIECModifyProgram();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Enum</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Enum</em>'.
+	 * @generated
+	 */
+	IECModifyEnum createIECModifyEnum();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Configuration</em>'.
+	 * @generated
+	 */
+	IECModifyConfiguration createIECModifyConfiguration();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

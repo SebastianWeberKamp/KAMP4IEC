@@ -169,22 +169,13 @@ public interface IECModificationmarksPackage extends EPackage {
 	int IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Functionblock Modifications</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>IEC Seed Modifications</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_SEED_MODIFICATIONS_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 2;
+	int IEC_SEED_MODIFICATIONS_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>IEC Seed Modifications</em>' class.
@@ -224,13 +215,76 @@ public interface IECModificationmarksPackage extends EPackage {
 	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Function Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Interface Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__INTERFACE_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Method Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Property Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Program Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROGRAM_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Configuration Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Enum Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>IEC Change Propagation Due To Data Dependency</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY_FEATURE_COUNT = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 2;
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY_FEATURE_COUNT = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>IEC Change Propagation Due To Data Dependency</em>' class.
@@ -462,6 +516,518 @@ public interface IECModificationmarksPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyFunctionImpl <em>IEC Modify Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyFunctionImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyFunction()
+	 * @generated
+	 */
+	int IEC_MODIFY_FUNCTION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Function</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_FUNCTION_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyInterfaceImpl <em>IEC Modify Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyInterfaceImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyInterface()
+	 * @generated
+	 */
+	int IEC_MODIFY_INTERFACE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_INTERFACE_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyMethodImpl <em>IEC Modify Method</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyMethodImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyMethod()
+	 * @generated
+	 */
+	int IEC_MODIFY_METHOD = 9;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Method</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_METHOD_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl <em>IEC Modify Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyProperty()
+	 * @generated
+	 */
+	int IEC_MODIFY_PROPERTY = 10;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROPERTY_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyProgramImpl <em>IEC Modify Program</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyProgramImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyProgram()
+	 * @generated
+	 */
+	int IEC_MODIFY_PROGRAM = 11;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Program</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Program</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_PROGRAM_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyEnumImpl <em>IEC Modify Enum</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyEnumImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyEnum()
+	 * @generated
+	 */
+	int IEC_MODIFY_ENUM = 12;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Enum</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Enum</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_ENUM_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyConfigurationImpl <em>IEC Modify Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyConfigurationImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyConfiguration()
+	 * @generated
+	 */
+	int IEC_MODIFY_CONFIGURATION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION__AFFECTED_ELEMENT = IEC_MODIFY_ELEMENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION__CAUSING_ELEMENTS = IEC_MODIFY_ELEMENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION__ID = IEC_MODIFY_ELEMENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION__TOOLDERIVED = IEC_MODIFY_ELEMENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION__USER_DECISION = IEC_MODIFY_ELEMENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>IEC Modify Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION_FEATURE_COUNT = IEC_MODIFY_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>IEC Modify Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_MODIFY_CONFIGURATION_OPERATION_COUNT = IEC_MODIFY_ELEMENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.AbstractKAMP4IECModificationRepository <em>Abstract KAMP4IEC Modification Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,17 +1069,6 @@ public interface IECModificationmarksPackage extends EPackage {
 	EReference getIECSeedModifications_GlobalVariableModifications();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionblockModifications <em>Functionblock Modifications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Functionblock Modifications</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionblockModifications()
-	 * @see #getIECSeedModifications()
-	 * @generated
-	 */
-	EReference getIECSeedModifications_FunctionblockModifications();
-
-	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency <em>IEC Change Propagation Due To Data Dependency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -546,6 +1101,83 @@ public interface IECModificationmarksPackage extends EPackage {
 	EReference getIECChangePropagationDueToDataDependency_GlobalVariableModifications();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getFunctionModifications <em>Function Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Function Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getFunctionModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_FunctionModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getInterfaceModifications <em>Interface Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Interface Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getInterfaceModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_InterfaceModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodModifications <em>Method Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Method Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_MethodModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyModifications <em>Property Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Property Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_PropertyModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getProgramModifications <em>Program Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Program Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getProgramModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_ProgramModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getConfigurationModifications <em>Configuration Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Configuration Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getConfigurationModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_ConfigurationModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getEnumModifications <em>Enum Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Enum Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getEnumModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_EnumModifications();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement <em>IEC Modify Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -574,6 +1206,76 @@ public interface IECModificationmarksPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIECModifyFunctionBlock();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction <em>IEC Modify Function</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Function</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction
+	 * @generated
+	 */
+	EClass getIECModifyFunction();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface <em>IEC Modify Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Interface</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface
+	 * @generated
+	 */
+	EClass getIECModifyInterface();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod <em>IEC Modify Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Method</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod
+	 * @generated
+	 */
+	EClass getIECModifyMethod();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty <em>IEC Modify Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Property</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty
+	 * @generated
+	 */
+	EClass getIECModifyProperty();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram <em>IEC Modify Program</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Program</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram
+	 * @generated
+	 */
+	EClass getIECModifyProgram();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum <em>IEC Modify Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Enum</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum
+	 * @generated
+	 */
+	EClass getIECModifyEnum();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration <em>IEC Modify Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Configuration</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration
+	 * @generated
+	 */
+	EClass getIECModifyConfiguration();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -637,14 +1339,6 @@ public interface IECModificationmarksPackage extends EPackage {
 		EReference IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS = eINSTANCE.getIECSeedModifications_GlobalVariableModifications();
 
 		/**
-		 * The meta object literal for the '<em><b>Functionblock Modifications</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS = eINSTANCE.getIECSeedModifications_FunctionblockModifications();
-
-		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl <em>IEC Change Propagation Due To Data Dependency</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -669,6 +1363,62 @@ public interface IECModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__GLOBAL_VARIABLE_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_GlobalVariableModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Function Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_FunctionModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__INTERFACE_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_InterfaceModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Method Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_MethodModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Property Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_PropertyModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Program Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROGRAM_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_ProgramModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Configuration Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_ConfigurationModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Enum Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_EnumModifications();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyElementImpl <em>IEC Modify Element</em>}' class.
@@ -699,6 +1449,76 @@ public interface IECModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EClass IEC_MODIFY_FUNCTION_BLOCK = eINSTANCE.getIECModifyFunctionBlock();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyFunctionImpl <em>IEC Modify Function</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyFunctionImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyFunction()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_FUNCTION = eINSTANCE.getIECModifyFunction();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyInterfaceImpl <em>IEC Modify Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyInterfaceImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyInterface()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_INTERFACE = eINSTANCE.getIECModifyInterface();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyMethodImpl <em>IEC Modify Method</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyMethodImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyMethod()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_METHOD = eINSTANCE.getIECModifyMethod();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl <em>IEC Modify Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyProperty()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_PROPERTY = eINSTANCE.getIECModifyProperty();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyProgramImpl <em>IEC Modify Program</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyProgramImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyProgram()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_PROGRAM = eINSTANCE.getIECModifyProgram();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyEnumImpl <em>IEC Modify Enum</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyEnumImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyEnum()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_ENUM = eINSTANCE.getIECModifyEnum();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyConfigurationImpl <em>IEC Modify Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyConfigurationImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyConfiguration()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_CONFIGURATION = eINSTANCE.getIECModifyConfiguration();
 
 	}
 

@@ -10,6 +10,7 @@ import org.eclipse.ocl.ecore.delegate.OCLInvocationDelegateFactory.Global;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.util.MapUtil;
+import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
@@ -81,7 +82,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link IECMethodImplementation}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link FunctionBlock}s.
+	 * Looks up all {@link IECMethodImplementation}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link IECMethodImplementation}s and which {@link FunctionBlock}s they are accessing.
@@ -89,12 +90,12 @@ public class IECArchitectureModelLookup {
 	public static Map<IECMethodImplementation, Set<FunctionBlock>> lookUpMethodsOfFunctionBlock(
 			IECArchitectureVersion version, Collection<FunctionBlock> functionBlocks) {
 		Map<IECMethodImplementation, Set<FunctionBlock>> results = new HashMap<IECMethodImplementation, Set<FunctionBlock>>();
-		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for(FunctionBlock fb : program.getCallsFunctionBlock()) {
-				for(IECMethodImplementation method : fb.getHasMethod()) {
-					for(FunctionBlock accessed : method.getCallsFunctionBlock()) {
-						for(FunctionBlock functionBlock : functionBlocks) {
-							putOrAddToMap(results, method, accessed, functionBlock);
+		if(version.getComponentInternalDependencyRepository() != null) {
+			for(FunctionblockDependency dependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
+				for(FunctionBlock functionBlock : functionBlocks) {
+					if(dependency.getProvidedFunctionBlock().getId().equals(functionBlock.getId())) {
+						if(dependency.getRequiredResource() instanceof IECMethodImplementation) {
+							putOrAddToMap(results, (IECMethodImplementation) dependency.getRequiredResource(), dependency.getProvidedFunctionBlock(), functionBlock);
 						}
 					}
 				}
@@ -104,7 +105,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link FunctionBlock}s.
+	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link FunctionBlock}s and which {@link FunctionBlock}s they are accessing.
@@ -112,11 +113,13 @@ public class IECArchitectureModelLookup {
 	public static Map<FunctionBlock, Set<FunctionBlock>> lookUpFunctionBlocksOfFunctionBlock(
 			IECArchitectureVersion version, Collection<FunctionBlock> functionBlocks) {
 		Map<FunctionBlock, Set<FunctionBlock>> results = new HashMap<FunctionBlock, Set<FunctionBlock>>();
-		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for(FunctionBlock callingFunctionBlock : program.getCallsFunctionBlock()) {
-				for(FunctionBlock accessed : callingFunctionBlock.getCallsFunctionBlock()) {
-					for(FunctionBlock functionBlock : functionBlocks) {
-						putOrAddToMap(results, callingFunctionBlock, accessed, functionBlock);
+		if(version.getComponentInternalDependencyRepository() != null) {
+			for(FunctionblockDependency dependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
+				for(FunctionBlock functionBlock : functionBlocks) {
+					if(dependency.getProvidedFunctionBlock().getId().equals(functionBlock.getId())) {
+						if(dependency.getRequiredResource() instanceof FunctionBlock) {
+							putOrAddToMap(results, (FunctionBlock) dependency.getRequiredResource(), dependency.getProvidedFunctionBlock(), functionBlock);
+						}
 					}
 				}
 			}

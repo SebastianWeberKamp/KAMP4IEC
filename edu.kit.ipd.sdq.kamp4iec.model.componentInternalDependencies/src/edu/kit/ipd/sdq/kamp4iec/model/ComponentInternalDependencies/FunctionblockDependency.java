@@ -2,8 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -62,12 +62,12 @@ public interface FunctionblockDependency extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Required Resource</em>' reference.
-	 * @see #setRequiredResource(FunctionblockResource)
+	 * @see #setRequiredResource(DependencyResource)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage#getFunctionblockDependency_RequiredResource()
 	 * @model required="true"
 	 * @generated
 	 */
-	FunctionblockResource getRequiredResource();
+	DependencyResource getRequiredResource();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency#getRequiredResource <em>Required Resource</em>}' reference.
@@ -77,7 +77,7 @@ public interface FunctionblockDependency extends EObject {
 	 * @see #getRequiredResource()
 	 * @generated
 	 */
-	void setRequiredResource(FunctionblockResource value);
+	void setRequiredResource(DependencyResource value);
 
 	/**
 	 * Returns the value of the '<em><b>Has Method Dependency</b></em>' containment reference list.

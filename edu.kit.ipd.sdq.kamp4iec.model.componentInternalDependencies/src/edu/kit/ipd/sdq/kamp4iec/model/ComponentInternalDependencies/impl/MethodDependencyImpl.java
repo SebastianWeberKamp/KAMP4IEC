@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -39,7 +39,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected MethodResource requiredResource;
+	protected DependencyResource requiredResource;
 
 	/**
 	 * The cached value of the '{@link #getProvidedMethod() <em>Provided Method</em>}' reference.
@@ -75,10 +75,10 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodResource getRequiredResource() {
+	public DependencyResource getRequiredResource() {
 		if (requiredResource != null && requiredResource.eIsProxy()) {
 			InternalEObject oldRequiredResource = (InternalEObject)requiredResource;
-			requiredResource = (MethodResource)eResolveProxy(oldRequiredResource);
+			requiredResource = (DependencyResource)eResolveProxy(oldRequiredResource);
 			if (requiredResource != oldRequiredResource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__REQUIRED_RESOURCE, oldRequiredResource, requiredResource));
@@ -92,7 +92,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MethodResource basicGetRequiredResource() {
+	public DependencyResource basicGetRequiredResource() {
 		return requiredResource;
 	}
 
@@ -101,8 +101,8 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequiredResource(MethodResource newRequiredResource) {
-		MethodResource oldRequiredResource = requiredResource;
+	public void setRequiredResource(DependencyResource newRequiredResource) {
+		DependencyResource oldRequiredResource = requiredResource;
 		requiredResource = newRequiredResource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__REQUIRED_RESOURCE, oldRequiredResource, requiredResource));
@@ -173,7 +173,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__REQUIRED_RESOURCE:
-				setRequiredResource((MethodResource)newValue);
+				setRequiredResource((DependencyResource)newValue);
 				return;
 			case ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__PROVIDED_METHOD:
 				setProvidedMethod((IECMethodImplementation)newValue);
@@ -191,7 +191,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__REQUIRED_RESOURCE:
-				setRequiredResource((MethodResource)null);
+				setRequiredResource((DependencyResource)null);
 				return;
 			case ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__PROVIDED_METHOD:
 				setProvidedMethod((IECMethodImplementation)null);

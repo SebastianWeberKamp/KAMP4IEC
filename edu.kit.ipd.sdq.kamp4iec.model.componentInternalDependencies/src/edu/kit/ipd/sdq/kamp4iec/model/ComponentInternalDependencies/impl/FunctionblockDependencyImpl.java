@@ -6,8 +6,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInt
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -58,7 +58,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected FunctionblockResource requiredResource;
+	protected DependencyResource requiredResource;
 
 	/**
 	 * The cached value of the '{@link #getHasMethodDependency() <em>Has Method Dependency</em>}' containment reference list.
@@ -132,10 +132,10 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionblockResource getRequiredResource() {
+	public DependencyResource getRequiredResource() {
 		if (requiredResource != null && requiredResource.eIsProxy()) {
 			InternalEObject oldRequiredResource = (InternalEObject)requiredResource;
-			requiredResource = (FunctionblockResource)eResolveProxy(oldRequiredResource);
+			requiredResource = (DependencyResource)eResolveProxy(oldRequiredResource);
 			if (requiredResource != oldRequiredResource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__REQUIRED_RESOURCE, oldRequiredResource, requiredResource));
@@ -149,7 +149,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FunctionblockResource basicGetRequiredResource() {
+	public DependencyResource basicGetRequiredResource() {
 		return requiredResource;
 	}
 
@@ -158,8 +158,8 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequiredResource(FunctionblockResource newRequiredResource) {
-		FunctionblockResource oldRequiredResource = requiredResource;
+	public void setRequiredResource(DependencyResource newRequiredResource) {
+		DependencyResource oldRequiredResource = requiredResource;
 		requiredResource = newRequiredResource;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__REQUIRED_RESOURCE, oldRequiredResource, requiredResource));
@@ -224,7 +224,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 				setProvidedFunctionBlock((FunctionBlock)newValue);
 				return;
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__REQUIRED_RESOURCE:
-				setRequiredResource((FunctionblockResource)newValue);
+				setRequiredResource((DependencyResource)newValue);
 				return;
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__HAS_METHOD_DEPENDENCY:
 				getHasMethodDependency().clear();
@@ -246,7 +246,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 				setProvidedFunctionBlock((FunctionBlock)null);
 				return;
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__REQUIRED_RESOURCE:
-				setRequiredResource((FunctionblockResource)null);
+				setRequiredResource((DependencyResource)null);
 				return;
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__HAS_METHOD_DEPENDENCY:
 				getHasMethodDependency().clear();

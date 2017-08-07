@@ -5,7 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractSeedModificationsImpl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
 import java.util.Collection;
@@ -29,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getGlobalVariableModifications <em>Global Variable Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getFunctionblockModifications <em>Functionblock Modifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,16 +42,6 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 	 * @ordered
 	 */
 	protected EList<IECModifyGlobalVariable> globalVariableModifications;
-
-	/**
-	 * The cached value of the '{@link #getFunctionblockModifications() <em>Functionblock Modifications</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFunctionblockModifications()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IECModifyFunctionBlock> functionblockModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,25 +79,11 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECModifyFunctionBlock> getFunctionblockModifications() {
-		if (functionblockModifications == null) {
-			functionblockModifications = new EObjectContainmentEList<IECModifyFunctionBlock>(IECModifyFunctionBlock.class, this, IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS);
-		}
-		return functionblockModifications;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
 				return ((InternalEList<?>)getGlobalVariableModifications()).basicRemove(otherEnd, msgs);
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS:
-				return ((InternalEList<?>)getFunctionblockModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -124,8 +98,6 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 		switch (featureID) {
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
 				return getGlobalVariableModifications();
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS:
-				return getFunctionblockModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,10 +115,6 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 				getGlobalVariableModifications().clear();
 				getGlobalVariableModifications().addAll((Collection<? extends IECModifyGlobalVariable>)newValue);
 				return;
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS:
-				getFunctionblockModifications().clear();
-				getFunctionblockModifications().addAll((Collection<? extends IECModifyFunctionBlock>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -162,9 +130,6 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
 				getGlobalVariableModifications().clear();
 				return;
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS:
-				getFunctionblockModifications().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -179,8 +144,6 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 		switch (featureID) {
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
 				return globalVariableModifications != null && !globalVariableModifications.isEmpty();
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS:
-				return functionblockModifications != null && !functionblockModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

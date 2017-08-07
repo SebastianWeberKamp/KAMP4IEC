@@ -54,8 +54,6 @@ public class IECMethodImplementationItemProvider extends IdentifierItemProvider 
 			addAccessesGlobalVariablePropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
-			addCallsMethodPropertyDescriptor(object);
-			addCallsFunctionBlockPropertyDescriptor(object);
 			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -141,50 +139,6 @@ public class IECMethodImplementationItemProvider extends IdentifierItemProvider 
 				 getString("_UI_IECMethodImplementation_CallsFunction_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethodImplementation_CallsFunction_feature", "_UI_IECMethodImplementation_type"),
 				 IECModelPackage.Literals.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Calls Method feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCallsMethodPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECMethodImplementation_CallsMethod_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethodImplementation_CallsMethod_feature", "_UI_IECMethodImplementation_type"),
-				 IECModelPackage.Literals.IEC_METHOD_IMPLEMENTATION__CALLS_METHOD,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Calls Function Block feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCallsFunctionBlockPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECMethodImplementation_CallsFunctionBlock_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethodImplementation_CallsFunctionBlock_feature", "_UI_IECMethodImplementation_type"),
-				 IECModelPackage.Literals.IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK,
 				 true,
 				 false,
 				 true,

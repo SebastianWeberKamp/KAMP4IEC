@@ -64,6 +64,13 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 			case IECModificationmarksPackage.IEC_MODIFY_ELEMENT: return createIECModifyElement();
 			case IECModificationmarksPackage.IEC_MODIFY_GLOBAL_VARIABLE: return createIECModifyGlobalVariable();
 			case IECModificationmarksPackage.IEC_MODIFY_FUNCTION_BLOCK: return createIECModifyFunctionBlock();
+			case IECModificationmarksPackage.IEC_MODIFY_FUNCTION: return createIECModifyFunction();
+			case IECModificationmarksPackage.IEC_MODIFY_INTERFACE: return createIECModifyInterface();
+			case IECModificationmarksPackage.IEC_MODIFY_METHOD: return createIECModifyMethod();
+			case IECModificationmarksPackage.IEC_MODIFY_PROPERTY: return createIECModifyProperty();
+			case IECModificationmarksPackage.IEC_MODIFY_PROGRAM: return createIECModifyProgram();
+			case IECModificationmarksPackage.IEC_MODIFY_ENUM: return createIECModifyEnum();
+			case IECModificationmarksPackage.IEC_MODIFY_CONFIGURATION: return createIECModifyConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -127,6 +134,76 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 	public IECModifyFunctionBlock createIECModifyFunctionBlock() {
 		IECModifyFunctionBlockImpl iecModifyFunctionBlock = new IECModifyFunctionBlockImpl();
 		return iecModifyFunctionBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyFunction createIECModifyFunction() {
+		IECModifyFunctionImpl iecModifyFunction = new IECModifyFunctionImpl();
+		return iecModifyFunction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyInterface createIECModifyInterface() {
+		IECModifyInterfaceImpl iecModifyInterface = new IECModifyInterfaceImpl();
+		return iecModifyInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyMethod createIECModifyMethod() {
+		IECModifyMethodImpl iecModifyMethod = new IECModifyMethodImpl();
+		return iecModifyMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyProperty createIECModifyProperty() {
+		IECModifyPropertyImpl iecModifyProperty = new IECModifyPropertyImpl();
+		return iecModifyProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyProgram createIECModifyProgram() {
+		IECModifyProgramImpl iecModifyProgram = new IECModifyProgramImpl();
+		return iecModifyProgram;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyEnum createIECModifyEnum() {
+		IECModifyEnumImpl iecModifyEnum = new IECModifyEnumImpl();
+		return iecModifyEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyConfiguration createIECModifyConfiguration() {
+		IECModifyConfigurationImpl iecModifyConfiguration = new IECModifyConfigurationImpl();
+		return iecModifyConfiguration;
 	}
 
 	/**

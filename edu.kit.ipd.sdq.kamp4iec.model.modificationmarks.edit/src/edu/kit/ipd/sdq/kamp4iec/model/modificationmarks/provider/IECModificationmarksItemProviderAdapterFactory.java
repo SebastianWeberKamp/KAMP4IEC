@@ -210,6 +210,167 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyFunctionItemProvider iecModifyFunctionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyFunctionAdapter() {
+		if (iecModifyFunctionItemProvider == null) {
+			iecModifyFunctionItemProvider = new IECModifyFunctionItemProvider(this);
+		}
+
+		return iecModifyFunctionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyInterfaceItemProvider iecModifyInterfaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyInterfaceAdapter() {
+		if (iecModifyInterfaceItemProvider == null) {
+			iecModifyInterfaceItemProvider = new IECModifyInterfaceItemProvider(this);
+		}
+
+		return iecModifyInterfaceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyMethodItemProvider iecModifyMethodItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyMethodAdapter() {
+		if (iecModifyMethodItemProvider == null) {
+			iecModifyMethodItemProvider = new IECModifyMethodItemProvider(this);
+		}
+
+		return iecModifyMethodItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyPropertyItemProvider iecModifyPropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyPropertyAdapter() {
+		if (iecModifyPropertyItemProvider == null) {
+			iecModifyPropertyItemProvider = new IECModifyPropertyItemProvider(this);
+		}
+
+		return iecModifyPropertyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyProgramItemProvider iecModifyProgramItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyProgramAdapter() {
+		if (iecModifyProgramItemProvider == null) {
+			iecModifyProgramItemProvider = new IECModifyProgramItemProvider(this);
+		}
+
+		return iecModifyProgramItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyEnumItemProvider iecModifyEnumItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyEnumAdapter() {
+		if (iecModifyEnumItemProvider == null) {
+			iecModifyEnumItemProvider = new IECModifyEnumItemProvider(this);
+		}
+
+		return iecModifyEnumItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyConfigurationItemProvider iecModifyConfigurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyConfigurationAdapter() {
+		if (iecModifyConfigurationItemProvider == null) {
+			iecModifyConfigurationItemProvider = new IECModifyConfigurationItemProvider(this);
+		}
+
+		return iecModifyConfigurationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,6 +475,13 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 		if (iecModifyElementItemProvider != null) iecModifyElementItemProvider.dispose();
 		if (iecModifyGlobalVariableItemProvider != null) iecModifyGlobalVariableItemProvider.dispose();
 		if (iecModifyFunctionBlockItemProvider != null) iecModifyFunctionBlockItemProvider.dispose();
+		if (iecModifyFunctionItemProvider != null) iecModifyFunctionItemProvider.dispose();
+		if (iecModifyInterfaceItemProvider != null) iecModifyInterfaceItemProvider.dispose();
+		if (iecModifyMethodItemProvider != null) iecModifyMethodItemProvider.dispose();
+		if (iecModifyPropertyItemProvider != null) iecModifyPropertyItemProvider.dispose();
+		if (iecModifyProgramItemProvider != null) iecModifyProgramItemProvider.dispose();
+		if (iecModifyEnumItemProvider != null) iecModifyEnumItemProvider.dispose();
+		if (iecModifyConfigurationItemProvider != null) iecModifyConfigurationItemProvider.dispose();
 	}
 
 }

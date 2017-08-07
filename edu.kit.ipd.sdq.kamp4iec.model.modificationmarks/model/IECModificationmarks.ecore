@@ -27,6 +27,20 @@
         upperBound="-1" eType="#//IECModifyFunctionBlock" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariableModifications"
         upperBound="-1" eType="#//IECModifyGlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionModifications"
+        upperBound="-1" eType="#//IECModifyFunction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
+        upperBound="-1" eType="#//IECModifyInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodModifications" upperBound="-1"
+        eType="#//IECModifyMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyModifications"
+        upperBound="-1" eType="#//IECModifyProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programModifications" upperBound="-1"
+        eType="#//IECModifyProgram" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configurationModifications"
+        upperBound="-1" eType="#//IECModifyConfiguration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enumModifications" upperBound="-1"
+        eType="#//IECModifyEnum" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECModifyElement">
     <eTypeParameters name="T">

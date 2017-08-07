@@ -41,8 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getHasProperty <em>Has Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
@@ -118,26 +116,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @ordered
 	 */
 	protected EList<Function> callsFunction;
-
-	/**
-	 * The cached value of the '{@link #getCallsFunctionBlock() <em>Calls Function Block</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCallsFunctionBlock()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FunctionBlock> callsFunctionBlock;
-
-	/**
-	 * The cached value of the '{@link #getCallsMethod() <em>Calls Method</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCallsMethod()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IECMethodImplementation> callsMethod;
 
 	/**
 	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference list.
@@ -283,30 +261,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionBlock> getCallsFunctionBlock() {
-		if (callsFunctionBlock == null) {
-			callsFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK);
-		}
-		return callsFunctionBlock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<IECMethodImplementation> getCallsMethod() {
-		if (callsMethod == null) {
-			callsMethod = new EObjectResolvingEList<IECMethodImplementation>(IECMethodImplementation.class, this, IECModelPackage.FUNCTION_BLOCK__CALLS_METHOD);
-		}
-		return callsMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<IECInterface> getImplements() {
 		if (implements_ == null) {
 			implements_ = new EObjectResolvingEList<IECInterface>(IECInterface.class, this, IECModelPackage.FUNCTION_BLOCK__IMPLEMENTS);
@@ -355,10 +309,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return getUsesEnum();
 			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				return getCallsFunction();
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK:
-				return getCallsFunctionBlock();
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_METHOD:
-				return getCallsMethod();
 			case IECModelPackage.FUNCTION_BLOCK__IMPLEMENTS:
 				return getImplements();
 		}
@@ -401,14 +351,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				getCallsFunction().clear();
 				getCallsFunction().addAll((Collection<? extends Function>)newValue);
 				return;
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK:
-				getCallsFunctionBlock().clear();
-				getCallsFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
-				return;
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_METHOD:
-				getCallsMethod().clear();
-				getCallsMethod().addAll((Collection<? extends IECMethodImplementation>)newValue);
-				return;
 			case IECModelPackage.FUNCTION_BLOCK__IMPLEMENTS:
 				getImplements().clear();
 				getImplements().addAll((Collection<? extends IECInterface>)newValue);
@@ -446,12 +388,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				getCallsFunction().clear();
 				return;
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK:
-				getCallsFunctionBlock().clear();
-				return;
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_METHOD:
-				getCallsMethod().clear();
-				return;
 			case IECModelPackage.FUNCTION_BLOCK__IMPLEMENTS:
 				getImplements().clear();
 				return;
@@ -481,10 +417,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return usesEnum != null && !usesEnum.isEmpty();
 			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				return callsFunction != null && !callsFunction.isEmpty();
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK:
-				return callsFunctionBlock != null && !callsFunctionBlock.isEmpty();
-			case IECModelPackage.FUNCTION_BLOCK__CALLS_METHOD:
-				return callsMethod != null && !callsMethod.isEmpty();
 			case IECModelPackage.FUNCTION_BLOCK__IMPLEMENTS:
 				return implements_ != null && !implements_.isEmpty();
 		}

@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getGlobalVariableModifications <em>Global Variable Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionblockModifications <em>Functionblock Modifications</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications()
@@ -39,21 +38,5 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * @generated
 	 */
 	EList<IECModifyGlobalVariable> getGlobalVariableModifications();
-
-	/**
-	 * Returns the value of the '<em><b>Functionblock Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Functionblock Modifications</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Functionblock Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_FunctionblockModifications()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<IECModifyFunctionBlock> getFunctionblockModifications();
 
 } // IECSeedModifications

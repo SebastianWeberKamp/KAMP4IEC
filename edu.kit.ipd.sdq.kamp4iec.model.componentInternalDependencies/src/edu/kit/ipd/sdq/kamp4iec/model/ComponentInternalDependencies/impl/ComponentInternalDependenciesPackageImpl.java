@@ -270,11 +270,11 @@ public class ComponentInternalDependenciesPackageImpl extends EPackageImpl imple
 
 		initEClass(functionblockDependencyEClass, FunctionblockDependency.class, "FunctionblockDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunctionblockDependency_ProvidedFunctionBlock(), theIECModelPackage.getFunctionBlock(), null, "ProvidedFunctionBlock", null, 1, 1, FunctionblockDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionblockDependency_RequiredResource(), theIECModelPackage.getFunctionblockResource(), null, "RequiredResource", null, 1, 1, FunctionblockDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionblockDependency_RequiredResource(), theIECModelPackage.getDependencyResource(), null, "RequiredResource", null, 1, 1, FunctionblockDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionblockDependency_HasMethodDependency(), this.getMethodDependency(), null, "HasMethodDependency", null, 0, -1, FunctionblockDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(methodDependencyEClass, MethodDependency.class, "MethodDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMethodDependency_RequiredResource(), theIECModelPackage.getMethodResource(), null, "RequiredResource", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodDependency_RequiredResource(), theIECModelPackage.getDependencyResource(), null, "RequiredResource", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMethodDependency_ProvidedMethod(), theIECRepositoryPackage.getIECMethodImplementation(), null, "ProvidedMethod", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

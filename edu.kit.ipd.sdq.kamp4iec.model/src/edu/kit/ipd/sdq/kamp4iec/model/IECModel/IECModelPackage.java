@@ -254,31 +254,13 @@ public interface IECModelPackage extends EPackage {
 	int FUNCTION_BLOCK__CALLS_FUNCTION = IEC_COMPONENT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Calls Function Block</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK = IEC_COMPONENT_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Calls Method</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__CALLS_METHOD = IEC_COMPONENT_FEATURE_COUNT + 8;
-
-	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__IMPLEMENTS = IEC_COMPONENT_FEATURE_COUNT + 9;
+	int FUNCTION_BLOCK__IMPLEMENTS = IEC_COMPONENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Function Block</em>' class.
@@ -287,7 +269,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 10;
+	int FUNCTION_BLOCK_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Function Block</em>' class.
@@ -606,13 +588,31 @@ public interface IECModelPackage extends EPackage {
 	int IEC_INTERFACE__TYPE = IEC_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Has Method</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_INTERFACE__HAS_METHOD = IEC_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Has Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_INTERFACE__HAS_PROPERTY = IEC_COMPONENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>IEC Interface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 1;
+	int IEC_INTERFACE_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>IEC Interface</em>' class.
@@ -741,31 +741,13 @@ public interface IECModelPackage extends EPackage {
 	int IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION = IEC_COMPONENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Calls Method</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_METHOD_IMPLEMENTATION__CALLS_METHOD = IEC_COMPONENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Calls Function Block</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK = IEC_COMPONENT_FEATURE_COUNT + 6;
-
-	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__IMPLEMENTS = IEC_COMPONENT_FEATURE_COUNT + 7;
+	int IEC_METHOD_IMPLEMENTATION__IMPLEMENTS = IEC_COMPONENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>IEC Method Implementation</em>' class.
@@ -774,7 +756,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 8;
+	int IEC_METHOD_IMPLEMENTATION_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>IEC Method Implementation</em>' class.
@@ -905,61 +887,32 @@ public interface IECModelPackage extends EPackage {
 
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource <em>Functionblock Resource</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource <em>Dependency Resource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getFunctionblockResource()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getDependencyResource()
 	 * @generated
 	 */
-	int FUNCTIONBLOCK_RESOURCE = 10;
+	int DEPENDENCY_RESOURCE = 10;
 
 	/**
-	 * The number of structural features of the '<em>Functionblock Resource</em>' class.
+	 * The number of structural features of the '<em>Dependency Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT = 0;
+	int DEPENDENCY_RESOURCE_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Functionblock Resource</em>' class.
+	 * The number of operations of the '<em>Dependency Resource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTIONBLOCK_RESOURCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource <em>Method Resource</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getMethodResource()
-	 * @generated
-	 */
-	int METHOD_RESOURCE = 11;
-
-	/**
-	 * The number of structural features of the '<em>Method Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD_RESOURCE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Method Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD_RESOURCE_OPERATION_COUNT = 0;
-
+	int DEPENDENCY_RESOURCE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImpl <em>IEC Property</em>}' class.
@@ -969,7 +922,7 @@ public interface IECModelPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECProperty()
 	 * @generated
 	 */
-	int IEC_PROPERTY = 12;
+	int IEC_PROPERTY = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1042,7 +995,7 @@ public interface IECModelPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECMethod()
 	 * @generated
 	 */
-	int IEC_METHOD = 13;
+	int IEC_METHOD = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1116,7 +1069,7 @@ public interface IECModelPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getInterfaces()
 	 * @generated
 	 */
-	int INTERFACES = 14;
+	int INTERFACES = 13;
 
 	/**
 	 * The feature id for the '<em><b>Contains Interface</b></em>' containment reference list.
@@ -1232,28 +1185,6 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunctionBlock_CallsFunction();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsFunctionBlock <em>Calls Function Block</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Calls Function Block</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsFunctionBlock()
-	 * @see #getFunctionBlock()
-	 * @generated
-	 */
-	EReference getFunctionBlock_CallsFunctionBlock();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsMethod <em>Calls Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Calls Method</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getCallsMethod()
-	 * @see #getFunctionBlock()
-	 * @generated
-	 */
-	EReference getFunctionBlock_CallsMethod();
 
 	/**
 	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getImplements <em>Implements</em>}'.
@@ -1516,6 +1447,28 @@ public interface IECModelPackage extends EPackage {
 	EReference getIECInterface_Type();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getHasMethod <em>Has Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Has Method</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getHasMethod()
+	 * @see #getIECInterface()
+	 * @generated
+	 */
+	EReference getIECInterface_HasMethod();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getHasProperty <em>Has Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Has Property</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getHasProperty()
+	 * @see #getIECInterface()
+	 * @generated
+	 */
+	EReference getIECInterface_HasProperty();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable <em>Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1613,28 +1566,6 @@ public interface IECModelPackage extends EPackage {
 	EReference getIECMethodImplementation_CallsFunction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getCallsMethod <em>Calls Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Calls Method</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getCallsMethod()
-	 * @see #getIECMethodImplementation()
-	 * @generated
-	 */
-	EReference getIECMethodImplementation_CallsMethod();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getCallsFunctionBlock <em>Calls Function Block</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Calls Function Block</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getCallsFunctionBlock()
-	 * @see #getIECMethodImplementation()
-	 * @generated
-	 */
-	EReference getIECMethodImplementation_CallsFunctionBlock();
-
-	/**
 	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getImplements <em>Implements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1720,24 +1651,14 @@ public interface IECModelPackage extends EPackage {
 	EClass getIECComponent();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource <em>Functionblock Resource</em>}'.
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource <em>Dependency Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Functionblock Resource</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource
+	 * @return the meta object for class '<em>Dependency Resource</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource
 	 * @generated
 	 */
-	EClass getFunctionblockResource();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource <em>Method Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Method Resource</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource
-	 * @generated
-	 */
-	EClass getMethodResource();
+	EClass getDependencyResource();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty <em>IEC Property</em>}'.
@@ -1934,22 +1855,6 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FUNCTION_BLOCK__CALLS_FUNCTION = eINSTANCE.getFunctionBlock_CallsFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Calls Function Block</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION_BLOCK__CALLS_FUNCTION_BLOCK = eINSTANCE.getFunctionBlock_CallsFunctionBlock();
-
-		/**
-		 * The meta object literal for the '<em><b>Calls Method</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION_BLOCK__CALLS_METHOD = eINSTANCE.getFunctionBlock_CallsMethod();
 
 		/**
 		 * The meta object literal for the '<em><b>Implements</b></em>' reference list feature.
@@ -2152,6 +2057,22 @@ public interface IECModelPackage extends EPackage {
 		EReference IEC_INTERFACE__TYPE = eINSTANCE.getIECInterface_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Has Method</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_INTERFACE__HAS_METHOD = eINSTANCE.getIECInterface_HasMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Has Property</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_INTERFACE__HAS_PROPERTY = eINSTANCE.getIECInterface_HasProperty();
+
+		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2228,22 +2149,6 @@ public interface IECModelPackage extends EPackage {
 		EReference IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION = eINSTANCE.getIECMethodImplementation_CallsFunction();
 
 		/**
-		 * The meta object literal for the '<em><b>Calls Method</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_METHOD_IMPLEMENTATION__CALLS_METHOD = eINSTANCE.getIECMethodImplementation_CallsMethod();
-
-		/**
-		 * The meta object literal for the '<em><b>Calls Function Block</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION_BLOCK = eINSTANCE.getIECMethodImplementation_CallsFunctionBlock();
-
-		/**
 		 * The meta object literal for the '<em><b>Implements</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2314,24 +2219,14 @@ public interface IECModelPackage extends EPackage {
 		EClass IEC_COMPONENT = eINSTANCE.getIECComponent();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource <em>Functionblock Resource</em>}' class.
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource <em>Dependency Resource</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionblockResource
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getFunctionblockResource()
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getDependencyResource()
 		 * @generated
 		 */
-		EClass FUNCTIONBLOCK_RESOURCE = eINSTANCE.getFunctionblockResource();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource <em>Method Resource</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.MethodResource
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getMethodResource()
-		 * @generated
-		 */
-		EClass METHOD_RESOURCE = eINSTANCE.getMethodResource();
+		EClass DEPENDENCY_RESOURCE = eINSTANCE.getDependencyResource();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImpl <em>IEC Property</em>}' class.

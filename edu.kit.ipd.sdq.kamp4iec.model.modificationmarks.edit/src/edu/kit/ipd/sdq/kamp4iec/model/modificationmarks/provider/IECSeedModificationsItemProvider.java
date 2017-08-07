@@ -67,7 +67,6 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -121,7 +120,6 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 
 		switch (notification.getFeatureID(IECSeedModifications.class)) {
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -143,11 +141,6 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 			(createChildParameter
 				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS,
 				 IECModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTIONBLOCK_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyFunctionBlock()));
 	}
 
 	/**
