@@ -82,6 +82,27 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
+	 * Looks up all {@link Program}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link FunctionBlock}s.
+	 * @param version The current {@link IECArchitectureVersion}.
+	 * @param functionBlocks The {@link FunctionBlock}s to look up.
+	 * @return A map of all {@link Program}s and which {@link FunctionBlock}s they are accessing.
+	 */
+	public static Map<Function, Set<FunctionBlock>> lookUpFunctionsOfFunctionBlock(
+			IECArchitectureVersion version, Collection<FunctionBlock> functionBlocks) {
+		Map<Function, Set<FunctionBlock>> results = new HashMap<Function, Set<FunctionBlock>>();
+		for (Program program : version.getConfiguration().getContainsProgram()) {
+			for(FunctionBlock accessed : program.getCallsFunctionBlock()) {
+				for(Function function : accessed.getCallsFunction()) {
+					for(FunctionBlock functionBlock : functionBlocks) {
+						putOrAddToMap(results, function, accessed, functionBlock);
+					}
+				}
+			}
+		}
+		return results;
+	}
+
+	/**
 	 * Looks up all {@link IECMethodImplementation}s of the {@link IECArchitectureVersion}s {@link Configuration} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.

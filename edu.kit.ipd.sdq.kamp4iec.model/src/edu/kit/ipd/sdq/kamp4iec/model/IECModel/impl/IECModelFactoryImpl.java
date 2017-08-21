@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
@@ -15,6 +16,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -79,6 +81,7 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 			case IECModelPackage.IEC_PROPERTY: return createIECProperty();
 			case IECModelPackage.IEC_METHOD: return createIECMethod();
 			case IECModelPackage.INTERFACES: return createInterfaces();
+			case IECModelPackage.ENUMS: return createEnums();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -202,6 +205,16 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	public Interfaces createInterfaces() {
 		InterfacesImpl interfaces = new InterfacesImpl();
 		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enums createEnums() {
+		EnumsImpl enums = new EnumsImpl();
+		return enums;
 	}
 
 	/**

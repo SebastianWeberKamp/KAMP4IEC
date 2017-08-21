@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -57,76 +58,6 @@ public interface IECModelPackage extends EPackage {
 	IECModelPackage eINSTANCE = edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl <em>Function Block</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getFunctionBlock()
-	 * @generated
-	 */
-	int FUNCTION_BLOCK = 0;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl <em>Function</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getFunction()
-	 * @generated
-	 */
-	int FUNCTION = 1;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl <em>Program</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getProgram()
-	 * @generated
-	 */
-	int PROGRAM = 2;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl <em>IEC Interface</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECInterface()
-	 * @generated
-	 */
-	int IEC_INTERFACE = 4;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getGlobalVariable()
-	 * @generated
-	 */
-	int GLOBAL_VARIABLE = 5;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl <em>IEC Method Implementation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECMethodImplementation()
-	 * @generated
-	 */
-	int IEC_METHOD_IMPLEMENTATION = 6;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl <em>IEC Property Implementation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECPropertyImplementation()
-	 * @generated
-	 */
-	int IEC_PROPERTY_IMPLEMENTATION = 7;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent <em>IEC Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,6 +102,16 @@ public interface IECModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int IEC_COMPONENT_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl <em>Function Block</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getFunctionBlock()
+	 * @generated
+	 */
+	int FUNCTION_BLOCK = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -236,7 +177,7 @@ public interface IECModelPackage extends EPackage {
 	int FUNCTION_BLOCK__HAS_PROPERTY = IEC_COMPONENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -281,6 +222,16 @@ public interface IECModelPackage extends EPackage {
 	int FUNCTION_BLOCK_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl <em>Function</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getFunction()
+	 * @generated
+	 */
+	int FUNCTION = 1;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -317,7 +268,7 @@ public interface IECModelPackage extends EPackage {
 	int FUNCTION__CALLS_FUNCTION = IEC_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -342,6 +293,16 @@ public interface IECModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int FUNCTION_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl <em>Program</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getProgram()
+	 * @generated
+	 */
+	int PROGRAM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -407,7 +368,7 @@ public interface IECModelPackage extends EPackage {
 	int PROGRAM__DECLARES_VARIABLE = IEC_COMPONENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -525,7 +486,7 @@ public interface IECModelPackage extends EPackage {
 	int CONFIGURATION__ACCESSES_GLOBAL_VARIABLE = IEC_COMPONENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -534,7 +495,7 @@ public interface IECModelPackage extends EPackage {
 	int CONFIGURATION__USES_ENUM = IEC_COMPONENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference.
+	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -559,6 +520,16 @@ public interface IECModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONFIGURATION_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl <em>IEC Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECInterface()
+	 * @generated
+	 */
+	int IEC_INTERFACE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -624,6 +595,16 @@ public interface IECModelPackage extends EPackage {
 	int IEC_INTERFACE_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getGlobalVariable()
+	 * @generated
+	 */
+	int GLOBAL_VARIABLE = 5;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -651,7 +632,7 @@ public interface IECModelPackage extends EPackage {
 	int GLOBAL_VARIABLE__TYPE = IEC_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -676,6 +657,16 @@ public interface IECModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int GLOBAL_VARIABLE_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl <em>IEC Method Implementation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECMethodImplementation()
+	 * @generated
+	 */
+	int IEC_METHOD_IMPLEMENTATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -723,7 +714,7 @@ public interface IECModelPackage extends EPackage {
 	int IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY = IEC_COMPONENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -768,6 +759,16 @@ public interface IECModelPackage extends EPackage {
 	int IEC_METHOD_IMPLEMENTATION_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl <em>IEC Property Implementation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getIECPropertyImplementation()
+	 * @generated
+	 */
+	int IEC_PROPERTY_IMPLEMENTATION = 7;
+
+	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -795,7 +796,7 @@ public interface IECModelPackage extends EPackage {
 	int IEC_PROPERTY_IMPLEMENTATION__TYPE = IEC_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -884,7 +885,6 @@ public interface IECModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ENUM_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource <em>Dependency Resource</em>}' class.
@@ -1060,7 +1060,6 @@ public interface IECModelPackage extends EPackage {
 	 */
 	int IEC_METHOD_OPERATION_COUNT = IEC_COMPONENT_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.InterfacesImpl <em>Interfaces</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -1097,6 +1096,43 @@ public interface IECModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERFACES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumsImpl <em>Enums</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumsImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getEnums()
+	 * @generated
+	 */
+	int ENUMS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Contains Enums</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMS__CONTAINS_ENUMS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Enums</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Enums</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMS_OPERATION_COUNT = 0;
 
 
 	/**
@@ -1165,10 +1201,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getFunctionBlock_HasProperty();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the reference list '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getUsesEnum()
 	 * @see #getFunctionBlock()
 	 * @generated
@@ -1230,10 +1266,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getFunction_CallsFunction();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the reference list '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getUsesEnum()
 	 * @see #getFunction()
 	 * @generated
@@ -1306,10 +1342,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getProgram_DeclaresVariable();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the reference list '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getUsesEnum()
 	 * @see #getProgram()
 	 * @generated
@@ -1404,10 +1440,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getConfiguration_AccessesGlobalVariable();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the containment reference '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum()
 	 * @see #getConfiguration()
 	 * @generated
@@ -1415,10 +1451,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getConfiguration_UsesEnum();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces <em>Interfaces</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Interfaces</em>'.
+	 * @return the meta object for the containment reference '<em>Interfaces</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces()
 	 * @see #getConfiguration()
 	 * @generated
@@ -1490,10 +1526,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getGlobalVariable_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the reference list '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getUsesEnum()
 	 * @see #getGlobalVariable()
 	 * @generated
@@ -1544,10 +1580,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getIECMethodImplementation_AccessesProperty();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the reference list '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getUsesEnum()
 	 * @see #getIECMethodImplementation()
 	 * @generated
@@ -1598,10 +1634,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getIECPropertyImplementation_Type();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation#getUsesEnum <em>Uses Enum</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation#getUsesEnum <em>Uses Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Uses Enum</em>'.
+	 * @return the meta object for the reference list '<em>Uses Enum</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation#getUsesEnum()
 	 * @see #getIECPropertyImplementation()
 	 * @generated
@@ -1768,6 +1804,27 @@ public interface IECModelPackage extends EPackage {
 	EReference getInterfaces_ContainsInterface();
 
 	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums <em>Enums</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Enums</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums
+	 * @generated
+	 */
+	EClass getEnums();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums#getContainsEnums <em>Contains Enums</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contains Enums</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums#getContainsEnums()
+	 * @see #getEnums()
+	 * @generated
+	 */
+	EReference getEnums_ContainsEnums();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1841,7 +1898,7 @@ public interface IECModelPackage extends EPackage {
 		EReference FUNCTION_BLOCK__HAS_PROPERTY = eINSTANCE.getFunctionBlock_HasProperty();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1891,7 +1948,7 @@ public interface IECModelPackage extends EPackage {
 		EReference FUNCTION__CALLS_FUNCTION = eINSTANCE.getFunction_CallsFunction();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1949,7 +2006,7 @@ public interface IECModelPackage extends EPackage {
 		EReference PROGRAM__DECLARES_VARIABLE = eINSTANCE.getProgram_DeclaresVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2023,7 +2080,7 @@ public interface IECModelPackage extends EPackage {
 		EReference CONFIGURATION__ACCESSES_GLOBAL_VARIABLE = eINSTANCE.getConfiguration_AccessesGlobalVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2031,7 +2088,7 @@ public interface IECModelPackage extends EPackage {
 		EReference CONFIGURATION__USES_ENUM = eINSTANCE.getConfiguration_UsesEnum();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2091,7 +2148,7 @@ public interface IECModelPackage extends EPackage {
 		EReference GLOBAL_VARIABLE__TYPE = eINSTANCE.getGlobalVariable_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2133,7 +2190,7 @@ public interface IECModelPackage extends EPackage {
 		EReference IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY = eINSTANCE.getIECMethodImplementation_AccessesProperty();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2175,7 +2232,7 @@ public interface IECModelPackage extends EPackage {
 		EReference IEC_PROPERTY_IMPLEMENTATION__TYPE = eINSTANCE.getIECPropertyImplementation_Type();
 
 		/**
-		 * The meta object literal for the '<em><b>Uses Enum</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Uses Enum</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2313,6 +2370,24 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERFACES__CONTAINS_INTERFACE = eINSTANCE.getInterfaces_ContainsInterface();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumsImpl <em>Enums</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumsImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelPackageImpl#getEnums()
+		 * @generated
+		 */
+		EClass ENUMS = eINSTANCE.getEnums();
+
+		/**
+		 * The meta object literal for the '<em><b>Contains Enums</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENUMS__CONTAINS_ENUMS = eINSTANCE.getEnums_ContainsEnums();
 
 	}
 

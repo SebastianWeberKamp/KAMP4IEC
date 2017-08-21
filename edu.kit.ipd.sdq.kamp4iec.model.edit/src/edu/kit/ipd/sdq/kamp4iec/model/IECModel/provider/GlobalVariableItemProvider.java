@@ -4,7 +4,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider;
 
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
@@ -17,10 +16,8 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable} object.
@@ -51,6 +48,7 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addUsesEnumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -78,33 +76,25 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Uses Enum feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(IECModelPackage.Literals.GLOBAL_VARIABLE__USES_ENUM);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
+	protected void addUsesEnumPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GlobalVariable_UsesEnum_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_UsesEnum_feature", "_UI_GlobalVariable_type"),
+				 IECModelPackage.Literals.GLOBAL_VARIABLE__USES_ENUM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -143,12 +133,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(GlobalVariable.class)) {
-			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -162,11 +146,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.GLOBAL_VARIABLE__USES_ENUM,
-				 IECModelFactory.eINSTANCE.createEnum()));
 	}
 
 	/**

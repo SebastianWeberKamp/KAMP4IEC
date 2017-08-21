@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.util;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
@@ -16,7 +17,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -187,6 +190,12 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.INTERFACES: {
 				Interfaces interfaces = (Interfaces)theEObject;
 				T result = caseInterfaces(interfaces);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECModelPackage.ENUMS: {
+				Enums enums = (Enums)theEObject;
+				T result = caseEnums(enums);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -401,6 +410,21 @@ public class IECModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInterfaces(Interfaces object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Enums</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Enums</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnums(Enums object) {
 		return null;
 	}
 

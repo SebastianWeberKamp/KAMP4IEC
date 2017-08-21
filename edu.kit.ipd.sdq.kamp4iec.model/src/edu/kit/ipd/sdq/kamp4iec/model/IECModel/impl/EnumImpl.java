@@ -3,7 +3,9 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
+
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

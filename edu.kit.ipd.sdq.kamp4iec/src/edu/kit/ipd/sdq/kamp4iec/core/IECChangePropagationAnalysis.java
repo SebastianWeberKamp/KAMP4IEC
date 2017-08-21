@@ -291,6 +291,42 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		 }
 	}
 	
+	protected void calculateAndMarkFunctionBlockToFunctionPropagation(IECArchitectureVersion version,
+			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
+		List<FunctionBlock> markedFunctionBlocks = new ArrayList<>();
+		for(IECComponent marked : getMarkedComponents()) {
+			if(marked instanceof FunctionBlock) {
+				markedFunctionBlocks.add((FunctionBlock) marked);
+			}
+		}
+		Map<Function, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
+				lookUpFunctionsOfFunctionBlock(version, markedFunctionBlocks);
+
+		 for(Map.Entry<Function, Set<FunctionBlock>> elementsToBeMarkedEntry: 
+			 	elementsToBeMarked.entrySet()) {
+			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
+				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
+					if (!elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().contains(cause)) {
+						elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().add(cause);	
+					}
+				}	
+			} else {
+				IECModifyFunction modification = IECModificationmarksFactory.eINSTANCE.createIECModifyFunction();
+				modification.setToolderived(true);
+				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
+				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
+				
+				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
+				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
+				this.getIECChangePropagationDueToDataDependencies().getFunctionModifications().
+						add(modification);
+				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
+			}
+		 }
+	}
+	
 	protected void calculateAndMarkFunctionBlockToMethodPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
 		List<FunctionBlock> markedFunctionBlocks = new ArrayList<>();
@@ -560,6 +596,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkFunctionToFunctionPropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof FunctionBlock) {
 			calculateAndMarkFunctionBlockToProgramPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkFunctionBlockToFunctionPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkFunctionBlockToMethodPropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof IECInterface) {
 			calculateAndMarkInterfaceToProgramPropagation(version, elementsMarkedInThisStep);

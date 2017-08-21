@@ -53,7 +53,6 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 
 			addAccessesPropertyPropertyDescriptor(object);
 			addAccessesGlobalVariablePropertyDescriptor(object);
-			addInterfacesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -103,28 +102,6 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Interfaces feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInterfacesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Configuration_Interfaces_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_Interfaces_feature", "_UI_Configuration_type"),
-				 IECModelPackage.Literals.CONFIGURATION__INTERFACES,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -139,6 +116,7 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__CONTAINS_PROGRAM);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__DECLARES_VARIABLE);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__USES_ENUM);
+			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__INTERFACES);
 		}
 		return childrenFeatures;
 	}
@@ -197,6 +175,7 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
 			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
+			case IECModelPackage.CONFIGURATION__INTERFACES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -227,7 +206,12 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.CONFIGURATION__USES_ENUM,
-				 IECModelFactory.eINSTANCE.createEnum()));
+				 IECModelFactory.eINSTANCE.createEnums()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModelPackage.Literals.CONFIGURATION__INTERFACES,
+				 IECModelFactory.eINSTANCE.createInterfaces()));
 	}
 
 	/**

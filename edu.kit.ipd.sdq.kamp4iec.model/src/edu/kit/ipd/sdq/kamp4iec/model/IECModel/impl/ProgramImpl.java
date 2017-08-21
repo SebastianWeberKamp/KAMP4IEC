@@ -12,6 +12,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,6 +24,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -100,7 +102,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	protected EList<GlobalVariable> declaresVariable;
 
 	/**
-	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' containment reference list.
+	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUsesEnum()
@@ -251,7 +253,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 */
 	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum() {
 		if (usesEnum == null) {
-			usesEnum = new EObjectContainmentEList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, this, IECModelPackage.PROGRAM__USES_ENUM);
+			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, this, IECModelPackage.PROGRAM__USES_ENUM);
 		}
 		return usesEnum;
 	}
@@ -306,8 +308,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return ((InternalEList<?>)getCallsFunctionBlock()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__DECLARES_VARIABLE:
 				return ((InternalEList<?>)getDeclaresVariable()).basicRemove(otherEnd, msgs);
-			case IECModelPackage.PROGRAM__USES_ENUM:
-				return ((InternalEList<?>)getUsesEnum()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

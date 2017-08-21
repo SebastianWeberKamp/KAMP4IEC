@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Enum</b></em>'.

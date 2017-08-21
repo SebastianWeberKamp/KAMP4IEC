@@ -348,6 +348,29 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnumsItemProvider enumsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnumsAdapter() {
+		if (enumsItemProvider == null) {
+			enumsItemProvider = new EnumsItemProvider(this);
+		}
+
+		return enumsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,6 +481,7 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 		if (iecPropertyItemProvider != null) iecPropertyItemProvider.dispose();
 		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
 		if (interfacesItemProvider != null) interfacesItemProvider.dispose();
+		if (enumsItemProvider != null) enumsItemProvider.dispose();
 	}
 
 }

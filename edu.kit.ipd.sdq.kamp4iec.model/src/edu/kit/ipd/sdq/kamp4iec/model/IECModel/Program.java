@@ -92,7 +92,7 @@ public interface Program extends IECComponent {
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Implements Interface</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Implements Interface</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -120,17 +120,17 @@ public interface Program extends IECComponent {
 	EList<GlobalVariable> getDeclaresVariable();
 
 	/**
-	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Uses Enum</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Enum</em>' containment reference list.
+	 * @return the value of the '<em>Uses Enum</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_UsesEnum()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();

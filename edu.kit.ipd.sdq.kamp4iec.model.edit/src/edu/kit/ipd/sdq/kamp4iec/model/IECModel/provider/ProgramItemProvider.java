@@ -52,6 +52,8 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addImplementsInterfacePropertyDescriptor(object);
+			addUsesEnumPropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
 			addAccessesGlobalVariablePropertyDescriptor(object);
@@ -73,6 +75,50 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Program_Type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Program_Type_feature", "_UI_Program_type"),
 				 IECModelPackage.Literals.PROGRAM__TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Implements Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplementsInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Program_ImplementsInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_ImplementsInterface_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__IMPLEMENTS_INTERFACE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Enum feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesEnumPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Program_UsesEnum_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_UsesEnum_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__USES_ENUM,
 				 true,
 				 false,
 				 true,
@@ -161,9 +207,7 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__IMPLEMENTS_INTERFACE);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_VARIABLE);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__USES_ENUM);
 		}
 		return childrenFeatures;
 	}
@@ -221,9 +265,7 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		switch (notification.getFeatureID(Program.class)) {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
-			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
 			case IECModelPackage.PROGRAM__DECLARES_VARIABLE:
-			case IECModelPackage.PROGRAM__USES_ENUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -253,18 +295,8 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__IMPLEMENTS_INTERFACE,
-				 IECModelFactory.eINSTANCE.createIECInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__DECLARES_VARIABLE,
 				 IECModelFactory.eINSTANCE.createGlobalVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__USES_ENUM,
-				 IECModelFactory.eINSTANCE.createEnum()));
 	}
 
 	/**

@@ -91,42 +91,52 @@ public interface Configuration extends IECComponent {
 	EList<GlobalVariable> getAccessesGlobalVariable();
 
 	/**
-	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
+	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Uses Enum</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Uses Enum</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Enum</em>' containment reference list.
+	 * @return the value of the '<em>Uses Enum</em>' containment reference.
+	 * @see #setUsesEnum(Enums)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_UsesEnum()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
+	Enums getUsesEnum();
 
 	/**
-	 * Returns the value of the '<em><b>Interfaces</b></em>' reference.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum <em>Uses Enum</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Uses Enum</em>' containment reference.
+	 * @see #getUsesEnum()
+	 * @generated
+	 */
+	void setUsesEnum(Enums value);
+
+	/**
+	 * Returns the value of the '<em><b>Interfaces</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Interfaces</em>' reference isn't clear,
+	 * If the meaning of the '<em>Interfaces</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Interfaces</em>' reference.
+	 * @return the value of the '<em>Interfaces</em>' containment reference.
 	 * @see #setInterfaces(Interfaces)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_Interfaces()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Interfaces getInterfaces();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces <em>Interfaces</em>}' reference.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces <em>Interfaces</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Interfaces</em>' reference.
+	 * @param value the new value of the '<em>Interfaces</em>' containment reference.
 	 * @see #getInterfaces()
 	 * @generated
 	 */

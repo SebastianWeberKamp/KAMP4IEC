@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -86,17 +88,17 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	protected EList<GlobalVariable> accessesGlobalVariable;
 
 	/**
-	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' containment reference list.
+	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUsesEnum()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+	protected Enums usesEnum;
 
 	/**
-	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInterfaces()
@@ -177,10 +179,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum() {
-		if (usesEnum == null) {
-			usesEnum = new EObjectContainmentEList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, this, IECModelPackage.CONFIGURATION__USES_ENUM);
-		}
+	public Enums getUsesEnum() {
 		return usesEnum;
 	}
 
@@ -189,15 +188,41 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Interfaces getInterfaces() {
-		if (interfaces != null && interfaces.eIsProxy()) {
-			InternalEObject oldInterfaces = (InternalEObject)interfaces;
-			interfaces = (Interfaces)eResolveProxy(oldInterfaces);
-			if (interfaces != oldInterfaces) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.CONFIGURATION__INTERFACES, oldInterfaces, interfaces));
-			}
+	public NotificationChain basicSetUsesEnum(Enums newUsesEnum, NotificationChain msgs) {
+		Enums oldUsesEnum = usesEnum;
+		usesEnum = newUsesEnum;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__USES_ENUM, oldUsesEnum, newUsesEnum);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUsesEnum(Enums newUsesEnum) {
+		if (newUsesEnum != usesEnum) {
+			NotificationChain msgs = null;
+			if (usesEnum != null)
+				msgs = ((InternalEObject)usesEnum).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECModelPackage.CONFIGURATION__USES_ENUM, null, msgs);
+			if (newUsesEnum != null)
+				msgs = ((InternalEObject)newUsesEnum).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - IECModelPackage.CONFIGURATION__USES_ENUM, null, msgs);
+			msgs = basicSetUsesEnum(newUsesEnum, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__USES_ENUM, newUsesEnum, newUsesEnum));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Interfaces getInterfaces() {
 		return interfaces;
 	}
 
@@ -206,8 +231,14 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Interfaces basicGetInterfaces() {
-		return interfaces;
+	public NotificationChain basicSetInterfaces(Interfaces newInterfaces, NotificationChain msgs) {
+		Interfaces oldInterfaces = interfaces;
+		interfaces = newInterfaces;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__INTERFACES, oldInterfaces, newInterfaces);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -216,10 +247,17 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * @generated
 	 */
 	public void setInterfaces(Interfaces newInterfaces) {
-		Interfaces oldInterfaces = interfaces;
-		interfaces = newInterfaces;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__INTERFACES, oldInterfaces, interfaces));
+		if (newInterfaces != interfaces) {
+			NotificationChain msgs = null;
+			if (interfaces != null)
+				msgs = ((InternalEObject)interfaces).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECModelPackage.CONFIGURATION__INTERFACES, null, msgs);
+			if (newInterfaces != null)
+				msgs = ((InternalEObject)newInterfaces).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - IECModelPackage.CONFIGURATION__INTERFACES, null, msgs);
+			msgs = basicSetInterfaces(newInterfaces, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__INTERFACES, newInterfaces, newInterfaces));
 	}
 
 	/**
@@ -235,7 +273,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
 				return ((InternalEList<?>)getDeclaresVariable()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
-				return ((InternalEList<?>)getUsesEnum()).basicRemove(otherEnd, msgs);
+				return basicSetUsesEnum(null, msgs);
+			case IECModelPackage.CONFIGURATION__INTERFACES:
+				return basicSetInterfaces(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -259,8 +299,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				return getUsesEnum();
 			case IECModelPackage.CONFIGURATION__INTERFACES:
-				if (resolve) return getInterfaces();
-				return basicGetInterfaces();
+				return getInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -291,8 +330,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				getAccessesGlobalVariable().addAll((Collection<? extends GlobalVariable>)newValue);
 				return;
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
-				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
+				setUsesEnum((Enums)newValue);
 				return;
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				setInterfaces((Interfaces)newValue);
@@ -322,7 +360,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				getAccessesGlobalVariable().clear();
 				return;
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
-				getUsesEnum().clear();
+				setUsesEnum((Enums)null);
 				return;
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				setInterfaces((Interfaces)null);
@@ -348,7 +386,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__ACCESSES_GLOBAL_VARIABLE:
 				return accessesGlobalVariable != null && !accessesGlobalVariable.isEmpty();
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
-				return usesEnum != null && !usesEnum.isEmpty();
+				return usesEnum != null;
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				return interfaces != null;
 		}

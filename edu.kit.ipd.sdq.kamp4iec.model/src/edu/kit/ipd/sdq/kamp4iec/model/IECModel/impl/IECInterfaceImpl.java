@@ -5,18 +5,22 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
-import java.util.Collection;
-import org.eclipse.emf.common.notify.Notification;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
+
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -55,6 +59,7 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * @ordered
 	 */
 	protected EList<IECMethod> hasMethod;
+
 	/**
 	 * The cached value of the '{@link #getHasProperty() <em>Has Property</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -130,6 +130,15 @@ public interface IECModelFactory extends EFactory {
 	Interfaces createInterfaces();
 
 	/**
+	 * Returns a new object of class '<em>Enums</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enums</em>'.
+	 * @generated
+	 */
+	Enums createEnums();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
