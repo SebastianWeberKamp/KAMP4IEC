@@ -918,20 +918,17 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		functionBlockEClass.getESuperTypes().add(this.getIECComponent());
 		functionBlockEClass.getESuperTypes().add(this.getDependencyResource());
 		functionEClass.getESuperTypes().add(this.getIECComponent());
 		programEClass.getESuperTypes().add(this.getIECComponent());
 		configurationEClass.getESuperTypes().add(this.getIECComponent());
-		iecInterfaceEClass.getESuperTypes().add(this.getIECComponent());
 		iecInterfaceEClass.getESuperTypes().add(this.getDependencyResource());
 		globalVariableEClass.getESuperTypes().add(this.getIECComponent());
-		iecMethodImplementationEClass.getESuperTypes().add(this.getIECComponent());
 		iecMethodImplementationEClass.getESuperTypes().add(this.getDependencyResource());
-		iecPropertyImplementationEClass.getESuperTypes().add(this.getIECComponent());
 		iecPropertyImplementationEClass.getESuperTypes().add(this.getDependencyResource());
 		enumEClass.getESuperTypes().add(this.getIECComponent());
 		iecComponentEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
+		dependencyResourceEClass.getESuperTypes().add(this.getIECComponent());
 		iecPropertyEClass.getESuperTypes().add(this.getIECComponent());
 		iecMethodEClass.getESuperTypes().add(this.getIECComponent());
 

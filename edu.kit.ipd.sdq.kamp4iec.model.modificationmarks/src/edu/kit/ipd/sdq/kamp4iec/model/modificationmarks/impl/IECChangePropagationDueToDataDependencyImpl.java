@@ -13,8 +13,10 @@ import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -44,6 +46,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getProgramModifications <em>Program Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getConfigurationModifications <em>Configuration Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getEnumModifications <em>Enum Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getMethodImplementationModifications <em>Method Implementation Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getPropertyImplementationModifications <em>Property Implementation Modifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -138,6 +142,26 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * @ordered
 	 */
 	protected EList<IECModifyEnum> enumModifications;
+
+	/**
+	 * The cached value of the '{@link #getMethodImplementationModifications() <em>Method Implementation Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMethodImplementationModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECModifyMethodImplementation> methodImplementationModifications;
+
+	/**
+	 * The cached value of the '{@link #getPropertyImplementationModifications() <em>Property Implementation Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPropertyImplementationModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECModifyPropertyImplementation> propertyImplementationModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -271,6 +295,30 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IECModifyMethodImplementation> getMethodImplementationModifications() {
+		if (methodImplementationModifications == null) {
+			methodImplementationModifications = new EObjectContainmentEList<IECModifyMethodImplementation>(IECModifyMethodImplementation.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS);
+		}
+		return methodImplementationModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<IECModifyPropertyImplementation> getPropertyImplementationModifications() {
+		if (propertyImplementationModifications == null) {
+			propertyImplementationModifications = new EObjectContainmentEList<IECModifyPropertyImplementation>(IECModifyPropertyImplementation.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS);
+		}
+		return propertyImplementationModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -292,6 +340,10 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return ((InternalEList<?>)getConfigurationModifications()).basicRemove(otherEnd, msgs);
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
 				return ((InternalEList<?>)getEnumModifications()).basicRemove(otherEnd, msgs);
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
+				return ((InternalEList<?>)getMethodImplementationModifications()).basicRemove(otherEnd, msgs);
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
+				return ((InternalEList<?>)getPropertyImplementationModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -322,6 +374,10 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return getConfigurationModifications();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
 				return getEnumModifications();
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
+				return getMethodImplementationModifications();
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
+				return getPropertyImplementationModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -371,6 +427,14 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				getEnumModifications().clear();
 				getEnumModifications().addAll((Collection<? extends IECModifyEnum>)newValue);
 				return;
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
+				getMethodImplementationModifications().clear();
+				getMethodImplementationModifications().addAll((Collection<? extends IECModifyMethodImplementation>)newValue);
+				return;
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
+				getPropertyImplementationModifications().clear();
+				getPropertyImplementationModifications().addAll((Collection<? extends IECModifyPropertyImplementation>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -410,6 +474,12 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
 				getEnumModifications().clear();
 				return;
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
+				getMethodImplementationModifications().clear();
+				return;
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
+				getPropertyImplementationModifications().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -440,6 +510,10 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return configurationModifications != null && !configurationModifications.isEmpty();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
 				return enumModifications != null && !enumModifications.isEmpty();
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
+				return methodImplementationModifications != null && !methodImplementationModifications.isEmpty();
+			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
+				return propertyImplementationModifications != null && !propertyImplementationModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

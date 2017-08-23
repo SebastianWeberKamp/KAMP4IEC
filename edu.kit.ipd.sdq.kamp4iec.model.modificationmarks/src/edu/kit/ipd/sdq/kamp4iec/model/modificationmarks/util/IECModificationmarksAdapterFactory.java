@@ -132,6 +132,14 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createIECModifyConfigurationAdapter();
 			}
 			@Override
+			public Adapter caseIECModifyMethodImplementation(IECModifyMethodImplementation object) {
+				return createIECModifyMethodImplementationAdapter();
+			}
+			@Override
+			public Adapter caseIECModifyPropertyImplementation(IECModifyPropertyImplementation object) {
+				return createIECModifyPropertyImplementationAdapter();
+			}
+			@Override
 			public <S extends AbstractSeedModifications, T extends AbstractChangePropagationStep> Adapter caseAbstractModificationRepository(AbstractModificationRepository<S, T> object) {
 				return createAbstractModificationRepositoryAdapter();
 			}
@@ -364,6 +372,34 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIECModifyConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation <em>IEC Modify Method Implementation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation
+	 * @generated
+	 */
+	public Adapter createIECModifyMethodImplementationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation <em>IEC Modify Property Implementation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation
+	 * @generated
+	 */
+	public Adapter createIECModifyPropertyImplementationAdapter() {
 		return null;
 	}
 

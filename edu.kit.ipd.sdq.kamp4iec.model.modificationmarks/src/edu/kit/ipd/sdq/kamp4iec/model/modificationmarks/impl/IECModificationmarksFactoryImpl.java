@@ -71,6 +71,8 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 			case IECModificationmarksPackage.IEC_MODIFY_PROGRAM: return createIECModifyProgram();
 			case IECModificationmarksPackage.IEC_MODIFY_ENUM: return createIECModifyEnum();
 			case IECModificationmarksPackage.IEC_MODIFY_CONFIGURATION: return createIECModifyConfiguration();
+			case IECModificationmarksPackage.IEC_MODIFY_METHOD_IMPLEMENTATION: return createIECModifyMethodImplementation();
+			case IECModificationmarksPackage.IEC_MODIFY_PROPERTY_IMPLEMENTATION: return createIECModifyPropertyImplementation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -204,6 +206,26 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 	public IECModifyConfiguration createIECModifyConfiguration() {
 		IECModifyConfigurationImpl iecModifyConfiguration = new IECModifyConfigurationImpl();
 		return iecModifyConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyMethodImplementation createIECModifyMethodImplementation() {
+		IECModifyMethodImplementationImpl iecModifyMethodImplementation = new IECModifyMethodImplementationImpl();
+		return iecModifyMethodImplementation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyPropertyImplementation createIECModifyPropertyImplementation() {
+		IECModifyPropertyImplementationImpl iecModifyPropertyImplementation = new IECModifyPropertyImplementationImpl();
+		return iecModifyPropertyImplementation;
 	}
 
 	/**

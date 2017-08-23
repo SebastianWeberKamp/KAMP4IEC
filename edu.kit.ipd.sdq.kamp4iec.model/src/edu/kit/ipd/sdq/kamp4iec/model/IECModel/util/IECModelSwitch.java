@@ -85,8 +85,8 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.FUNCTION_BLOCK: {
 				FunctionBlock functionBlock = (FunctionBlock)theEObject;
 				T result = caseFunctionBlock(functionBlock);
-				if (result == null) result = caseIECComponent(functionBlock);
 				if (result == null) result = caseDependencyResource(functionBlock);
+				if (result == null) result = caseIECComponent(functionBlock);
 				if (result == null) result = caseIdentifier(functionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -118,8 +118,8 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.IEC_INTERFACE: {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
-				if (result == null) result = caseIECComponent(iecInterface);
 				if (result == null) result = caseDependencyResource(iecInterface);
+				if (result == null) result = caseIECComponent(iecInterface);
 				if (result == null) result = caseIdentifier(iecInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -135,8 +135,8 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION: {
 				IECMethodImplementation iecMethodImplementation = (IECMethodImplementation)theEObject;
 				T result = caseIECMethodImplementation(iecMethodImplementation);
-				if (result == null) result = caseIECComponent(iecMethodImplementation);
 				if (result == null) result = caseDependencyResource(iecMethodImplementation);
+				if (result == null) result = caseIECComponent(iecMethodImplementation);
 				if (result == null) result = caseIdentifier(iecMethodImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -144,8 +144,8 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION: {
 				IECPropertyImplementation iecPropertyImplementation = (IECPropertyImplementation)theEObject;
 				T result = caseIECPropertyImplementation(iecPropertyImplementation);
-				if (result == null) result = caseIECComponent(iecPropertyImplementation);
 				if (result == null) result = caseDependencyResource(iecPropertyImplementation);
+				if (result == null) result = caseIECComponent(iecPropertyImplementation);
 				if (result == null) result = caseIdentifier(iecPropertyImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -168,6 +168,8 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.DEPENDENCY_RESOURCE: {
 				DependencyResource dependencyResource = (DependencyResource)theEObject;
 				T result = caseDependencyResource(dependencyResource);
+				if (result == null) result = caseIECComponent(dependencyResource);
+				if (result == null) result = caseIdentifier(dependencyResource);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

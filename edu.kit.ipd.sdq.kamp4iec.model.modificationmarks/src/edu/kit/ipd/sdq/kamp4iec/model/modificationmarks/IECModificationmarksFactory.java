@@ -141,6 +141,24 @@ public interface IECModificationmarksFactory extends EFactory {
 	IECModifyConfiguration createIECModifyConfiguration();
 
 	/**
+	 * Returns a new object of class '<em>IEC Modify Method Implementation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Method Implementation</em>'.
+	 * @generated
+	 */
+	IECModifyMethodImplementation createIECModifyMethodImplementation();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Property Implementation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Property Implementation</em>'.
+	 * @generated
+	 */
+	IECModifyPropertyImplementation createIECModifyPropertyImplementation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

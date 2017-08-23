@@ -371,6 +371,52 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyMethodImplementationItemProvider iecModifyMethodImplementationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyMethodImplementationAdapter() {
+		if (iecModifyMethodImplementationItemProvider == null) {
+			iecModifyMethodImplementationItemProvider = new IECModifyMethodImplementationItemProvider(this);
+		}
+
+		return iecModifyMethodImplementationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IECModifyPropertyImplementationItemProvider iecModifyPropertyImplementationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIECModifyPropertyImplementationAdapter() {
+		if (iecModifyPropertyImplementationItemProvider == null) {
+			iecModifyPropertyImplementationItemProvider = new IECModifyPropertyImplementationItemProvider(this);
+		}
+
+		return iecModifyPropertyImplementationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -482,6 +528,8 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 		if (iecModifyProgramItemProvider != null) iecModifyProgramItemProvider.dispose();
 		if (iecModifyEnumItemProvider != null) iecModifyEnumItemProvider.dispose();
 		if (iecModifyConfigurationItemProvider != null) iecModifyConfigurationItemProvider.dispose();
+		if (iecModifyMethodImplementationItemProvider != null) iecModifyMethodImplementationItemProvider.dispose();
+		if (iecModifyPropertyImplementationItemProvider != null) iecModifyPropertyImplementationItemProvider.dispose();
 	}
 
 }

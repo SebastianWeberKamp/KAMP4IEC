@@ -29,6 +29,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 
 /**
@@ -239,14 +240,14 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
+				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
 				
 				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
 				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
-				this.getIECChangePropagationDueToDataDependencies().getMethodModifications().
+				this.getIECChangePropagationDueToDataDependencies().getMethodImplementationModifications().
 						add(modification);
 				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
 			}
@@ -349,14 +350,14 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
+				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
 				
 				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
 				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
-				this.getIECChangePropagationDueToDataDependencies().getMethodModifications().
+				this.getIECChangePropagationDueToDataDependencies().getMethodImplementationModifications().
 						add(modification);
 				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
 			}
@@ -387,14 +388,14 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
+				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
 				
 				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
 				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
-				this.getIECChangePropagationDueToDataDependencies().getMethodModifications().
+				this.getIECChangePropagationDueToDataDependencies().getMethodImplementationModifications().
 						add(modification);
 				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
 			}
