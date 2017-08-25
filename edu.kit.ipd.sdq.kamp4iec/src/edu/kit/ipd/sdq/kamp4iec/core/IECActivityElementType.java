@@ -49,7 +49,7 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	}
 
 	public static IECActivityElementType[] getTopLevelArchitectureActivityElementTypes() {	
-		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK};
+		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, PROPERTY, METHOD, ENUM};
 	}
 
 }

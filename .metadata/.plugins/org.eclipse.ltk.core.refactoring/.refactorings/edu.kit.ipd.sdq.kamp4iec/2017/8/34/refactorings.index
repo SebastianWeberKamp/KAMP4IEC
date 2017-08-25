@@ -12,3 +12,6 @@
 1503477303185	Rename local variable 'functionBlock'
 1503477429187	Rename local variable 'fb'
 1503478072485	Rename local variable 'functionBlock'
+1503563391820	Rename local variable 'numberOfISMetadataFiles'
+1503563399362	Rename local variable 'numberOfISSourceFiles'
+1503657335552	Rename local variable 'providedRole'

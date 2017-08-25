@@ -7,10 +7,13 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.tests
+Export-Package: edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.tests,
+ IECFieldOfActivityAnnotations.tests
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
  org.palladiosimulator.pcm;visibility:=reexport,
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
  de.uka.ipd.sdq.stoex;visibility:=reexport,
