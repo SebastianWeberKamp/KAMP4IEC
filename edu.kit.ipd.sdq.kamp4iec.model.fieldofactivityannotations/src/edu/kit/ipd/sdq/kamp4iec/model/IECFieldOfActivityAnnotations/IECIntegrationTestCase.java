@@ -2,9 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
-import org.palladiosimulator.pcm.core.composition.AssemblyConnector;
-
-import org.palladiosimulator.pcm.repository.OperationProvidedRole;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,8 +14,7 @@ import org.palladiosimulator.pcm.repository.OperationProvidedRole;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getParent <em>Parent</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getProvidedrole <em>Providedrole</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getAssemblyConnector <em>Assembly Connector</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getComponent <em>Component</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECIntegrationTestCase()
@@ -54,55 +51,29 @@ public interface IECIntegrationTestCase extends IECTestCase {
 	void setParent(IECTestSpecification value);
 
 	/**
-	 * Returns the value of the '<em><b>Providedrole</b></em>' reference.
+	 * Returns the value of the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Providedrole</em>' reference isn't clear,
+	 * If the meaning of the '<em>Component</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Providedrole</em>' reference.
-	 * @see #setProvidedrole(OperationProvidedRole)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECIntegrationTestCase_Providedrole()
+	 * @return the value of the '<em>Component</em>' reference.
+	 * @see #setComponent(IECComponent)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECIntegrationTestCase_Component()
 	 * @model
 	 * @generated
 	 */
-	OperationProvidedRole getProvidedrole();
+	IECComponent getComponent();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getProvidedrole <em>Providedrole</em>}' reference.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getComponent <em>Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Providedrole</em>' reference.
-	 * @see #getProvidedrole()
+	 * @param value the new value of the '<em>Component</em>' reference.
+	 * @see #getComponent()
 	 * @generated
 	 */
-	void setProvidedrole(OperationProvidedRole value);
-
-	/**
-	 * Returns the value of the '<em><b>Assembly Connector</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Assembly Connector</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assembly Connector</em>' reference.
-	 * @see #setAssemblyConnector(AssemblyConnector)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECIntegrationTestCase_AssemblyConnector()
-	 * @model
-	 * @generated
-	 */
-	AssemblyConnector getAssemblyConnector();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getAssemblyConnector <em>Assembly Connector</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assembly Connector</em>' reference.
-	 * @see #getAssemblyConnector()
-	 * @generated
-	 */
-	void setAssemblyConnector(AssemblyConnector value);
+	void setComponent(IECComponent value);
 
 } // IECIntegrationTestCase

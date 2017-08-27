@@ -7,6 +7,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECPerson;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRole;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRoleList;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,8 +26,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.palladiosimulator.pcm.repository.RepositoryComponent;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public abstract class IECRoleImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<RepositoryComponent> components;
+	protected EList<IECComponent> components;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,9 +182,9 @@ public abstract class IECRoleImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<RepositoryComponent> getComponents() {
+	public EList<IECComponent> getComponents() {
 		if (components == null) {
-			components = new EObjectResolvingEList<RepositoryComponent>(RepositoryComponent.class, this, IECFieldOfActivityAnnotationsPackage.IEC_ROLE__COMPONENTS);
+			components = new EObjectResolvingEList<IECComponent>(IECComponent.class, this, IECFieldOfActivityAnnotationsPackage.IEC_ROLE__COMPONENTS);
 		}
 		return components;
 	}
@@ -279,7 +279,7 @@ public abstract class IECRoleImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_ROLE__COMPONENTS:
 				getComponents().clear();
-				getComponents().addAll((Collection<? extends RepositoryComponent>)newValue);
+				getComponents().addAll((Collection<? extends IECComponent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -6,20 +6,17 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfAc
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import org.palladiosimulator.pcm.core.composition.AssemblyConnector;
-
-import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,32 +27,21 @@ import org.palladiosimulator.pcm.repository.OperationProvidedRole;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl#getProvidedrole <em>Providedrole</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl#getAssemblyConnector <em>Assembly Connector</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl#getComponent <em>Component</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregationImpl implements IECIntegrationTestCaseAggregation {
 	/**
-	 * The cached value of the '{@link #getProvidedrole() <em>Providedrole</em>}' reference.
+	 * The cached value of the '{@link #getComponent() <em>Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProvidedrole()
+	 * @see #getComponent()
 	 * @generated
 	 * @ordered
 	 */
-	protected OperationProvidedRole providedrole;
-
-	/**
-	 * The cached value of the '{@link #getAssemblyConnector() <em>Assembly Connector</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAssemblyConnector()
-	 * @generated
-	 * @ordered
-	 */
-	protected AssemblyConnector assemblyConnector;
+	protected IECComponent component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,16 +108,16 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationProvidedRole getProvidedrole() {
-		if (providedrole != null && ((EObject)providedrole).eIsProxy()) {
-			InternalEObject oldProvidedrole = (InternalEObject)providedrole;
-			providedrole = (OperationProvidedRole)eResolveProxy(oldProvidedrole);
-			if (providedrole != oldProvidedrole) {
+	public IECComponent getComponent() {
+		if (component != null && component.eIsProxy()) {
+			InternalEObject oldComponent = (InternalEObject)component;
+			component = (IECComponent)eResolveProxy(oldComponent);
+			if (component != oldComponent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE, oldProvidedrole, providedrole));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT, oldComponent, component));
 			}
 		}
-		return providedrole;
+		return component;
 	}
 
 	/**
@@ -139,8 +125,8 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationProvidedRole basicGetProvidedrole() {
-		return providedrole;
+	public IECComponent basicGetComponent() {
+		return component;
 	}
 
 	/**
@@ -148,49 +134,11 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProvidedrole(OperationProvidedRole newProvidedrole) {
-		OperationProvidedRole oldProvidedrole = providedrole;
-		providedrole = newProvidedrole;
+	public void setComponent(IECComponent newComponent) {
+		IECComponent oldComponent = component;
+		component = newComponent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE, oldProvidedrole, providedrole));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AssemblyConnector getAssemblyConnector() {
-		if (assemblyConnector != null && ((EObject)assemblyConnector).eIsProxy()) {
-			InternalEObject oldAssemblyConnector = (InternalEObject)assemblyConnector;
-			assemblyConnector = (AssemblyConnector)eResolveProxy(oldAssemblyConnector);
-			if (assemblyConnector != oldAssemblyConnector) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR, oldAssemblyConnector, assemblyConnector));
-			}
-		}
-		return assemblyConnector;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AssemblyConnector basicGetAssemblyConnector() {
-		return assemblyConnector;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAssemblyConnector(AssemblyConnector newAssemblyConnector) {
-		AssemblyConnector oldAssemblyConnector = assemblyConnector;
-		assemblyConnector = newAssemblyConnector;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR, oldAssemblyConnector, assemblyConnector));
+			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT, oldComponent, component));
 	}
 
 	/**
@@ -247,12 +195,9 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT:
 				return getParent();
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				if (resolve) return getProvidedrole();
-				return basicGetProvidedrole();
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR:
-				if (resolve) return getAssemblyConnector();
-				return basicGetAssemblyConnector();
+			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT:
+				if (resolve) return getComponent();
+				return basicGetComponent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -268,11 +213,8 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT:
 				setParent((IECTestSpecification)newValue);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				setProvidedrole((OperationProvidedRole)newValue);
-				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR:
-				setAssemblyConnector((AssemblyConnector)newValue);
+			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT:
+				setComponent((IECComponent)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,11 +231,8 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT:
 				setParent((IECTestSpecification)null);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				setProvidedrole((OperationProvidedRole)null);
-				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR:
-				setAssemblyConnector((AssemblyConnector)null);
+			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT:
+				setComponent((IECComponent)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -309,10 +248,8 @@ public class IECIntegrationTestCaseAggregationImpl extends IECTestCaseAggregatio
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT:
 				return getParent() != null;
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				return providedrole != null;
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR:
-				return assemblyConnector != null;
+			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT:
+				return component != null;
 		}
 		return super.eIsSet(featureID);
 	}

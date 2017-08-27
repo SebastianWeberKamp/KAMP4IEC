@@ -141,7 +141,7 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 				activity.addFollowupActivity(new Activity(IECActivityType.TESTDEVELOPMENT, 
 						IECActivityElementType.TESTCASE, activity.getElement(),
 						"", null, BasicActivity.ADD, 
-						"Test development: Develop unit tests for ProvidedRole."));
+						"Test development: Develop unit tests for component."));
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getTopLevelArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.REMOVE) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(baseVersion, activity);
@@ -149,7 +149,7 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 					activity.addFollowupActivity(new Activity(IECActivityType.TESTDEVELOPMENT, 
 							IECActivityElementType.TESTCASE, activity.getElement(),
 							numberOfUnitTests + " test(s)", null, BasicActivity.REMOVE, 
-							"Test development: Remove unit tests for ProvidedRole."));
+							"Test development: Remove unit tests for component."));
 				}
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getTopLevelArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.MODIFY) {
@@ -158,7 +158,7 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 					activity.addFollowupActivity(new Activity(IECActivityType.TESTUPDATE, 
 							IECActivityElementType.TESTCASE, activity.getElement(),
 							numberOfUnitTests + " test(s)", null, BasicActivity.CHECKANDUPDATE, 
-							"Test development: Check and update unit tests for ProvidedRole."));
+							"Test development: Check and update unit tests for component."));
 				}
 			}
 			deriveTestDevelopmentActivities(baseVersion, targetVersion, activity.getSubActivities());

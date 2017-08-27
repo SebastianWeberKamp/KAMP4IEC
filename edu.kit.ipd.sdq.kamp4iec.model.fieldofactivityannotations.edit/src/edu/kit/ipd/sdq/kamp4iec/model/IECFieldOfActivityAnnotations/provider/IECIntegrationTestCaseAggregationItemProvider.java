@@ -43,48 +43,25 @@ public class IECIntegrationTestCaseAggregationItemProvider extends IECTestCaseAg
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addProvidedrolePropertyDescriptor(object);
-			addAssemblyConnectorPropertyDescriptor(object);
+			addComponentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Providedrole feature.
+	 * This adds a property descriptor for the Component feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProvidedrolePropertyDescriptor(Object object) {
+	protected void addComponentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IECIntegrationTestCaseAggregation_providedrole_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECIntegrationTestCaseAggregation_providedrole_feature", "_UI_IECIntegrationTestCaseAggregation_type"),
-				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Assembly Connector feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAssemblyConnectorPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECIntegrationTestCaseAggregation_assemblyConnector_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECIntegrationTestCaseAggregation_assemblyConnector_feature", "_UI_IECIntegrationTestCaseAggregation_type"),
-				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR,
+				 getString("_UI_IECIntegrationTestCaseAggregation_component_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECIntegrationTestCaseAggregation_component_feature", "_UI_IECIntegrationTestCaseAggregation_type"),
+				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT,
 				 true,
 				 false,
 				 true,

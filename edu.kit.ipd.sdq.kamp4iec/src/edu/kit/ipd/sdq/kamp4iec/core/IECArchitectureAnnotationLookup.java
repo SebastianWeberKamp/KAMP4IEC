@@ -28,7 +28,7 @@ public class IECArchitectureAnnotationLookup {
 			IECComponent component) {
 		List<IECSourceFile> sourceFiles = new ArrayList<IECSourceFile>();
 		
-		if (version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
+		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECSourceFile sourceFile : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getSourceFiles()) {
 				if (sourceFile.getComponent()==component) {
@@ -42,7 +42,7 @@ public class IECArchitectureAnnotationLookup {
 
 	public static IECSourceFileAggregation lookUpSourceFileAggregationForComponent(IECArchitectureVersion version, 
 			IECComponent component) {
-		if (version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
+		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECSourceFileAggregation sourceFileAggregation : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getSourceFileAggregations()) {
 				if (sourceFileAggregation.getComponent()==component) {
@@ -58,7 +58,7 @@ public class IECArchitectureAnnotationLookup {
 			IECComponent component) {
 		List<IECMetadataFile> metadataFiles = new ArrayList<IECMetadataFile>();
 		
-		if (version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
+		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECMetadataFile metadataFile : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getMetadataFiles()) {
 				if (metadataFile.getComponent()==component) {
@@ -72,7 +72,7 @@ public class IECArchitectureAnnotationLookup {
 
 	public static IECMetadataFileAggregation lookUpMetadataFileAggregationForComponent(IECArchitectureVersion version, 
 			IECComponent component) {
-		if (version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
+		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECMetadataFileAggregation metadataFileAggregation : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getMetadataFileAggregations()) {
 				if (metadataFileAggregation.getComponent()==component) {
@@ -86,10 +86,10 @@ public class IECArchitectureAnnotationLookup {
 
 	public static IECUnitTestCaseAggregation lookUpUnitTestAggregationForIECComponent(
 			IECArchitectureVersion version, IECComponent component) {
-		if (version.getFieldOfActivityRepository().getTestSpecification() != null) {
+		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getTestSpecification() != null) {
 			for (IECUnitTestCaseAggregation testAggregation : version.getFieldOfActivityRepository().
 					getTestSpecification().getUnitTestCaseAggregations()) {
-				if (testAggregation.getProvidedrole()==component) {
+				if (testAggregation.getComponent()==component) {
 					return testAggregation;
 				}
 			}
@@ -102,10 +102,10 @@ public class IECArchitectureAnnotationLookup {
 			IECArchitectureVersion version,IECComponent component) {
 		List<IECUnitTestCase> testCases = new ArrayList<IECUnitTestCase>();
 		
-		if (version.getFieldOfActivityRepository().getTestSpecification() != null) {
+		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getTestSpecification() != null) {
 			for (IECUnitTestCase testcase : version.getFieldOfActivityRepository().
 					getTestSpecification().getUnitTestCases()) {
-				if (testcase.getProvidedrole()==component) {
+				if (testcase.getComponent()==component) {
 					testCases.add(testcase);
 				}
 			}

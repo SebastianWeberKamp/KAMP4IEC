@@ -10,6 +10,10 @@ import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
 
 import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelEditPlugin;
+
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -49,6 +53,8 @@ public final class IECFieldOfActivityAnnotationsEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     IdentifierEditPlugin.INSTANCE,
+		     IECModelEditPlugin.INSTANCE,
+		     IECRepositoryEditPlugin.INSTANCE,
 		     PalladioComponentModelEditPlugin.INSTANCE,
 		     ProbabilityFunctionEditPlugin.INSTANCE,
 		     StoexEditPlugin.INSTANCE,

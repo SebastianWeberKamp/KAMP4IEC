@@ -43,25 +43,25 @@ public class IECUnitTestCaseItemProvider extends IECTestCaseItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addProvidedrolePropertyDescriptor(object);
+			addComponentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Providedrole feature.
+	 * This adds a property descriptor for the Component feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProvidedrolePropertyDescriptor(Object object) {
+	protected void addComponentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IECUnitTestCase_providedrole_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECUnitTestCase_providedrole_feature", "_UI_IECUnitTestCase_type"),
-				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_UNIT_TEST_CASE__PROVIDEDROLE,
+				 getString("_UI_IECUnitTestCase_component_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECUnitTestCase_component_feature", "_UI_IECUnitTestCase_type"),
+				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_UNIT_TEST_CASE__COMPONENT,
 				 true,
 				 false,
 				 true,

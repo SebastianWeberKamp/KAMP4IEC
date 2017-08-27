@@ -3,6 +3,7 @@ package edu.kit.ipd.sdq.kamp4iec.core;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
@@ -45,6 +46,11 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 					createConfiguration();
 		}
 		this._configuration = params.configuration;
+		if (params.fieldOfActivityRepository == null) {
+			_fieldOfActivityRepository = IECFieldOfActivityAnnotationsFactory.eINSTANCE.
+					createIECFieldOfActivityAnnotationsRepository();
+		}
+		this._fieldOfActivityRepository = params.fieldOfActivityRepository;
 		
 	}
 	

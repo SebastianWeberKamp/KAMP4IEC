@@ -34,6 +34,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTester;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -42,8 +44,6 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.palladiosimulator.pcm.PcmPackage;
-
-import org.palladiosimulator.pcm.core.composition.CompositionPackage;
 
 import org.palladiosimulator.pcm.repository.RepositoryPackage;
 
@@ -304,6 +304,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		isInited = true;
 
 		// Initialize simple dependencies
+		IECModelPackage.eINSTANCE.eClass();
 		PcmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -749,7 +750,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECUnitTestCase_Providedrole() {
+	public EReference getIECUnitTestCase_Component() {
 		return (EReference)iecUnitTestCaseEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -776,7 +777,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECAcceptanceTestCase_Providedrole() {
+	public EReference getIECAcceptanceTestCase_Component() {
 		return (EReference)iecAcceptanceTestCaseEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -803,17 +804,8 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECIntegrationTestCase_Providedrole() {
+	public EReference getIECIntegrationTestCase_Component() {
 		return (EReference)iecIntegrationTestCaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECIntegrationTestCase_AssemblyConnector() {
-		return (EReference)iecIntegrationTestCaseEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -839,7 +831,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECUnitTestCaseAggregation_Providedrole() {
+	public EReference getIECUnitTestCaseAggregation_Component() {
 		return (EReference)iecUnitTestCaseAggregationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -866,7 +858,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECAcceptanceTestCaseAggregation_Providedrole() {
+	public EReference getIECAcceptanceTestCaseAggregation_Component() {
 		return (EReference)iecAcceptanceTestCaseAggregationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -893,17 +885,8 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECIntegrationTestCaseAggregation_Providedrole() {
+	public EReference getIECIntegrationTestCaseAggregation_Component() {
 		return (EReference)iecIntegrationTestCaseAggregationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECIntegrationTestCaseAggregation_AssemblyConnector() {
-		return (EReference)iecIntegrationTestCaseAggregationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1297,29 +1280,27 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 
 		iecUnitTestCaseEClass = createEClass(IEC_UNIT_TEST_CASE);
 		createEReference(iecUnitTestCaseEClass, IEC_UNIT_TEST_CASE__PARENT);
-		createEReference(iecUnitTestCaseEClass, IEC_UNIT_TEST_CASE__PROVIDEDROLE);
+		createEReference(iecUnitTestCaseEClass, IEC_UNIT_TEST_CASE__COMPONENT);
 
 		iecAcceptanceTestCaseEClass = createEClass(IEC_ACCEPTANCE_TEST_CASE);
 		createEReference(iecAcceptanceTestCaseEClass, IEC_ACCEPTANCE_TEST_CASE__PARENT);
-		createEReference(iecAcceptanceTestCaseEClass, IEC_ACCEPTANCE_TEST_CASE__PROVIDEDROLE);
+		createEReference(iecAcceptanceTestCaseEClass, IEC_ACCEPTANCE_TEST_CASE__COMPONENT);
 
 		iecIntegrationTestCaseEClass = createEClass(IEC_INTEGRATION_TEST_CASE);
 		createEReference(iecIntegrationTestCaseEClass, IEC_INTEGRATION_TEST_CASE__PARENT);
-		createEReference(iecIntegrationTestCaseEClass, IEC_INTEGRATION_TEST_CASE__PROVIDEDROLE);
-		createEReference(iecIntegrationTestCaseEClass, IEC_INTEGRATION_TEST_CASE__ASSEMBLY_CONNECTOR);
+		createEReference(iecIntegrationTestCaseEClass, IEC_INTEGRATION_TEST_CASE__COMPONENT);
 
 		iecUnitTestCaseAggregationEClass = createEClass(IEC_UNIT_TEST_CASE_AGGREGATION);
 		createEReference(iecUnitTestCaseAggregationEClass, IEC_UNIT_TEST_CASE_AGGREGATION__PARENT);
-		createEReference(iecUnitTestCaseAggregationEClass, IEC_UNIT_TEST_CASE_AGGREGATION__PROVIDEDROLE);
+		createEReference(iecUnitTestCaseAggregationEClass, IEC_UNIT_TEST_CASE_AGGREGATION__COMPONENT);
 
 		iecAcceptanceTestCaseAggregationEClass = createEClass(IEC_ACCEPTANCE_TEST_CASE_AGGREGATION);
 		createEReference(iecAcceptanceTestCaseAggregationEClass, IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT);
-		createEReference(iecAcceptanceTestCaseAggregationEClass, IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE);
+		createEReference(iecAcceptanceTestCaseAggregationEClass, IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT);
 
 		iecIntegrationTestCaseAggregationEClass = createEClass(IEC_INTEGRATION_TEST_CASE_AGGREGATION);
 		createEReference(iecIntegrationTestCaseAggregationEClass, IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT);
-		createEReference(iecIntegrationTestCaseAggregationEClass, IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE);
-		createEReference(iecIntegrationTestCaseAggregationEClass, IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR);
+		createEReference(iecIntegrationTestCaseAggregationEClass, IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT);
 
 		iecStaffSpecificationEClass = createEClass(IEC_STAFF_SPECIFICATION);
 		createEReference(iecStaffSpecificationEClass, IEC_STAFF_SPECIFICATION__PARENT);
@@ -1393,8 +1374,8 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		IECModelPackage theIECModelPackage = (IECModelPackage)EPackage.Registry.INSTANCE.getEPackage(IECModelPackage.eNS_URI);
 		RepositoryPackage theRepositoryPackage = (RepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(RepositoryPackage.eNS_URI);
-		CompositionPackage theCompositionPackage = (CompositionPackage)EPackage.Registry.INSTANCE.getEPackage(CompositionPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1432,15 +1413,15 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 
 		initEClass(iecSourceFileEClass, IECSourceFile.class, "IECSourceFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECSourceFile_Parent(), this.getIECDevelopmentArtefactSpecification(), this.getIECDevelopmentArtefactSpecification_SourceFiles(), "parent", null, 1, 1, IECSourceFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECSourceFile_Component(), theRepositoryPackage.getRepositoryComponent(), null, "component", null, 0, 1, IECSourceFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECSourceFile_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECSourceFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecSourceFileAggregationEClass, IECSourceFileAggregation.class, "IECSourceFileAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECSourceFileAggregation_Parent(), this.getIECDevelopmentArtefactSpecification(), this.getIECDevelopmentArtefactSpecification_SourceFileAggregations(), "parent", null, 1, 1, IECSourceFileAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECSourceFileAggregation_Component(), theRepositoryPackage.getRepositoryComponent(), null, "component", null, 0, 1, IECSourceFileAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECSourceFileAggregation_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECSourceFileAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecMetadataFileEClass, IECMetadataFile.class, "IECMetadataFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECMetadataFile_Parent(), this.getIECDevelopmentArtefactSpecification(), this.getIECDevelopmentArtefactSpecification_MetadataFiles(), "parent", null, 1, 1, IECMetadataFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMetadataFile_Component(), theRepositoryPackage.getRepositoryComponent(), null, "component", null, 0, 1, IECMetadataFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMetadataFile_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECMetadataFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecMetadataFileAggregationEClass, IECMetadataFileAggregation.class, "IECMetadataFileAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECMetadataFileAggregation_Parent(), this.getIECDevelopmentArtefactSpecification(), this.getIECDevelopmentArtefactSpecification_MetadataFileAggregations(), "parent", null, 1, 1, IECMetadataFileAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1464,39 +1445,37 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		initEReference(getIECRuntimeInstance_Parent(), this.getIECDeploymentSpecification(), this.getIECDeploymentSpecification_RuntimeInstances(), "parent", null, 1, 1, IECRuntimeInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIECRuntimeInstance_Name(), ecorePackage.getEString(), "name", null, 0, 1, IECRuntimeInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIECRuntimeInstance_Description(), ecorePackage.getEString(), "description", null, 0, 1, IECRuntimeInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECRuntimeInstance_Components(), theRepositoryPackage.getRepositoryComponent(), null, "components", null, 0, -1, IECRuntimeInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECRuntimeInstance_Components(), theIECModelPackage.getIECComponent(), null, "components", null, 0, -1, IECRuntimeInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecRuntimeInstanceAggregationEClass, IECRuntimeInstanceAggregation.class, "IECRuntimeInstanceAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECRuntimeInstanceAggregation_Parent(), this.getIECDeploymentSpecification(), this.getIECDeploymentSpecification_RuntimeInstanceAggregations(), "parent", null, 1, 1, IECRuntimeInstanceAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIECRuntimeInstanceAggregation_NumberOfInstances(), ecorePackage.getEInt(), "numberOfInstances", null, 0, 1, IECRuntimeInstanceAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIECRuntimeInstanceAggregation_Description(), ecorePackage.getEString(), "description", null, 0, 1, IECRuntimeInstanceAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECRuntimeInstanceAggregation_Components(), theRepositoryPackage.getRepositoryComponent(), null, "components", null, 0, -1, IECRuntimeInstanceAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECRuntimeInstanceAggregation_Components(), theIECModelPackage.getIECComponent(), null, "components", null, 0, -1, IECRuntimeInstanceAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecUnitTestCaseEClass, IECUnitTestCase.class, "IECUnitTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECUnitTestCase_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_UnitTestCases(), "parent", null, 1, 1, IECUnitTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECUnitTestCase_Providedrole(), theRepositoryPackage.getOperationProvidedRole(), null, "providedrole", null, 0, 1, IECUnitTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECUnitTestCase_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECUnitTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecAcceptanceTestCaseEClass, IECAcceptanceTestCase.class, "IECAcceptanceTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECAcceptanceTestCase_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_AcceptanceTestCases(), "parent", null, 1, 1, IECAcceptanceTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECAcceptanceTestCase_Providedrole(), theRepositoryPackage.getOperationProvidedRole(), null, "providedrole", null, 0, 1, IECAcceptanceTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECAcceptanceTestCase_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECAcceptanceTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecIntegrationTestCaseEClass, IECIntegrationTestCase.class, "IECIntegrationTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECIntegrationTestCase_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_IntegrationTestCases(), "parent", null, 1, 1, IECIntegrationTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECIntegrationTestCase_Providedrole(), theRepositoryPackage.getOperationProvidedRole(), null, "providedrole", null, 0, 1, IECIntegrationTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECIntegrationTestCase_AssemblyConnector(), theCompositionPackage.getAssemblyConnector(), null, "assemblyConnector", null, 0, 1, IECIntegrationTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECIntegrationTestCase_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECIntegrationTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecUnitTestCaseAggregationEClass, IECUnitTestCaseAggregation.class, "IECUnitTestCaseAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECUnitTestCaseAggregation_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_UnitTestCaseAggregations(), "parent", null, 1, 1, IECUnitTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECUnitTestCaseAggregation_Providedrole(), theRepositoryPackage.getOperationProvidedRole(), null, "providedrole", null, 0, 1, IECUnitTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECUnitTestCaseAggregation_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECUnitTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecAcceptanceTestCaseAggregationEClass, IECAcceptanceTestCaseAggregation.class, "IECAcceptanceTestCaseAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECAcceptanceTestCaseAggregation_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_AcceptanceTestCaseAggregations(), "parent", null, 1, 1, IECAcceptanceTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECAcceptanceTestCaseAggregation_Providedrole(), theRepositoryPackage.getOperationProvidedRole(), null, "providedrole", null, 0, 1, IECAcceptanceTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECAcceptanceTestCaseAggregation_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECAcceptanceTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecIntegrationTestCaseAggregationEClass, IECIntegrationTestCaseAggregation.class, "IECIntegrationTestCaseAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECIntegrationTestCaseAggregation_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_IntegrationTestCaseAggregations(), "parent", null, 1, 1, IECIntegrationTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECIntegrationTestCaseAggregation_Providedrole(), theRepositoryPackage.getOperationProvidedRole(), null, "providedrole", null, 0, 1, IECIntegrationTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECIntegrationTestCaseAggregation_AssemblyConnector(), theCompositionPackage.getAssemblyConnector(), null, "assemblyConnector", null, 0, 1, IECIntegrationTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECIntegrationTestCaseAggregation_Component(), theIECModelPackage.getIECComponent(), null, "component", null, 0, 1, IECIntegrationTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecStaffSpecificationEClass, IECStaffSpecification.class, "IECStaffSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECStaffSpecification_Parent(), this.getIECFieldOfActivityAnnotationsRepository(), this.getIECFieldOfActivityAnnotationsRepository_StaffSpecification(), "parent", null, 1, 1, IECStaffSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1516,7 +1495,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		initEReference(getIECRole_Parent(), this.getIECRoleList(), this.getIECRoleList_Roles(), "parent", null, 1, 1, IECRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECRole_Person(), this.getIECPerson(), this.getIECPerson_Roles(), "person", null, 0, -1, IECRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIECRole_Description(), ecorePackage.getEString(), "description", null, 0, 1, IECRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECRole_Components(), theRepositoryPackage.getRepositoryComponent(), null, "components", null, 0, -1, IECRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECRole_Components(), theIECModelPackage.getIECComponent(), null, "components", null, 0, -1, IECRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecRoleListEClass, IECRoleList.class, "IECRoleList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECRoleList_Parent(), this.getIECStaffSpecification(), this.getIECStaffSpecification_RoleList(), "parent", null, 1, 1, IECRoleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

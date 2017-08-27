@@ -881,13 +881,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_UNIT_TEST_CASE__PARENT = IEC_TEST_CASE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' reference.
+	 * The feature id for the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_UNIT_TEST_CASE__PROVIDEDROLE = IEC_TEST_CASE_FEATURE_COUNT + 1;
+	int IEC_UNIT_TEST_CASE__COMPONENT = IEC_TEST_CASE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Unit Test Case</em>' class.
@@ -936,13 +936,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_ACCEPTANCE_TEST_CASE__PARENT = IEC_TEST_CASE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' reference.
+	 * The feature id for the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_ACCEPTANCE_TEST_CASE__PROVIDEDROLE = IEC_TEST_CASE_FEATURE_COUNT + 1;
+	int IEC_ACCEPTANCE_TEST_CASE__COMPONENT = IEC_TEST_CASE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Acceptance Test Case</em>' class.
@@ -991,22 +991,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_INTEGRATION_TEST_CASE__PARENT = IEC_TEST_CASE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' reference.
+	 * The feature id for the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTEGRATION_TEST_CASE__PROVIDEDROLE = IEC_TEST_CASE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Assembly Connector</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE__ASSEMBLY_CONNECTOR = IEC_TEST_CASE_FEATURE_COUNT + 2;
+	int IEC_INTEGRATION_TEST_CASE__COMPONENT = IEC_TEST_CASE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Integration Test Case</em>' class.
@@ -1015,7 +1006,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTEGRATION_TEST_CASE_FEATURE_COUNT = IEC_TEST_CASE_FEATURE_COUNT + 3;
+	int IEC_INTEGRATION_TEST_CASE_FEATURE_COUNT = IEC_TEST_CASE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>IEC Integration Test Case</em>' class.
@@ -1110,13 +1101,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_UNIT_TEST_CASE_AGGREGATION__PARENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' reference.
+	 * The feature id for the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_UNIT_TEST_CASE_AGGREGATION__PROVIDEDROLE = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
+	int IEC_UNIT_TEST_CASE_AGGREGATION__COMPONENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Unit Test Case Aggregation</em>' class.
@@ -1174,13 +1165,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' reference.
+	 * The feature id for the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
+	int IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Acceptance Test Case Aggregation</em>' class.
@@ -1238,22 +1229,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' reference.
+	 * The feature id for the '<em><b>Component</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Assembly Connector</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 2;
+	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Integration Test Case Aggregation</em>' class.
@@ -1262,7 +1244,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION_FEATURE_COUNT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 3;
+	int IEC_INTEGRATION_TEST_CASE_AGGREGATION_FEATURE_COUNT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>IEC Integration Test Case Aggregation</em>' class.
@@ -2303,15 +2285,15 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECUnitTestCase_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase#getComponent <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Providedrole</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase#getProvidedrole()
+	 * @return the meta object for the reference '<em>Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase#getComponent()
 	 * @see #getIECUnitTestCase()
 	 * @generated
 	 */
-	EReference getIECUnitTestCase_Providedrole();
+	EReference getIECUnitTestCase_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase <em>IEC Acceptance Test Case</em>}'.
@@ -2335,15 +2317,15 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECAcceptanceTestCase_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase#getComponent <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Providedrole</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase#getProvidedrole()
+	 * @return the meta object for the reference '<em>Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase#getComponent()
 	 * @see #getIECAcceptanceTestCase()
 	 * @generated
 	 */
-	EReference getIECAcceptanceTestCase_Providedrole();
+	EReference getIECAcceptanceTestCase_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase <em>IEC Integration Test Case</em>}'.
@@ -2367,26 +2349,15 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECIntegrationTestCase_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getComponent <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Providedrole</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getProvidedrole()
+	 * @return the meta object for the reference '<em>Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getComponent()
 	 * @see #getIECIntegrationTestCase()
 	 * @generated
 	 */
-	EReference getIECIntegrationTestCase_Providedrole();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getAssemblyConnector <em>Assembly Connector</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Assembly Connector</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getAssemblyConnector()
-	 * @see #getIECIntegrationTestCase()
-	 * @generated
-	 */
-	EReference getIECIntegrationTestCase_AssemblyConnector();
+	EReference getIECIntegrationTestCase_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation <em>IEC Unit Test Case Aggregation</em>}'.
@@ -2410,15 +2381,15 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECUnitTestCaseAggregation_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation#getComponent <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Providedrole</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation#getProvidedrole()
+	 * @return the meta object for the reference '<em>Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation#getComponent()
 	 * @see #getIECUnitTestCaseAggregation()
 	 * @generated
 	 */
-	EReference getIECUnitTestCaseAggregation_Providedrole();
+	EReference getIECUnitTestCaseAggregation_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation <em>IEC Acceptance Test Case Aggregation</em>}'.
@@ -2442,15 +2413,15 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECAcceptanceTestCaseAggregation_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation#getComponent <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Providedrole</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation#getProvidedrole()
+	 * @return the meta object for the reference '<em>Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation#getComponent()
 	 * @see #getIECAcceptanceTestCaseAggregation()
 	 * @generated
 	 */
-	EReference getIECAcceptanceTestCaseAggregation_Providedrole();
+	EReference getIECAcceptanceTestCaseAggregation_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation <em>IEC Integration Test Case Aggregation</em>}'.
@@ -2474,26 +2445,15 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECIntegrationTestCaseAggregation_Parent();
 
 	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getComponent <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Providedrole</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getProvidedrole()
+	 * @return the meta object for the reference '<em>Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getComponent()
 	 * @see #getIECIntegrationTestCaseAggregation()
 	 * @generated
 	 */
-	EReference getIECIntegrationTestCaseAggregation_Providedrole();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getAssemblyConnector <em>Assembly Connector</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Assembly Connector</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getAssemblyConnector()
-	 * @see #getIECIntegrationTestCaseAggregation()
-	 * @generated
-	 */
-	EReference getIECIntegrationTestCaseAggregation_AssemblyConnector();
+	EReference getIECIntegrationTestCaseAggregation_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECStaffSpecification <em>IEC Staff Specification</em>}'.
@@ -3278,12 +3238,12 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_UNIT_TEST_CASE__PARENT = eINSTANCE.getIECUnitTestCase_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IEC_UNIT_TEST_CASE__PROVIDEDROLE = eINSTANCE.getIECUnitTestCase_Providedrole();
+		EReference IEC_UNIT_TEST_CASE__COMPONENT = eINSTANCE.getIECUnitTestCase_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECAcceptanceTestCaseImpl <em>IEC Acceptance Test Case</em>}' class.
@@ -3304,12 +3264,12 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_ACCEPTANCE_TEST_CASE__PARENT = eINSTANCE.getIECAcceptanceTestCase_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IEC_ACCEPTANCE_TEST_CASE__PROVIDEDROLE = eINSTANCE.getIECAcceptanceTestCase_Providedrole();
+		EReference IEC_ACCEPTANCE_TEST_CASE__COMPONENT = eINSTANCE.getIECAcceptanceTestCase_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseImpl <em>IEC Integration Test Case</em>}' class.
@@ -3330,20 +3290,12 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_INTEGRATION_TEST_CASE__PARENT = eINSTANCE.getIECIntegrationTestCase_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IEC_INTEGRATION_TEST_CASE__PROVIDEDROLE = eINSTANCE.getIECIntegrationTestCase_Providedrole();
-
-		/**
-		 * The meta object literal for the '<em><b>Assembly Connector</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_INTEGRATION_TEST_CASE__ASSEMBLY_CONNECTOR = eINSTANCE.getIECIntegrationTestCase_AssemblyConnector();
+		EReference IEC_INTEGRATION_TEST_CASE__COMPONENT = eINSTANCE.getIECIntegrationTestCase_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECUnitTestCaseAggregationImpl <em>IEC Unit Test Case Aggregation</em>}' class.
@@ -3364,12 +3316,12 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_UNIT_TEST_CASE_AGGREGATION__PARENT = eINSTANCE.getIECUnitTestCaseAggregation_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IEC_UNIT_TEST_CASE_AGGREGATION__PROVIDEDROLE = eINSTANCE.getIECUnitTestCaseAggregation_Providedrole();
+		EReference IEC_UNIT_TEST_CASE_AGGREGATION__COMPONENT = eINSTANCE.getIECUnitTestCaseAggregation_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECAcceptanceTestCaseAggregationImpl <em>IEC Acceptance Test Case Aggregation</em>}' class.
@@ -3390,12 +3342,12 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT = eINSTANCE.getIECAcceptanceTestCaseAggregation_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE = eINSTANCE.getIECAcceptanceTestCaseAggregation_Providedrole();
+		EReference IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT = eINSTANCE.getIECAcceptanceTestCaseAggregation_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl <em>IEC Integration Test Case Aggregation</em>}' class.
@@ -3416,20 +3368,12 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT = eINSTANCE.getIECIntegrationTestCaseAggregation_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IEC_INTEGRATION_TEST_CASE_AGGREGATION__PROVIDEDROLE = eINSTANCE.getIECIntegrationTestCaseAggregation_Providedrole();
-
-		/**
-		 * The meta object literal for the '<em><b>Assembly Connector</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_INTEGRATION_TEST_CASE_AGGREGATION__ASSEMBLY_CONNECTOR = eINSTANCE.getIECIntegrationTestCaseAggregation_AssemblyConnector();
+		EReference IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT = eINSTANCE.getIECIntegrationTestCaseAggregation_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECStaffSpecificationImpl <em>IEC Staff Specification</em>}' class.

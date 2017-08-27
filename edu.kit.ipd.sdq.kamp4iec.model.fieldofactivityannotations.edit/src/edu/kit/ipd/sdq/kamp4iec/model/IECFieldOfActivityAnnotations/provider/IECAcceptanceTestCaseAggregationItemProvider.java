@@ -43,25 +43,25 @@ public class IECAcceptanceTestCaseAggregationItemProvider extends IECTestCaseAgg
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addProvidedrolePropertyDescriptor(object);
+			addComponentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Providedrole feature.
+	 * This adds a property descriptor for the Component feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProvidedrolePropertyDescriptor(Object object) {
+	protected void addComponentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IECAcceptanceTestCaseAggregation_providedrole_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECAcceptanceTestCaseAggregation_providedrole_feature", "_UI_IECAcceptanceTestCaseAggregation_type"),
-				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE,
+				 getString("_UI_IECAcceptanceTestCaseAggregation_component_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECAcceptanceTestCaseAggregation_component_feature", "_UI_IECAcceptanceTestCaseAggregation_type"),
+				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT,
 				 true,
 				 false,
 				 true,

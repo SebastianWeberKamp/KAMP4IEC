@@ -9,10 +9,7 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations,
  edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl,
- edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.util,
- IECFieldOfActivityAnnotations,
- IECFieldOfActivityAnnotations.impl,
- IECFieldOfActivityAnnotations.util
+ edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,

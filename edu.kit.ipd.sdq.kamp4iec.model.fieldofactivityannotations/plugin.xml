@@ -10,7 +10,7 @@
       <!-- @generated IECFieldOfActivityAnnotations -->
       <package
             uri="http://sdq.ipd.kit.edu/IECFieldOfActivityAnnotations"
-            class="IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage"
             genModel="model/IECFieldOfActivityAnnotations.genmodel"/>
    </extension>
 

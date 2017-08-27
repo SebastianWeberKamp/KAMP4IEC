@@ -198,18 +198,18 @@ public class IECInternalModificationDerivation {
 			Function function = ((IECModifyFunction) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
-		} else if (modification instanceof IECModifyMethod){
+		} else if (modification instanceof IECModifyMethodImplementation){
 			IECMethodImplementation method = ((IECModifyMethodImplementation) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + method.eClass().getName() + ".");
+		} else if (modification instanceof IECModifyPropertyImplementation){
+			IECPropertyImplementation function = ((IECModifyPropertyImplementation) modification).getAffectedElement();
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
+					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyProgram){
 			Program program = ((IECModifyProgram) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, program, program.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + program.eClass().getName() + ".");
-		} else if (modification instanceof IECModifyProperty){
-			IECPropertyImplementation function = ((IECModifyPropertyImplementation) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
-					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyInterface){
 			IECInterface iecInterface = ((IECModifyInterface) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, iecInterface, iecInterface.getId(), 

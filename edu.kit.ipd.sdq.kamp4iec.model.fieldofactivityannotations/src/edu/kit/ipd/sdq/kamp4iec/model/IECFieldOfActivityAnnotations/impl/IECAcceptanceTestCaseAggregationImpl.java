@@ -6,18 +6,17 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanc
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import org.palladiosimulator.pcm.repository.OperationProvidedRole;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,21 +27,21 @@ import org.palladiosimulator.pcm.repository.OperationProvidedRole;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECAcceptanceTestCaseAggregationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECAcceptanceTestCaseAggregationImpl#getProvidedrole <em>Providedrole</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECAcceptanceTestCaseAggregationImpl#getComponent <em>Component</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregationImpl implements IECAcceptanceTestCaseAggregation {
 	/**
-	 * The cached value of the '{@link #getProvidedrole() <em>Providedrole</em>}' reference.
+	 * The cached value of the '{@link #getComponent() <em>Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProvidedrole()
+	 * @see #getComponent()
 	 * @generated
 	 * @ordered
 	 */
-	protected OperationProvidedRole providedrole;
+	protected IECComponent component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,16 +108,16 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationProvidedRole getProvidedrole() {
-		if (providedrole != null && ((EObject)providedrole).eIsProxy()) {
-			InternalEObject oldProvidedrole = (InternalEObject)providedrole;
-			providedrole = (OperationProvidedRole)eResolveProxy(oldProvidedrole);
-			if (providedrole != oldProvidedrole) {
+	public IECComponent getComponent() {
+		if (component != null && component.eIsProxy()) {
+			InternalEObject oldComponent = (InternalEObject)component;
+			component = (IECComponent)eResolveProxy(oldComponent);
+			if (component != oldComponent) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE, oldProvidedrole, providedrole));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT, oldComponent, component));
 			}
 		}
-		return providedrole;
+		return component;
 	}
 
 	/**
@@ -126,8 +125,8 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OperationProvidedRole basicGetProvidedrole() {
-		return providedrole;
+	public IECComponent basicGetComponent() {
+		return component;
 	}
 
 	/**
@@ -135,11 +134,11 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProvidedrole(OperationProvidedRole newProvidedrole) {
-		OperationProvidedRole oldProvidedrole = providedrole;
-		providedrole = newProvidedrole;
+	public void setComponent(IECComponent newComponent) {
+		IECComponent oldComponent = component;
+		component = newComponent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE, oldProvidedrole, providedrole));
+			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT, oldComponent, component));
 	}
 
 	/**
@@ -196,9 +195,9 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT:
 				return getParent();
-			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				if (resolve) return getProvidedrole();
-				return basicGetProvidedrole();
+			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT:
+				if (resolve) return getComponent();
+				return basicGetComponent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,8 +213,8 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT:
 				setParent((IECTestSpecification)newValue);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				setProvidedrole((OperationProvidedRole)newValue);
+			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT:
+				setComponent((IECComponent)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -232,8 +231,8 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT:
 				setParent((IECTestSpecification)null);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				setProvidedrole((OperationProvidedRole)null);
+			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT:
+				setComponent((IECComponent)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -249,8 +248,8 @@ public class IECAcceptanceTestCaseAggregationImpl extends IECTestCaseAggregation
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PARENT:
 				return getParent() != null;
-			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__PROVIDEDROLE:
-				return providedrole != null;
+			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT:
+				return component != null;
 		}
 		return super.eIsSet(featureID);
 	}

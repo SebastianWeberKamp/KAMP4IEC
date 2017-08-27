@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsModelWizardID"
+            id="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsModelWizardID"
             name="%_UI_IECFieldOfActivityAnnotationsModelWizard_label"
-            class="IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsModelWizard"
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/IECFieldOfActivityAnnotationsModelFile.gif">
          <description>%_UI_IECFieldOfActivityAnnotationsModelWizard_description</description>
@@ -25,12 +25,13 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated IECFieldOfActivityAnnotations -->
       <editor
-            id="IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsEditorID"
+            id="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsEditorID"
             name="%_UI_IECFieldOfActivityAnnotationsEditor_label"
             icon="icons/full/obj16/IECFieldOfActivityAnnotationsModelFile.gif"
             extensions="iecfieldofactivityannotations"
-            class="IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsEditor"
-            contributorClass="IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsActionBarContributor">
+            class="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.presentation.IECFieldOfActivityAnnotationsActionBarContributor">
       </editor>
    </extension>
+
 </plugin>

@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.palladiosimulator.pcm.repository.RepositoryComponent;
 
 /**
  * <!-- begin-user-doc -->
@@ -110,7 +110,7 @@ public interface IECRuntimeInstanceAggregation extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' reference list.
-	 * The list contents are of type {@link org.palladiosimulator.pcm.repository.RepositoryComponent}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Components</em>' reference list isn't clear,
@@ -122,6 +122,6 @@ public interface IECRuntimeInstanceAggregation extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<RepositoryComponent> getComponents();
+	EList<IECComponent> getComponents();
 
 } // IECRuntimeInstanceAggregation

@@ -164,6 +164,10 @@ import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelItemProviderAdapterFactory;
+
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
+
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import org.palladiosimulator.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
@@ -751,6 +755,8 @@ public class IECFieldOfActivityAnnotationsEditor
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECFieldOfActivityAnnotationsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new IECModelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new IECRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new EntityItemProviderAdapterFactory());

@@ -90,34 +90,32 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECUnitTestCase" eSuperTypes="#//IECTestCase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/unitTestCases"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECAcceptanceTestCase" eSuperTypes="#//IECTestCase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/acceptanceTestCases"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECIntegrationTestCase" eSuperTypes="#//IECTestCase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/integrationTestCases"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationProvidedRole"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyConnector" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyConnector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECUnitTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/unitTestCaseAggregations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECAcceptanceTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/acceptanceTestCaseAggregations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECIntegrationTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/integrationTestCaseAggregations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationProvidedRole"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyConnector" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//core/composition/AssemblyConnector"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECStaffSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
