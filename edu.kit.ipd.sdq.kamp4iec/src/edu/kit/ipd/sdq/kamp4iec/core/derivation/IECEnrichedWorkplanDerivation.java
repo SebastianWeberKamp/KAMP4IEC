@@ -30,7 +30,12 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 		deriveMetadataActivities(baseArchitectureVersion, subVersion, result);
 		deriveTestDevelopmentActivities(baseArchitectureVersion, subVersion, result);
 		deriveTestExecutionActivities(subVersion, result);
-		deriveDeploymentExecutionActivities(subVersion, result);
+		//TODO integration tests
+		//TODO acceptance tests
+		deriveDeploymentExecutionActivities(subVersion, result);		
+		//TODO staff
+		//TODO technology specification
+		//TODO design patterns
 
 		return result;
 	}

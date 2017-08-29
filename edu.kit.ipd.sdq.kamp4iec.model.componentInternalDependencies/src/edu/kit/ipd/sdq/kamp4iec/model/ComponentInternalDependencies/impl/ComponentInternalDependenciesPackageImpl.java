@@ -9,8 +9,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.Functionbloc
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -256,7 +254,6 @@ public class ComponentInternalDependenciesPackageImpl extends EPackageImpl imple
 
 		// Obtain other dependent packages
 		IECModelPackage theIECModelPackage = (IECModelPackage)EPackage.Registry.INSTANCE.getEPackage(IECModelPackage.eNS_URI);
-		IECRepositoryPackage theIECRepositoryPackage = (IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(IECRepositoryPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -275,7 +272,7 @@ public class ComponentInternalDependenciesPackageImpl extends EPackageImpl imple
 
 		initEClass(methodDependencyEClass, MethodDependency.class, "MethodDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMethodDependency_RequiredResource(), theIECModelPackage.getDependencyResource(), null, "RequiredResource", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMethodDependency_ProvidedMethod(), theIECRepositoryPackage.getIECMethodImplementation(), null, "ProvidedMethod", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodDependency_ProvidedMethod(), theIECModelPackage.getIECMethodImplementation(), null, "ProvidedMethod", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

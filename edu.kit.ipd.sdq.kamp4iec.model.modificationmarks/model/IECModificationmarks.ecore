@@ -75,6 +75,11 @@
       <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECInterface"/>
     </eGenericSuperTypes>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECModifyMethodImplementation">
+    <eGenericSuperTypes eClassifier="#//IECModifyElement">
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECMethodImplementation"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECModifyMethod">
     <eGenericSuperTypes eClassifier="#//IECModifyElement">
       <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECMethod"/>
@@ -83,6 +88,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECModifyProperty">
     <eGenericSuperTypes eClassifier="#//IECModifyElement">
       <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECProperty"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IECModifyPropertyImplementation">
+    <eGenericSuperTypes eClassifier="#//IECModifyElement">
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECPropertyImplementation"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECModifyProgram">
@@ -98,16 +108,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECModifyConfiguration">
     <eGenericSuperTypes eClassifier="#//IECModifyElement">
       <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//Configuration"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECModifyMethodImplementation">
-    <eGenericSuperTypes eClassifier="#//IECModifyElement">
-      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECMethodImplementation"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECModifyPropertyImplementation">
-    <eGenericSuperTypes eClassifier="#//IECModifyElement">
-      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECPropertyImplementation"/>
     </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>

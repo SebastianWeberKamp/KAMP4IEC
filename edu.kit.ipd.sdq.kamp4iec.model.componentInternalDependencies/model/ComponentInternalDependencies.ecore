@@ -18,6 +18,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="RequiredResource" lowerBound="1"
         eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//DependencyResource"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ProvidedMethod" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECMethodImplementation"/>
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//IECMethodImplementation"/>
   </eClassifiers>
 </ecore:EPackage>

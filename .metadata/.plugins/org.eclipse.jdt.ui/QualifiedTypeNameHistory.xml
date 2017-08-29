@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.provider.IECModificationmarksItemProviderAdapterFactory"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesFactory"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsFactory"/>
 </qualifiedTypeNameHistroy>

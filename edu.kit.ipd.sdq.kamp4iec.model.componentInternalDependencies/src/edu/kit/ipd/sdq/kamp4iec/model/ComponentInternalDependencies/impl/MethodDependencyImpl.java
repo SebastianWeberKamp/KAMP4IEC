@@ -6,8 +6,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInt
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -49,7 +47,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected IECMethodImplementation providedMethod;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation providedMethod;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,10 +111,10 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECMethodImplementation getProvidedMethod() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation getProvidedMethod() {
 		if (providedMethod != null && providedMethod.eIsProxy()) {
 			InternalEObject oldProvidedMethod = (InternalEObject)providedMethod;
-			providedMethod = (IECMethodImplementation)eResolveProxy(oldProvidedMethod);
+			providedMethod = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation)eResolveProxy(oldProvidedMethod);
 			if (providedMethod != oldProvidedMethod) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__PROVIDED_METHOD, oldProvidedMethod, providedMethod));
@@ -130,7 +128,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECMethodImplementation basicGetProvidedMethod() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation basicGetProvidedMethod() {
 		return providedMethod;
 	}
 
@@ -139,8 +137,8 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProvidedMethod(IECMethodImplementation newProvidedMethod) {
-		IECMethodImplementation oldProvidedMethod = providedMethod;
+	public void setProvidedMethod(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation newProvidedMethod) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation oldProvidedMethod = providedMethod;
 		providedMethod = newProvidedMethod;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__PROVIDED_METHOD, oldProvidedMethod, providedMethod));
@@ -176,7 +174,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 				setRequiredResource((DependencyResource)newValue);
 				return;
 			case ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__PROVIDED_METHOD:
-				setProvidedMethod((IECMethodImplementation)newValue);
+				setProvidedMethod((edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,7 +192,7 @@ public class MethodDependencyImpl extends MinimalEObjectImpl.Container implement
 				setRequiredResource((DependencyResource)null);
 				return;
 			case ComponentInternalDependenciesPackage.METHOD_DEPENDENCY__PROVIDED_METHOD:
-				setProvidedMethod((IECMethodImplementation)null);
+				setProvidedMethod((edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation)null);
 				return;
 		}
 		super.eUnset(featureID);
