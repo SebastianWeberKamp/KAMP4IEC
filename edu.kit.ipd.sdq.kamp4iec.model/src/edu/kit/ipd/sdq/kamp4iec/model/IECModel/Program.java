@@ -14,14 +14,16 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresFunctionBlock <em>Declares Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getImplementsInterface <em>Implements Interface</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresVariable <em>Declares Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresGlobalVariable <em>Declares Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresFunction <em>Declares Function</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram()
@@ -30,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Program extends IECComponent {
 	/**
-	 * Returns the value of the '<em><b>Calls Function</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -38,15 +40,31 @@ public interface Program extends IECComponent {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calls Function</em>' containment reference list.
+	 * @return the value of the '<em>Calls Function</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_CallsFunction()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<Function> getCallsFunction();
 
 	/**
-	 * Returns the value of the '<em><b>Calls Function Block</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Declares Function Block</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Declares Function Block</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Declares Function Block</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_DeclaresFunctionBlock()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<FunctionBlock> getDeclaresFunctionBlock();
+
+	/**
+	 * Returns the value of the '<em><b>Calls Function Block</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -54,12 +72,28 @@ public interface Program extends IECComponent {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calls Function Block</em>' containment reference list.
+	 * @return the value of the '<em>Calls Function Block</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_CallsFunctionBlock()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<FunctionBlock> getCallsFunctionBlock();
+
+	/**
+	 * Returns the value of the '<em><b>Declares Function</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Declares Function</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Declares Function</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_DeclaresFunction()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Function> getDeclaresFunction();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -104,20 +138,20 @@ public interface Program extends IECComponent {
 	EList<IECInterface> getImplementsInterface();
 
 	/**
-	 * Returns the value of the '<em><b>Declares Variable</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Declares Global Variable</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Declares Variable</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Declares Global Variable</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Declares Variable</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_DeclaresVariable()
+	 * @return the value of the '<em>Declares Global Variable</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_DeclaresGlobalVariable()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GlobalVariable> getDeclaresVariable();
+	EList<GlobalVariable> getDeclaresGlobalVariable();
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.

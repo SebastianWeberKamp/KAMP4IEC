@@ -473,15 +473,15 @@ public class IECModelItemProviderAdapterFactory extends IECModelAdapterFactory i
 		if (functionItemProvider != null) functionItemProvider.dispose();
 		if (programItemProvider != null) programItemProvider.dispose();
 		if (configurationItemProvider != null) configurationItemProvider.dispose();
-		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
 		if (globalVariableItemProvider != null) globalVariableItemProvider.dispose();
 		if (iecMethodImplementationItemProvider != null) iecMethodImplementationItemProvider.dispose();
 		if (iecPropertyImplementationItemProvider != null) iecPropertyImplementationItemProvider.dispose();
-		if (enumItemProvider != null) enumItemProvider.dispose();
 		if (iecPropertyItemProvider != null) iecPropertyItemProvider.dispose();
 		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
 		if (interfacesItemProvider != null) interfacesItemProvider.dispose();
+		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
 		if (enumsItemProvider != null) enumsItemProvider.dispose();
+		if (enumItemProvider != null) enumItemProvider.dispose();
 	}
 
 }

@@ -73,15 +73,15 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 			case IECModelPackage.FUNCTION: return createFunction();
 			case IECModelPackage.PROGRAM: return createProgram();
 			case IECModelPackage.CONFIGURATION: return createConfiguration();
-			case IECModelPackage.IEC_INTERFACE: return createIECInterface();
 			case IECModelPackage.GLOBAL_VARIABLE: return createGlobalVariable();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION: return createIECMethodImplementation();
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION: return createIECPropertyImplementation();
-			case IECModelPackage.ENUM: return createEnum();
 			case IECModelPackage.IEC_PROPERTY: return createIECProperty();
 			case IECModelPackage.IEC_METHOD: return createIECMethod();
 			case IECModelPackage.INTERFACES: return createInterfaces();
+			case IECModelPackage.IEC_INTERFACE: return createIECInterface();
 			case IECModelPackage.ENUMS: return createEnums();
+			case IECModelPackage.ENUM: return createEnum();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

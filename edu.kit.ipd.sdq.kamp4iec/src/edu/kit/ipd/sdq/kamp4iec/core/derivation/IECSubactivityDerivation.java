@@ -45,7 +45,7 @@ public class IECSubactivityDerivation {
 		if (globalVariable instanceof GlobalVariable) {
 			Configuration configuration = version.getConfiguration();
 			for(Program program : configuration.getContainsProgram()) {
-				for(FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+				for(FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 					for(GlobalVariable globVar : functionBlock.getAccessesGlobalVariable()) {
 						if(globalVariable.getId() == globVar.getId()) {
 							addSubActivity(globalVariable, IECActivityElementType.FUNCTIONBLOCK, functionBlock, parentActivity);
@@ -64,13 +64,13 @@ public class IECSubactivityDerivation {
 						addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
 					}
 				}
-				for(GlobalVariable globVar : program.getDeclaresVariable()) {
+				for(GlobalVariable globVar : program.getDeclaresGlobalVariable()) {
 					if(globalVariable.getId() == globVar.getId()) {
 						addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
 					}
 				}
 			}
-			for(GlobalVariable globVar : configuration.getDeclaresVariable()) {
+			for(GlobalVariable globVar : configuration.getDeclaresGlobalVariable()) {
 				if(globalVariable.getId() == globVar.getId()) {
 					addSubActivity(globalVariable, IECActivityElementType.CONFIGURATION, configuration, parentActivity);
 				}
@@ -87,14 +87,19 @@ public class IECSubactivityDerivation {
 		if (functionBlock instanceof FunctionBlock) {
 			Configuration configuration = version.getConfiguration();
 			for(Program program : configuration.getContainsProgram()) {
-				for(FunctionBlock fb : program.getCallsFunctionBlock()) {
+				for(FunctionBlock fb : program.getDeclaresFunctionBlock()) {
 					if(functionBlock.getId() == fb.getId()) {
 						addSubActivity(functionBlock, IECActivityElementType.PROGRAM, program, parentActivity);
 					}
-					for(FunctionblockDependency dependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
-						if (dependency.getProvidedFunctionBlock().getId() == functionBlock.getId() && dependency.getRequiredResource().getId() == fb.getId()) {
-							addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, fb, parentActivity);
-						}
+				}
+			}
+			for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
+				if (fbDependency.getRequiredResource().getId() == functionBlock.getId()) {
+					addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, fbDependency.getProvidedFunctionBlock(), parentActivity);
+				}
+				for(MethodDependency methodDependency : fbDependency.getHasMethodDependency()) {
+					if (fbDependency.getRequiredResource().getId() == functionBlock.getId()) {
+						addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, methodDependency.getProvidedMethod(), parentActivity);
 					}
 				}
 			}
@@ -105,15 +110,10 @@ public class IECSubactivityDerivation {
 		if (function instanceof Function) {
 			Configuration configuration = version.getConfiguration();
 			for(Program program : configuration.getContainsProgram()) {
-				for(FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+				for(FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 					for(Function func : functionBlock.getCallsFunction()) {
 						if(function.getId() == func.getId()) {
 							addSubActivity(function, IECActivityElementType.FUNCTIONBLOCK, functionBlock, parentActivity);
-						}
-						for(Function called : func.getCallsFunction()) {
-							if(function.getId() == called.getId()) {
-								addSubActivity(function, IECActivityElementType.FUNCTION, func, parentActivity);
-							}
 						}
 					}
 					for(IECMethodImplementation method : functionBlock.getHasMethod()) {
@@ -124,9 +124,14 @@ public class IECSubactivityDerivation {
 						}
 					}
 				}
-				for(Function func : program.getCallsFunction()) {
+				for(Function func : program.getDeclaresFunction()) {
 					if(function.getId() == func.getId()) {
-						addSubActivity(function, IECActivityElementType.FUNCTION, func, parentActivity);
+						addSubActivity(function, IECActivityElementType.PROGRAM, func, parentActivity);
+					}
+					for(Function called : func.getCallsFunction()) {
+						if(function.getId() == called.getId()) {
+							addSubActivity(function, IECActivityElementType.FUNCTION, func, parentActivity);
+						}
 					}
 				}
 			}
@@ -142,11 +147,37 @@ public class IECSubactivityDerivation {
 						addSubActivity(iecInterface, IECActivityElementType.PROGRAM, program, parentActivity);
 					}
 				}
-				for(FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+				for(FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 					for(IECInterface iecIn : functionBlock.getImplements()) {
 						if(iecInterface.getId() == iecIn.getId()) {
 							addSubActivity(iecInterface, IECActivityElementType.FUNCTIONBLOCK, functionBlock, parentActivity);
 						}
+					}
+				}
+			}
+		}
+	}
+
+	private void deriveSubactivity(IECMethod iecMethod, Activity parentActivity, IECArchitectureVersion version) {
+		if (iecMethod instanceof IECMethod) {
+			Configuration configuration = version.getConfiguration();
+			for(IECInterface iecInterface : configuration.getInterfaces().getContainsInterface()) {
+				for(IECMethod method : iecInterface.getHasMethod()) {
+					if(iecMethod.getId() == method.getId()) {
+						addSubActivity(iecMethod, IECActivityElementType.INTERFACE, iecInterface, parentActivity);
+					}
+				}
+			}
+		}
+	}
+
+	private void deriveSubactivity(IECProperty iecProperty, Activity parentActivity, IECArchitectureVersion version) {
+		if (iecProperty instanceof IECProperty) {
+			Configuration configuration = version.getConfiguration();
+			for(IECInterface iecInterface : configuration.getInterfaces().getContainsInterface()) {
+				for(IECProperty property : iecInterface.getHasProperty()) {
+					if(iecProperty.getId() == property.getId()) {
+						addSubActivity(iecProperty, IECActivityElementType.INTERFACE, iecInterface, parentActivity);
 					}
 				}
 			}

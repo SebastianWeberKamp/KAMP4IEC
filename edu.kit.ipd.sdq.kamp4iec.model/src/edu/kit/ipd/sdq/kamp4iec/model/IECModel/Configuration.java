@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getContainsProgram <em>Contains Program</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getDeclaresVariable <em>Declares Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getDeclaresGlobalVariable <em>Declares Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum <em>Uses Enum</em>}</li>
@@ -43,20 +43,20 @@ public interface Configuration extends IECComponent {
 	EList<Program> getContainsProgram();
 
 	/**
-	 * Returns the value of the '<em><b>Declares Variable</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Declares Global Variable</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Declares Variable</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Declares Global Variable</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Declares Variable</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_DeclaresVariable()
+	 * @return the value of the '<em>Declares Global Variable</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_DeclaresGlobalVariable()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<GlobalVariable> getDeclaresVariable();
+	EList<GlobalVariable> getDeclaresGlobalVariable();
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Property</b></em>' reference list.

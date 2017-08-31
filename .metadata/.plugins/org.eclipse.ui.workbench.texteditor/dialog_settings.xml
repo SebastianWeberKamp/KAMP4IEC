@@ -2,29 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="OfInter" key="selection"/>
+		<item value="Type" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="ofInter"/>
-			<item value="integration"/>
-			<item value="Execute"/>
-			<item value="Update"/>
-			<item value="IECModificationmarksEditorPlugin"/>
-			<item value="seed"/>
-			<item value="//"/>
-			<item value="get"/>
+			<item value="type"/>
+			<item value="oftype"/>
+			<item value="config.getAccessesGlobalVariable"/>
+			<item value="getCallsFunctionBlock"/>
+			<item value="ofMethodIm"/>
+			<item value="configurationof"/>
+			<item value="configurationofiec"/>
+			<item value="configurationofM"/>
 		</list>
 		<list key="replacehistory">
+			<item value="getDeclaresFunctionBlock"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1309" key="DIALOG_X_ORIGIN"/>
-		<item value="208" key="DIALOG_Y_ORIGIN"/>
+		<item value="1530" key="DIALOG_X_ORIGIN"/>
+		<item value="212" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

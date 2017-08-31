@@ -114,7 +114,7 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__CONTAINS_PROGRAM);
-			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__DECLARES_VARIABLE);
+			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__USES_ENUM);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__INTERFACES);
 		}
@@ -173,7 +173,7 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 
 		switch (notification.getFeatureID(Configuration.class)) {
 			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
-			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
+			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -200,7 +200,7 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.CONFIGURATION__DECLARES_VARIABLE,
+				(IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE,
 				 IECModelFactory.eINSTANCE.createGlobalVariable()));
 
 		newChildDescriptors.add

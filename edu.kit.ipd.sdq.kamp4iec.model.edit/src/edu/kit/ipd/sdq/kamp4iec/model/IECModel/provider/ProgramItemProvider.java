@@ -206,8 +206,10 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_VARIABLE);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION);
 		}
 		return childrenFeatures;
 	}
@@ -264,8 +266,10 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		switch (notification.getFeatureID(Program.class)) {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
+			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
-			case IECModelPackage.PROGRAM__DECLARES_VARIABLE:
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -290,13 +294,48 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK,
+				 IECModelFactory.eINSTANCE.createFunctionBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE,
+				 IECModelFactory.eINSTANCE.createGlobalVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK,
 				 IECModelFactory.eINSTANCE.createFunctionBlock()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__DECLARES_VARIABLE,
-				 IECModelFactory.eINSTANCE.createGlobalVariable()));
+				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION,
+				 IECModelFactory.eINSTANCE.createFunction()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION ||
+			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION ||
+			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK ||
+			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

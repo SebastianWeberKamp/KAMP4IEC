@@ -115,15 +115,6 @@ public class IECModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECModelPackage.IEC_INTERFACE: {
-				IECInterface iecInterface = (IECInterface)theEObject;
-				T result = caseIECInterface(iecInterface);
-				if (result == null) result = caseDependencyResource(iecInterface);
-				if (result == null) result = caseIECComponent(iecInterface);
-				if (result == null) result = caseIdentifier(iecInterface);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IECModelPackage.GLOBAL_VARIABLE: {
 				GlobalVariable globalVariable = (GlobalVariable)theEObject;
 				T result = caseGlobalVariable(globalVariable);
@@ -147,14 +138,6 @@ public class IECModelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDependencyResource(iecPropertyImplementation);
 				if (result == null) result = caseIECComponent(iecPropertyImplementation);
 				if (result == null) result = caseIdentifier(iecPropertyImplementation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECModelPackage.ENUM: {
-				edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum enum_ = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum)theEObject;
-				T result = caseEnum(enum_);
-				if (result == null) result = caseIECComponent(enum_);
-				if (result == null) result = caseIdentifier(enum_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -195,9 +178,26 @@ public class IECModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case IECModelPackage.IEC_INTERFACE: {
+				IECInterface iecInterface = (IECInterface)theEObject;
+				T result = caseIECInterface(iecInterface);
+				if (result == null) result = caseDependencyResource(iecInterface);
+				if (result == null) result = caseIECComponent(iecInterface);
+				if (result == null) result = caseIdentifier(iecInterface);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case IECModelPackage.ENUMS: {
 				Enums enums = (Enums)theEObject;
 				T result = caseEnums(enums);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECModelPackage.ENUM: {
+				edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum enum_ = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum)theEObject;
+				T result = caseEnum(enum_);
+				if (result == null) result = caseIECComponent(enum_);
+				if (result == null) result = caseIdentifier(enum_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

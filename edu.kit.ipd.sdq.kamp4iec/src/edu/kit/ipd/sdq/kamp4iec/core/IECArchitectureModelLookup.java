@@ -57,7 +57,7 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<IECInterface> interfaces) {
 		Map<FunctionBlock, Set<IECInterface>> results = new HashMap<FunctionBlock, Set<IECInterface>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for(FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+			for(FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 				for(IECInterface accessed : functionBlock.getImplements()) {
 					for(IECInterface interf : interfaces) {
 						putOrAddToMap(results, functionBlock, accessed, interf);
@@ -78,8 +78,11 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<FunctionBlock> functionBlocks) {
 		Map<Program, Set<FunctionBlock>> results = new HashMap<Program, Set<FunctionBlock>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for(FunctionBlock accessed : program.getCallsFunctionBlock()) {
-				for(FunctionBlock functionBlock : functionBlocks) {
+			for(FunctionBlock functionBlock : functionBlocks) {
+				for(FunctionBlock accessed : program.getDeclaresFunctionBlock()) {
+					putOrAddToMap(results, program, accessed, functionBlock);
+				}
+				for(FunctionBlock accessed : program.getCallsFunctionBlock()) {
 					putOrAddToMap(results, program, accessed, functionBlock);
 				}
 			}
@@ -143,7 +146,7 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<Function> functions) {
 		Map<IECMethodImplementation, Set<Function>> results = new HashMap<IECMethodImplementation, Set<Function>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+			for (FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 				for(IECMethodImplementation method : functionBlock.getHasMethod()) {
 					for(Function function : functions) {
 						for(Function accessed : method.getCallsFunction()) {
@@ -166,7 +169,7 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<Function> functions) {
 		Map<FunctionBlock, Set<Function>> results = new HashMap<FunctionBlock, Set<Function>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+			for (FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 				for(Function function : functions) {
 					for(Function accessed : functionBlock.getCallsFunction()) {
 						putOrAddToMap(results, functionBlock, accessed, function);
@@ -227,7 +230,7 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<GlobalVariable> globalVariables) {
 		Map<IECMethodImplementation, Set<GlobalVariable>> results = new HashMap<IECMethodImplementation, Set<GlobalVariable>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+			for (FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 				for(IECMethodImplementation method : functionBlock.getHasMethod()) {
 					for(GlobalVariable globVar : globalVariables) {
 						for(GlobalVariable accessed : method.getAccessesGlobalVariable()) {
@@ -250,7 +253,7 @@ public class IECArchitectureModelLookup {
 			IECArchitectureVersion version, Collection<GlobalVariable> globalVariables) {
 		Map<FunctionBlock, Set<GlobalVariable>> results = new HashMap<FunctionBlock, Set<GlobalVariable>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
-			for (FunctionBlock functionBlock : program.getCallsFunctionBlock()) {
+			for (FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
 				for(GlobalVariable globVar : globalVariables) {
 					for(GlobalVariable accessed : functionBlock.getAccessesGlobalVariable()) {
 						putOrAddToMap(results, functionBlock, accessed, globVar);
@@ -275,7 +278,7 @@ public class IECArchitectureModelLookup {
 				for(GlobalVariable accessed : prog.getAccessesGlobalVariable()) {
 					putOrAddToMap(results, prog, accessed, toCompare);
 				}
-				for(GlobalVariable declared : prog.getDeclaresVariable()) {
+				for(GlobalVariable declared : prog.getDeclaresGlobalVariable()) {
 					putOrAddToMap(results, prog, declared, toCompare);
 				}
 			}
@@ -297,7 +300,7 @@ public class IECArchitectureModelLookup {
 			for(GlobalVariable accesed : config.getAccessesGlobalVariable()) {
 				putOrAddToMap(results, config, accesed, toCompare);
 			}
-			for(GlobalVariable declared : config.getDeclaresVariable()) {
+			for(GlobalVariable declared : config.getDeclaresGlobalVariable()) {
 				putOrAddToMap(results, config, declared, toCompare);
 			}
 		}

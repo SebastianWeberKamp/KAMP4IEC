@@ -100,10 +100,6 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 				return createConfigurationAdapter();
 			}
 			@Override
-			public Adapter caseIECInterface(IECInterface object) {
-				return createIECInterfaceAdapter();
-			}
-			@Override
 			public Adapter caseGlobalVariable(GlobalVariable object) {
 				return createGlobalVariableAdapter();
 			}
@@ -114,10 +110,6 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIECPropertyImplementation(IECPropertyImplementation object) {
 				return createIECPropertyImplementationAdapter();
-			}
-			@Override
-			public Adapter caseEnum(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum object) {
-				return createEnumAdapter();
 			}
 			@Override
 			public Adapter caseIECComponent(IECComponent object) {
@@ -140,8 +132,16 @@ public class IECModelAdapterFactory extends AdapterFactoryImpl {
 				return createInterfacesAdapter();
 			}
 			@Override
+			public Adapter caseIECInterface(IECInterface object) {
+				return createIECInterfaceAdapter();
+			}
+			@Override
 			public Adapter caseEnums(Enums object) {
 				return createEnumsAdapter();
+			}
+			@Override
+			public Adapter caseEnum(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum object) {
+				return createEnumAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier(Identifier object) {

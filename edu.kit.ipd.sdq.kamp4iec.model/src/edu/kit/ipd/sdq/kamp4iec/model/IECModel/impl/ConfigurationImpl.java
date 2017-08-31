@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getContainsProgram <em>Contains Program</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getDeclaresVariable <em>Declares Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getDeclaresGlobalVariable <em>Declares Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getUsesEnum <em>Uses Enum</em>}</li>
@@ -58,14 +58,14 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	protected EList<Program> containsProgram;
 
 	/**
-	 * The cached value of the '{@link #getDeclaresVariable() <em>Declares Variable</em>}' containment reference list.
+	 * The cached value of the '{@link #getDeclaresGlobalVariable() <em>Declares Global Variable</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDeclaresVariable()
+	 * @see #getDeclaresGlobalVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GlobalVariable> declaresVariable;
+	protected EList<GlobalVariable> declaresGlobalVariable;
 
 	/**
 	 * The cached value of the '{@link #getAccessesProperty() <em>Accesses Property</em>}' reference list.
@@ -143,11 +143,11 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GlobalVariable> getDeclaresVariable() {
-		if (declaresVariable == null) {
-			declaresVariable = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.CONFIGURATION__DECLARES_VARIABLE);
+	public EList<GlobalVariable> getDeclaresGlobalVariable() {
+		if (declaresGlobalVariable == null) {
+			declaresGlobalVariable = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
 		}
-		return declaresVariable;
+		return declaresGlobalVariable;
 	}
 
 	/**
@@ -270,8 +270,8 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 		switch (featureID) {
 			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
 				return ((InternalEList<?>)getContainsProgram()).basicRemove(otherEnd, msgs);
-			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
-				return ((InternalEList<?>)getDeclaresVariable()).basicRemove(otherEnd, msgs);
+			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
+				return ((InternalEList<?>)getDeclaresGlobalVariable()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				return basicSetUsesEnum(null, msgs);
 			case IECModelPackage.CONFIGURATION__INTERFACES:
@@ -290,8 +290,8 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 		switch (featureID) {
 			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
 				return getContainsProgram();
-			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
-				return getDeclaresVariable();
+			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
+				return getDeclaresGlobalVariable();
 			case IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY:
 				return getAccessesProperty();
 			case IECModelPackage.CONFIGURATION__ACCESSES_GLOBAL_VARIABLE:
@@ -317,9 +317,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				getContainsProgram().clear();
 				getContainsProgram().addAll((Collection<? extends Program>)newValue);
 				return;
-			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
-				getDeclaresVariable().clear();
-				getDeclaresVariable().addAll((Collection<? extends GlobalVariable>)newValue);
+			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
+				getDeclaresGlobalVariable().clear();
+				getDeclaresGlobalVariable().addAll((Collection<? extends GlobalVariable>)newValue);
 				return;
 			case IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
@@ -350,8 +350,8 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
 				return;
-			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
-				getDeclaresVariable().clear();
+			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
+				getDeclaresGlobalVariable().clear();
 				return;
 			case IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
@@ -379,8 +379,8 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 		switch (featureID) {
 			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
 				return containsProgram != null && !containsProgram.isEmpty();
-			case IECModelPackage.CONFIGURATION__DECLARES_VARIABLE:
-				return declaresVariable != null && !declaresVariable.isEmpty();
+			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
+				return declaresGlobalVariable != null && !declaresGlobalVariable.isEmpty();
 			case IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY:
 				return accessesProperty != null && !accessesProperty.isEmpty();
 			case IECModelPackage.CONFIGURATION__ACCESSES_GLOBAL_VARIABLE:

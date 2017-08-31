@@ -27,14 +27,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
-        eType="#//Function" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunctionBlock" upperBound="-1"
-        eType="#//FunctionBlock" containment="true"/>
+        eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresFunctionBlock"
+        upperBound="-1" eType="#//FunctionBlock" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Program"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ImplementsInterface" upperBound="-1"
         eType="#//IECInterface"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresVariable" upperBound="-1"
-        eType="#//GlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresGlobalVariable"
+        upperBound="-1" eType="#//GlobalVariable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
@@ -43,12 +43,16 @@
         eType="#//IECMethodImplementation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunctionBlock" upperBound="-1"
+        eType="#//FunctionBlock"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresFunction" upperBound="-1"
+        eType="#//Function" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Configuration" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgram" upperBound="-1"
         eType="#//Program" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresVariable" upperBound="-1"
-        eType="#//GlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresGlobalVariable"
+        upperBound="-1" eType="#//GlobalVariable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
         eType="#//IECPropertyImplementation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
