@@ -31,10 +31,10 @@ public class IECModelTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new IECModelTests("IECModel Tests");
-		suite.addTestSuite(IECMethodImplementationTest.class);
-		suite.addTestSuite(IECPropertyImplementationTest.class);
-		suite.addTestSuite(IECPropertyTest.class);
 		suite.addTestSuite(IECMethodTest.class);
+		suite.addTestSuite(IECPropertyTest.class);
+		suite.addTestSuite(IECAbstractPropertyTest.class);
+		suite.addTestSuite(IECAbstractMethodTest.class);
 		return suite;
 	}
 

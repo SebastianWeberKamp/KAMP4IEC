@@ -67,12 +67,12 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 			case IECModificationmarksPackage.IEC_MODIFY_FUNCTION: return createIECModifyFunction();
 			case IECModificationmarksPackage.IEC_MODIFY_INTERFACE: return createIECModifyInterface();
 			case IECModificationmarksPackage.IEC_MODIFY_METHOD: return createIECModifyMethod();
+			case IECModificationmarksPackage.IEC_MODIFY_ABSTRACT_METHOD: return createIECModifyAbstractMethod();
+			case IECModificationmarksPackage.IEC_MODIFY_ABSTRACT_PROPERTY: return createIECModifyAbstractProperty();
 			case IECModificationmarksPackage.IEC_MODIFY_PROPERTY: return createIECModifyProperty();
 			case IECModificationmarksPackage.IEC_MODIFY_PROGRAM: return createIECModifyProgram();
 			case IECModificationmarksPackage.IEC_MODIFY_ENUM: return createIECModifyEnum();
 			case IECModificationmarksPackage.IEC_MODIFY_CONFIGURATION: return createIECModifyConfiguration();
-			case IECModificationmarksPackage.IEC_MODIFY_METHOD_IMPLEMENTATION: return createIECModifyMethodImplementation();
-			case IECModificationmarksPackage.IEC_MODIFY_PROPERTY_IMPLEMENTATION: return createIECModifyPropertyImplementation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -173,6 +173,26 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public IECModifyAbstractMethod createIECModifyAbstractMethod() {
+		IECModifyAbstractMethodImpl iecModifyAbstractMethod = new IECModifyAbstractMethodImpl();
+		return iecModifyAbstractMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECModifyAbstractProperty createIECModifyAbstractProperty() {
+		IECModifyAbstractPropertyImpl iecModifyAbstractProperty = new IECModifyAbstractPropertyImpl();
+		return iecModifyAbstractProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IECModifyProperty createIECModifyProperty() {
 		IECModifyPropertyImpl iecModifyProperty = new IECModifyPropertyImpl();
 		return iecModifyProperty;
@@ -206,26 +226,6 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 	public IECModifyConfiguration createIECModifyConfiguration() {
 		IECModifyConfigurationImpl iecModifyConfiguration = new IECModifyConfigurationImpl();
 		return iecModifyConfiguration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECModifyMethodImplementation createIECModifyMethodImplementation() {
-		IECModifyMethodImplementationImpl iecModifyMethodImplementation = new IECModifyMethodImplementationImpl();
-		return iecModifyMethodImplementation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECModifyPropertyImplementation createIECModifyPropertyImplementation() {
-		IECModifyPropertyImplementationImpl iecModifyPropertyImplementation = new IECModifyPropertyImplementationImpl();
-		return iecModifyPropertyImplementation;
 	}
 
 	/**

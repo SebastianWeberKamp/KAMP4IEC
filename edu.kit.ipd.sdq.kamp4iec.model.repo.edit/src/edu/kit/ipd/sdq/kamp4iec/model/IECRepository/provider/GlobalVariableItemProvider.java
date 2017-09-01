@@ -46,7 +46,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
-			addUsesEnumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,28 +68,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uses Enum feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsesEnumPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GlobalVariable_UsesEnum_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_UsesEnum_feature", "_UI_GlobalVariable_type"),
-				 IECRepositoryPackage.Literals.GLOBAL_VARIABLE__USES_ENUM,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

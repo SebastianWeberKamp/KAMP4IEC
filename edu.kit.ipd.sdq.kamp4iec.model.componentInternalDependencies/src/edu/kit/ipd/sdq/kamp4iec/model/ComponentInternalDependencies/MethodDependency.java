@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -58,12 +59,12 @@ public interface MethodDependency extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Provided Method</em>' reference.
-	 * @see #setProvidedMethod(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation)
+	 * @see #setProvidedMethod(IECMethod)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage#getMethodDependency_ProvidedMethod()
 	 * @model required="true"
 	 * @generated
 	 */
-	edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation getProvidedMethod();
+	IECMethod getProvidedMethod();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency#getProvidedMethod <em>Provided Method</em>}' reference.
@@ -73,6 +74,6 @@ public interface MethodDependency extends EObject {
 	 * @see #getProvidedMethod()
 	 * @generated
 	 */
-	void setProvidedMethod(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation value);
+	void setProvidedMethod(IECMethod value);
 
 } // MethodDependency

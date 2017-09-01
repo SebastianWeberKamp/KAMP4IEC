@@ -8,14 +8,14 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
@@ -81,20 +81,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iecMethodImplementationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iecPropertyImplementationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass enumEClass = null;
 
 	/**
@@ -110,6 +96,20 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	private EClass dependencyResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iecAbstractPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass iecAbstractMethodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -344,7 +344,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_DeclaresFunctionBlock() {
-		return (EReference)programEClass.getEStructuralFeatures().get(1);
+		return (EReference)programEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -353,7 +353,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_CallsFunctionBlock() {
-		return (EReference)programEClass.getEStructuralFeatures().get(9);
+		return (EReference)programEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -371,7 +371,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_Type() {
-		return (EReference)programEClass.getEStructuralFeatures().get(2);
+		return (EReference)programEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -380,7 +380,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_ImplementsInterface() {
-		return (EReference)programEClass.getEStructuralFeatures().get(3);
+		return (EReference)programEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -389,7 +389,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_DeclaresGlobalVariable() {
-		return (EReference)programEClass.getEStructuralFeatures().get(4);
+		return (EReference)programEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -398,7 +398,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_UsesEnum() {
-		return (EReference)programEClass.getEStructuralFeatures().get(5);
+		return (EReference)programEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -407,7 +407,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_AccessesProperty() {
-		return (EReference)programEClass.getEStructuralFeatures().get(6);
+		return (EReference)programEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -416,7 +416,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_CallsMethod() {
-		return (EReference)programEClass.getEStructuralFeatures().get(7);
+		return (EReference)programEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -425,7 +425,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getProgram_AccessesGlobalVariable() {
-		return (EReference)programEClass.getEStructuralFeatures().get(8);
+		return (EReference)programEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -559,105 +559,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIECMethodImplementation() {
-		return iecMethodImplementationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECMethodImplementation_Type() {
-		return (EReference)iecMethodImplementationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECMethodImplementation_AccessesGlobalVariable() {
-		return (EReference)iecMethodImplementationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECMethodImplementation_AccessesProperty() {
-		return (EReference)iecMethodImplementationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECMethodImplementation_UsesEnum() {
-		return (EReference)iecMethodImplementationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECMethodImplementation_CallsFunction() {
-		return (EReference)iecMethodImplementationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECMethodImplementation_Implements() {
-		return (EReference)iecMethodImplementationEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIECPropertyImplementation() {
-		return iecPropertyImplementationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECPropertyImplementation_Type() {
-		return (EReference)iecPropertyImplementationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECPropertyImplementation_UsesEnum() {
-		return (EReference)iecPropertyImplementationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECPropertyImplementation_Implements() {
-		return (EReference)iecPropertyImplementationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getEnum() {
 		return enumEClass;
 	}
@@ -694,6 +595,78 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getIECAbstractProperty() {
+		return iecAbstractPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECAbstractProperty_UsesEnum() {
+		return (EReference)iecAbstractPropertyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECAbstractProperty_Type() {
+		return (EReference)iecAbstractPropertyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECAbstractProperty_Implements() {
+		return (EReference)iecAbstractPropertyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIECAbstractMethod() {
+		return iecAbstractMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECAbstractMethod_UsesEnum() {
+		return (EReference)iecAbstractMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECAbstractMethod_Type() {
+		return (EReference)iecAbstractMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECAbstractMethod_Implements() {
+		return (EReference)iecAbstractMethodEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIECProperty() {
 		return iecPropertyEClass;
 	}
@@ -704,7 +677,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getIECProperty_UsesEnum() {
-		return (EReference)iecPropertyEClass.getEStructuralFeatures().get(0);
+		return (EReference)iecPropertyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -713,7 +686,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getIECProperty_Type() {
-		return (EReference)iecPropertyEClass.getEStructuralFeatures().get(1);
+		return (EReference)iecPropertyEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -740,7 +713,16 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getIECMethod_UsesEnum() {
-		return (EReference)iecMethodEClass.getEStructuralFeatures().get(0);
+		return (EReference)iecMethodEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECMethod_CallsFunction() {
+		return (EReference)iecMethodEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -749,6 +731,15 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * @generated
 	 */
 	public EReference getIECMethod_Type() {
+		return (EReference)iecMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECMethod_AccessesGlobalVariable() {
 		return (EReference)iecMethodEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -757,8 +748,17 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECMethod_Implements() {
+	public EReference getIECMethod_AccessesProperty() {
 		return (EReference)iecMethodEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECMethod_Implements() {
+		return (EReference)iecMethodEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -842,7 +842,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		programEClass = createEClass(PROGRAM);
 		createEReference(programEClass, PROGRAM__CALLS_FUNCTION);
-		createEReference(programEClass, PROGRAM__DECLARES_FUNCTION_BLOCK);
 		createEReference(programEClass, PROGRAM__TYPE);
 		createEReference(programEClass, PROGRAM__IMPLEMENTS_INTERFACE);
 		createEReference(programEClass, PROGRAM__DECLARES_GLOBAL_VARIABLE);
@@ -851,6 +850,7 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		createEReference(programEClass, PROGRAM__CALLS_METHOD);
 		createEReference(programEClass, PROGRAM__ACCESSES_GLOBAL_VARIABLE);
 		createEReference(programEClass, PROGRAM__CALLS_FUNCTION_BLOCK);
+		createEReference(programEClass, PROGRAM__DECLARES_FUNCTION_BLOCK);
 		createEReference(programEClass, PROGRAM__DECLARES_FUNCTION);
 
 		configurationEClass = createEClass(CONFIGURATION);
@@ -865,32 +865,32 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		createEReference(globalVariableEClass, GLOBAL_VARIABLE__TYPE);
 		createEReference(globalVariableEClass, GLOBAL_VARIABLE__USES_ENUM);
 
-		iecMethodImplementationEClass = createEClass(IEC_METHOD_IMPLEMENTATION);
-		createEReference(iecMethodImplementationEClass, IEC_METHOD_IMPLEMENTATION__TYPE);
-		createEReference(iecMethodImplementationEClass, IEC_METHOD_IMPLEMENTATION__ACCESSES_GLOBAL_VARIABLE);
-		createEReference(iecMethodImplementationEClass, IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY);
-		createEReference(iecMethodImplementationEClass, IEC_METHOD_IMPLEMENTATION__USES_ENUM);
-		createEReference(iecMethodImplementationEClass, IEC_METHOD_IMPLEMENTATION__CALLS_FUNCTION);
-		createEReference(iecMethodImplementationEClass, IEC_METHOD_IMPLEMENTATION__IMPLEMENTS);
+		iecMethodEClass = createEClass(IEC_METHOD);
+		createEReference(iecMethodEClass, IEC_METHOD__TYPE);
+		createEReference(iecMethodEClass, IEC_METHOD__ACCESSES_GLOBAL_VARIABLE);
+		createEReference(iecMethodEClass, IEC_METHOD__ACCESSES_PROPERTY);
+		createEReference(iecMethodEClass, IEC_METHOD__USES_ENUM);
+		createEReference(iecMethodEClass, IEC_METHOD__CALLS_FUNCTION);
+		createEReference(iecMethodEClass, IEC_METHOD__IMPLEMENTS);
 
-		iecPropertyImplementationEClass = createEClass(IEC_PROPERTY_IMPLEMENTATION);
-		createEReference(iecPropertyImplementationEClass, IEC_PROPERTY_IMPLEMENTATION__TYPE);
-		createEReference(iecPropertyImplementationEClass, IEC_PROPERTY_IMPLEMENTATION__USES_ENUM);
-		createEReference(iecPropertyImplementationEClass, IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS);
+		iecPropertyEClass = createEClass(IEC_PROPERTY);
+		createEReference(iecPropertyEClass, IEC_PROPERTY__TYPE);
+		createEReference(iecPropertyEClass, IEC_PROPERTY__USES_ENUM);
+		createEReference(iecPropertyEClass, IEC_PROPERTY__IMPLEMENTS);
 
 		iecComponentEClass = createEClass(IEC_COMPONENT);
 
 		dependencyResourceEClass = createEClass(DEPENDENCY_RESOURCE);
 
-		iecPropertyEClass = createEClass(IEC_PROPERTY);
-		createEReference(iecPropertyEClass, IEC_PROPERTY__USES_ENUM);
-		createEReference(iecPropertyEClass, IEC_PROPERTY__TYPE);
-		createEReference(iecPropertyEClass, IEC_PROPERTY__IMPLEMENTS);
+		iecAbstractPropertyEClass = createEClass(IEC_ABSTRACT_PROPERTY);
+		createEReference(iecAbstractPropertyEClass, IEC_ABSTRACT_PROPERTY__USES_ENUM);
+		createEReference(iecAbstractPropertyEClass, IEC_ABSTRACT_PROPERTY__TYPE);
+		createEReference(iecAbstractPropertyEClass, IEC_ABSTRACT_PROPERTY__IMPLEMENTS);
 
-		iecMethodEClass = createEClass(IEC_METHOD);
-		createEReference(iecMethodEClass, IEC_METHOD__USES_ENUM);
-		createEReference(iecMethodEClass, IEC_METHOD__TYPE);
-		createEReference(iecMethodEClass, IEC_METHOD__IMPLEMENTS);
+		iecAbstractMethodEClass = createEClass(IEC_ABSTRACT_METHOD);
+		createEReference(iecAbstractMethodEClass, IEC_ABSTRACT_METHOD__USES_ENUM);
+		createEReference(iecAbstractMethodEClass, IEC_ABSTRACT_METHOD__TYPE);
+		createEReference(iecAbstractMethodEClass, IEC_ABSTRACT_METHOD__IMPLEMENTS);
 
 		interfacesEClass = createEClass(INTERFACES);
 		createEReference(interfacesEClass, INTERFACES__CONTAINS_INTERFACE);
@@ -943,22 +943,22 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		programEClass.getESuperTypes().add(this.getIECComponent());
 		configurationEClass.getESuperTypes().add(this.getIECComponent());
 		globalVariableEClass.getESuperTypes().add(this.getIECComponent());
-		iecMethodImplementationEClass.getESuperTypes().add(this.getDependencyResource());
-		iecPropertyImplementationEClass.getESuperTypes().add(this.getDependencyResource());
+		iecMethodEClass.getESuperTypes().add(this.getDependencyResource());
+		iecPropertyEClass.getESuperTypes().add(this.getDependencyResource());
 		iecComponentEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		dependencyResourceEClass.getESuperTypes().add(this.getIECComponent());
-		iecPropertyEClass.getESuperTypes().add(this.getIECComponent());
-		iecMethodEClass.getESuperTypes().add(this.getIECComponent());
+		iecAbstractPropertyEClass.getESuperTypes().add(this.getIECComponent());
+		iecAbstractMethodEClass.getESuperTypes().add(this.getIECComponent());
 		iecInterfaceEClass.getESuperTypes().add(this.getDependencyResource());
 		enumEClass.getESuperTypes().add(this.getIECComponent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunctionBlock_Type(), theIECRepositoryPackage.getFunctionBlock(), null, "Type", null, 1, 1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionBlock_AccessesProperty(), this.getIECPropertyImplementation(), null, "AccessesProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_AccessesProperty(), this.getIECProperty(), null, "AccessesProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionBlock_HasMethod(), this.getIECMethodImplementation(), null, "HasMethod", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionBlock_HasProperty(), this.getIECPropertyImplementation(), null, "HasProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_HasMethod(), this.getIECMethod(), null, "HasMethod", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_HasProperty(), this.getIECProperty(), null, "HasProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_Implements(), this.getIECInterface(), null, "Implements", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -970,21 +970,21 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 
 		initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getProgram_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProgram_DeclaresFunctionBlock(), this.getFunctionBlock(), null, "DeclaresFunctionBlock", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_Type(), theIECRepositoryPackage.getProgram(), null, "Type", null, 1, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_ImplementsInterface(), this.getIECInterface(), null, "ImplementsInterface", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_DeclaresGlobalVariable(), this.getGlobalVariable(), null, "DeclaresGlobalVariable", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProgram_AccessesProperty(), this.getIECPropertyImplementation(), null, "AccessesProperty", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProgram_CallsMethod(), this.getIECMethodImplementation(), null, "CallsMethod", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgram_AccessesProperty(), this.getIECProperty(), null, "AccessesProperty", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgram_CallsMethod(), this.getIECMethod(), null, "CallsMethod", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_CallsFunctionBlock(), this.getFunctionBlock(), null, "CallsFunctionBlock", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProgram_DeclaresFunctionBlock(), this.getFunctionBlock(), null, "DeclaresFunctionBlock", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProgram_DeclaresFunction(), this.getFunction(), null, "DeclaresFunction", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(configurationEClass, Configuration.class, "Configuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConfiguration_ContainsProgram(), this.getProgram(), null, "ContainsProgram", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConfiguration_DeclaresGlobalVariable(), this.getGlobalVariable(), null, "DeclaresGlobalVariable", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_AccessesProperty(), this.getIECPropertyImplementation(), null, "AccessesProperty", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConfiguration_AccessesProperty(), this.getIECProperty(), null, "AccessesProperty", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConfiguration_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConfiguration_UsesEnum(), this.getEnums(), null, "UsesEnum", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConfiguration_Interfaces(), this.getInterfaces(), null, "Interfaces", null, 0, 1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -993,40 +993,40 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEReference(getGlobalVariable_Type(), theIECRepositoryPackage.getGlobalVariable(), null, "Type", null, 1, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGlobalVariable_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(iecMethodImplementationEClass, IECMethodImplementation.class, "IECMethodImplementation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIECMethodImplementation_Type(), theIECRepositoryPackage.getIECMethodImplementation(), null, "Type", null, 1, 1, IECMethodImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethodImplementation_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, IECMethodImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethodImplementation_AccessesProperty(), this.getIECPropertyImplementation(), null, "AccessesProperty", null, 0, -1, IECMethodImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethodImplementation_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, IECMethodImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethodImplementation_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, IECMethodImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethodImplementation_Implements(), this.getIECMethod(), null, "Implements", null, 0, 1, IECMethodImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEClass(iecMethodEClass, IECMethod.class, "IECMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIECMethod_Type(), theIECRepositoryPackage.getIECMethod(), null, "Type", null, 1, 1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMethod_AccessesGlobalVariable(), this.getGlobalVariable(), null, "AccessesGlobalVariable", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMethod_AccessesProperty(), this.getIECProperty(), null, "AccessesProperty", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMethod_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMethod_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMethod_Implements(), this.getIECAbstractMethod(), null, "Implements", null, 0, 1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(iecPropertyImplementationEClass, IECPropertyImplementation.class, "IECPropertyImplementation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIECPropertyImplementation_Type(), theIECRepositoryPackage.getIECPropertyImplementation(), null, "Type", null, 1, 1, IECPropertyImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECPropertyImplementation_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, IECPropertyImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECPropertyImplementation_Implements(), this.getIECProperty(), null, "Implements", null, 0, 1, IECPropertyImplementation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEClass(iecPropertyEClass, IECProperty.class, "IECProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIECProperty_Type(), theIECRepositoryPackage.getIECProperty(), null, "Type", null, 1, 1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECProperty_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECProperty_Implements(), this.getIECAbstractProperty(), null, "Implements", null, 0, 1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecComponentEClass, IECComponent.class, "IECComponent", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(dependencyResourceEClass, DependencyResource.class, "DependencyResource", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iecPropertyEClass, IECProperty.class, "IECProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIECProperty_UsesEnum(), theIECRepositoryPackage.getEnum(), null, "UsesEnum", null, 0, -1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECProperty_Type(), theIECRepositoryPackage.getIECProperty(), null, "Type", null, 1, 1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECProperty_Implements(), this.getIECInterface(), null, "Implements", null, 0, 1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEClass(iecAbstractPropertyEClass, IECAbstractProperty.class, "IECAbstractProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIECAbstractProperty_UsesEnum(), theIECRepositoryPackage.getEnum(), null, "UsesEnum", null, 0, -1, IECAbstractProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECAbstractProperty_Type(), theIECRepositoryPackage.getIECProperty(), null, "Type", null, 1, 1, IECAbstractProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECAbstractProperty_Implements(), this.getIECInterface(), null, "Implements", null, 0, 1, IECAbstractProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(iecMethodEClass, IECMethod.class, "IECMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIECMethod_UsesEnum(), theIECRepositoryPackage.getEnum(), null, "UsesEnum", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethod_Type(), theIECRepositoryPackage.getIECMethod(), null, "Type", null, 1, 1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECMethod_Implements(), this.getIECInterface(), null, "Implements", null, 0, 1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEClass(iecAbstractMethodEClass, IECAbstractMethod.class, "IECAbstractMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIECAbstractMethod_UsesEnum(), theIECRepositoryPackage.getEnum(), null, "UsesEnum", null, 0, -1, IECAbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECAbstractMethod_Type(), theIECRepositoryPackage.getIECMethod(), null, "Type", null, 1, 1, IECAbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECAbstractMethod_Implements(), this.getIECInterface(), null, "Implements", null, 0, 1, IECAbstractMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfacesEClass, Interfaces.class, "Interfaces", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInterfaces_ContainsInterface(), this.getIECInterface(), null, "ContainsInterface", null, 0, -1, Interfaces.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecInterfaceEClass, IECInterface.class, "IECInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECInterface_Type(), theIECRepositoryPackage.getIECInterface(), null, "Type", null, 1, 1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECInterface_HasMethod(), this.getIECMethod(), null, "HasMethod", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECInterface_HasProperty(), this.getIECProperty(), null, "HasProperty", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECInterface_HasMethod(), this.getIECAbstractMethod(), null, "HasMethod", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECInterface_HasProperty(), this.getIECAbstractProperty(), null, "HasProperty", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumsEClass, Enums.class, "Enums", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnums_ContainsEnums(), theIECRepositoryPackage.getEnum(), null, "ContainsEnums", null, 0, -1, Enums.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

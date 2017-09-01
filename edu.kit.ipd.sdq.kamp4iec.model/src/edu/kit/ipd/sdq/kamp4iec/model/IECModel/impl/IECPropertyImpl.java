@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 
@@ -29,24 +29,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImpl#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImpl#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImpl#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
-	/**
-	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsesEnum()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
-
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -58,6 +48,16 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty type;
 
 	/**
+	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsesEnum()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+
+	/**
 	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,7 +65,7 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	 * @generated
 	 * @ordered
 	 */
-	protected IECInterface implements_;
+	protected IECAbstractProperty implements_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,9 +91,9 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum() {
 		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECModelPackage.IEC_PROPERTY__USES_ENUM);
+			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class, this, IECModelPackage.IEC_PROPERTY__USES_ENUM);
 		}
 		return usesEnum;
 	}
@@ -141,10 +141,10 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECInterface getImplements() {
+	public IECAbstractProperty getImplements() {
 		if (implements_ != null && implements_.eIsProxy()) {
 			InternalEObject oldImplements = (InternalEObject)implements_;
-			implements_ = (IECInterface)eResolveProxy(oldImplements);
+			implements_ = (IECAbstractProperty)eResolveProxy(oldImplements);
 			if (implements_ != oldImplements) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_PROPERTY__IMPLEMENTS, oldImplements, implements_));
@@ -158,7 +158,7 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECInterface basicGetImplements() {
+	public IECAbstractProperty basicGetImplements() {
 		return implements_;
 	}
 
@@ -167,8 +167,8 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setImplements(IECInterface newImplements) {
-		IECInterface oldImplements = implements_;
+	public void setImplements(IECAbstractProperty newImplements) {
+		IECAbstractProperty oldImplements = implements_;
 		implements_ = newImplements;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_PROPERTY__IMPLEMENTS, oldImplements, implements_));
@@ -182,11 +182,11 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
-				return getUsesEnum();
 			case IECModelPackage.IEC_PROPERTY__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
+			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
+				return getUsesEnum();
 			case IECModelPackage.IEC_PROPERTY__IMPLEMENTS:
 				if (resolve) return getImplements();
 				return basicGetImplements();
@@ -203,15 +203,15 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
-				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
-				return;
 			case IECModelPackage.IEC_PROPERTY__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty)newValue);
 				return;
+			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
+				getUsesEnum().clear();
+				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
+				return;
 			case IECModelPackage.IEC_PROPERTY__IMPLEMENTS:
-				setImplements((IECInterface)newValue);
+				setImplements((IECAbstractProperty)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,14 +225,14 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
-				getUsesEnum().clear();
-				return;
 			case IECModelPackage.IEC_PROPERTY__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty)null);
 				return;
+			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
+				getUsesEnum().clear();
+				return;
 			case IECModelPackage.IEC_PROPERTY__IMPLEMENTS:
-				setImplements((IECInterface)null);
+				setImplements((IECAbstractProperty)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -246,10 +246,10 @@ public class IECPropertyImpl extends IdentifierImpl implements IECProperty {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
-				return usesEnum != null && !usesEnum.isEmpty();
 			case IECModelPackage.IEC_PROPERTY__TYPE:
 				return type != null;
+			case IECModelPackage.IEC_PROPERTY__USES_ENUM:
+				return usesEnum != null && !usesEnum.isEmpty();
 			case IECModelPackage.IEC_PROPERTY__IMPLEMENTS:
 				return implements_ != null;
 		}

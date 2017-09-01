@@ -16,6 +16,7 @@ import junit.textui.TestRunner;
  * <p>
  * The following features are tested:
  * <ul>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getType() <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getImplements() <em>Implements</em>}</li>
  * </ul>
  * </p>
@@ -93,6 +94,32 @@ public class IECMethodTest extends TestCase {
 	}
 
 	/**
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getType() <em>Type</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getType()
+	 * @generated
+	 */
+	public void testGetType() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod) <em>Type</em>}' feature setter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod)
+	 * @generated
+	 */
+	public void testSetType() {
+		// TODO: implement this feature setter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
 	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getImplements() <em>Implements</em>}' feature getter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,10 +133,10 @@ public class IECMethodTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface) <em>Implements</em>}' feature setter.
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod) <em>Implements</em>}' feature setter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod)
 	 * @generated
 	 */
 	public void testSetImplements() {

@@ -13,8 +13,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getAccessesProperty <em>Accesses Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getImplements <em>Implements</em>}</li>
  * </ul>
  *
@@ -22,10 +25,10 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IECMethod extends IECComponent {
+public interface IECMethod extends DependencyResource {
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
@@ -37,7 +40,23 @@ public interface IECMethod extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
+
+	/**
+	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calls Function</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calls Function</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethod_CallsFunction()
+	 * @model
+	 * @generated
+	 */
+	EList<Function> getCallsFunction();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -50,7 +69,7 @@ public interface IECMethod extends IECComponent {
 	 * @return the value of the '<em>Type</em>' reference.
 	 * @see #setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethod_Type()
-	 * @model required="true"
+	 * @model required="true" derived="true"
 	 * @generated
 	 */
 	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod getType();
@@ -66,6 +85,38 @@ public interface IECMethod extends IECComponent {
 	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod value);
 
 	/**
+	 * Returns the value of the '<em><b>Accesses Global Variable</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Accesses Global Variable</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accesses Global Variable</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethod_AccessesGlobalVariable()
+	 * @model
+	 * @generated
+	 */
+	EList<GlobalVariable> getAccessesGlobalVariable();
+
+	/**
+	 * Returns the value of the '<em><b>Accesses Property</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Accesses Property</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accesses Property</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethod_AccessesProperty()
+	 * @model
+	 * @generated
+	 */
+	EList<IECProperty> getAccessesProperty();
+
+	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -74,12 +125,12 @@ public interface IECMethod extends IECComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implements</em>' reference.
-	 * @see #setImplements(IECInterface)
+	 * @see #setImplements(IECAbstractMethod)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethod_Implements()
 	 * @model derived="true"
 	 * @generated
 	 */
-	IECInterface getImplements();
+	IECAbstractMethod getImplements();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod#getImplements <em>Implements</em>}' reference.
@@ -89,6 +140,6 @@ public interface IECMethod extends IECComponent {
 	 * @see #getImplements()
 	 * @generated
 	 */
-	void setImplements(IECInterface value);
+	void setImplements(IECAbstractMethod value);
 
 } // IECMethod

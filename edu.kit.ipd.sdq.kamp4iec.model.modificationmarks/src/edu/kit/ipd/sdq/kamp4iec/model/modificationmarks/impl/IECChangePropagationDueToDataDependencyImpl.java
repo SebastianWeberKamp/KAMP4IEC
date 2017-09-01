@@ -6,6 +6,8 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.ChangePropagationStepIm
 
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
@@ -13,10 +15,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -101,7 +101,7 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECModifyMethod> methodModifications;
+	protected EList<IECModifyAbstractMethod> methodModifications;
 
 	/**
 	 * The cached value of the '{@link #getPropertyModifications() <em>Property Modifications</em>}' containment reference list.
@@ -111,7 +111,7 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECModifyProperty> propertyModifications;
+	protected EList<IECModifyAbstractProperty> propertyModifications;
 
 	/**
 	 * The cached value of the '{@link #getProgramModifications() <em>Program Modifications</em>}' containment reference list.
@@ -151,7 +151,7 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECModifyMethodImplementation> methodImplementationModifications;
+	protected EList<IECModifyMethod> methodImplementationModifications;
 
 	/**
 	 * The cached value of the '{@link #getPropertyImplementationModifications() <em>Property Implementation Modifications</em>}' containment reference list.
@@ -161,7 +161,7 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECModifyPropertyImplementation> propertyImplementationModifications;
+	protected EList<IECModifyProperty> propertyImplementationModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,9 +235,9 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECModifyMethod> getMethodModifications() {
+	public EList<IECModifyAbstractMethod> getMethodModifications() {
 		if (methodModifications == null) {
-			methodModifications = new EObjectContainmentEList<IECModifyMethod>(IECModifyMethod.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS);
+			methodModifications = new EObjectContainmentEList<IECModifyAbstractMethod>(IECModifyAbstractMethod.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS);
 		}
 		return methodModifications;
 	}
@@ -247,9 +247,9 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECModifyProperty> getPropertyModifications() {
+	public EList<IECModifyAbstractProperty> getPropertyModifications() {
 		if (propertyModifications == null) {
-			propertyModifications = new EObjectContainmentEList<IECModifyProperty>(IECModifyProperty.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS);
+			propertyModifications = new EObjectContainmentEList<IECModifyAbstractProperty>(IECModifyAbstractProperty.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS);
 		}
 		return propertyModifications;
 	}
@@ -295,9 +295,9 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECModifyMethodImplementation> getMethodImplementationModifications() {
+	public EList<IECModifyMethod> getMethodImplementationModifications() {
 		if (methodImplementationModifications == null) {
-			methodImplementationModifications = new EObjectContainmentEList<IECModifyMethodImplementation>(IECModifyMethodImplementation.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS);
+			methodImplementationModifications = new EObjectContainmentEList<IECModifyMethod>(IECModifyMethod.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS);
 		}
 		return methodImplementationModifications;
 	}
@@ -307,9 +307,9 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECModifyPropertyImplementation> getPropertyImplementationModifications() {
+	public EList<IECModifyProperty> getPropertyImplementationModifications() {
 		if (propertyImplementationModifications == null) {
-			propertyImplementationModifications = new EObjectContainmentEList<IECModifyPropertyImplementation>(IECModifyPropertyImplementation.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS);
+			propertyImplementationModifications = new EObjectContainmentEList<IECModifyProperty>(IECModifyProperty.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS);
 		}
 		return propertyImplementationModifications;
 	}
@@ -409,11 +409,11 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS:
 				getMethodModifications().clear();
-				getMethodModifications().addAll((Collection<? extends IECModifyMethod>)newValue);
+				getMethodModifications().addAll((Collection<? extends IECModifyAbstractMethod>)newValue);
 				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS:
 				getPropertyModifications().clear();
-				getPropertyModifications().addAll((Collection<? extends IECModifyProperty>)newValue);
+				getPropertyModifications().addAll((Collection<? extends IECModifyAbstractProperty>)newValue);
 				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROGRAM_MODIFICATIONS:
 				getProgramModifications().clear();
@@ -429,11 +429,11 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
 				getMethodImplementationModifications().clear();
-				getMethodImplementationModifications().addAll((Collection<? extends IECModifyMethodImplementation>)newValue);
+				getMethodImplementationModifications().addAll((Collection<? extends IECModifyMethod>)newValue);
 				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
 				getPropertyImplementationModifications().clear();
-				getPropertyImplementationModifications().addAll((Collection<? extends IECModifyPropertyImplementation>)newValue);
+				getPropertyImplementationModifications().addAll((Collection<? extends IECModifyProperty>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

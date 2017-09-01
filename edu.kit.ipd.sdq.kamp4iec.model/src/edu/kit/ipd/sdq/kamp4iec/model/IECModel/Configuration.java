@@ -60,7 +60,7 @@ public interface Configuration extends IECComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accesses Property</em>' reference list isn't clear,
@@ -72,7 +72,7 @@ public interface Configuration extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<IECPropertyImplementation> getAccessesProperty();
+	EList<IECProperty> getAccessesProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Global Variable</b></em>' reference list.

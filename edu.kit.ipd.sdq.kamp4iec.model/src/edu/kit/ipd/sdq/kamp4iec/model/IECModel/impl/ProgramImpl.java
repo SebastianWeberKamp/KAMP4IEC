@@ -6,9 +6,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
@@ -38,7 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresFunctionBlock <em>Declares Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getImplementsInterface <em>Implements Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresGlobalVariable <em>Declares Global Variable</em>}</li>
@@ -47,6 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresFunctionBlock <em>Declares Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresFunction <em>Declares Function</em>}</li>
  * </ul>
  *
@@ -62,16 +62,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @ordered
 	 */
 	protected EList<Function> callsFunction;
-
-	/**
-	 * The cached value of the '{@link #getDeclaresFunctionBlock() <em>Declares Function Block</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeclaresFunctionBlock()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FunctionBlock> declaresFunctionBlock;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -121,7 +111,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECPropertyImplementation> accessesProperty;
+	protected EList<IECProperty> accessesProperty;
 
 	/**
 	 * The cached value of the '{@link #getCallsMethod() <em>Calls Method</em>}' reference list.
@@ -131,7 +121,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethodImplementation> callsMethod;
+	protected EList<IECMethod> callsMethod;
 
 	/**
 	 * The cached value of the '{@link #getAccessesGlobalVariable() <em>Accesses Global Variable</em>}' reference list.
@@ -152,6 +142,16 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @ordered
 	 */
 	protected EList<FunctionBlock> callsFunctionBlock;
+
+	/**
+	 * The cached value of the '{@link #getDeclaresFunctionBlock() <em>Declares Function Block</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDeclaresFunctionBlock()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionBlock> declaresFunctionBlock;
 
 	/**
 	 * The cached value of the '{@link #getDeclaresFunction() <em>Declares Function</em>}' containment reference list.
@@ -309,9 +309,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECPropertyImplementation> getAccessesProperty() {
+	public EList<IECProperty> getAccessesProperty() {
 		if (accessesProperty == null) {
-			accessesProperty = new EObjectResolvingEList<IECPropertyImplementation>(IECPropertyImplementation.class, this, IECModelPackage.PROGRAM__ACCESSES_PROPERTY);
+			accessesProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.PROGRAM__ACCESSES_PROPERTY);
 		}
 		return accessesProperty;
 	}
@@ -321,9 +321,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethodImplementation> getCallsMethod() {
+	public EList<IECMethod> getCallsMethod() {
 		if (callsMethod == null) {
-			callsMethod = new EObjectResolvingEList<IECMethodImplementation>(IECMethodImplementation.class, this, IECModelPackage.PROGRAM__CALLS_METHOD);
+			callsMethod = new EObjectResolvingEList<IECMethod>(IECMethod.class, this, IECModelPackage.PROGRAM__CALLS_METHOD);
 		}
 		return callsMethod;
 	}
@@ -348,10 +348,10 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
-				return ((InternalEList<?>)getDeclaresFunctionBlock()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
 				return ((InternalEList<?>)getDeclaresGlobalVariable()).basicRemove(otherEnd, msgs);
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
+				return ((InternalEList<?>)getDeclaresFunctionBlock()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				return ((InternalEList<?>)getDeclaresFunction()).basicRemove(otherEnd, msgs);
 		}
@@ -368,8 +368,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 		switch (featureID) {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				return getCallsFunction();
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
-				return getDeclaresFunctionBlock();
 			case IECModelPackage.PROGRAM__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -387,6 +385,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return getAccessesGlobalVariable();
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				return getCallsFunctionBlock();
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
+				return getDeclaresFunctionBlock();
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				return getDeclaresFunction();
 		}
@@ -406,10 +406,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				getCallsFunction().clear();
 				getCallsFunction().addAll((Collection<? extends Function>)newValue);
 				return;
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
-				getDeclaresFunctionBlock().clear();
-				getDeclaresFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
-				return;
 			case IECModelPackage.PROGRAM__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)newValue);
 				return;
@@ -427,11 +423,11 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return;
 			case IECModelPackage.PROGRAM__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
-				getAccessesProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
+				getAccessesProperty().addAll((Collection<? extends IECProperty>)newValue);
 				return;
 			case IECModelPackage.PROGRAM__CALLS_METHOD:
 				getCallsMethod().clear();
-				getCallsMethod().addAll((Collection<? extends IECMethodImplementation>)newValue);
+				getCallsMethod().addAll((Collection<? extends IECMethod>)newValue);
 				return;
 			case IECModelPackage.PROGRAM__ACCESSES_GLOBAL_VARIABLE:
 				getAccessesGlobalVariable().clear();
@@ -440,6 +436,10 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				getCallsFunctionBlock().clear();
 				getCallsFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
+				return;
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
+				getDeclaresFunctionBlock().clear();
+				getDeclaresFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
 				return;
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				getDeclaresFunction().clear();
@@ -459,9 +459,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 		switch (featureID) {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				getCallsFunction().clear();
-				return;
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
-				getDeclaresFunctionBlock().clear();
 				return;
 			case IECModelPackage.PROGRAM__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)null);
@@ -487,6 +484,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				getCallsFunctionBlock().clear();
 				return;
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
+				getDeclaresFunctionBlock().clear();
+				return;
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				getDeclaresFunction().clear();
 				return;
@@ -504,8 +504,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 		switch (featureID) {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				return callsFunction != null && !callsFunction.isEmpty();
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
-				return declaresFunctionBlock != null && !declaresFunctionBlock.isEmpty();
 			case IECModelPackage.PROGRAM__TYPE:
 				return type != null;
 			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
@@ -522,6 +520,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return accessesGlobalVariable != null && !accessesGlobalVariable.isEmpty();
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				return callsFunctionBlock != null && !callsFunctionBlock.isEmpty();
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
+				return declaresFunctionBlock != null && !declaresFunctionBlock.isEmpty();
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				return declaresFunction != null && !declaresFunction.isEmpty();
 		}

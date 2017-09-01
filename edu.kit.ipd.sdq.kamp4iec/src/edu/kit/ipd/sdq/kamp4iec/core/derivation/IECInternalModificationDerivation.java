@@ -11,10 +11,9 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
-import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
@@ -22,26 +21,21 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.AbstractKAMP4IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl;
 
 public class IECInternalModificationDerivation {
 	
@@ -131,16 +125,16 @@ public class IECInternalModificationDerivation {
 		Collection<IECModifyMethod> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyMethod.class);
 		for (IECModifyMethod modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, 
-					   IECActivityElementType.METHOD);
+					   IECActivityElementType.ABSTRACTMETHOD);
 			activityList.add(componentActivity);
 		}
 	}
 	
 	private void deriveMethodImplementationModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<IECModifyMethodImplementation> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyMethodImplementation.class);
-		for (IECModifyMethodImplementation modifyComponent : modifyComponents) {
+		Collection<IECModifyAbstractMethod> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyAbstractMethod.class);
+		for (IECModifyAbstractMethod modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, 
-					   IECActivityElementType.METHODIMPLEMENTATION);
+					   IECActivityElementType.METHOD);
 			activityList.add(componentActivity);
 		}
 	}
@@ -149,16 +143,16 @@ public class IECInternalModificationDerivation {
 		Collection<IECModifyProperty> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyProperty.class);
 		for (IECModifyProperty modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, 
-					   IECActivityElementType.PROPERTY);
+					   IECActivityElementType.ABSTRACTPROPERTY);
 			activityList.add(componentActivity);
 		}
 	}
 	
 	private void derivePropertyImplementationModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<IECModifyPropertyImplementation> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyPropertyImplementation.class);
-		for (IECModifyPropertyImplementation modifyComponent : modifyComponents) {
+		Collection<IECModifyProperty> modifyComponents = ArchitectureModelLookup.lookUpAllCalculatedMarksOfAType(targetVersion, IECModifyProperty.class);
+		for (IECModifyProperty modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, 
-					   IECActivityElementType.PROPERTYIMPLEMENTATION);
+					   IECActivityElementType.PROPERTY);
 			activityList.add(componentActivity);
 		}
 	}
@@ -223,16 +217,16 @@ public class IECInternalModificationDerivation {
 			IECMethod method = ((IECModifyMethod) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + method.eClass().getName() + ".");
-		} else if (modification instanceof IECModifyMethodImplementation){
-			IECMethodImplementation method = ((IECModifyMethodImplementation) modification).getAffectedElement();
+		} else if (modification instanceof IECModifyMethod){
+			IECMethod method = ((IECModifyMethod) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + method.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyProperty){
 			IECProperty function = ((IECModifyProperty) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
-		} else if (modification instanceof IECModifyPropertyImplementation){
-			IECPropertyImplementation function = ((IECModifyPropertyImplementation) modification).getAffectedElement();
+		} else if (modification instanceof IECModifyProperty){
+			IECProperty function = ((IECModifyProperty) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyProgram){

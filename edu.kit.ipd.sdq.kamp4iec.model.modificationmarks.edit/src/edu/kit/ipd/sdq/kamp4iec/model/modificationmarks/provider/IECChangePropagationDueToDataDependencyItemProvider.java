@@ -180,12 +180,12 @@ public class IECChangePropagationDueToDataDependencyItemProvider extends ChangeP
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModificationmarksPackage.Literals.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyMethod()));
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyAbstractMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModificationmarksPackage.Literals.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyProperty()));
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyAbstractProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -205,12 +205,12 @@ public class IECChangePropagationDueToDataDependencyItemProvider extends ChangeP
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModificationmarksPackage.Literals.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation()));
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModificationmarksPackage.Literals.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyPropertyImplementation()));
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyProperty()));
 	}
 
 	/**

@@ -56,7 +56,7 @@ public interface FunctionBlock extends DependencyResource {
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accesses Property</em>' reference list isn't clear,
@@ -68,7 +68,7 @@ public interface FunctionBlock extends DependencyResource {
 	 * @model
 	 * @generated
 	 */
-	EList<IECPropertyImplementation> getAccessesProperty();
+	EList<IECProperty> getAccessesProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Global Variable</b></em>' reference list.
@@ -88,7 +88,7 @@ public interface FunctionBlock extends DependencyResource {
 
 	/**
 	 * Returns the value of the '<em><b>Has Method</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Method</em>' containment reference list isn't clear,
@@ -100,11 +100,11 @@ public interface FunctionBlock extends DependencyResource {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECMethodImplementation> getHasMethod();
+	EList<IECMethod> getHasMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Has Property</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Property</em>' containment reference list isn't clear,
@@ -116,7 +116,7 @@ public interface FunctionBlock extends DependencyResource {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECPropertyImplementation> getHasProperty();
+	EList<IECProperty> getHasProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.

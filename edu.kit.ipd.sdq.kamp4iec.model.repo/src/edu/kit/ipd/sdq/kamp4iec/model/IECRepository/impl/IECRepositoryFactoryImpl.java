@@ -5,11 +5,11 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
@@ -73,13 +73,13 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 			case IECRepositoryPackage.FUNCTION_BLOCK: return createFunctionBlock();
 			case IECRepositoryPackage.GLOBAL_VARIABLE: return createGlobalVariable();
 			case IECRepositoryPackage.IEC_INTERFACE: return createIECInterface();
-			case IECRepositoryPackage.IEC_METHOD_IMPLEMENTATION: return createIECMethodImplementation();
+			case IECRepositoryPackage.IEC_METHOD: return createIECMethod();
 			case IECRepositoryPackage.FUNCTION: return createFunction();
 			case IECRepositoryPackage.PROGRAM: return createProgram();
 			case IECRepositoryPackage.REPOSITORY: return createRepository();
-			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION: return createIECPropertyImplementation();
 			case IECRepositoryPackage.IEC_PROPERTY: return createIECProperty();
-			case IECRepositoryPackage.IEC_METHOD: return createIECMethod();
+			case IECRepositoryPackage.IEC_ABSTRACT_PROPERTY: return createIECAbstractProperty();
+			case IECRepositoryPackage.IEC_ABSTRACT_METHOD: return createIECAbstractMethod();
 			case IECRepositoryPackage.ENUM: return createEnum();
 			case IECRepositoryPackage.IMPLEMENTS_INTERFACE: return createImplementsInterface();
 			default:
@@ -152,16 +152,6 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECMethodImplementation createIECMethodImplementation() {
-		IECMethodImplementationImpl iecMethodImplementation = new IECMethodImplementationImpl();
-		return iecMethodImplementation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Function createFunction() {
 		FunctionImpl function = new FunctionImpl();
 		return function;
@@ -192,9 +182,9 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECPropertyImplementation createIECPropertyImplementation() {
-		IECPropertyImplementationImpl iecPropertyImplementation = new IECPropertyImplementationImpl();
-		return iecPropertyImplementation;
+	public IECProperty createIECProperty() {
+		IECPropertyImpl iecProperty = new IECPropertyImpl();
+		return iecProperty;
 	}
 
 	/**
@@ -202,9 +192,19 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECProperty createIECProperty() {
-		IECPropertyImpl iecProperty = new IECPropertyImpl();
-		return iecProperty;
+	public IECAbstractProperty createIECAbstractProperty() {
+		IECAbstractPropertyImpl iecAbstractProperty = new IECAbstractPropertyImpl();
+		return iecAbstractProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECAbstractMethod createIECAbstractMethod() {
+		IECAbstractMethodImpl iecAbstractMethod = new IECAbstractMethodImpl();
+		return iecAbstractMethod;
 	}
 
 	/**

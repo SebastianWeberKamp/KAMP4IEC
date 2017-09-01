@@ -14,8 +14,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -47,31 +45,8 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUsesEnumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Uses Enum feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsesEnumPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECInterface_UsesEnum_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECInterface_UsesEnum_feature", "_UI_IECInterface_type"),
-				 IECRepositoryPackage.Literals.IEC_INTERFACE__USES_ENUM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -165,12 +140,12 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_METHOD,
-				 IECRepositoryFactory.eINSTANCE.createIECMethod()));
+				 IECRepositoryFactory.eINSTANCE.createIECAbstractMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_PROPERTY,
-				 IECRepositoryFactory.eINSTANCE.createIECProperty()));
+				 IECRepositoryFactory.eINSTANCE.createIECAbstractProperty()));
 	}
 
 }

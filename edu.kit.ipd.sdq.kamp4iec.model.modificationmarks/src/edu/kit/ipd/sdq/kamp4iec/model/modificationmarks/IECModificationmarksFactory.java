@@ -105,6 +105,24 @@ public interface IECModificationmarksFactory extends EFactory {
 	IECModifyMethod createIECModifyMethod();
 
 	/**
+	 * Returns a new object of class '<em>IEC Modify Abstract Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Abstract Method</em>'.
+	 * @generated
+	 */
+	IECModifyAbstractMethod createIECModifyAbstractMethod();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Abstract Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Abstract Property</em>'.
+	 * @generated
+	 */
+	IECModifyAbstractProperty createIECModifyAbstractProperty();
+
+	/**
 	 * Returns a new object of class '<em>IEC Modify Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,24 +157,6 @@ public interface IECModificationmarksFactory extends EFactory {
 	 * @generated
 	 */
 	IECModifyConfiguration createIECModifyConfiguration();
-
-	/**
-	 * Returns a new object of class '<em>IEC Modify Method Implementation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Modify Method Implementation</em>'.
-	 * @generated
-	 */
-	IECModifyMethodImplementation createIECModifyMethodImplementation();
-
-	/**
-	 * Returns a new object of class '<em>IEC Modify Property Implementation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Modify Property Implementation</em>'.
-	 * @generated
-	 */
-	IECModifyPropertyImplementation createIECModifyPropertyImplementation();
 
 	/**
 	 * Returns the package supported by this factory.

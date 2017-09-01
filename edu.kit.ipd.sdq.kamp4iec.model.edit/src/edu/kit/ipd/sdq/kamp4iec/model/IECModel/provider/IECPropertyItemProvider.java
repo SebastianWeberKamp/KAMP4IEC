@@ -47,8 +47,8 @@ public class IECPropertyItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUsesEnumPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addUsesEnumPropertyDescriptor(object);
 			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;

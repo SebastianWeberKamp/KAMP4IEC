@@ -2,17 +2,15 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -20,8 +18,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,12 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getHasIecMethod <em>Has Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getHasIecProperty <em>Has Iec Property</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getHasInterface <em>Has Interface</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getAccessesVariable <em>Accesses Variable</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getUsesFunctionBlock <em>Uses Function Block</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getUsesEnum <em>Uses Enum</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getUsesInterface <em>Uses Interface</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,7 +46,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethodImplementation> hasIecMethod;
+	protected EList<IECMethod> hasIecMethod;
 
 	/**
 	 * The cached value of the '{@link #getHasIecProperty() <em>Has Iec Property</em>}' containment reference list.
@@ -63,67 +56,17 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECPropertyImplementation> hasIecProperty;
+	protected EList<IECProperty> hasIecProperty;
 
 	/**
-	 * The cached value of the '{@link #getHasInterface() <em>Has Interface</em>}' containment reference list.
+	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getHasInterface()
+	 * @see #getImplements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ImplementsInterface> hasInterface;
-
-	/**
-	 * The cached value of the '{@link #getAccessesVariable() <em>Accesses Variable</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccessesVariable()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<GlobalVariable> accessesVariable;
-
-	/**
-	 * The cached value of the '{@link #getUsesFunctionBlock() <em>Uses Function Block</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsesFunctionBlock()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FunctionBlock> usesFunctionBlock;
-
-	/**
-	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCallsFunction()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Function> callsFunction;
-
-	/**
-	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsesEnum()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
-
-	/**
-	 * The cached value of the '{@link #getUsesInterface() <em>Uses Interface</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsesInterface()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IECInterface> usesInterface;
+	protected ImplementsInterface implements_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,9 +92,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethodImplementation> getHasIecMethod() {
+	public EList<IECMethod> getHasIecMethod() {
 		if (hasIecMethod == null) {
-			hasIecMethod = new EObjectContainmentEList<IECMethodImplementation>(IECMethodImplementation.class, this, IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_METHOD);
+			hasIecMethod = new EObjectContainmentEList<IECMethod>(IECMethod.class, this, IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_METHOD);
 		}
 		return hasIecMethod;
 	}
@@ -161,9 +104,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECPropertyImplementation> getHasIecProperty() {
+	public EList<IECProperty> getHasIecProperty() {
 		if (hasIecProperty == null) {
-			hasIecProperty = new EObjectContainmentEList<IECPropertyImplementation>(IECPropertyImplementation.class, this, IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY);
+			hasIecProperty = new EObjectContainmentEList<IECProperty>(IECProperty.class, this, IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY);
 		}
 		return hasIecProperty;
 	}
@@ -173,11 +116,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ImplementsInterface> getHasInterface() {
-		if (hasInterface == null) {
-			hasInterface = new EObjectContainmentEList<ImplementsInterface>(ImplementsInterface.class, this, IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE);
-		}
-		return hasInterface;
+	public ImplementsInterface getImplements() {
+		return implements_;
 	}
 
 	/**
@@ -185,11 +125,14 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GlobalVariable> getAccessesVariable() {
-		if (accessesVariable == null) {
-			accessesVariable = new EObjectResolvingEList<GlobalVariable>(GlobalVariable.class, this, IECRepositoryPackage.FUNCTION_BLOCK__ACCESSES_VARIABLE);
+	public NotificationChain basicSetImplements(ImplementsInterface newImplements, NotificationChain msgs) {
+		ImplementsInterface oldImplements = implements_;
+		implements_ = newImplements;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, oldImplements, newImplements);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return accessesVariable;
+		return msgs;
 	}
 
 	/**
@@ -197,47 +140,18 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionBlock> getUsesFunctionBlock() {
-		if (usesFunctionBlock == null) {
-			usesFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK);
+	public void setImplements(ImplementsInterface newImplements) {
+		if (newImplements != implements_) {
+			NotificationChain msgs = null;
+			if (implements_ != null)
+				msgs = ((InternalEObject)implements_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, null, msgs);
+			if (newImplements != null)
+				msgs = ((InternalEObject)newImplements).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, null, msgs);
+			msgs = basicSetImplements(newImplements, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return usesFunctionBlock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Function> getCallsFunction() {
-		if (callsFunction == null) {
-			callsFunction = new EObjectResolvingEList<Function>(Function.class, this, IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION);
-		}
-		return callsFunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
-		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM);
-		}
-		return usesEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<IECInterface> getUsesInterface() {
-		if (usesInterface == null) {
-			usesInterface = new EObjectResolvingEList<IECInterface>(IECInterface.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_INTERFACE);
-		}
-		return usesInterface;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, newImplements, newImplements));
 	}
 
 	/**
@@ -252,8 +166,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return ((InternalEList<?>)getHasIecMethod()).basicRemove(otherEnd, msgs);
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY:
 				return ((InternalEList<?>)getHasIecProperty()).basicRemove(otherEnd, msgs);
-			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE:
-				return ((InternalEList<?>)getHasInterface()).basicRemove(otherEnd, msgs);
+			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
+				return basicSetImplements(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -270,18 +184,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return getHasIecMethod();
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY:
 				return getHasIecProperty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE:
-				return getHasInterface();
-			case IECRepositoryPackage.FUNCTION_BLOCK__ACCESSES_VARIABLE:
-				return getAccessesVariable();
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK:
-				return getUsesFunctionBlock();
-			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
-				return getCallsFunction();
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM:
-				return getUsesEnum();
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_INTERFACE:
-				return getUsesInterface();
+			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
+				return getImplements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -297,35 +201,14 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 		switch (featureID) {
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_METHOD:
 				getHasIecMethod().clear();
-				getHasIecMethod().addAll((Collection<? extends IECMethodImplementation>)newValue);
+				getHasIecMethod().addAll((Collection<? extends IECMethod>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY:
 				getHasIecProperty().clear();
-				getHasIecProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
+				getHasIecProperty().addAll((Collection<? extends IECProperty>)newValue);
 				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE:
-				getHasInterface().clear();
-				getHasInterface().addAll((Collection<? extends ImplementsInterface>)newValue);
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__ACCESSES_VARIABLE:
-				getAccessesVariable().clear();
-				getAccessesVariable().addAll((Collection<? extends GlobalVariable>)newValue);
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK:
-				getUsesFunctionBlock().clear();
-				getUsesFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
-				getCallsFunction().clear();
-				getCallsFunction().addAll((Collection<? extends Function>)newValue);
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM:
-				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_INTERFACE:
-				getUsesInterface().clear();
-				getUsesInterface().addAll((Collection<? extends IECInterface>)newValue);
+			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
+				setImplements((ImplementsInterface)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -345,23 +228,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY:
 				getHasIecProperty().clear();
 				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE:
-				getHasInterface().clear();
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__ACCESSES_VARIABLE:
-				getAccessesVariable().clear();
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK:
-				getUsesFunctionBlock().clear();
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
-				getCallsFunction().clear();
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM:
-				getUsesEnum().clear();
-				return;
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_INTERFACE:
-				getUsesInterface().clear();
+			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
+				setImplements((ImplementsInterface)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -379,18 +247,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return hasIecMethod != null && !hasIecMethod.isEmpty();
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY:
 				return hasIecProperty != null && !hasIecProperty.isEmpty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE:
-				return hasInterface != null && !hasInterface.isEmpty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__ACCESSES_VARIABLE:
-				return accessesVariable != null && !accessesVariable.isEmpty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK:
-				return usesFunctionBlock != null && !usesFunctionBlock.isEmpty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
-				return callsFunction != null && !callsFunction.isEmpty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM:
-				return usesEnum != null && !usesEnum.isEmpty();
-			case IECRepositoryPackage.FUNCTION_BLOCK__USES_INTERFACE:
-				return usesInterface != null && !usesInterface.isEmpty();
+			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
+				return implements_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

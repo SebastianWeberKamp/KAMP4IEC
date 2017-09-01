@@ -11,10 +11,11 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
@@ -51,10 +52,10 @@ public class IECSubactivityDerivation {
 							addSubActivity(globalVariable, IECActivityElementType.FUNCTIONBLOCK, functionBlock, parentActivity);
 						}
 					}
-					for(IECMethodImplementation method : functionBlock.getHasMethod()) {
+					for(IECMethod method : functionBlock.getHasMethod()) {
 						for(GlobalVariable globVar : method.getAccessesGlobalVariable()) {
 							if(globalVariable.getId() == globVar.getId()) {
-								addSubActivity(globalVariable, IECActivityElementType.METHOD, method, parentActivity);
+								addSubActivity(globalVariable, IECActivityElementType.ABSTRACTMETHOD, method, parentActivity);
 							}
 						}
 					}
@@ -116,10 +117,10 @@ public class IECSubactivityDerivation {
 							addSubActivity(function, IECActivityElementType.FUNCTIONBLOCK, functionBlock, parentActivity);
 						}
 					}
-					for(IECMethodImplementation method : functionBlock.getHasMethod()) {
+					for(IECMethod method : functionBlock.getHasMethod()) {
 						for(Function func : method.getCallsFunction()) {
 							if(function.getId() == func.getId()) {
-								addSubActivity(function, IECActivityElementType.METHOD, method, parentActivity);
+								addSubActivity(function, IECActivityElementType.ABSTRACTMETHOD, method, parentActivity);
 							}
 						}
 					}
@@ -162,7 +163,7 @@ public class IECSubactivityDerivation {
 		if (iecMethod instanceof IECMethod) {
 			Configuration configuration = version.getConfiguration();
 			for(IECInterface iecInterface : configuration.getInterfaces().getContainsInterface()) {
-				for(IECMethod method : iecInterface.getHasMethod()) {
+				for(IECAbstractMethod method : iecInterface.getHasMethod()) {
 					if(iecMethod.getId() == method.getId()) {
 						addSubActivity(iecMethod, IECActivityElementType.INTERFACE, iecInterface, parentActivity);
 					}
@@ -175,7 +176,7 @@ public class IECSubactivityDerivation {
 		if (iecProperty instanceof IECProperty) {
 			Configuration configuration = version.getConfiguration();
 			for(IECInterface iecInterface : configuration.getInterfaces().getContainsInterface()) {
-				for(IECProperty property : iecInterface.getHasProperty()) {
+				for(IECAbstractProperty property : iecInterface.getHasProperty()) {
 					if(iecProperty.getId() == property.getId()) {
 						addSubActivity(iecProperty, IECActivityElementType.INTERFACE, iecInterface, parentActivity);
 					}

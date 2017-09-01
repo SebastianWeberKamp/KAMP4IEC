@@ -49,15 +49,6 @@ public interface IECRepositoryFactory extends EFactory {
 	IECInterface createIECInterface();
 
 	/**
-	 * Returns a new object of class '<em>IEC Method Implementation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Method Implementation</em>'.
-	 * @generated
-	 */
-	IECMethodImplementation createIECMethodImplementation();
-
-	/**
 	 * Returns a new object of class '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -85,15 +76,6 @@ public interface IECRepositoryFactory extends EFactory {
 	Repository createRepository();
 
 	/**
-	 * Returns a new object of class '<em>IEC Property Implementation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Property Implementation</em>'.
-	 * @generated
-	 */
-	IECPropertyImplementation createIECPropertyImplementation();
-
-	/**
 	 * Returns a new object of class '<em>IEC Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +83,24 @@ public interface IECRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	IECProperty createIECProperty();
+
+	/**
+	 * Returns a new object of class '<em>IEC Abstract Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Abstract Property</em>'.
+	 * @generated
+	 */
+	IECAbstractProperty createIECAbstractProperty();
+
+	/**
+	 * Returns a new object of class '<em>IEC Abstract Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Abstract Method</em>'.
+	 * @generated
+	 */
+	IECAbstractMethod createIECAbstractMethod();
 
 	/**
 	 * Returns a new object of class '<em>IEC Method</em>'.

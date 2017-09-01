@@ -116,6 +116,14 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createIECModifyMethodAdapter();
 			}
 			@Override
+			public Adapter caseIECModifyAbstractMethod(IECModifyAbstractMethod object) {
+				return createIECModifyAbstractMethodAdapter();
+			}
+			@Override
+			public Adapter caseIECModifyAbstractProperty(IECModifyAbstractProperty object) {
+				return createIECModifyAbstractPropertyAdapter();
+			}
+			@Override
 			public Adapter caseIECModifyProperty(IECModifyProperty object) {
 				return createIECModifyPropertyAdapter();
 			}
@@ -130,14 +138,6 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIECModifyConfiguration(IECModifyConfiguration object) {
 				return createIECModifyConfigurationAdapter();
-			}
-			@Override
-			public Adapter caseIECModifyMethodImplementation(IECModifyMethodImplementation object) {
-				return createIECModifyMethodImplementationAdapter();
-			}
-			@Override
-			public Adapter caseIECModifyPropertyImplementation(IECModifyPropertyImplementation object) {
-				return createIECModifyPropertyImplementationAdapter();
 			}
 			@Override
 			public <S extends AbstractSeedModifications, T extends AbstractChangePropagationStep> Adapter caseAbstractModificationRepository(AbstractModificationRepository<S, T> object) {
@@ -320,6 +320,34 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod <em>IEC Modify Abstract Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod
+	 * @generated
+	 */
+	public Adapter createIECModifyAbstractMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty <em>IEC Modify Abstract Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty
+	 * @generated
+	 */
+	public Adapter createIECModifyAbstractPropertyAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty <em>IEC Modify Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -372,34 +400,6 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIECModifyConfigurationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation <em>IEC Modify Method Implementation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation
-	 * @generated
-	 */
-	public Adapter createIECModifyMethodImplementationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation <em>IEC Modify Property Implementation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyPropertyImplementation
-	 * @generated
-	 */
-	public Adapter createIECModifyPropertyImplementationAdapter() {
 		return null;
 	}
 

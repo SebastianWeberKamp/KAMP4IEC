@@ -4,13 +4,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionBlock" eSuperTypes="#//DependencyResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//FunctionBlock"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
-        eType="#//IECPropertyImplementation"/>
+        eType="#//IECProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethod" upperBound="-1"
-        eType="#//IECMethodImplementation" containment="true"/>
+        eType="#//IECMethod" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasProperty" upperBound="-1"
-        eType="#//IECPropertyImplementation" containment="true"/>
+        eType="#//IECProperty" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
@@ -28,8 +28,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Program" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
         eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresFunctionBlock"
-        upperBound="-1" eType="#//FunctionBlock" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Program"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ImplementsInterface" upperBound="-1"
         eType="#//IECInterface"/>
@@ -38,13 +36,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
-        eType="#//IECPropertyImplementation"/>
+        eType="#//IECProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsMethod" upperBound="-1"
-        eType="#//IECMethodImplementation"/>
+        eType="#//IECMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunctionBlock" upperBound="-1"
         eType="#//FunctionBlock"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresFunctionBlock"
+        upperBound="-1" eType="#//FunctionBlock" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresFunction" upperBound="-1"
         eType="#//Function" containment="true"/>
   </eClassifiers>
@@ -54,7 +54,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
-        eType="#//IECPropertyImplementation"/>
+        eType="#//IECProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" eType="#//Enums"
@@ -67,39 +67,39 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECMethodImplementation" eSuperTypes="#//DependencyResource">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECMethodImplementation"
+  <eClassifiers xsi:type="ecore:EClass" name="IECMethod" eSuperTypes="#//DependencyResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECMethod"
         derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesGlobalVariable"
         upperBound="-1" eType="#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesProperty" upperBound="-1"
-        eType="#//IECPropertyImplementation"/>
+        eType="#//IECProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
         eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Implements" eType="#//IECMethod"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Implements" eType="#//IECAbstractMethod"
         derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECPropertyImplementation" eSuperTypes="#//DependencyResource">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECPropertyImplementation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IECProperty" eSuperTypes="#//DependencyResource">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Implements" eType="#//IECProperty"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Implements" eType="#//IECAbstractProperty"
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECComponent" abstract="true" interface="true"
       eSuperTypes="../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Identifier"/>
   <eClassifiers xsi:type="ecore:EClass" name="DependencyResource" abstract="true"
       interface="true" eSuperTypes="#//IECComponent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IECProperty" eSuperTypes="#//IECComponent">
+  <eClassifiers xsi:type="ecore:EClass" name="IECAbstractProperty" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Enum"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECProperty"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Implements" eType="#//IECInterface"
         derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECMethod" eSuperTypes="#//IECComponent">
+  <eClassifiers xsi:type="ecore:EClass" name="IECAbstractMethod" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//Enum"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECMethod"/>
@@ -113,9 +113,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECInterface" eSuperTypes="#//DependencyResource">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Type" lowerBound="1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECInterface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethod" upperBound="-1"
-        eType="#//IECMethod" containment="true"/>
+        eType="#//IECAbstractMethod" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasProperty" upperBound="-1"
-        eType="#//IECProperty" containment="true"/>
+        eType="#//IECAbstractProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Enums">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsEnums" upperBound="-1"

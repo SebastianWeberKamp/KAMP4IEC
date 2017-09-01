@@ -43,25 +43,25 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUsesEnumPropertyDescriptor(object);
+			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Uses Enum feature.
+	 * This adds a property descriptor for the Implements feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUsesEnumPropertyDescriptor(Object object) {
+	protected void addImplementsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IECMethod_UsesEnum_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_UsesEnum_feature", "_UI_IECMethod_type"),
-				 IECRepositoryPackage.Literals.IEC_METHOD__USES_ENUM,
+				 getString("_UI_IECMethod_implements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_implements_feature", "_UI_IECMethod_type"),
+				 IECRepositoryPackage.Literals.IEC_METHOD__IMPLEMENTS,
 				 true,
 				 false,
 				 true,

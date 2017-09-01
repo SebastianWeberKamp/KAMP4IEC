@@ -5,11 +5,11 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.util;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
@@ -92,8 +92,8 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createIECInterfaceAdapter();
 			}
 			@Override
-			public Adapter caseIECMethodImplementation(IECMethodImplementation object) {
-				return createIECMethodImplementationAdapter();
+			public Adapter caseIECMethod(IECMethod object) {
+				return createIECMethodAdapter();
 			}
 			@Override
 			public Adapter caseFunction(Function object) {
@@ -108,16 +108,16 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createRepositoryAdapter();
 			}
 			@Override
-			public Adapter caseIECPropertyImplementation(IECPropertyImplementation object) {
-				return createIECPropertyImplementationAdapter();
-			}
-			@Override
 			public Adapter caseIECProperty(IECProperty object) {
 				return createIECPropertyAdapter();
 			}
 			@Override
-			public Adapter caseIECMethod(IECMethod object) {
-				return createIECMethodAdapter();
+			public Adapter caseIECAbstractProperty(IECAbstractProperty object) {
+				return createIECAbstractPropertyAdapter();
+			}
+			@Override
+			public Adapter caseIECAbstractMethod(IECAbstractMethod object) {
+				return createIECAbstractMethodAdapter();
 			}
 			@Override
 			public Adapter caseEnum(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum object) {
@@ -194,20 +194,6 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation <em>IEC Method Implementation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation
-	 * @generated
-	 */
-	public Adapter createIECMethodImplementationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function <em>Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -250,20 +236,6 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation <em>IEC Property Implementation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation
-	 * @generated
-	 */
-	public Adapter createIECPropertyImplementationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty <em>IEC Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -274,6 +246,34 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIECPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty <em>IEC Abstract Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty
+	 * @generated
+	 */
+	public Adapter createIECAbstractPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod <em>IEC Abstract Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod
+	 * @generated
+	 */
+	public Adapter createIECAbstractMethodAdapter() {
 		return null;
 	}
 

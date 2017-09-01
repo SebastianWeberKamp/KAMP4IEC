@@ -2,11 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -58,7 +57,7 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethod> hasMethod;
+	protected EList<IECAbstractMethod> hasMethod;
 
 	/**
 	 * The cached value of the '{@link #getHasProperty() <em>Has Property</em>}' containment reference list.
@@ -68,7 +67,7 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> hasProperty;
+	protected EList<IECAbstractProperty> hasProperty;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,9 +131,9 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethod> getHasMethod() {
+	public EList<IECAbstractMethod> getHasMethod() {
 		if (hasMethod == null) {
-			hasMethod = new EObjectContainmentEList<IECMethod>(IECMethod.class, this, IECModelPackage.IEC_INTERFACE__HAS_METHOD);
+			hasMethod = new EObjectContainmentEList<IECAbstractMethod>(IECAbstractMethod.class, this, IECModelPackage.IEC_INTERFACE__HAS_METHOD);
 		}
 		return hasMethod;
 	}
@@ -144,9 +143,9 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getHasProperty() {
+	public EList<IECAbstractProperty> getHasProperty() {
 		if (hasProperty == null) {
-			hasProperty = new EObjectContainmentEList<IECProperty>(IECProperty.class, this, IECModelPackage.IEC_INTERFACE__HAS_PROPERTY);
+			hasProperty = new EObjectContainmentEList<IECAbstractProperty>(IECAbstractProperty.class, this, IECModelPackage.IEC_INTERFACE__HAS_PROPERTY);
 		}
 		return hasProperty;
 	}
@@ -200,11 +199,11 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 				return;
 			case IECModelPackage.IEC_INTERFACE__HAS_METHOD:
 				getHasMethod().clear();
-				getHasMethod().addAll((Collection<? extends IECMethod>)newValue);
+				getHasMethod().addAll((Collection<? extends IECAbstractMethod>)newValue);
 				return;
 			case IECModelPackage.IEC_INTERFACE__HAS_PROPERTY:
 				getHasProperty().clear();
-				getHasProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getHasProperty().addAll((Collection<? extends IECAbstractProperty>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

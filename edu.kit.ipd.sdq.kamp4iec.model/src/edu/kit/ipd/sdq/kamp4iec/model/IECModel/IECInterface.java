@@ -51,7 +51,7 @@ public interface IECInterface extends DependencyResource {
 
 	/**
 	 * Returns the value of the '<em><b>Has Method</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Method</em>' containment reference list isn't clear,
@@ -63,11 +63,11 @@ public interface IECInterface extends DependencyResource {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECMethod> getHasMethod();
+	EList<IECAbstractMethod> getHasMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Has Property</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Property</em>' containment reference list isn't clear,
@@ -79,6 +79,6 @@ public interface IECInterface extends DependencyResource {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECProperty> getHasProperty();
+	EList<IECAbstractProperty> getHasProperty();
 
 } // IECInterface

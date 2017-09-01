@@ -2,16 +2,14 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,22 +19,21 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	/**
-	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
+	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUsesEnum()
+	 * @see #getImplements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
-
+	protected IECAbstractMethod implements_;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,11 +58,37 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
-		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.IEC_METHOD__USES_ENUM);
+	public IECAbstractMethod getImplements() {
+		if (implements_ != null && implements_.eIsProxy()) {
+			InternalEObject oldImplements = (InternalEObject)implements_;
+			implements_ = (IECAbstractMethod)eResolveProxy(oldImplements);
+			if (implements_ != oldImplements) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECRepositoryPackage.IEC_METHOD__IMPLEMENTS, oldImplements, implements_));
+			}
 		}
-		return usesEnum;
+		return implements_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECAbstractMethod basicGetImplements() {
+		return implements_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setImplements(IECAbstractMethod newImplements) {
+		IECAbstractMethod oldImplements = implements_;
+		implements_ = newImplements;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.IEC_METHOD__IMPLEMENTS, oldImplements, implements_));
 	}
 
 	/**
@@ -76,8 +99,9 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_METHOD__USES_ENUM:
-				return getUsesEnum();
+			case IECRepositoryPackage.IEC_METHOD__IMPLEMENTS:
+				if (resolve) return getImplements();
+				return basicGetImplements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -91,9 +115,8 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_METHOD__USES_ENUM:
-				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
+			case IECRepositoryPackage.IEC_METHOD__IMPLEMENTS:
+				setImplements((IECAbstractMethod)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -107,8 +130,8 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_METHOD__USES_ENUM:
-				getUsesEnum().clear();
+			case IECRepositoryPackage.IEC_METHOD__IMPLEMENTS:
+				setImplements((IECAbstractMethod)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -122,8 +145,8 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_METHOD__USES_ENUM:
-				return usesEnum != null && !usesEnum.isEmpty();
+			case IECRepositoryPackage.IEC_METHOD__IMPLEMENTS:
+				return implements_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

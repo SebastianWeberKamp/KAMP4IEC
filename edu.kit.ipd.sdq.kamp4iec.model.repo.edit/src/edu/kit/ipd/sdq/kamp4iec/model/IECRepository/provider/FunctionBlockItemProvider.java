@@ -14,8 +14,6 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -47,123 +45,8 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAccessesVariablePropertyDescriptor(object);
-			addUsesFunctionBlockPropertyDescriptor(object);
-			addCallsFunctionPropertyDescriptor(object);
-			addUsesEnumPropertyDescriptor(object);
-			addUsesInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Accesses Variable feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAccessesVariablePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionBlock_AccessesVariable_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_AccessesVariable_feature", "_UI_FunctionBlock_type"),
-				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__ACCESSES_VARIABLE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uses Function Block feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsesFunctionBlockPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionBlock_UsesFunctionBlock_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_UsesFunctionBlock_feature", "_UI_FunctionBlock_type"),
-				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__USES_FUNCTION_BLOCK,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Calls Function feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addCallsFunctionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionBlock_CallsFunction_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsFunction_feature", "_UI_FunctionBlock_type"),
-				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__CALLS_FUNCTION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uses Enum feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsesEnumPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionBlock_UsesEnum_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_UsesEnum_feature", "_UI_FunctionBlock_type"),
-				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__USES_ENUM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Uses Interface feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsesInterfacePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_FunctionBlock_UsesInterface_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_UsesInterface_feature", "_UI_FunctionBlock_type"),
-				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__USES_INTERFACE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -180,7 +63,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_METHOD);
 			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_PROPERTY);
-			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_INTERFACE);
+			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__IMPLEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -238,7 +121,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		switch (notification.getFeatureID(FunctionBlock.class)) {
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_METHOD:
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_IEC_PROPERTY:
-			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_INTERFACE:
+			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -259,16 +142,16 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_METHOD,
-				 IECRepositoryFactory.eINSTANCE.createIECMethodImplementation()));
+				 IECRepositoryFactory.eINSTANCE.createIECMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_PROPERTY,
-				 IECRepositoryFactory.eINSTANCE.createIECPropertyImplementation()));
+				 IECRepositoryFactory.eINSTANCE.createIECProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_INTERFACE,
+				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__IMPLEMENTS,
 				 IECRepositoryFactory.eINSTANCE.createImplementsInterface()));
 	}
 

@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getDefinesIecMethod <em>Defines Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getDefinesIecProperty <em>Defines Iec Property</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getIECInterface()
@@ -25,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
 public interface IECInterface extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Defines Iec Method</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Defines Iec Method</em>' containment reference list isn't clear,
@@ -37,11 +36,11 @@ public interface IECInterface extends Identifier {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECMethod> getDefinesIecMethod();
+	EList<IECAbstractMethod> getDefinesIecMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Defines Iec Property</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Defines Iec Property</em>' containment reference list isn't clear,
@@ -53,22 +52,6 @@ public interface IECInterface extends Identifier {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECProperty> getDefinesIecProperty();
-
-	/**
-	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Enum</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getIECInterface_UsesEnum()
-	 * @model
-	 * @generated
-	 */
-	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
+	EList<IECAbstractProperty> getDefinesIecProperty();
 
 } // IECInterface

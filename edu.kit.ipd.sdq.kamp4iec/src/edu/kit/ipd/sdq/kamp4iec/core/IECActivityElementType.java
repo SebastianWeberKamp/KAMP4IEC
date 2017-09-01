@@ -9,11 +9,11 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;;
 
 public enum IECActivityElementType implements AbstractActivityElementType {
@@ -24,10 +24,10 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	PROGRAM(Program.class),
 	FUNCTION(Function.class),
 	INTERFACE(IECInterface.class),
+	ABSTRACTPROPERTY(IECAbstractProperty.class),
 	PROPERTY(IECProperty.class),
-	PROPERTYIMPLEMENTATION(IECPropertyImplementation.class),
+	ABSTRACTMETHOD(IECAbstractMethod.class),
 	METHOD(IECMethod.class),
-	METHODIMPLEMENTATION(IECMethodImplementation.class),
 	ENUM(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class),
 	// annotation-related
 	SOURCECODEFILES(IECSourceFile.class),
@@ -53,7 +53,7 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	}
 
 	public static IECActivityElementType[] getTopLevelArchitectureActivityElementTypes() {	
-		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, PROPERTY, METHOD, ENUM};
+		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, ABSTRACTPROPERTY, ABSTRACTMETHOD, ENUM};
 	}
 
 }

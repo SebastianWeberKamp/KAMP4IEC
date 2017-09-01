@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
 import java.util.Collection;
@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -30,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getDefinesIecMethod <em>Defines Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getDefinesIecProperty <em>Defines Iec Property</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,7 +42,7 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethod> definesIecMethod;
+	protected EList<IECAbstractMethod> definesIecMethod;
 
 	/**
 	 * The cached value of the '{@link #getDefinesIecProperty() <em>Defines Iec Property</em>}' containment reference list.
@@ -54,17 +52,7 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> definesIecProperty;
-
-	/**
-	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsesEnum()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
+	protected EList<IECAbstractProperty> definesIecProperty;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,9 +78,9 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethod> getDefinesIecMethod() {
+	public EList<IECAbstractMethod> getDefinesIecMethod() {
 		if (definesIecMethod == null) {
-			definesIecMethod = new EObjectContainmentEList<IECMethod>(IECMethod.class, this, IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD);
+			definesIecMethod = new EObjectContainmentEList<IECAbstractMethod>(IECAbstractMethod.class, this, IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD);
 		}
 		return definesIecMethod;
 	}
@@ -102,23 +90,11 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getDefinesIecProperty() {
+	public EList<IECAbstractProperty> getDefinesIecProperty() {
 		if (definesIecProperty == null) {
-			definesIecProperty = new EObjectContainmentEList<IECProperty>(IECProperty.class, this, IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY);
+			definesIecProperty = new EObjectContainmentEList<IECAbstractProperty>(IECAbstractProperty.class, this, IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY);
 		}
 		return definesIecProperty;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
-		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.IEC_INTERFACE__USES_ENUM);
-		}
-		return usesEnum;
 	}
 
 	/**
@@ -149,8 +125,6 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 				return getDefinesIecMethod();
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
 				return getDefinesIecProperty();
-			case IECRepositoryPackage.IEC_INTERFACE__USES_ENUM:
-				return getUsesEnum();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -166,15 +140,11 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 		switch (featureID) {
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
 				getDefinesIecMethod().clear();
-				getDefinesIecMethod().addAll((Collection<? extends IECMethod>)newValue);
+				getDefinesIecMethod().addAll((Collection<? extends IECAbstractMethod>)newValue);
 				return;
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
 				getDefinesIecProperty().clear();
-				getDefinesIecProperty().addAll((Collection<? extends IECProperty>)newValue);
-				return;
-			case IECRepositoryPackage.IEC_INTERFACE__USES_ENUM:
-				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
+				getDefinesIecProperty().addAll((Collection<? extends IECAbstractProperty>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,9 +164,6 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
 				getDefinesIecProperty().clear();
 				return;
-			case IECRepositoryPackage.IEC_INTERFACE__USES_ENUM:
-				getUsesEnum().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,8 +180,6 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 				return definesIecMethod != null && !definesIecMethod.isEmpty();
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
 				return definesIecProperty != null && !definesIecProperty.isEmpty();
-			case IECRepositoryPackage.IEC_INTERFACE__USES_ENUM:
-				return usesEnum != null && !usesEnum.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

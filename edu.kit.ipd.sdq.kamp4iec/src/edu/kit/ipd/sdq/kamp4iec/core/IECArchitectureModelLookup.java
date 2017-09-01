@@ -18,12 +18,12 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.DependencyResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 public class IECArchitectureModelLookup {
@@ -96,15 +96,15 @@ public class IECArchitectureModelLookup {
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link IECMethodImplementation}s and which {@link FunctionBlock}s they are accessing.
 	 */
-	public static Map<IECMethodImplementation, Set<FunctionBlock>> lookUpMethodsOfFunctionBlock(
+	public static Map<IECMethod, Set<FunctionBlock>> lookUpMethodsOfFunctionBlock(
 			IECArchitectureVersion version, Collection<FunctionBlock> functionBlocks) {
-		Map<IECMethodImplementation, Set<FunctionBlock>> results = new HashMap<IECMethodImplementation, Set<FunctionBlock>>();
+		Map<IECMethod, Set<FunctionBlock>> results = new HashMap<IECMethod, Set<FunctionBlock>>();
 		if(version.getComponentInternalDependencyRepository() != null) {
 			for(FunctionblockDependency dependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
 				for(FunctionBlock functionBlock : functionBlocks) {
 					if(dependency.getProvidedFunctionBlock().getId().equals(functionBlock.getId())) {
-						if(dependency.getRequiredResource() instanceof IECMethodImplementation) {
-							putOrAddToMap(results, (IECMethodImplementation) dependency.getRequiredResource(), dependency.getProvidedFunctionBlock(), functionBlock);
+						if(dependency.getRequiredResource() instanceof IECMethod) {
+							putOrAddToMap(results, (IECMethod) dependency.getRequiredResource(), dependency.getProvidedFunctionBlock(), functionBlock);
 						}
 					}
 				}
@@ -142,12 +142,12 @@ public class IECArchitectureModelLookup {
 	 * @param functions The {@link Function}s to look up.
 	 * @return A map of all {@link IECMethodImplementation}s and which {@link Function}s they are accessing.
 	 */
-	public static Map<IECMethodImplementation, Set<Function>> lookUpMethodsOfFunction(
+	public static Map<IECMethod, Set<Function>> lookUpMethodsOfFunction(
 			IECArchitectureVersion version, Collection<Function> functions) {
-		Map<IECMethodImplementation, Set<Function>> results = new HashMap<IECMethodImplementation, Set<Function>>();
+		Map<IECMethod, Set<Function>> results = new HashMap<IECMethod, Set<Function>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
 			for (FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
-				for(IECMethodImplementation method : functionBlock.getHasMethod()) {
+				for(IECMethod method : functionBlock.getHasMethod()) {
 					for(Function function : functions) {
 						for(Function accessed : method.getCallsFunction()) {
 							putOrAddToMap(results, method, accessed, function);
@@ -226,12 +226,12 @@ public class IECArchitectureModelLookup {
 	 * @param globalVariables The {@link GlobalVariable}s to look up.
 	 * @return A map of all {@link IECMethodImplementation}s and which {@link GlobalVariable}s they are accessing.
 	 */
-	public static Map<IECMethodImplementation, Set<GlobalVariable>> lookUpMethodsOfGlobalVariable(
+	public static Map<IECMethod, Set<GlobalVariable>> lookUpMethodsOfGlobalVariable(
 			IECArchitectureVersion version, Collection<GlobalVariable> globalVariables) {
-		Map<IECMethodImplementation, Set<GlobalVariable>> results = new HashMap<IECMethodImplementation, Set<GlobalVariable>>();
+		Map<IECMethod, Set<GlobalVariable>> results = new HashMap<IECMethod, Set<GlobalVariable>>();
 		for (Program program : version.getConfiguration().getContainsProgram()) {
 			for (FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
-				for(IECMethodImplementation method : functionBlock.getHasMethod()) {
+				for(IECMethod method : functionBlock.getHasMethod()) {
 					for(GlobalVariable globVar : globalVariables) {
 						for(GlobalVariable accessed : method.getAccessesGlobalVariable()) {
 							putOrAddToMap(results, method, accessed, globVar);
@@ -313,12 +313,12 @@ public class IECArchitectureModelLookup {
 	 * @param method The {@link IECMethod}s to look up.
 	 * @return The {@link IECInterface}s which access the {@link IECMethod}s in a Map.
 	 */
-	public static Map<IECInterface, Set<IECMethod>> lookUpInterfaceOfMethod(
-			IECArchitectureVersion version, Collection<IECMethod> methods) {
-		Map<IECInterface, Set<IECMethod>> results = new HashMap<IECInterface, Set<IECMethod>>();
+	public static Map<IECInterface, Set<IECAbstractMethod>> lookUpInterfaceOfMethod(
+			IECArchitectureVersion version, Collection<IECAbstractMethod> methods) {
+		Map<IECInterface, Set<IECAbstractMethod>> results = new HashMap<IECInterface, Set<IECAbstractMethod>>();
 		for(IECInterface iecInterface : version.getConfiguration().getInterfaces().getContainsInterface()) {
-			for(IECMethod toCompare: methods) {
-				for(IECMethod method: iecInterface.getHasMethod()) {
+			for(IECAbstractMethod toCompare: methods) {
+				for(IECAbstractMethod method: iecInterface.getHasMethod()) {
 					putOrAddToMap(results, iecInterface, method, toCompare);
 				}
 			}
@@ -332,12 +332,12 @@ public class IECArchitectureModelLookup {
 	 * @param method The {@link IECMethod}s to look up.
 	 * @return The {@link IECInterface}s which access the {@link IECMethod}s in a Map.
 	 */
-	public static Map<IECInterface, Set<IECProperty>> lookUpInterfaceOfProperty(
-			IECArchitectureVersion version, Collection<IECProperty> properties) {
-		Map<IECInterface, Set<IECProperty>> results = new HashMap<IECInterface, Set<IECProperty>>();
+	public static Map<IECInterface, Set<IECAbstractProperty>> lookUpInterfaceOfProperty(
+			IECArchitectureVersion version, Collection<IECAbstractProperty> properties) {
+		Map<IECInterface, Set<IECAbstractProperty>> results = new HashMap<IECInterface, Set<IECAbstractProperty>>();
 		for(IECInterface iecInterface : version.getConfiguration().getInterfaces().getContainsInterface()) {
-			for(IECProperty toCompare: properties) {
-				for(IECProperty property: iecInterface.getHasProperty()) {
+			for(IECAbstractProperty toCompare: properties) {
+				for(IECAbstractProperty property: iecInterface.getHasProperty()) {
 					putOrAddToMap(results, iecInterface, property, toCompare);
 				}
 			}
@@ -351,14 +351,14 @@ public class IECArchitectureModelLookup {
 	 * @param methods The {@link IECMethodImplementation}s to look up.
 	 * @return A map of all {@link FunctionBlock}s and which {@link IECMethodImplementation}s they are accessing.
 	 */
-	public static Map<FunctionBlock, Set<IECMethodImplementation>> lookUpFunctionBlocksOfMethodImplementation(
-			IECArchitectureVersion version, Collection<IECMethodImplementation> methods) {
-		Map<FunctionBlock, Set<IECMethodImplementation>> results = new HashMap<FunctionBlock, Set<IECMethodImplementation>>();
+	public static Map<FunctionBlock, Set<IECMethod>> lookUpFunctionBlocksOfMethodImplementation(
+			IECArchitectureVersion version, Collection<IECMethod> methods) {
+		Map<FunctionBlock, Set<IECMethod>> results = new HashMap<FunctionBlock, Set<IECMethod>>();
 		if(version.getComponentInternalDependencyRepository() != null) {
 			for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
-				for(IECMethodImplementation compared : methods) {
-					if(fbDependency.getRequiredResource() instanceof IECMethodImplementation) {
-						putOrAddToMap(results, fbDependency.getProvidedFunctionBlock(), (IECMethodImplementation)fbDependency.getRequiredResource(), compared);
+				for(IECMethod compared : methods) {
+					if(fbDependency.getRequiredResource() instanceof IECMethod) {
+						putOrAddToMap(results, fbDependency.getProvidedFunctionBlock(), (IECMethod)fbDependency.getRequiredResource(), compared);
 					}
 				}
 			}
@@ -372,15 +372,15 @@ public class IECArchitectureModelLookup {
 	 * @param methods The {@link IECMethodImplementation}s to look up.
 	 * @return A map of all {@link IECMethodImplementation}s and which {@link IECMethodImplementation}s they are accessing.
 	 */
-	public static Map<IECMethodImplementation, Set<IECMethodImplementation>> lookUpMethodsOfMethodImplementation(
-			IECArchitectureVersion version, Collection<IECMethodImplementation> methods) {
-		Map<IECMethodImplementation, Set<IECMethodImplementation>> results = new HashMap<IECMethodImplementation, Set<IECMethodImplementation>>();
+	public static Map<IECMethod, Set<IECMethod>> lookUpMethodsOfMethodImplementation(
+			IECArchitectureVersion version, Collection<IECMethod> methods) {
+		Map<IECMethod, Set<IECMethod>> results = new HashMap<IECMethod, Set<IECMethod>>();
 		if(version.getComponentInternalDependencyRepository() != null) {
 			for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
 				for(MethodDependency methodDependency : fbDependency.getHasMethodDependency()) {
-					for(IECMethodImplementation compared : methods) {
-						if(methodDependency.getRequiredResource() instanceof IECMethodImplementation) {
-							putOrAddToMap(results, methodDependency.getProvidedMethod(), (IECMethodImplementation)fbDependency.getRequiredResource(), compared);
+					for(IECMethod compared : methods) {
+						if(methodDependency.getRequiredResource() instanceof IECMethod) {
+							putOrAddToMap(results, methodDependency.getProvidedMethod(), (IECMethod)fbDependency.getRequiredResource(), compared);
 						}
 					}
 				}
@@ -395,12 +395,12 @@ public class IECArchitectureModelLookup {
 	 * @param method The {@link IECMethodImplementation}s to look up.
 	 * @return The {@link Program}s which access the {@link IECMethodImplementation}s in a Map.
 	 */
-	public static Map<Program, Set<IECMethodImplementation>> lookUpProgramsOfMethodImplementation(
-			IECArchitectureVersion version, Collection<IECMethodImplementation> methods) {
-		Map<Program, Set<IECMethodImplementation>> results = new HashMap<Program, Set<IECMethodImplementation>>();
+	public static Map<Program, Set<IECMethod>> lookUpProgramsOfMethodImplementation(
+			IECArchitectureVersion version, Collection<IECMethod> methods) {
+		Map<Program, Set<IECMethod>> results = new HashMap<Program, Set<IECMethod>>();
 		for(Program prog : version.getConfiguration().getContainsProgram()) {
-			for(IECMethodImplementation toCompare: methods) {
-				for(IECMethodImplementation property: prog.getCallsMethod()) {
+			for(IECMethod toCompare: methods) {
+				for(IECMethod property: prog.getCallsMethod()) {
 					putOrAddToMap(results, prog, property, toCompare);
 				}
 			}
@@ -414,15 +414,15 @@ public class IECArchitectureModelLookup {
 	 * @param properties The {@link IECPropertyImplementation}s to look up.
 	 * @return The {@link IECMethodImplementation}s which access the {@link IECPropertyImplementation}s in a Map.
 	 */
-	public static Map<IECMethodImplementation, Set<IECPropertyImplementation>> lookUpMethodImplementaionsOfPropertyImplementation(
-			IECArchitectureVersion version, Collection<IECPropertyImplementation> properties) {
-		Map<IECMethodImplementation, Set<IECPropertyImplementation>> results = new HashMap<IECMethodImplementation, Set<IECPropertyImplementation>>();
+	public static Map<IECMethod, Set<IECProperty>> lookUpMethodImplementaionsOfPropertyImplementation(
+			IECArchitectureVersion version, Collection<IECProperty> properties) {
+		Map<IECMethod, Set<IECProperty>> results = new HashMap<IECMethod, Set<IECProperty>>();
 		if(version.getComponentInternalDependencyRepository() != null) {
 			for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
 				for(MethodDependency methodDependency : fbDependency.getHasMethodDependency()) {
-					for(IECPropertyImplementation compared : properties) {
-						if(methodDependency.getRequiredResource() instanceof IECMethodImplementation) {
-							putOrAddToMap(results, methodDependency.getProvidedMethod(), (IECPropertyImplementation)fbDependency.getRequiredResource(), compared);
+					for(IECProperty compared : properties) {
+						if(methodDependency.getRequiredResource() instanceof IECMethod) {
+							putOrAddToMap(results, methodDependency.getProvidedMethod(), (IECProperty)fbDependency.getRequiredResource(), compared);
 						}
 					}
 				}
@@ -437,14 +437,14 @@ public class IECArchitectureModelLookup {
 	 * @param properties The {@link IECPropertyImplementation}s to look up.
 	 * @return The {@link FunctionBlock}s which access the {@link IECPropertyImplementation}s in a Map.
 	 */
-	public static Map<FunctionBlock, Set<IECPropertyImplementation>> lookUpFunctionBlocksOfPropertyImplementation(
-			IECArchitectureVersion version, Collection<IECPropertyImplementation> properties) {
-		Map<FunctionBlock, Set<IECPropertyImplementation>> results = new HashMap<FunctionBlock, Set<IECPropertyImplementation>>();
+	public static Map<FunctionBlock, Set<IECProperty>> lookUpFunctionBlocksOfPropertyImplementation(
+			IECArchitectureVersion version, Collection<IECProperty> properties) {
+		Map<FunctionBlock, Set<IECProperty>> results = new HashMap<FunctionBlock, Set<IECProperty>>();
 		if(version.getComponentInternalDependencyRepository() != null) {
 			for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
-				for(IECPropertyImplementation compared : properties) {
-					if(fbDependency.getRequiredResource() instanceof IECMethodImplementation) {
-						putOrAddToMap(results, fbDependency.getProvidedFunctionBlock(), (IECPropertyImplementation)fbDependency.getRequiredResource(), compared);
+				for(IECProperty compared : properties) {
+					if(fbDependency.getRequiredResource() instanceof IECMethod) {
+						putOrAddToMap(results, fbDependency.getProvidedFunctionBlock(), (IECProperty)fbDependency.getRequiredResource(), compared);
 					}
 				}
 			}
@@ -458,12 +458,12 @@ public class IECArchitectureModelLookup {
 	 * @param method The {@link IECMethodImplementation}s to look up.
 	 * @return The {@link Program}s which access the {@link IECMethodImplementation}s in a Map.
 	 */
-	public static Map<Program, Set<IECPropertyImplementation>> lookUpProgramsOfPropertyImplementation(
-			IECArchitectureVersion version, Collection<IECPropertyImplementation> properties) {
-		Map<Program, Set<IECPropertyImplementation>> results = new HashMap<Program, Set<IECPropertyImplementation>>();
+	public static Map<Program, Set<IECProperty>> lookUpProgramsOfPropertyImplementation(
+			IECArchitectureVersion version, Collection<IECProperty> properties) {
+		Map<Program, Set<IECProperty>> results = new HashMap<Program, Set<IECProperty>>();
 		for(Program prog : version.getConfiguration().getContainsProgram()) {
-			for(IECPropertyImplementation toCompare: properties) {
-				for(IECPropertyImplementation property: prog.getAccessesProperty()) {
+			for(IECProperty toCompare: properties) {
+				for(IECProperty property: prog.getAccessesProperty()) {
 					putOrAddToMap(results, prog, property, toCompare);
 				}
 			}
@@ -477,11 +477,11 @@ public class IECArchitectureModelLookup {
 	 * @param method The {@link IECMethodImplementation}s to look up.
 	 * @return The {@link Configuration} which accesses the {@link IECMethodImplementation}s in a Map.
 	 */
-	public static Map<Configuration, Set<IECPropertyImplementation>> lookUpConfigurationsOfPropertyImplementation(
-			IECArchitectureVersion version, Collection<IECPropertyImplementation> properties) {
-		Map<Configuration, Set<IECPropertyImplementation>> results = new HashMap<Configuration, Set<IECPropertyImplementation>>();
-		for(IECPropertyImplementation toCompare: properties) {
-			for(IECPropertyImplementation property: version.getConfiguration().getAccessesProperty()) {
+	public static Map<Configuration, Set<IECProperty>> lookUpConfigurationsOfPropertyImplementation(
+			IECArchitectureVersion version, Collection<IECProperty> properties) {
+		Map<Configuration, Set<IECProperty>> results = new HashMap<Configuration, Set<IECProperty>>();
+		for(IECProperty toCompare: properties) {
+			for(IECProperty property: version.getConfiguration().getAccessesProperty()) {
 				putOrAddToMap(results, version.getConfiguration(), property, toCompare);
 			}
 		}

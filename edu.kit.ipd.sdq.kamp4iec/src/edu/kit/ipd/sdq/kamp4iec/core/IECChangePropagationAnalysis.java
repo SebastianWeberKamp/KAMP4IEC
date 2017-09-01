@@ -1,10 +1,9 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -12,18 +11,17 @@ import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
@@ -32,7 +30,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 
 /**
@@ -229,10 +226,10 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				markedGlobalVariables.add((GlobalVariable) marked);
 			}
 		}
-		Map<IECMethodImplementation, Set<GlobalVariable>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECMethod, Set<GlobalVariable>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfGlobalVariable(version, markedGlobalVariables);
 
-		 for(Map.Entry<IECMethodImplementation, Set<GlobalVariable>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECMethod, Set<GlobalVariable>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -243,7 +240,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
+				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
@@ -303,10 +300,10 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				markedFunctionBlocks.add((FunctionBlock) marked);
 			}
 		}
-		Map<IECMethodImplementation, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECMethod, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfFunctionBlock(version, markedFunctionBlocks);
 
-		 for(Map.Entry<IECMethodImplementation, Set<FunctionBlock>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECMethod, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -317,7 +314,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
+				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
@@ -377,10 +374,10 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				markedFunctions.add((Function) marked);
 			}
 		}
-		Map<IECMethodImplementation, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECMethod, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfFunction(version, markedFunctions);
 
-		 for(Map.Entry<IECMethodImplementation, Set<Function>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECMethod, Set<Function>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -391,7 +388,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
+				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
@@ -591,16 +588,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkMethodToInterfacePropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECMethod> markedMethods = new ArrayList<>();
+		List<IECAbstractMethod> markedMethods = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECMethod) {
-				markedMethods.add((IECMethod) marked);
+			if(marked instanceof IECAbstractMethod) {
+				markedMethods.add((IECAbstractMethod) marked);
 			}
 		}
-		Map<IECInterface, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECInterface, Set<IECAbstractMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpInterfaceOfMethod(version, markedMethods);
 
-		 for(Map.Entry<IECInterface, Set<IECMethod>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECInterface, Set<IECAbstractMethod>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -627,16 +624,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkPropertyToInterfacePropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECProperty> properties = new ArrayList<>();
+		List<IECAbstractProperty> properties = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECProperty) {
-				properties.add((IECProperty) marked);
+			if(marked instanceof IECAbstractProperty) {
+				properties.add((IECAbstractProperty) marked);
 			}
 		}
-		Map<IECInterface, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECInterface, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpInterfaceOfProperty(version, properties);
 
-		 for(Map.Entry<IECInterface, Set<IECProperty>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECInterface, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -703,16 +700,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkMethodImplementationToFunctionBlockPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECMethodImplementation> markedMethods = new ArrayList<>();
+		List<IECMethod> markedMethods = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECMethodImplementation) {
-				markedMethods.add((IECMethodImplementation) marked);
+			if(marked instanceof IECMethod) {
+				markedMethods.add((IECMethod) marked);
 			}
 		}
-		Map<FunctionBlock, Set<IECMethodImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<FunctionBlock, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfMethodImplementation(version, markedMethods);
 
-		 for(Map.Entry<FunctionBlock, Set<IECMethodImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<FunctionBlock, Set<IECMethod>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -739,16 +736,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkMethodImplementationToProgramPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECMethodImplementation> markedMethods = new ArrayList<>();
+		List<IECMethod> markedMethods = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECMethodImplementation) {
-				markedMethods.add((IECMethodImplementation) marked);
+			if(marked instanceof IECMethod) {
+				markedMethods.add((IECMethod) marked);
 			}
 		}
-		Map<Program, Set<IECMethodImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<Program, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfMethodImplementation(version, markedMethods);
 
-		 for(Map.Entry<Program, Set<IECMethodImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<Program, Set<IECMethod>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -775,16 +772,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkMethodImplementationToMethodPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECMethodImplementation> markedMethods = new ArrayList<>();
+		List<IECMethod> markedMethods = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECMethodImplementation) {
-				markedMethods.add((IECMethodImplementation) marked);
+			if(marked instanceof IECMethod) {
+				markedMethods.add((IECMethod) marked);
 			}
 		}
-		Map<IECMethodImplementation, Set<IECMethodImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECMethod, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfMethodImplementation(version, markedMethods);
 
-		 for(Map.Entry<IECMethodImplementation, Set<IECMethodImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECMethod, Set<IECMethod>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -795,7 +792,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
+				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
@@ -813,16 +810,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkPropertyImplementationToMethodPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECPropertyImplementation> markedProperties = new ArrayList<>();
+		List<IECProperty> markedProperties = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECPropertyImplementation) {
-				markedProperties.add((IECPropertyImplementation) marked);
+			if(marked instanceof IECProperty) {
+				markedProperties.add((IECProperty) marked);
 			}
 		}
-		Map<IECMethodImplementation, Set<IECPropertyImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<IECMethod, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodImplementaionsOfPropertyImplementation(version, markedProperties);
 
-		 for(Map.Entry<IECMethodImplementation, Set<IECPropertyImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<IECMethod, Set<IECProperty>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -833,7 +830,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					}
 				}	
 			} else {
-				IECModifyMethodImplementation modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethodImplementation();
+				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
 				modification.setToolderived(true);
 				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
 				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
@@ -849,16 +846,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkPropertyImplementationToFunctionBlockPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECPropertyImplementation> markedProperties = new ArrayList<>();
+		List<IECProperty> markedProperties = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECPropertyImplementation) {
-				markedProperties.add((IECPropertyImplementation) marked);
+			if(marked instanceof IECProperty) {
+				markedProperties.add((IECProperty) marked);
 			}
 		}
-		Map<FunctionBlock, Set<IECPropertyImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<FunctionBlock, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfPropertyImplementation(version, markedProperties);
 
-		 for(Map.Entry<FunctionBlock, Set<IECPropertyImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<FunctionBlock, Set<IECProperty>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -885,16 +882,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkPropertyImplementationToConfigurationPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECPropertyImplementation> markedProperties = new ArrayList<>();
+		List<IECProperty> markedProperties = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECPropertyImplementation) {
-				markedProperties.add((IECPropertyImplementation) marked);
+			if(marked instanceof IECProperty) {
+				markedProperties.add((IECProperty) marked);
 			}
 		}
-		Map<Configuration, Set<IECPropertyImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<Configuration, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpConfigurationsOfPropertyImplementation(version, markedProperties);
 
-		 for(Map.Entry<Configuration, Set<IECPropertyImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<Configuration, Set<IECProperty>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -921,16 +918,16 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	protected void calculateAndMarkPropertyImplementationToProgramPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECPropertyImplementation> markedProperties = new ArrayList<>();
+		List<IECProperty> markedProperties = new ArrayList<>();
 		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECPropertyImplementation) {
-				markedProperties.add((IECPropertyImplementation) marked);
+			if(marked instanceof IECProperty) {
+				markedProperties.add((IECProperty) marked);
 			}
 		}
-		Map<Program, Set<IECPropertyImplementation>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<Program, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfPropertyImplementation(version, markedProperties);
 
-		 for(Map.Entry<Program, Set<IECPropertyImplementation>> elementsToBeMarkedEntry: 
+		 for(Map.Entry<Program, Set<IECProperty>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
 				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
@@ -977,11 +974,11 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkMethodToInterfacePropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof IECProperty) {
 			calculateAndMarkPropertyToInterfacePropagation(version, elementsMarkedInThisStep);
-		} else if (entry.getKey() instanceof IECMethodImplementation) {
+		} else if (entry.getKey() instanceof IECMethod) {
 			calculateAndMarkMethodImplementationToFunctionBlockPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkMethodImplementationToMethodPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkMethodImplementationToProgramPropagation(version, elementsMarkedInThisStep);
-		} else if (entry.getKey() instanceof IECPropertyImplementation) {
+		} else if (entry.getKey() instanceof IECProperty) {
 			calculateAndMarkPropertyImplementationToFunctionBlockPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkPropertyImplementationToMethodPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkPropertyImplementationToProgramPropagation(version, elementsMarkedInThisStep);

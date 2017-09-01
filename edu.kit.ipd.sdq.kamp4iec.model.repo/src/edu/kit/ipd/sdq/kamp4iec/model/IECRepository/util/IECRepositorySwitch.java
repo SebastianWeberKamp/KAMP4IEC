@@ -5,11 +5,11 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.util;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
@@ -99,10 +99,10 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECRepositoryPackage.IEC_METHOD_IMPLEMENTATION: {
-				IECMethodImplementation iecMethodImplementation = (IECMethodImplementation)theEObject;
-				T result = caseIECMethodImplementation(iecMethodImplementation);
-				if (result == null) result = caseIdentifier(iecMethodImplementation);
+			case IECRepositoryPackage.IEC_METHOD: {
+				IECMethod iecMethod = (IECMethod)theEObject;
+				T result = caseIECMethod(iecMethod);
+				if (result == null) result = caseIdentifier(iecMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,13 +126,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION: {
-				IECPropertyImplementation iecPropertyImplementation = (IECPropertyImplementation)theEObject;
-				T result = caseIECPropertyImplementation(iecPropertyImplementation);
-				if (result == null) result = caseIdentifier(iecPropertyImplementation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IECRepositoryPackage.IEC_PROPERTY: {
 				IECProperty iecProperty = (IECProperty)theEObject;
 				T result = caseIECProperty(iecProperty);
@@ -140,10 +133,17 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECRepositoryPackage.IEC_METHOD: {
-				IECMethod iecMethod = (IECMethod)theEObject;
-				T result = caseIECMethod(iecMethod);
-				if (result == null) result = caseIdentifier(iecMethod);
+			case IECRepositoryPackage.IEC_ABSTRACT_PROPERTY: {
+				IECAbstractProperty iecAbstractProperty = (IECAbstractProperty)theEObject;
+				T result = caseIECAbstractProperty(iecAbstractProperty);
+				if (result == null) result = caseIdentifier(iecAbstractProperty);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.IEC_ABSTRACT_METHOD: {
+				IECAbstractMethod iecAbstractMethod = (IECAbstractMethod)theEObject;
+				T result = caseIECAbstractMethod(iecAbstractMethod);
+				if (result == null) result = caseIdentifier(iecAbstractMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -215,21 +215,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Method Implementation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Method Implementation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECMethodImplementation(IECMethodImplementation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -275,21 +260,6 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Property Implementation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Property Implementation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECPropertyImplementation(IECPropertyImplementation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IEC Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -301,6 +271,36 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIECProperty(IECProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IEC Abstract Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IEC Abstract Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIECAbstractProperty(IECAbstractProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>IEC Abstract Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>IEC Abstract Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIECAbstractMethod(IECAbstractMethod object) {
 		return null;
 	}
 

@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresFunctionBlock <em>Declares Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getImplementsInterface <em>Implements Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresGlobalVariable <em>Declares Global Variable</em>}</li>
@@ -23,6 +22,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresFunctionBlock <em>Declares Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresFunction <em>Declares Function</em>}</li>
  * </ul>
  *
@@ -171,7 +171,7 @@ public interface Program extends IECComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accesses Property</em>' reference list isn't clear,
@@ -183,11 +183,11 @@ public interface Program extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<IECPropertyImplementation> getAccessesProperty();
+	EList<IECProperty> getAccessesProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Method</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calls Method</em>' reference list isn't clear,
@@ -199,7 +199,7 @@ public interface Program extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<IECMethodImplementation> getCallsMethod();
+	EList<IECMethod> getCallsMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Global Variable</b></em>' reference list.

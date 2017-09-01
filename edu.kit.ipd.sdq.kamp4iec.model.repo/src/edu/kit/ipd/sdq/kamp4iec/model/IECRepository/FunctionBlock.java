@@ -15,12 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getHasIecMethod <em>Has Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getHasIecProperty <em>Has Iec Property</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getHasInterface <em>Has Interface</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getAccessesVariable <em>Accesses Variable</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesFunctionBlock <em>Uses Function Block</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesEnum <em>Uses Enum</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesInterface <em>Uses Interface</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements <em>Implements</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock()
@@ -30,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface FunctionBlock extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Has Iec Method</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Iec Method</em>' containment reference list isn't clear,
@@ -42,11 +37,11 @@ public interface FunctionBlock extends Identifier {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECMethodImplementation> getHasIecMethod();
+	EList<IECMethod> getHasIecMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Has Iec Property</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Iec Property</em>' containment reference list isn't clear,
@@ -58,102 +53,32 @@ public interface FunctionBlock extends Identifier {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECPropertyImplementation> getHasIecProperty();
+	EList<IECProperty> getHasIecProperty();
 
 	/**
-	 * Returns the value of the '<em><b>Has Interface</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface}.
+	 * Returns the value of the '<em><b>Implements</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Has Interface</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Implements</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Has Interface</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_HasInterface()
+	 * @return the value of the '<em>Implements</em>' containment reference.
+	 * @see #setImplements(ImplementsInterface)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_Implements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ImplementsInterface> getHasInterface();
+	ImplementsInterface getImplements();
 
 	/**
-	 * Returns the value of the '<em><b>Accesses Variable</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements <em>Implements</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Accesses Variable</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accesses Variable</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_AccessesVariable()
-	 * @model
+	 * @param value the new value of the '<em>Implements</em>' containment reference.
+	 * @see #getImplements()
 	 * @generated
 	 */
-	EList<GlobalVariable> getAccessesVariable();
-
-	/**
-	 * Returns the value of the '<em><b>Uses Function Block</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uses Function Block</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Function Block</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_UsesFunctionBlock()
-	 * @model
-	 * @generated
-	 */
-	EList<FunctionBlock> getUsesFunctionBlock();
-
-	/**
-	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Calls Function</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calls Function</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_CallsFunction()
-	 * @model
-	 * @generated
-	 */
-	EList<Function> getCallsFunction();
-
-	/**
-	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Enum</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_UsesEnum()
-	 * @model
-	 * @generated
-	 */
-	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
-
-	/**
-	 * Returns the value of the '<em><b>Uses Interface</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uses Interface</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Interface</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_UsesInterface()
-	 * @model
-	 * @generated
-	 */
-	EList<IECInterface> getUsesInterface();
+	void setImplements(ImplementsInterface value);
 
 } // FunctionBlock

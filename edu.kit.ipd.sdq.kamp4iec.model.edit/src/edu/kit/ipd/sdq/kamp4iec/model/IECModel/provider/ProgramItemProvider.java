@@ -206,9 +206,9 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION);
 		}
 		return childrenFeatures;
@@ -266,9 +266,9 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		switch (notification.getFeatureID(Program.class)) {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
 			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
+			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -294,17 +294,17 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK,
-				 IECModelFactory.eINSTANCE.createFunctionBlock()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE,
 				 IECModelFactory.eINSTANCE.createGlobalVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK,
+				 IECModelFactory.eINSTANCE.createFunctionBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK,
 				 IECModelFactory.eINSTANCE.createFunctionBlock()));
 
 		newChildDescriptors.add
@@ -327,8 +327,8 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		boolean qualify =
 			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION ||
 			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION ||
-			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK ||
-			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK;
+			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK ||
+			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK;
 
 		if (qualify) {
 			return getString

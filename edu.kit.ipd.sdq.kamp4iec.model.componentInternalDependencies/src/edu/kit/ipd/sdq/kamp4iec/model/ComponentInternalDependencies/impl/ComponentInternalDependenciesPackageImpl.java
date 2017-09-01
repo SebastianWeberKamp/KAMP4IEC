@@ -272,7 +272,7 @@ public class ComponentInternalDependenciesPackageImpl extends EPackageImpl imple
 
 		initEClass(methodDependencyEClass, MethodDependency.class, "MethodDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMethodDependency_RequiredResource(), theIECModelPackage.getDependencyResource(), null, "RequiredResource", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMethodDependency_ProvidedMethod(), theIECModelPackage.getIECMethodImplementation(), null, "ProvidedMethod", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMethodDependency_ProvidedMethod(), theIECModelPackage.getIECMethod(), null, "ProvidedMethod", null, 1, 1, MethodDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

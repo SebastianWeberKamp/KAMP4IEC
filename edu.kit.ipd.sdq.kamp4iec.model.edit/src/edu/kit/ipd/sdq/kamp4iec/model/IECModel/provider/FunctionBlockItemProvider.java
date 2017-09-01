@@ -284,12 +284,12 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_METHOD,
-				 IECModelFactory.eINSTANCE.createIECMethodImplementation()));
+				 IECModelFactory.eINSTANCE.createIECMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY,
-				 IECModelFactory.eINSTANCE.createIECPropertyImplementation()));
+				 IECModelFactory.eINSTANCE.createIECProperty()));
 	}
 
 	/**

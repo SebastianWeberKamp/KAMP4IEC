@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#getImplements <em>Implements</em>}</li>
  * </ul>
  *
@@ -22,10 +22,10 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IECProperty extends IECComponent {
+public interface IECProperty extends DependencyResource {
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
@@ -37,7 +37,7 @@ public interface IECProperty extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
@@ -74,12 +74,12 @@ public interface IECProperty extends IECComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Implements</em>' reference.
-	 * @see #setImplements(IECInterface)
+	 * @see #setImplements(IECAbstractProperty)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECProperty_Implements()
 	 * @model derived="true"
 	 * @generated
 	 */
-	IECInterface getImplements();
+	IECAbstractProperty getImplements();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#getImplements <em>Implements</em>}' reference.
@@ -89,6 +89,6 @@ public interface IECProperty extends IECComponent {
 	 * @see #getImplements()
 	 * @generated
 	 */
-	void setImplements(IECInterface value);
+	void setImplements(IECAbstractProperty value);
 
 } // IECProperty

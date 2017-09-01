@@ -106,10 +106,10 @@ public class IECPropertyTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface) <em>Implements</em>}' feature setter.
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty) <em>Implements</em>}' feature setter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty#setImplements(edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty)
 	 * @generated
 	 */
 	public void testSetImplements() {

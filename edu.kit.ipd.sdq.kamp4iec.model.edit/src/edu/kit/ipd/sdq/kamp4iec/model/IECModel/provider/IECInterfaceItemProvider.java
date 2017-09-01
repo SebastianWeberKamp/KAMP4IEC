@@ -169,12 +169,12 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.IEC_INTERFACE__HAS_METHOD,
-				 IECModelFactory.eINSTANCE.createIECMethod()));
+				 IECModelFactory.eINSTANCE.createIECAbstractMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.IEC_INTERFACE__HAS_PROPERTY,
-				 IECModelFactory.eINSTANCE.createIECProperty()));
+				 IECModelFactory.eINSTANCE.createIECAbstractProperty()));
 	}
 
 	/**

@@ -6,10 +6,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -67,7 +66,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECPropertyImplementation> accessesProperty;
+	protected EList<IECProperty> accessesProperty;
 
 	/**
 	 * The cached value of the '{@link #getAccessesGlobalVariable() <em>Accesses Global Variable</em>}' reference list.
@@ -87,7 +86,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethodImplementation> hasMethod;
+	protected EList<IECMethod> hasMethod;
 
 	/**
 	 * The cached value of the '{@link #getHasProperty() <em>Has Property</em>}' containment reference list.
@@ -97,7 +96,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECPropertyImplementation> hasProperty;
+	protected EList<IECProperty> hasProperty;
 
 	/**
 	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
@@ -191,9 +190,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECPropertyImplementation> getAccessesProperty() {
+	public EList<IECProperty> getAccessesProperty() {
 		if (accessesProperty == null) {
-			accessesProperty = new EObjectResolvingEList<IECPropertyImplementation>(IECPropertyImplementation.class, this, IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY);
+			accessesProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY);
 		}
 		return accessesProperty;
 	}
@@ -215,9 +214,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethodImplementation> getHasMethod() {
+	public EList<IECMethod> getHasMethod() {
 		if (hasMethod == null) {
-			hasMethod = new EObjectContainmentEList<IECMethodImplementation>(IECMethodImplementation.class, this, IECModelPackage.FUNCTION_BLOCK__HAS_METHOD);
+			hasMethod = new EObjectContainmentEList<IECMethod>(IECMethod.class, this, IECModelPackage.FUNCTION_BLOCK__HAS_METHOD);
 		}
 		return hasMethod;
 	}
@@ -227,9 +226,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECPropertyImplementation> getHasProperty() {
+	public EList<IECProperty> getHasProperty() {
 		if (hasProperty == null) {
-			hasProperty = new EObjectContainmentEList<IECPropertyImplementation>(IECPropertyImplementation.class, this, IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY);
+			hasProperty = new EObjectContainmentEList<IECProperty>(IECProperty.class, this, IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY);
 		}
 		return hasProperty;
 	}
@@ -329,7 +328,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
-				getAccessesProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
+				getAccessesProperty().addAll((Collection<? extends IECProperty>)newValue);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_GLOBAL_VARIABLE:
 				getAccessesGlobalVariable().clear();
@@ -337,11 +336,11 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 				getHasMethod().clear();
-				getHasMethod().addAll((Collection<? extends IECMethodImplementation>)newValue);
+				getHasMethod().addAll((Collection<? extends IECMethod>)newValue);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				getHasProperty().clear();
-				getHasProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
+				getHasProperty().addAll((Collection<? extends IECProperty>)newValue);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__USES_ENUM:
 				getUsesEnum().clear();

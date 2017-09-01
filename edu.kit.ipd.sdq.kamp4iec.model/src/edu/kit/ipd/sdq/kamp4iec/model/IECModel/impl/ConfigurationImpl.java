@@ -6,7 +6,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
@@ -75,7 +75,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECPropertyImplementation> accessesProperty;
+	protected EList<IECProperty> accessesProperty;
 
 	/**
 	 * The cached value of the '{@link #getAccessesGlobalVariable() <em>Accesses Global Variable</em>}' reference list.
@@ -155,9 +155,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECPropertyImplementation> getAccessesProperty() {
+	public EList<IECProperty> getAccessesProperty() {
 		if (accessesProperty == null) {
-			accessesProperty = new EObjectResolvingEList<IECPropertyImplementation>(IECPropertyImplementation.class, this, IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY);
+			accessesProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY);
 		}
 		return accessesProperty;
 	}
@@ -323,7 +323,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				return;
 			case IECModelPackage.CONFIGURATION__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
-				getAccessesProperty().addAll((Collection<? extends IECPropertyImplementation>)newValue);
+				getAccessesProperty().addAll((Collection<? extends IECProperty>)newValue);
 				return;
 			case IECModelPackage.CONFIGURATION__ACCESSES_GLOBAL_VARIABLE:
 				getAccessesGlobalVariable().clear();

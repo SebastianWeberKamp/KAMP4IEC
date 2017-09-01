@@ -47,8 +47,11 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUsesEnumPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
+			addAccessesGlobalVariablePropertyDescriptor(object);
+			addAccessesPropertyPropertyDescriptor(object);
+			addUsesEnumPropertyDescriptor(object);
+			addCallsFunctionPropertyDescriptor(object);
 			addImplementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -77,6 +80,28 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Calls Function feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsFunctionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECMethod_CallsFunction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_CallsFunction_feature", "_UI_IECMethod_type"),
+				 IECModelPackage.Literals.IEC_METHOD__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,6 +115,50 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 				 getString("_UI_IECMethod_Type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_Type_feature", "_UI_IECMethod_type"),
 				 IECModelPackage.Literals.IEC_METHOD__TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accesses Global Variable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccessesGlobalVariablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECMethod_AccessesGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_AccessesGlobalVariable_feature", "_UI_IECMethod_type"),
+				 IECModelPackage.Literals.IEC_METHOD__ACCESSES_GLOBAL_VARIABLE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accesses Property feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccessesPropertyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECMethod_AccessesProperty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_AccessesProperty_feature", "_UI_IECMethod_type"),
+				 IECModelPackage.Literals.IEC_METHOD__ACCESSES_PROPERTY,
 				 true,
 				 false,
 				 true,

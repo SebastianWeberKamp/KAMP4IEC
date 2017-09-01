@@ -7,13 +7,13 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
@@ -74,10 +74,10 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 			case IECModelPackage.PROGRAM: return createProgram();
 			case IECModelPackage.CONFIGURATION: return createConfiguration();
 			case IECModelPackage.GLOBAL_VARIABLE: return createGlobalVariable();
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION: return createIECMethodImplementation();
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION: return createIECPropertyImplementation();
-			case IECModelPackage.IEC_PROPERTY: return createIECProperty();
 			case IECModelPackage.IEC_METHOD: return createIECMethod();
+			case IECModelPackage.IEC_PROPERTY: return createIECProperty();
+			case IECModelPackage.IEC_ABSTRACT_PROPERTY: return createIECAbstractProperty();
+			case IECModelPackage.IEC_ABSTRACT_METHOD: return createIECAbstractMethod();
 			case IECModelPackage.INTERFACES: return createInterfaces();
 			case IECModelPackage.IEC_INTERFACE: return createIECInterface();
 			case IECModelPackage.ENUMS: return createEnums();
@@ -152,26 +152,6 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECMethodImplementation createIECMethodImplementation() {
-		IECMethodImplementationImpl iecMethodImplementation = new IECMethodImplementationImpl();
-		return iecMethodImplementation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECPropertyImplementation createIECPropertyImplementation() {
-		IECPropertyImplementationImpl iecPropertyImplementation = new IECPropertyImplementationImpl();
-		return iecPropertyImplementation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum createEnum() {
 		EnumImpl enum_ = new EnumImpl();
 		return enum_;
@@ -185,6 +165,26 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	public IECProperty createIECProperty() {
 		IECPropertyImpl iecProperty = new IECPropertyImpl();
 		return iecProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECAbstractProperty createIECAbstractProperty() {
+		IECAbstractPropertyImpl iecAbstractProperty = new IECAbstractPropertyImpl();
+		return iecAbstractProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IECAbstractMethod createIECAbstractMethod() {
+		IECAbstractMethodImpl iecAbstractMethod = new IECAbstractMethodImpl();
+		return iecAbstractMethod;
 	}
 
 	/**
