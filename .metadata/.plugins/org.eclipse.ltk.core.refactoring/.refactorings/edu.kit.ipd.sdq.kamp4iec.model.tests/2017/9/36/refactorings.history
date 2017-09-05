@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;edu.kit.ipd.sdq.kamp4iec.model.tests&apos;&#x0D;&#x0A;- Original project: &apos;edu.kit.ipd.sdq.kamp4iec.model.tests&apos;&#x0D;&#x0A;- Original element: &apos;edu.kit.ipd.sdq.kamp4iec.model.IECModel.tests.DerivedTypeTest.java&apos;" description="Delete element" element1="/src&lt;edu.kit.ipd.sdq.kamp4iec.model.IECModel.tests{DerivedTypeTest.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1504533413203" subPackages="false" version="1.0"/>
+</session>

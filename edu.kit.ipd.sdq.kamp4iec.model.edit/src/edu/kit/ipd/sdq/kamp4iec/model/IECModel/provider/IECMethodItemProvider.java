@@ -53,6 +53,7 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 			addUsesEnumPropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
 			addImplementsPropertyDescriptor(object);
+			addCallsMethodPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -181,6 +182,28 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 				 getString("_UI_IECMethod_Implements_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_Implements_feature", "_UI_IECMethod_type"),
 				 IECModelPackage.Literals.IEC_METHOD__IMPLEMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Calls Method feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsMethodPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECMethod_CallsMethod_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_CallsMethod_feature", "_UI_IECMethod_type"),
+				 IECModelPackage.Literals.IEC_METHOD__CALLS_METHOD,
 				 true,
 				 false,
 				 true,

@@ -5,9 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -57,7 +54,7 @@ public class IECAbstractMethodImpl extends IdentifierImpl implements IECAbstract
 	 * @generated
 	 * @ordered
 	 */
-	protected IECMethod type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod type;
 
 	/**
 	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
@@ -105,10 +102,10 @@ public class IECAbstractMethodImpl extends IdentifierImpl implements IECAbstract
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECMethod getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECMethod)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_ABSTRACT_METHOD__TYPE, oldType, type));
@@ -122,7 +119,7 @@ public class IECAbstractMethodImpl extends IdentifierImpl implements IECAbstract
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECMethod basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod basicGetType() {
 		return type;
 	}
 
@@ -131,8 +128,8 @@ public class IECAbstractMethodImpl extends IdentifierImpl implements IECAbstract
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECMethod newType) {
-		IECMethod oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_ABSTRACT_METHOD__TYPE, oldType, type));
@@ -210,7 +207,7 @@ public class IECAbstractMethodImpl extends IdentifierImpl implements IECAbstract
 				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
 				return;
 			case IECModelPackage.IEC_ABSTRACT_METHOD__TYPE:
-				setType((IECMethod)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod)newValue);
 				return;
 			case IECModelPackage.IEC_ABSTRACT_METHOD__IMPLEMENTS:
 				setImplements((IECInterface)newValue);
@@ -231,7 +228,7 @@ public class IECAbstractMethodImpl extends IdentifierImpl implements IECAbstract
 				getUsesEnum().clear();
 				return;
 			case IECModelPackage.IEC_ABSTRACT_METHOD__TYPE:
-				setType((IECMethod)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod)null);
 				return;
 			case IECModelPackage.IEC_ABSTRACT_METHOD__IMPLEMENTS:
 				setImplements((IECInterface)null);

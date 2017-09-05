@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -50,12 +48,12 @@ public interface IECAbstractProperty extends IECComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(IECProperty)
+	 * @see #setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECAbstractProperty_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	IECProperty getType();
+	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty getType();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty#getType <em>Type</em>}' reference.
@@ -65,7 +63,7 @@ public interface IECAbstractProperty extends IECComponent {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(IECProperty value);
+	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty value);
 
 	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference.

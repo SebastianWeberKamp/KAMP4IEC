@@ -210,6 +210,7 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK);
 		}
 		return childrenFeatures;
 	}
@@ -270,6 +271,7 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
+			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -311,6 +313,11 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION,
 				 IECModelFactory.eINSTANCE.createFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK,
+				 IECModelFactory.eINSTANCE.createFunctionBlock()));
 	}
 
 	/**
@@ -328,7 +335,8 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION ||
 			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION ||
 			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK ||
-			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK;
+			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK ||
+			childFeature == IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK;
 
 		if (qualify) {
 			return getString

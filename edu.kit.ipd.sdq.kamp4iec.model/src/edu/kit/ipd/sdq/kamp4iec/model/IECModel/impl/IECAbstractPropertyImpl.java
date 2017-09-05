@@ -5,9 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -57,7 +54,7 @@ public class IECAbstractPropertyImpl extends IdentifierImpl implements IECAbstra
 	 * @generated
 	 * @ordered
 	 */
-	protected IECProperty type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty type;
 
 	/**
 	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
@@ -105,10 +102,10 @@ public class IECAbstractPropertyImpl extends IdentifierImpl implements IECAbstra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECProperty getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECProperty)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_ABSTRACT_PROPERTY__TYPE, oldType, type));
@@ -122,7 +119,7 @@ public class IECAbstractPropertyImpl extends IdentifierImpl implements IECAbstra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECProperty basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty basicGetType() {
 		return type;
 	}
 
@@ -131,8 +128,8 @@ public class IECAbstractPropertyImpl extends IdentifierImpl implements IECAbstra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECProperty newType) {
-		IECProperty oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_ABSTRACT_PROPERTY__TYPE, oldType, type));
@@ -210,7 +207,7 @@ public class IECAbstractPropertyImpl extends IdentifierImpl implements IECAbstra
 				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
 				return;
 			case IECModelPackage.IEC_ABSTRACT_PROPERTY__TYPE:
-				setType((IECProperty)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty)newValue);
 				return;
 			case IECModelPackage.IEC_ABSTRACT_PROPERTY__IMPLEMENTS:
 				setImplements((IECInterface)newValue);
@@ -231,7 +228,7 @@ public class IECAbstractPropertyImpl extends IdentifierImpl implements IECAbstra
 				getUsesEnum().clear();
 				return;
 			case IECModelPackage.IEC_ABSTRACT_PROPERTY__TYPE:
-				setType((IECProperty)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty)null);
 				return;
 			case IECModelPackage.IEC_ABSTRACT_PROPERTY__IMPLEMENTS:
 				setImplements((IECInterface)null);

@@ -50,6 +50,7 @@ public class FunctionItemProvider extends IdentifierItemProvider {
 			addTypePropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
 			addUsesEnumPropertyDescriptor(object);
+			addHasDerivedReturnTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,6 +113,28 @@ public class FunctionItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Function_UsesEnum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Function_UsesEnum_feature", "_UI_Function_type"),
 				 IECModelPackage.Literals.FUNCTION__USES_ENUM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Has Derived Return Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHasDerivedReturnTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_HasDerivedReturnType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_HasDerivedReturnType_feature", "_UI_Function_type"),
+				 IECModelPackage.Literals.FUNCTION__HAS_DERIVED_RETURN_TYPE,
 				 true,
 				 false,
 				 true,

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl#getHasMethod <em>Has Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl#getHasProperty <em>Has Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl#getExtendsInterface <em>Extends Interface</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +70,16 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * @ordered
 	 */
 	protected EList<IECAbstractProperty> hasProperty;
+
+	/**
+	 * The cached value of the '{@link #getExtendsInterface() <em>Extends Interface</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtendsInterface()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECInterface> extendsInterface;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,6 +167,18 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IECInterface> getExtendsInterface() {
+		if (extendsInterface == null) {
+			extendsInterface = new EObjectResolvingEList<IECInterface>(IECInterface.class, this, IECModelPackage.IEC_INTERFACE__EXTENDS_INTERFACE);
+		}
+		return extendsInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -181,6 +205,8 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 				return getHasMethod();
 			case IECModelPackage.IEC_INTERFACE__HAS_PROPERTY:
 				return getHasProperty();
+			case IECModelPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				return getExtendsInterface();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +231,10 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 				getHasProperty().clear();
 				getHasProperty().addAll((Collection<? extends IECAbstractProperty>)newValue);
 				return;
+			case IECModelPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				getExtendsInterface().clear();
+				getExtendsInterface().addAll((Collection<? extends IECInterface>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -226,6 +256,9 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 			case IECModelPackage.IEC_INTERFACE__HAS_PROPERTY:
 				getHasProperty().clear();
 				return;
+			case IECModelPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				getExtendsInterface().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,6 +277,8 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 				return hasMethod != null && !hasMethod.isEmpty();
 			case IECModelPackage.IEC_INTERFACE__HAS_PROPERTY:
 				return hasProperty != null && !hasProperty.isEmpty();
+			case IECModelPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				return extendsInterface != null && !extendsInterface.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

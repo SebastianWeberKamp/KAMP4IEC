@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -50,12 +48,12 @@ public interface IECAbstractMethod extends IECComponent {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(IECMethod)
+	 * @see #setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECAbstractMethod_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	IECMethod getType();
+	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod getType();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod#getType <em>Type</em>}' reference.
@@ -65,7 +63,7 @@ public interface IECAbstractMethod extends IECComponent {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(IECMethod value);
+	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod value);
 
 	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference.

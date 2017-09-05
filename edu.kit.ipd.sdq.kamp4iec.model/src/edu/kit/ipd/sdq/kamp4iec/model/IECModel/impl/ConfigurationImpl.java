@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getAccessesProperty <em>Accesses Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ConfigurationImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
@@ -96,6 +97,16 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * @ordered
 	 */
 	protected Enums usesEnum;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration type;
 
 	/**
 	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference.
@@ -222,6 +233,44 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration getType() {
+		if (type != null && type.eIsProxy()) {
+			InternalEObject oldType = (InternalEObject)type;
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration)eResolveProxy(oldType);
+			if (type != oldType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.CONFIGURATION__TYPE, oldType, type));
+			}
+		}
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration basicGetType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.CONFIGURATION__TYPE, oldType, type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Interfaces getInterfaces() {
 		return interfaces;
 	}
@@ -298,6 +347,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				return getAccessesGlobalVariable();
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				return getUsesEnum();
+			case IECModelPackage.CONFIGURATION__TYPE:
+				if (resolve) return getType();
+				return basicGetType();
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				return getInterfaces();
 		}
@@ -332,6 +384,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				setUsesEnum((Enums)newValue);
 				return;
+			case IECModelPackage.CONFIGURATION__TYPE:
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration)newValue);
+				return;
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				setInterfaces((Interfaces)newValue);
 				return;
@@ -362,6 +417,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				setUsesEnum((Enums)null);
 				return;
+			case IECModelPackage.CONFIGURATION__TYPE:
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration)null);
+				return;
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				setInterfaces((Interfaces)null);
 				return;
@@ -387,6 +445,8 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				return accessesGlobalVariable != null && !accessesGlobalVariable.isEmpty();
 			case IECModelPackage.CONFIGURATION__USES_ENUM:
 				return usesEnum != null;
+			case IECModelPackage.CONFIGURATION__TYPE:
+				return type != null;
 			case IECModelPackage.CONFIGURATION__INTERFACES:
 				return interfaces != null;
 		}

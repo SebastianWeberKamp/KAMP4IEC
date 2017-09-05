@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.util;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
@@ -82,6 +84,7 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				FunctionBlock functionBlock = (FunctionBlock)theEObject;
 				T result = caseFunctionBlock(functionBlock);
 				if (result == null) result = caseIdentifier(functionBlock);
+				if (result == null) result = caseDerivedType(functionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -162,6 +165,19 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 			case IECRepositoryPackage.IMPLEMENTS_INTERFACE: {
 				ImplementsInterface implementsInterface = (ImplementsInterface)theEObject;
 				T result = caseImplementsInterface(implementsInterface);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.CONFIGURATION: {
+				Configuration configuration = (Configuration)theEObject;
+				T result = caseConfiguration(configuration);
+				if (result == null) result = caseIdentifier(configuration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.DERIVED_TYPE: {
+				DerivedType derivedType = (DerivedType)theEObject;
+				T result = caseDerivedType(derivedType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -361,6 +377,36 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImplementsInterface(ImplementsInterface object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConfiguration(Configuration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Derived Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Derived Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDerivedType(DerivedType object) {
 		return null;
 	}
 

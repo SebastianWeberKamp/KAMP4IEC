@@ -53,6 +53,7 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 
 			addAccessesPropertyPropertyDescriptor(object);
 			addAccessesGlobalVariablePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,6 +94,28 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Configuration_AccessesGlobalVariable_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_AccessesGlobalVariable_feature", "_UI_Configuration_type"),
 				 IECModelPackage.Literals.CONFIGURATION__ACCESSES_GLOBAL_VARIABLE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Configuration_Type_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_Type_feature", "_UI_Configuration_type"),
+				 IECModelPackage.Literals.CONFIGURATION__TYPE,
 				 true,
 				 false,
 				 true,

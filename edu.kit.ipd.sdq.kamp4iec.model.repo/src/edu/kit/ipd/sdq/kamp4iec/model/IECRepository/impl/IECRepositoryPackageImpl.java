@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
@@ -123,6 +125,20 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * @generated
 	 */
 	private EClass implementsInterfaceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass configurationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass derivedTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -485,6 +501,24 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getConfiguration() {
+		return configurationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDerivedType() {
+		return derivedTypeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVariableType() {
 		return variableTypeEEnum;
 	}
@@ -562,6 +596,10 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		implementsInterfaceEClass = createEClass(IMPLEMENTS_INTERFACE);
 		createEReference(implementsInterfaceEClass, IMPLEMENTS_INTERFACE__INTERFACE);
 
+		configurationEClass = createEClass(CONFIGURATION);
+
+		derivedTypeEClass = createEClass(DERIVED_TYPE);
+
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
 	}
@@ -595,6 +633,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 
 		// Add supertypes to classes
 		functionBlockEClass.getESuperTypes().add(this.getIdentifier());
+		functionBlockEClass.getESuperTypes().add(this.getDerivedType());
 		globalVariableEClass.getESuperTypes().add(this.getIdentifier());
 		iecInterfaceEClass.getESuperTypes().add(this.getIdentifier());
 		iecMethodEClass.getESuperTypes().add(this.getIdentifier());
@@ -603,6 +642,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		iecPropertyEClass.getESuperTypes().add(this.getIdentifier());
 		iecAbstractPropertyEClass.getESuperTypes().add(this.getIdentifier());
 		iecAbstractMethodEClass.getESuperTypes().add(this.getIdentifier());
+		configurationEClass.getESuperTypes().add(this.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -649,6 +689,10 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 
 		initEClass(implementsInterfaceEClass, ImplementsInterface.class, "ImplementsInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImplementsInterface_Interface(), this.getIECInterface(), null, "Interface", null, 1, 1, ImplementsInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(configurationEClass, Configuration.class, "Configuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(derivedTypeEClass, DerivedType.class, "DerivedType", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(variableTypeEEnum, VariableType.class, "VariableType");

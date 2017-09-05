@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getHasMethod <em>Has Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getHasProperty <em>Has Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getExtendsInterface <em>Extends Interface</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECInterface()
@@ -80,5 +81,21 @@ public interface IECInterface extends DependencyResource {
 	 * @generated
 	 */
 	EList<IECAbstractProperty> getHasProperty();
+
+	/**
+	 * Returns the value of the '<em><b>Extends Interface</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Extends Interface</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Extends Interface</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECInterface_ExtendsInterface()
+	 * @model
+	 * @generated
+	 */
+	EList<IECInterface> getExtendsInterface();
 
 } // IECInterface

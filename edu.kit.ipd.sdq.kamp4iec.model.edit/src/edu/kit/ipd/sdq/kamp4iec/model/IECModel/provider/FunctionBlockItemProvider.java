@@ -57,6 +57,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			addUsesEnumPropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
 			addImplementsPropertyDescriptor(object);
+			addCallsMethodPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -194,6 +195,28 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Calls Method feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsMethodPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_CallsMethod_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsMethod_feature", "_UI_FunctionBlock_type"),
+				 IECModelPackage.Literals.FUNCTION_BLOCK__CALLS_METHOD,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -207,6 +230,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_METHOD);
 			childrenFeatures.add(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY);
+			childrenFeatures.add(IECModelPackage.Literals.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK);
 		}
 		return childrenFeatures;
 	}
@@ -264,6 +288,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		switch (notification.getFeatureID(FunctionBlock.class)) {
 			case IECModelPackage.FUNCTION_BLOCK__HAS_METHOD:
 			case IECModelPackage.FUNCTION_BLOCK__HAS_PROPERTY:
+			case IECModelPackage.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -290,6 +315,11 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(IECModelPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY,
 				 IECModelFactory.eINSTANCE.createIECProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModelPackage.Literals.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK,
+				 IECModelFactory.eINSTANCE.createFunctionBlock()));
 	}
 
 	/**

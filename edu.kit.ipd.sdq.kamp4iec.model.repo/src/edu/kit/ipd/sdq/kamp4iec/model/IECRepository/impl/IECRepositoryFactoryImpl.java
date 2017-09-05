@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
@@ -82,6 +83,7 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 			case IECRepositoryPackage.IEC_ABSTRACT_METHOD: return createIECAbstractMethod();
 			case IECRepositoryPackage.ENUM: return createEnum();
 			case IECRepositoryPackage.IMPLEMENTS_INTERFACE: return createImplementsInterface();
+			case IECRepositoryPackage.CONFIGURATION: return createConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -235,6 +237,16 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 	public ImplementsInterface createImplementsInterface() {
 		ImplementsInterfaceImpl implementsInterface = new ImplementsInterfaceImpl();
 		return implementsInterface;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Configuration createConfiguration() {
+		ConfigurationImpl configuration = new ConfigurationImpl();
+		return configuration;
 	}
 
 	/**

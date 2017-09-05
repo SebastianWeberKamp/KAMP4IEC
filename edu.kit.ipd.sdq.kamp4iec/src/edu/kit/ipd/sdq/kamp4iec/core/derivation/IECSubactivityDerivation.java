@@ -125,16 +125,6 @@ public class IECSubactivityDerivation {
 						}
 					}
 				}
-				for(Function func : program.getDeclaresFunction()) {
-					if(function.getId() == func.getId()) {
-						addSubActivity(function, IECActivityElementType.PROGRAM, func, parentActivity);
-					}
-					for(Function called : func.getCallsFunction()) {
-						if(function.getId() == called.getId()) {
-							addSubActivity(function, IECActivityElementType.FUNCTION, func, parentActivity);
-						}
-					}
-				}
 			}
 		}
 	}

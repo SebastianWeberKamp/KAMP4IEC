@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.util;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
@@ -130,6 +132,14 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseImplementsInterface(ImplementsInterface object) {
 				return createImplementsInterfaceAdapter();
+			}
+			@Override
+			public Adapter caseConfiguration(Configuration object) {
+				return createConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseDerivedType(DerivedType object) {
+				return createDerivedTypeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -330,6 +340,34 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImplementsInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration <em>Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration
+	 * @generated
+	 */
+	public Adapter createConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType <em>Derived Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType
+	 * @generated
+	 */
+	public Adapter createDerivedTypeAdapter() {
 		return null;
 	}
 

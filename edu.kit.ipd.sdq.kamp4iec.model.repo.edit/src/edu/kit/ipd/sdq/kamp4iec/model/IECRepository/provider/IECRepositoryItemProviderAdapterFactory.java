@@ -348,6 +348,29 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConfigurationItemProvider configurationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConfigurationAdapter() {
+		if (configurationItemProvider == null) {
+			configurationItemProvider = new ConfigurationItemProvider(this);
+		}
+
+		return configurationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -458,6 +481,7 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 		if (iecAbstractMethodItemProvider != null) iecAbstractMethodItemProvider.dispose();
 		if (enumItemProvider != null) enumItemProvider.dispose();
 		if (implementsInterfaceItemProvider != null) implementsInterfaceItemProvider.dispose();
+		if (configurationItemProvider != null) configurationItemProvider.dispose();
 	}
 
 }

@@ -49,6 +49,7 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 
 			addTypePropertyDescriptor(object);
 			addUsesEnumPropertyDescriptor(object);
+			addHasDerivedTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +90,28 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 				 getString("_UI_GlobalVariable_UsesEnum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_UsesEnum_feature", "_UI_GlobalVariable_type"),
 				 IECModelPackage.Literals.GLOBAL_VARIABLE__USES_ENUM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Has Derived Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHasDerivedTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GlobalVariable_HasDerivedType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_HasDerivedType_feature", "_UI_GlobalVariable_type"),
+				 IECModelPackage.Literals.GLOBAL_VARIABLE__HAS_DERIVED_TYPE,
 				 true,
 				 false,
 				 true,

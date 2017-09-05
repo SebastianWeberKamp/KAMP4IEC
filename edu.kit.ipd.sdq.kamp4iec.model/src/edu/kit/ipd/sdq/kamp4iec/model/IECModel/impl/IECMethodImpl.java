@@ -38,6 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImpl#getUsesEnum <em>Uses Enum</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImpl#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImpl#getImplements <em>Implements</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImpl#getCallsMethod <em>Calls Method</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,6 +103,16 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	 * @ordered
 	 */
 	protected IECAbstractMethod implements_;
+
+	/**
+	 * The cached value of the '{@link #getCallsMethod() <em>Calls Method</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallsMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECMethod> callsMethod;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -251,6 +262,18 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IECMethod> getCallsMethod() {
+		if (callsMethod == null) {
+			callsMethod = new EObjectResolvingEList<IECMethod>(IECMethod.class, this, IECModelPackage.IEC_METHOD__CALLS_METHOD);
+		}
+		return callsMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -268,6 +291,8 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 			case IECModelPackage.IEC_METHOD__IMPLEMENTS:
 				if (resolve) return getImplements();
 				return basicGetImplements();
+			case IECModelPackage.IEC_METHOD__CALLS_METHOD:
+				return getCallsMethod();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -303,6 +328,10 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 			case IECModelPackage.IEC_METHOD__IMPLEMENTS:
 				setImplements((IECAbstractMethod)newValue);
 				return;
+			case IECModelPackage.IEC_METHOD__CALLS_METHOD:
+				getCallsMethod().clear();
+				getCallsMethod().addAll((Collection<? extends IECMethod>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -333,6 +362,9 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 			case IECModelPackage.IEC_METHOD__IMPLEMENTS:
 				setImplements((IECAbstractMethod)null);
 				return;
+			case IECModelPackage.IEC_METHOD__CALLS_METHOD:
+				getCallsMethod().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -357,6 +389,8 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 				return callsFunction != null && !callsFunction.isEmpty();
 			case IECModelPackage.IEC_METHOD__IMPLEMENTS:
 				return implements_ != null;
+			case IECModelPackage.IEC_METHOD__CALLS_METHOD:
+				return callsMethod != null && !callsMethod.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

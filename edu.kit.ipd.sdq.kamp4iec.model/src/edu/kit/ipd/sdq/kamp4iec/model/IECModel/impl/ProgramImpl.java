@@ -48,6 +48,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresFunctionBlock <em>Declares Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresFunction <em>Declares Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getInstantiatesFunctionBlock <em>Instantiates Function Block</em>}</li>
  * </ul>
  *
  * @generated
@@ -164,6 +165,16 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	protected EList<Function> declaresFunction;
 
 	/**
+	 * The cached value of the '{@link #getInstantiatesFunctionBlock() <em>Instantiates Function Block</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstantiatesFunctionBlock()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionBlock> instantiatesFunctionBlock;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,11 +222,11 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionBlock> getCallsFunctionBlock() {
-		if (callsFunctionBlock == null) {
-			callsFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK);
+	public EList<Function> getDeclaresFunction() {
+		if (declaresFunction == null) {
+			declaresFunction = new EObjectContainmentEList<Function>(Function.class, this, IECModelPackage.PROGRAM__DECLARES_FUNCTION);
 		}
-		return callsFunctionBlock;
+		return declaresFunction;
 	}
 
 	/**
@@ -223,11 +234,23 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Function> getDeclaresFunction() {
-		if (declaresFunction == null) {
-			declaresFunction = new EObjectContainmentEList<Function>(Function.class, this, IECModelPackage.PROGRAM__DECLARES_FUNCTION);
+	public EList<FunctionBlock> getInstantiatesFunctionBlock() {
+		if (instantiatesFunctionBlock == null) {
+			instantiatesFunctionBlock = new EObjectContainmentEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK);
 		}
-		return declaresFunction;
+		return instantiatesFunctionBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<FunctionBlock> getCallsFunctionBlock() {
+		if (callsFunctionBlock == null) {
+			callsFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK);
+		}
+		return callsFunctionBlock;
 	}
 
 	/**
@@ -354,6 +377,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return ((InternalEList<?>)getDeclaresFunctionBlock()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				return ((InternalEList<?>)getDeclaresFunction()).basicRemove(otherEnd, msgs);
+			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
+				return ((InternalEList<?>)getInstantiatesFunctionBlock()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -389,6 +414,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return getDeclaresFunctionBlock();
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				return getDeclaresFunction();
+			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
+				return getInstantiatesFunctionBlock();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -445,6 +472,10 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				getDeclaresFunction().clear();
 				getDeclaresFunction().addAll((Collection<? extends Function>)newValue);
 				return;
+			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
+				getInstantiatesFunctionBlock().clear();
+				getInstantiatesFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -490,6 +521,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				getDeclaresFunction().clear();
 				return;
+			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
+				getInstantiatesFunctionBlock().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -524,6 +558,8 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return declaresFunctionBlock != null && !declaresFunctionBlock.isEmpty();
 			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 				return declaresFunction != null && !declaresFunction.isEmpty();
+			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
+				return instantiatesFunctionBlock != null && !instantiatesFunctionBlock.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

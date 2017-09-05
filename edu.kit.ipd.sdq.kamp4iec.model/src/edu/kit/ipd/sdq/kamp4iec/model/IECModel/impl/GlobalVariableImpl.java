@@ -5,6 +5,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getHasDerivedType <em>Has Derived Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,6 +56,16 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * @ordered
 	 */
 	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> usesEnum;
+
+	/**
+	 * The cached value of the '{@link #getHasDerivedType() <em>Has Derived Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHasDerivedType()
+	 * @generated
+	 * @ordered
+	 */
+	protected DerivedType hasDerivedType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,6 +141,44 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DerivedType getHasDerivedType() {
+		if (hasDerivedType != null && hasDerivedType.eIsProxy()) {
+			InternalEObject oldHasDerivedType = (InternalEObject)hasDerivedType;
+			hasDerivedType = (DerivedType)eResolveProxy(oldHasDerivedType);
+			if (hasDerivedType != oldHasDerivedType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE, oldHasDerivedType, hasDerivedType));
+			}
+		}
+		return hasDerivedType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DerivedType basicGetHasDerivedType() {
+		return hasDerivedType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHasDerivedType(DerivedType newHasDerivedType) {
+		DerivedType oldHasDerivedType = hasDerivedType;
+		hasDerivedType = newHasDerivedType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE, oldHasDerivedType, hasDerivedType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -137,6 +187,9 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 				return basicGetType();
 			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
 				return getUsesEnum();
+			case IECModelPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				if (resolve) return getHasDerivedType();
+				return basicGetHasDerivedType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,6 +210,9 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 				getUsesEnum().clear();
 				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum>)newValue);
 				return;
+			case IECModelPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				setHasDerivedType((DerivedType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -175,6 +231,9 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
 				getUsesEnum().clear();
 				return;
+			case IECModelPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				setHasDerivedType((DerivedType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -191,6 +250,8 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 				return type != null;
 			case IECModelPackage.GLOBAL_VARIABLE__USES_ENUM:
 				return usesEnum != null && !usesEnum.isEmpty();
+			case IECModelPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				return hasDerivedType != null;
 		}
 		return super.eIsSet(featureID);
 	}

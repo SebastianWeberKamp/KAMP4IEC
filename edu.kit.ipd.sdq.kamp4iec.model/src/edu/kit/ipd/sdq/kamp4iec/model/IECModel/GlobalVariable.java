@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getHasDerivedType <em>Has Derived Type</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getGlobalVariable()
@@ -63,5 +65,31 @@ public interface GlobalVariable extends IECComponent {
 	 * @generated
 	 */
 	EList<edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum> getUsesEnum();
+
+	/**
+	 * Returns the value of the '<em><b>Has Derived Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Has Derived Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Has Derived Type</em>' reference.
+	 * @see #setHasDerivedType(DerivedType)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getGlobalVariable_HasDerivedType()
+	 * @model
+	 * @generated
+	 */
+	DerivedType getHasDerivedType();
+
+	/**
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getHasDerivedType <em>Has Derived Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Has Derived Type</em>' reference.
+	 * @see #getHasDerivedType()
+	 * @generated
+	 */
+	void setHasDerivedType(DerivedType value);
 
 } // GlobalVariable

@@ -52,6 +52,7 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
+			addExtendsInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -70,6 +71,28 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 				 getString("_UI_IECInterface_Type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECInterface_Type_feature", "_UI_IECInterface_type"),
 				 IECModelPackage.Literals.IEC_INTERFACE__TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Extends Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExtendsInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECInterface_ExtendsInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECInterface_ExtendsInterface_feature", "_UI_IECInterface_type"),
+				 IECModelPackage.Literals.IEC_INTERFACE__EXTENDS_INTERFACE,
 				 true,
 				 false,
 				 true,
