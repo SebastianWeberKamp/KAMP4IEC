@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
  * @model
  * @generated
  */
-public interface IECModifyAbstractProperty extends IECModifyElement<IECAbstractProperty> {
+public interface IECModifyAbstractProperty extends IECModifyComponent<IECAbstractProperty> {
 } // IECModifyAbstractProperty

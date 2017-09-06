@@ -5,9 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -89,7 +86,7 @@ public class IECRuntimeInstanceImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECComponent> components;
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent> components;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,9 +195,9 @@ public class IECRuntimeInstanceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECComponent> getComponents() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent> getComponents() {
 		if (components == null) {
-			components = new EObjectResolvingEList<IECComponent>(IECComponent.class, this, IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE__COMPONENTS);
+			components = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent.class, this, IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE__COMPONENTS);
 		}
 		return components;
 	}
@@ -289,7 +286,7 @@ public class IECRuntimeInstanceImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE__COMPONENTS:
 				getComponents().clear();
-				getComponents().addAll((Collection<? extends IECComponent>)newValue);
+				getComponents().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

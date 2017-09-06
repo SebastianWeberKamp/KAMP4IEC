@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IECModifyConfigurationImpl extends IECModifyElementImpl<Configuration> implements IECModifyConfiguration {
+public class IECModifyConfigurationImpl extends IECModifyComponentImpl<Configuration> implements IECModifyConfiguration {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

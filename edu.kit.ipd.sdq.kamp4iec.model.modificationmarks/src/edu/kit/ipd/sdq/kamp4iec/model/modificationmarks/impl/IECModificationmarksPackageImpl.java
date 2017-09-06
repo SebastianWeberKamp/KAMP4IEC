@@ -6,6 +6,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.AbstractKAMP4IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationRepository;
@@ -13,9 +14,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFact
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
@@ -73,7 +73,7 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass iecModifyElementEClass = null;
+	private EClass iecModifyComponentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,13 +137,6 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * @generated
 	 */
 	private EClass iecModifyProgramEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iecModifyEnumEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -339,7 +332,7 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECChangePropagationDueToDataDependency_EnumModifications() {
+	public EReference getIECChangePropagationDueToDataDependency_MethodImplementationModifications() {
 		return (EReference)iecChangePropagationDueToDataDependencyEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -348,7 +341,7 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECChangePropagationDueToDataDependency_MethodImplementationModifications() {
+	public EReference getIECChangePropagationDueToDataDependency_PropertyImplementationModifications() {
 		return (EReference)iecChangePropagationDueToDataDependencyEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -357,17 +350,8 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIECChangePropagationDueToDataDependency_PropertyImplementationModifications() {
-		return (EReference)iecChangePropagationDueToDataDependencyEClass.getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getIECModifyElement() {
-		return iecModifyElementEClass;
+	public EClass getIECModifyComponent() {
+		return iecModifyComponentEClass;
 	}
 
 	/**
@@ -456,15 +440,6 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIECModifyEnum() {
-		return iecModifyEnumEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIECModifyConfiguration() {
 		return iecModifyConfigurationEClass;
 	}
@@ -513,11 +488,10 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS);
 		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROGRAM_MODIFICATIONS);
 		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS);
-		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS);
 		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS);
 		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS);
 
-		iecModifyElementEClass = createEClass(IEC_MODIFY_ELEMENT);
+		iecModifyComponentEClass = createEClass(IEC_MODIFY_COMPONENT);
 
 		iecModifyGlobalVariableEClass = createEClass(IEC_MODIFY_GLOBAL_VARIABLE);
 
@@ -531,13 +505,11 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 
 		iecModifyAbstractMethodEClass = createEClass(IEC_MODIFY_ABSTRACT_METHOD);
 
-		iecModifyAbstractPropertyEClass = createEClass(IEC_MODIFY_ABSTRACT_PROPERTY);
-
 		iecModifyPropertyEClass = createEClass(IEC_MODIFY_PROPERTY);
 
-		iecModifyProgramEClass = createEClass(IEC_MODIFY_PROGRAM);
+		iecModifyAbstractPropertyEClass = createEClass(IEC_MODIFY_ABSTRACT_PROPERTY);
 
-		iecModifyEnumEClass = createEClass(IEC_MODIFY_ENUM);
+		iecModifyProgramEClass = createEClass(IEC_MODIFY_PROGRAM);
 
 		iecModifyConfigurationEClass = createEClass(IEC_MODIFY_CONFIGURATION);
 	}
@@ -567,17 +539,18 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 
 		// Obtain other dependent packages
 		ModificationmarksPackage theModificationmarksPackage = (ModificationmarksPackage)EPackage.Registry.INSTANCE.getEPackage(ModificationmarksPackage.eNS_URI);
+		IECRepositoryPackage theIECRepositoryPackage = (IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(IECRepositoryPackage.eNS_URI);
 		IECModelPackage theIECModelPackage = (IECModelPackage)EPackage.Registry.INSTANCE.getEPackage(IECModelPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter abstractKAMP4IECModificationRepositoryEClass_T = addETypeParameter(abstractKAMP4IECModificationRepositoryEClass, "T");
-		ETypeParameter iecModifyElementEClass_T = addETypeParameter(iecModifyElementEClass, "T");
+		ETypeParameter iecModifyComponentEClass_T = addETypeParameter(iecModifyComponentEClass, "T");
 
 		// Set bounds for type parameters
 		EGenericType g1 = createEGenericType(this.getIECSeedModifications());
 		abstractKAMP4IECModificationRepositoryEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theIECModelPackage.getIECComponent());
-		iecModifyElementEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(theIECRepositoryPackage.getIECComponent());
+		iecModifyComponentEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModificationRepository());
@@ -593,52 +566,48 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 		iecSeedModificationsEClass.getESuperTypes().add(theModificationmarksPackage.getAbstractSeedModifications());
 		iecChangePropagationDueToDataDependencyEClass.getESuperTypes().add(theModificationmarksPackage.getChangePropagationStep());
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(iecModifyElementEClass_T);
+		g2 = createEGenericType(iecModifyComponentEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(ecorePackage.getEObject());
 		g1.getETypeArguments().add(g2);
-		iecModifyElementEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getGlobalVariable());
+		iecModifyComponentEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getGlobalVariable());
 		g1.getETypeArguments().add(g2);
 		iecModifyGlobalVariableEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getFunctionBlock());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getFunctionBlock());
 		g1.getETypeArguments().add(g2);
 		iecModifyFunctionBlockEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getFunction());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getFunction());
 		g1.getETypeArguments().add(g2);
 		iecModifyFunctionEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getIECInterface());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getIECInterface());
 		g1.getETypeArguments().add(g2);
 		iecModifyInterfaceEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getIECMethod());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getIECMethod());
 		g1.getETypeArguments().add(g2);
 		iecModifyMethodEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getIECAbstractMethod());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getIECAbstractMethod());
 		g1.getETypeArguments().add(g2);
 		iecModifyAbstractMethodEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getIECAbstractProperty());
-		g1.getETypeArguments().add(g2);
-		iecModifyAbstractPropertyEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getIECProperty());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getIECProperty());
 		g1.getETypeArguments().add(g2);
 		iecModifyPropertyEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
+		g1 = createEGenericType(this.getIECModifyComponent());
+		g2 = createEGenericType(theIECRepositoryPackage.getIECAbstractProperty());
+		g1.getETypeArguments().add(g2);
+		iecModifyAbstractPropertyEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getIECModifyComponent());
 		g2 = createEGenericType(theIECModelPackage.getProgram());
 		g1.getETypeArguments().add(g2);
 		iecModifyProgramEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
-		g2 = createEGenericType(theIECModelPackage.getEnum());
-		g1.getETypeArguments().add(g2);
-		iecModifyEnumEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(this.getIECModifyElement());
+		g1 = createEGenericType(this.getIECModifyComponent());
 		g2 = createEGenericType(theIECModelPackage.getConfiguration());
 		g1.getETypeArguments().add(g2);
 		iecModifyConfigurationEClass.getEGenericSuperTypes().add(g1);
@@ -660,11 +629,10 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 		initEReference(getIECChangePropagationDueToDataDependency_PropertyModifications(), this.getIECModifyAbstractProperty(), null, "propertyModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECChangePropagationDueToDataDependency_ProgramModifications(), this.getIECModifyProgram(), null, "programModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECChangePropagationDueToDataDependency_ConfigurationModifications(), this.getIECModifyConfiguration(), null, "configurationModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECChangePropagationDueToDataDependency_EnumModifications(), this.getIECModifyEnum(), null, "enumModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECChangePropagationDueToDataDependency_MethodImplementationModifications(), this.getIECModifyMethod(), null, "methodImplementationModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECChangePropagationDueToDataDependency_PropertyImplementationModifications(), this.getIECModifyProperty(), null, "propertyImplementationModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(iecModifyElementEClass, IECModifyElement.class, "IECModifyElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iecModifyComponentEClass, IECModifyComponent.class, "IECModifyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iecModifyGlobalVariableEClass, IECModifyGlobalVariable.class, "IECModifyGlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -678,13 +646,11 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 
 		initEClass(iecModifyAbstractMethodEClass, IECModifyAbstractMethod.class, "IECModifyAbstractMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iecModifyAbstractPropertyEClass, IECModifyAbstractProperty.class, "IECModifyAbstractProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(iecModifyPropertyEClass, IECModifyProperty.class, "IECModifyProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iecModifyProgramEClass, IECModifyProgram.class, "IECModifyProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iecModifyAbstractPropertyEClass, IECModifyAbstractProperty.class, "IECModifyAbstractProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(iecModifyEnumEClass, IECModifyEnum.class, "IECModifyEnum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(iecModifyProgramEClass, IECModifyProgram.class, "IECModifyProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(iecModifyConfigurationEClass, IECModifyConfiguration.class, "IECModifyConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

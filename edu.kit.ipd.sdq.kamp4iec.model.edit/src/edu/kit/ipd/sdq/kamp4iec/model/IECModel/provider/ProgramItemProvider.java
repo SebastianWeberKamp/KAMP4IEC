@@ -3,9 +3,10 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider;
 
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
 
@@ -51,30 +52,30 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTypePropertyDescriptor(object);
-			addImplementsInterfacePropertyDescriptor(object);
-			addUsesEnumPropertyDescriptor(object);
-			addAccessesPropertyPropertyDescriptor(object);
+			addInstantiatesInterfacePropertyDescriptor(object);
+			addReadsGlobalVariablePropertyDescriptor(object);
+			addWritesGlobalVariablePropertyDescriptor(object);
+			addReadsPropertyPropertyDescriptor(object);
+			addWritesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
-			addAccessesGlobalVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
+	 * This adds a property descriptor for the Instantiates Interface feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTypePropertyDescriptor(Object object) {
+	protected void addInstantiatesInterfacePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Program_Type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_Type_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__TYPE,
+				 getString("_UI_Program_InstantiatesInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_InstantiatesInterface_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__INSTANTIATES_INTERFACE,
 				 true,
 				 false,
 				 true,
@@ -84,19 +85,19 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Implements Interface feature.
+	 * This adds a property descriptor for the Reads Global Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addImplementsInterfacePropertyDescriptor(Object object) {
+	protected void addReadsGlobalVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Program_ImplementsInterface_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_ImplementsInterface_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__IMPLEMENTS_INTERFACE,
+				 getString("_UI_Program_ReadsGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_ReadsGlobalVariable_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__READS_GLOBAL_VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -106,19 +107,19 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Uses Enum feature.
+	 * This adds a property descriptor for the Writes Global Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addUsesEnumPropertyDescriptor(Object object) {
+	protected void addWritesGlobalVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Program_UsesEnum_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_UsesEnum_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__USES_ENUM,
+				 getString("_UI_Program_WritesGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_WritesGlobalVariable_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__WRITES_GLOBAL_VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -128,19 +129,41 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Accesses Property feature.
+	 * This adds a property descriptor for the Reads Property feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAccessesPropertyPropertyDescriptor(Object object) {
+	protected void addReadsPropertyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Program_AccessesProperty_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_AccessesProperty_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__ACCESSES_PROPERTY,
+				 getString("_UI_Program_ReadsProperty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_ReadsProperty_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__READS_PROPERTY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Writes Property feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWritesPropertyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Program_WritesProperty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_WritesProperty_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__WRITES_PROPERTY,
 				 true,
 				 false,
 				 true,
@@ -172,28 +195,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Accesses Global Variable feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAccessesGlobalVariablePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Program_AccessesGlobalVariable_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_AccessesGlobalVariable_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__ACCESSES_GLOBAL_VARIABLE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -205,12 +206,9 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE);
+			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
 		}
 		return childrenFeatures;
 	}
@@ -266,12 +264,9 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Program.class)) {
-			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
-			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
-			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION_BLOCK:
-			case IECModelPackage.PROGRAM__DECLARES_FUNCTION:
 			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
+			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
+			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -291,59 +286,18 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION,
-				 IECModelFactory.eINSTANCE.createFunction()));
+				(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK,
+				 IECRepositoryFactory.eINSTANCE.createFunctionBlock()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE,
-				 IECModelFactory.eINSTANCE.createGlobalVariable()));
+				 IECRepositoryFactory.eINSTANCE.createGlobalVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK,
-				 IECModelFactory.eINSTANCE.createFunctionBlock()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK,
-				 IECModelFactory.eINSTANCE.createFunctionBlock()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION,
-				 IECModelFactory.eINSTANCE.createFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK,
-				 IECModelFactory.eINSTANCE.createFunctionBlock()));
-	}
-
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
-
-		boolean qualify =
-			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION ||
-			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION ||
-			childFeature == IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION_BLOCK ||
-			childFeature == IECModelPackage.Literals.PROGRAM__DECLARES_FUNCTION_BLOCK ||
-			childFeature == IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK;
-
-		if (qualify) {
-			return getString
-				("_UI_CreateChild_text2",
-				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+				(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION,
+				 IECRepositoryFactory.eINSTANCE.createFunction()));
 	}
 
 	/**

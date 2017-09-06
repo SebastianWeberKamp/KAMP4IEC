@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
-import org.palladiosimulator.pcm.repository.RepositoryComponent;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,12 +59,12 @@ public interface IECMetadataFileAggregation extends IECFileAggregation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component</em>' reference.
-	 * @see #setComponent(RepositoryComponent)
+	 * @see #setComponent(IECComponent)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECMetadataFileAggregation_Component()
 	 * @model
 	 * @generated
 	 */
-	RepositoryComponent getComponent();
+	IECComponent getComponent();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFileAggregation#getComponent <em>Component</em>}' reference.
@@ -74,6 +74,6 @@ public interface IECMetadataFileAggregation extends IECFileAggregation {
 	 * @see #getComponent()
 	 * @generated
 	 */
-	void setComponent(RepositoryComponent value);
+	void setComponent(IECComponent value);
 
 } // IECMetadataFileAggregation

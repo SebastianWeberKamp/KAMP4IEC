@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IECModifyProgramImpl extends IECModifyElementImpl<Program> implements IECModifyProgram {
+public class IECModifyProgramImpl extends IECModifyComponentImpl<Program> implements IECModifyProgram {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

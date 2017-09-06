@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
  * @model
  * @generated
  */
-public interface IECModifyFunction extends IECModifyElement<Function> {
+public interface IECModifyFunction extends IECModifyComponent<Function> {
 } // IECModifyFunction

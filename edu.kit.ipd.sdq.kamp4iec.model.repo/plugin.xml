@@ -6,6 +6,8 @@
 
 <plugin>
 
+
+null
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated IECRepository -->
       <package
@@ -14,5 +16,4 @@
             genModel="model/IECRepository.genmodel"/>
    </extension>
 
-null
 </plugin>

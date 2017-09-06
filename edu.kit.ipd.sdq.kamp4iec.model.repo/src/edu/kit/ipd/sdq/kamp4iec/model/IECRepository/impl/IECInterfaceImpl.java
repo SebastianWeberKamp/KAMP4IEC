@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -27,32 +28,43 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getDefinesIecMethod <em>Defines Iec Method</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getDefinesIecProperty <em>Defines Iec Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getHasMethod <em>Has Method</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getHasProperty <em>Has Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getExtendsInterface <em>Extends Interface</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	/**
-	 * The cached value of the '{@link #getDefinesIecMethod() <em>Defines Iec Method</em>}' containment reference list.
+	 * The cached value of the '{@link #getHasMethod() <em>Has Method</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefinesIecMethod()
+	 * @see #getHasMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECAbstractMethod> definesIecMethod;
+	protected EList<IECAbstractMethod> hasMethod;
 
 	/**
-	 * The cached value of the '{@link #getDefinesIecProperty() <em>Defines Iec Property</em>}' containment reference list.
+	 * The cached value of the '{@link #getHasProperty() <em>Has Property</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDefinesIecProperty()
+	 * @see #getHasProperty()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECAbstractProperty> definesIecProperty;
+	protected EList<IECAbstractProperty> hasProperty;
+
+	/**
+	 * The cached value of the '{@link #getExtendsInterface() <em>Extends Interface</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtendsInterface()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECInterface> extendsInterface;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,11 +90,11 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECAbstractMethod> getDefinesIecMethod() {
-		if (definesIecMethod == null) {
-			definesIecMethod = new EObjectContainmentEList<IECAbstractMethod>(IECAbstractMethod.class, this, IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD);
+	public EList<IECAbstractMethod> getHasMethod() {
+		if (hasMethod == null) {
+			hasMethod = new EObjectContainmentEList<IECAbstractMethod>(IECAbstractMethod.class, this, IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD);
 		}
-		return definesIecMethod;
+		return hasMethod;
 	}
 
 	/**
@@ -90,11 +102,23 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECAbstractProperty> getDefinesIecProperty() {
-		if (definesIecProperty == null) {
-			definesIecProperty = new EObjectContainmentEList<IECAbstractProperty>(IECAbstractProperty.class, this, IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY);
+	public EList<IECAbstractProperty> getHasProperty() {
+		if (hasProperty == null) {
+			hasProperty = new EObjectContainmentEList<IECAbstractProperty>(IECAbstractProperty.class, this, IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY);
 		}
-		return definesIecProperty;
+		return hasProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<IECInterface> getExtendsInterface() {
+		if (extendsInterface == null) {
+			extendsInterface = new EObjectResolvingEList<IECInterface>(IECInterface.class, this, IECRepositoryPackage.IEC_INTERFACE__EXTENDS_INTERFACE);
+		}
+		return extendsInterface;
 	}
 
 	/**
@@ -105,10 +129,10 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
-				return ((InternalEList<?>)getDefinesIecMethod()).basicRemove(otherEnd, msgs);
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
-				return ((InternalEList<?>)getDefinesIecProperty()).basicRemove(otherEnd, msgs);
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD:
+				return ((InternalEList<?>)getHasMethod()).basicRemove(otherEnd, msgs);
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY:
+				return ((InternalEList<?>)getHasProperty()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -121,10 +145,12 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
-				return getDefinesIecMethod();
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
-				return getDefinesIecProperty();
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD:
+				return getHasMethod();
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY:
+				return getHasProperty();
+			case IECRepositoryPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				return getExtendsInterface();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,13 +164,17 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
-				getDefinesIecMethod().clear();
-				getDefinesIecMethod().addAll((Collection<? extends IECAbstractMethod>)newValue);
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD:
+				getHasMethod().clear();
+				getHasMethod().addAll((Collection<? extends IECAbstractMethod>)newValue);
 				return;
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
-				getDefinesIecProperty().clear();
-				getDefinesIecProperty().addAll((Collection<? extends IECAbstractProperty>)newValue);
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY:
+				getHasProperty().clear();
+				getHasProperty().addAll((Collection<? extends IECAbstractProperty>)newValue);
+				return;
+			case IECRepositoryPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				getExtendsInterface().clear();
+				getExtendsInterface().addAll((Collection<? extends IECInterface>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,11 +188,14 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
-				getDefinesIecMethod().clear();
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD:
+				getHasMethod().clear();
 				return;
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
-				getDefinesIecProperty().clear();
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY:
+				getHasProperty().clear();
+				return;
+			case IECRepositoryPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				getExtendsInterface().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -176,10 +209,12 @@ public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
-				return definesIecMethod != null && !definesIecMethod.isEmpty();
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
-				return definesIecProperty != null && !definesIecProperty.isEmpty();
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD:
+				return hasMethod != null && !hasMethod.isEmpty();
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY:
+				return hasProperty != null && !hasProperty.isEmpty();
+			case IECRepositoryPackage.IEC_INTERFACE__EXTENDS_INTERFACE:
+				return extendsInterface != null && !extendsInterface.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

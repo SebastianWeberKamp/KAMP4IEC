@@ -2,8 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
 
@@ -16,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IECModifyAbstractMethodImpl extends IECModifyElementImpl<IECAbstractMethod> implements IECModifyAbstractMethod {
+public class IECModifyAbstractMethodImpl extends IECModifyComponentImpl<IECAbstractMethod> implements IECModifyAbstractMethod {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

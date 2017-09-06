@@ -14,5 +14,5 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
  * @model
  * @generated
  */
-public interface IECModifyProgram extends IECModifyElement<Program> {
+public interface IECModifyProgram extends IECModifyComponent<Program> {
 } // IECModifyProgram

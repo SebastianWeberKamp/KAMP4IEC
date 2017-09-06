@@ -31,7 +31,6 @@ public class IECModelAllTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new IECModelAllTests("IECModel Tests");
-		suite.addTest(IECModelTests.suite());
 		return suite;
 	}
 

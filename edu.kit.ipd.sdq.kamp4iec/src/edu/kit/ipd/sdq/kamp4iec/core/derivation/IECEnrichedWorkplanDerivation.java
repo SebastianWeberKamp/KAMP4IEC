@@ -7,6 +7,9 @@ import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractEnrichedWorkplanDerivation;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
+import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFileAggregation;
@@ -14,10 +17,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFil
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFileAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
-import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
-import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureAnnotationLookup;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 
 public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDerivation<IECArchitectureVersion> {
 	

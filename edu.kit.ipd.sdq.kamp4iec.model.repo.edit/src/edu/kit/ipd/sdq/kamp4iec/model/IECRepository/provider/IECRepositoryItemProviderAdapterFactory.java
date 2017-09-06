@@ -72,6 +72,29 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RepositoryItemProvider repositoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRepositoryAdapter() {
+		if (repositoryItemProvider == null) {
+			repositoryItemProvider = new RepositoryItemProvider(this);
+		}
+
+		return repositoryItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -118,29 +141,6 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECInterfaceItemProvider iecInterfaceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECInterfaceAdapter() {
-		if (iecInterfaceItemProvider == null) {
-			iecInterfaceItemProvider = new IECInterfaceItemProvider(this);
-		}
-
-		return iecInterfaceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,49 +164,49 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program} instances.
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProgramItemProvider programItemProvider;
+	protected IECMethodItemProvider iecMethodItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program}.
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createProgramAdapter() {
-		if (programItemProvider == null) {
-			programItemProvider = new ProgramItemProvider(this);
+	public Adapter createIECMethodAdapter() {
+		if (iecMethodItemProvider == null) {
+			iecMethodItemProvider = new IECMethodItemProvider(this);
 		}
 
-		return programItemProvider;
+		return iecMethodItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository} instances.
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RepositoryItemProvider repositoryItemProvider;
+	protected IECInterfaceItemProvider iecInterfaceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository}.
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRepositoryAdapter() {
-		if (repositoryItemProvider == null) {
-			repositoryItemProvider = new RepositoryItemProvider(this);
+	public Adapter createIECInterfaceAdapter() {
+		if (iecInterfaceItemProvider == null) {
+			iecInterfaceItemProvider = new IECInterfaceItemProvider(this);
 		}
 
-		return repositoryItemProvider;
+		return iecInterfaceItemProvider;
 	}
 
 	/**
@@ -276,98 +276,6 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 		}
 
 		return iecAbstractMethodItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECMethodItemProvider iecMethodItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECMethodAdapter() {
-		if (iecMethodItemProvider == null) {
-			iecMethodItemProvider = new IECMethodItemProvider(this);
-		}
-
-		return iecMethodItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EnumItemProvider enumItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEnumAdapter() {
-		if (enumItemProvider == null) {
-			enumItemProvider = new EnumItemProvider(this);
-		}
-
-		return enumItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ImplementsInterfaceItemProvider implementsInterfaceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createImplementsInterfaceAdapter() {
-		if (implementsInterfaceItemProvider == null) {
-			implementsInterfaceItemProvider = new ImplementsInterfaceItemProvider(this);
-		}
-
-		return implementsInterfaceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ConfigurationItemProvider configurationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createConfigurationAdapter() {
-		if (configurationItemProvider == null) {
-			configurationItemProvider = new ConfigurationItemProvider(this);
-		}
-
-		return configurationItemProvider;
 	}
 
 	/**
@@ -469,19 +377,15 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 	 * @generated
 	 */
 	public void dispose() {
+		if (repositoryItemProvider != null) repositoryItemProvider.dispose();
 		if (functionBlockItemProvider != null) functionBlockItemProvider.dispose();
 		if (globalVariableItemProvider != null) globalVariableItemProvider.dispose();
-		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
-		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
 		if (functionItemProvider != null) functionItemProvider.dispose();
-		if (programItemProvider != null) programItemProvider.dispose();
-		if (repositoryItemProvider != null) repositoryItemProvider.dispose();
+		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
+		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
 		if (iecPropertyItemProvider != null) iecPropertyItemProvider.dispose();
 		if (iecAbstractPropertyItemProvider != null) iecAbstractPropertyItemProvider.dispose();
 		if (iecAbstractMethodItemProvider != null) iecAbstractMethodItemProvider.dispose();
-		if (enumItemProvider != null) enumItemProvider.dispose();
-		if (implementsInterfaceItemProvider != null) implementsInterfaceItemProvider.dispose();
-		if (configurationItemProvider != null) configurationItemProvider.dispose();
 	}
 
 }

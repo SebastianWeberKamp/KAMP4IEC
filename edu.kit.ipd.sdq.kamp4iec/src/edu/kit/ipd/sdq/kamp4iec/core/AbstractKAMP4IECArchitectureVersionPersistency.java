@@ -35,8 +35,6 @@ public abstract class AbstractKAMP4IECArchitectureVersionPersistency<T extends I
 			saveEmfModelToResource(version.getModificationMarkRepository(), targetDirectoryPath, internalModFilePath, resourceSet);		
 		if (version.getFieldOfActivityRepository()!=null)
 			saveEmfModelToResource(version.getFieldOfActivityRepository(), targetDirectoryPath, fieldOfActivityRepositoryFilePath, resourceSet);
-		if (version.getComponentInternalDependencyRepository()!=null)
-			saveEmfModelToResource(version.getComponentInternalDependencyRepository(), targetDirectoryPath, cidepfilePath, resourceSet);
 	}
 
 }

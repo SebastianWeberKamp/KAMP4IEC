@@ -7,9 +7,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -92,8 +90,8 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createIECChangePropagationDueToDataDependencyAdapter();
 			}
 			@Override
-			public <T extends IECComponent> Adapter caseIECModifyElement(IECModifyElement<T> object) {
-				return createIECModifyElementAdapter();
+			public <T extends IECComponent> Adapter caseIECModifyComponent(IECModifyComponent<T> object) {
+				return createIECModifyComponentAdapter();
 			}
 			@Override
 			public Adapter caseIECModifyGlobalVariable(IECModifyGlobalVariable object) {
@@ -120,20 +118,16 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createIECModifyAbstractMethodAdapter();
 			}
 			@Override
-			public Adapter caseIECModifyAbstractProperty(IECModifyAbstractProperty object) {
-				return createIECModifyAbstractPropertyAdapter();
-			}
-			@Override
 			public Adapter caseIECModifyProperty(IECModifyProperty object) {
 				return createIECModifyPropertyAdapter();
 			}
 			@Override
-			public Adapter caseIECModifyProgram(IECModifyProgram object) {
-				return createIECModifyProgramAdapter();
+			public Adapter caseIECModifyAbstractProperty(IECModifyAbstractProperty object) {
+				return createIECModifyAbstractPropertyAdapter();
 			}
 			@Override
-			public Adapter caseIECModifyEnum(IECModifyEnum object) {
-				return createIECModifyEnumAdapter();
+			public Adapter caseIECModifyProgram(IECModifyProgram object) {
+				return createIECModifyProgramAdapter();
 			}
 			@Override
 			public Adapter caseIECModifyConfiguration(IECModifyConfiguration object) {
@@ -236,16 +230,16 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement <em>IEC Modify Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent <em>IEC Modify Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent
 	 * @generated
 	 */
-	public Adapter createIECModifyElementAdapter() {
+	public Adapter createIECModifyComponentAdapter() {
 		return null;
 	}
 
@@ -372,20 +366,6 @@ public class IECModificationmarksAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIECModifyProgramAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum <em>IEC Modify Enum</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum
-	 * @generated
-	 */
-	public Adapter createIECModifyEnumAdapter() {
 		return null;
 	}
 

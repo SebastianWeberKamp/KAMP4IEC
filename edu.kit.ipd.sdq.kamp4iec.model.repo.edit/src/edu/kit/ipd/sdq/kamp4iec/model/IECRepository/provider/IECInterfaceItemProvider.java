@@ -14,6 +14,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -45,8 +47,31 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addExtendsInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Extends Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExtendsInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECInterface_ExtendsInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECInterface_ExtendsInterface_feature", "_UI_IECInterface_type"),
+				 IECRepositoryPackage.Literals.IEC_INTERFACE__EXTENDS_INTERFACE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -61,8 +86,8 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_METHOD);
-			childrenFeatures.add(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_PROPERTY);
+			childrenFeatures.add(IECRepositoryPackage.Literals.IEC_INTERFACE__HAS_METHOD);
+			childrenFeatures.add(IECRepositoryPackage.Literals.IEC_INTERFACE__HAS_PROPERTY);
 		}
 		return childrenFeatures;
 	}
@@ -118,8 +143,8 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IECInterface.class)) {
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
-			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_PROPERTY:
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_METHOD:
+			case IECRepositoryPackage.IEC_INTERFACE__HAS_PROPERTY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,12 +164,12 @@ public class IECInterfaceItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_METHOD,
+				(IECRepositoryPackage.Literals.IEC_INTERFACE__HAS_METHOD,
 				 IECRepositoryFactory.eINSTANCE.createIECAbstractMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_PROPERTY,
+				(IECRepositoryPackage.Literals.IEC_INTERFACE__HAS_PROPERTY,
 				 IECRepositoryFactory.eINSTANCE.createIECAbstractProperty()));
 	}
 

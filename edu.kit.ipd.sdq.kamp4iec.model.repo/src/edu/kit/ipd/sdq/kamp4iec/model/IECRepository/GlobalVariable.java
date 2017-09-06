@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Global Variable</b></em>'.
@@ -11,42 +12,38 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable#getHasDerivedType <em>Has Derived Type</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getGlobalVariable()
  * @model
  * @generated
  */
-public interface GlobalVariable extends Identifier {
+public interface GlobalVariable extends IECComponent {
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The default value is <code>"NONE"</code>.
-	 * The literals are from the enumeration {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType}.
+	 * Returns the value of the '<em><b>Has Derived Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Has Derived Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType
-	 * @see #setType(VariableType)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getGlobalVariable_Type()
-	 * @model default="NONE"
+	 * @return the value of the '<em>Has Derived Type</em>' reference.
+	 * @see #setHasDerivedType(DerivedType)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getGlobalVariable_HasDerivedType()
+	 * @model
 	 * @generated
 	 */
-	VariableType getType();
+	DerivedType getHasDerivedType();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable#getHasDerivedType <em>Has Derived Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType
-	 * @see #getType()
+	 * @param value the new value of the '<em>Has Derived Type</em>' reference.
+	 * @see #getHasDerivedType()
 	 * @generated
 	 */
-	void setType(VariableType value);
+	void setHasDerivedType(DerivedType value);
 
 } // GlobalVariable

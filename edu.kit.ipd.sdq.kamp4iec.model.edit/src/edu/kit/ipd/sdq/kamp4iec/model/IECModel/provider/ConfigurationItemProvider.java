@@ -7,6 +7,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
+
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
 
 import java.util.Collection;
@@ -51,27 +53,28 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAccessesPropertyPropertyDescriptor(object);
-			addAccessesGlobalVariablePropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
+			addReadsGlobalVariablePropertyDescriptor(object);
+			addWritesGlobalVariablePropertyDescriptor(object);
+			addReadsPropertyPropertyDescriptor(object);
+			addWritesPropertyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Accesses Property feature.
+	 * This adds a property descriptor for the Reads Global Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAccessesPropertyPropertyDescriptor(Object object) {
+	protected void addReadsGlobalVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Configuration_AccessesProperty_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_AccessesProperty_feature", "_UI_Configuration_type"),
-				 IECModelPackage.Literals.CONFIGURATION__ACCESSES_PROPERTY,
+				 getString("_UI_Configuration_ReadsGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_ReadsGlobalVariable_feature", "_UI_Configuration_type"),
+				 IECModelPackage.Literals.CONFIGURATION__READS_GLOBAL_VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -81,19 +84,19 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Accesses Global Variable feature.
+	 * This adds a property descriptor for the Writes Global Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAccessesGlobalVariablePropertyDescriptor(Object object) {
+	protected void addWritesGlobalVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Configuration_AccessesGlobalVariable_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_AccessesGlobalVariable_feature", "_UI_Configuration_type"),
-				 IECModelPackage.Literals.CONFIGURATION__ACCESSES_GLOBAL_VARIABLE,
+				 getString("_UI_Configuration_WritesGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_WritesGlobalVariable_feature", "_UI_Configuration_type"),
+				 IECModelPackage.Literals.CONFIGURATION__WRITES_GLOBAL_VARIABLE,
 				 true,
 				 false,
 				 true,
@@ -103,19 +106,41 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
+	 * This adds a property descriptor for the Reads Property feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTypePropertyDescriptor(Object object) {
+	protected void addReadsPropertyPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Configuration_Type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_Type_feature", "_UI_Configuration_type"),
-				 IECModelPackage.Literals.CONFIGURATION__TYPE,
+				 getString("_UI_Configuration_ReadsProperty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_ReadsProperty_feature", "_UI_Configuration_type"),
+				 IECModelPackage.Literals.CONFIGURATION__READS_PROPERTY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Writes Property feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWritesPropertyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Configuration_WritesProperty_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_WritesProperty_feature", "_UI_Configuration_type"),
+				 IECModelPackage.Literals.CONFIGURATION__WRITES_PROPERTY,
 				 true,
 				 false,
 				 true,
@@ -136,10 +161,8 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__CONTAINS_PROGRAM);
+			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__INSTANTIATES_PROGRAM);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
-			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__USES_ENUM);
-			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__INTERFACES);
 		}
 		return childrenFeatures;
 	}
@@ -195,10 +218,8 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Configuration.class)) {
-			case IECModelPackage.CONFIGURATION__CONTAINS_PROGRAM:
+			case IECModelPackage.CONFIGURATION__INSTANTIATES_PROGRAM:
 			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
-			case IECModelPackage.CONFIGURATION__USES_ENUM:
-			case IECModelPackage.CONFIGURATION__INTERFACES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -218,23 +239,13 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModelPackage.Literals.CONFIGURATION__CONTAINS_PROGRAM,
+				(IECModelPackage.Literals.CONFIGURATION__INSTANTIATES_PROGRAM,
 				 IECModelFactory.eINSTANCE.createProgram()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE,
-				 IECModelFactory.eINSTANCE.createGlobalVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.CONFIGURATION__USES_ENUM,
-				 IECModelFactory.eINSTANCE.createEnums()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.CONFIGURATION__INTERFACES,
-				 IECModelFactory.eINSTANCE.createInterfaces()));
+				 IECRepositoryFactory.eINSTANCE.createGlobalVariable()));
 	}
 
 	/**

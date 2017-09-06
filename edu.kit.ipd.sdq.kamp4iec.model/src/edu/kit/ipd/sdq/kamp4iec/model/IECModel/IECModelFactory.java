@@ -22,24 +22,6 @@ public interface IECModelFactory extends EFactory {
 	IECModelFactory eINSTANCE = edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECModelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Function Block</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function Block</em>'.
-	 * @generated
-	 */
-	FunctionBlock createFunctionBlock();
-
-	/**
-	 * Returns a new object of class '<em>Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Function</em>'.
-	 * @generated
-	 */
-	Function createFunction();
-
-	/**
 	 * Returns a new object of class '<em>Program</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,87 +38,6 @@ public interface IECModelFactory extends EFactory {
 	 * @generated
 	 */
 	Configuration createConfiguration();
-
-	/**
-	 * Returns a new object of class '<em>IEC Interface</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Interface</em>'.
-	 * @generated
-	 */
-	IECInterface createIECInterface();
-
-	/**
-	 * Returns a new object of class '<em>Global Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Global Variable</em>'.
-	 * @generated
-	 */
-	GlobalVariable createGlobalVariable();
-
-	/**
-	 * Returns a new object of class '<em>Enum</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Enum</em>'.
-	 * @generated
-	 */
-	Enum createEnum();
-
-	/**
-	 * Returns a new object of class '<em>IEC Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Property</em>'.
-	 * @generated
-	 */
-	IECProperty createIECProperty();
-
-	/**
-	 * Returns a new object of class '<em>IEC Abstract Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Abstract Property</em>'.
-	 * @generated
-	 */
-	IECAbstractProperty createIECAbstractProperty();
-
-	/**
-	 * Returns a new object of class '<em>IEC Abstract Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Abstract Method</em>'.
-	 * @generated
-	 */
-	IECAbstractMethod createIECAbstractMethod();
-
-	/**
-	 * Returns a new object of class '<em>IEC Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Method</em>'.
-	 * @generated
-	 */
-	IECMethod createIECMethod();
-
-	/**
-	 * Returns a new object of class '<em>Interfaces</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interfaces</em>'.
-	 * @generated
-	 */
-	Interfaces createInterfaces();
-
-	/**
-	 * Returns a new object of class '<em>Enums</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Enums</em>'.
-	 * @generated
-	 */
-	Enums createEnums();
 
 	/**
 	 * Returns the package supported by this factory.

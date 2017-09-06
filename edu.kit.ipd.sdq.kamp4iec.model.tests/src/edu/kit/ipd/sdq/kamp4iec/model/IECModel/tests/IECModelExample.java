@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.tests;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class IECModelExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.iecmodel"));
-				FunctionBlock root = IECModelFactory.eINSTANCE.createFunctionBlock();
+				Program root = IECModelFactory.eINSTANCE.createProgram();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

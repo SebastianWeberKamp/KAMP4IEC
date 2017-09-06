@@ -1,8 +1,6 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
@@ -12,7 +10,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 
 public class IECArchitectureVersion extends AbstractArchitectureVersion<AbstractKAMP4IECModificationRepository<?>> {
-	private ComponentInternalDependenciesRepository _componentInternalDependencyRepository;
 	private Repository _IECRepository;
 	private Configuration _configuration;
 	private IECFieldOfActivityAnnotationsRepository _fieldOfActivityRepository;
@@ -20,7 +17,6 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 	public static class ArchitectureVersionParams{
 		public String name;
 		public AbstractKAMP4IECModificationRepository<?> modificationMarkRepository;
-		public ComponentInternalDependenciesRepository componentInternalDependencyRepository;
 		public Repository iecRepository;
 		public Configuration configuration;
 		public IECFieldOfActivityAnnotationsRepository fieldOfActivityRepository;
@@ -31,11 +27,6 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		// Some of the files describing the architecture might not exist; prevent NullPointer
 		// in propagation algorithm by setting newly created objects (whose EReferences are
 		// instantiated with empty collections, so the algorithm can handle them)
-		if (params.componentInternalDependencyRepository == null) {
-			_componentInternalDependencyRepository = ComponentInternalDependenciesFactory.eINSTANCE.
-					createComponentInternalDependenciesRepository();
-		}
-		this._componentInternalDependencyRepository = params.componentInternalDependencyRepository;
 		if (params.iecRepository == null) {
 			_IECRepository = IECRepositoryFactory.eINSTANCE.
 					createRepository();
@@ -52,15 +43,6 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		}
 		this._fieldOfActivityRepository = params.fieldOfActivityRepository;
 		
-	}
-	
-	public ComponentInternalDependenciesRepository getComponentInternalDependencyRepository() {
-		return _componentInternalDependencyRepository;
-	}
-
-	public void setComponentInternalDependencyRepository(
-			ComponentInternalDependenciesRepository componentInternalDependencyRepository) {
-		this._componentInternalDependencyRepository = componentInternalDependencyRepository;
 	}
 
 	public Repository getIECRepository() {

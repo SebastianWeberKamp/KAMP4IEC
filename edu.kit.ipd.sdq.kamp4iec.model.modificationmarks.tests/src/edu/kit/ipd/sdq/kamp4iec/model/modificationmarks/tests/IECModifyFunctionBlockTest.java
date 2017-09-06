@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IECModifyFunctionBlockTest extends IECModifyElementTest {
+public class IECModifyFunctionBlockTest extends IECModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->

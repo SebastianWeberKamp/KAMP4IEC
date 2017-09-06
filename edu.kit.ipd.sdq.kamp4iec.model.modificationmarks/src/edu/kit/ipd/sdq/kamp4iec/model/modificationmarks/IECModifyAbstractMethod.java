@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
  * @model
  * @generated
  */
-public interface IECModifyAbstractMethod extends IECModifyElement<IECAbstractMethod> {
+public interface IECModifyAbstractMethod extends IECModifyComponent<IECAbstractMethod> {
 } // IECModifyAbstractMethod

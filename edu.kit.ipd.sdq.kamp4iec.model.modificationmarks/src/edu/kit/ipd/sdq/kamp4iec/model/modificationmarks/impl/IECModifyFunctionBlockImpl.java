@@ -2,8 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import org.eclipse.emf.ecore.EClass;
@@ -15,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IECModifyFunctionBlockImpl extends IECModifyElementImpl<FunctionBlock> implements IECModifyFunctionBlock {
+public class IECModifyFunctionBlockImpl extends IECModifyComponentImpl<FunctionBlock> implements IECModifyFunctionBlock {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

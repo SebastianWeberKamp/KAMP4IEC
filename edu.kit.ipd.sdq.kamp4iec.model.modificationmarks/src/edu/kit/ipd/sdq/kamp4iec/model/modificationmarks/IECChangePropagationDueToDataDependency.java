@@ -23,7 +23,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyModifications <em>Property Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getProgramModifications <em>Program Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getConfigurationModifications <em>Configuration Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getEnumModifications <em>Enum Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodImplementationModifications <em>Method Implementation Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyImplementationModifications <em>Property Implementation Modifications</em>}</li>
  * </ul>
@@ -160,22 +159,6 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	 * @generated
 	 */
 	EList<IECModifyConfiguration> getConfigurationModifications();
-
-	/**
-	 * Returns the value of the '<em><b>Enum Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Enum Modifications</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Enum Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_EnumModifications()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<IECModifyEnum> getEnumModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Method Implementation Modifications</b></em>' containment reference list.

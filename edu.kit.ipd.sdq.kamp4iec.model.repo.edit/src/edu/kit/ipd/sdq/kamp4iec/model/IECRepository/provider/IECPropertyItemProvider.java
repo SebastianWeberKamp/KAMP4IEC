@@ -44,6 +44,7 @@ public class IECPropertyItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addImplementsPropertyDescriptor(object);
+			addHasDerivedTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +63,28 @@ public class IECPropertyItemProvider extends IdentifierItemProvider {
 				 getString("_UI_IECProperty_implements_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECProperty_implements_feature", "_UI_IECProperty_type"),
 				 IECRepositoryPackage.Literals.IEC_PROPERTY__IMPLEMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Has Derived Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHasDerivedTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECProperty_HasDerivedType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECProperty_HasDerivedType_feature", "_UI_IECProperty_type"),
+				 IECRepositoryPackage.Literals.IEC_PROPERTY__HAS_DERIVED_TYPE,
 				 true,
 				 false,
 				 true,

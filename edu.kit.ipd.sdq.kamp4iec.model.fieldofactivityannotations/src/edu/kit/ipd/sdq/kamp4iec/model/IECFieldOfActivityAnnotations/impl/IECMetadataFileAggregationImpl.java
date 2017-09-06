@@ -6,18 +6,16 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDevelopme
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFileAggregation;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import org.palladiosimulator.pcm.repository.RepositoryComponent;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,7 +40,7 @@ public class IECMetadataFileAggregationImpl extends IECFileAggregationImpl imple
 	 * @generated
 	 * @ordered
 	 */
-	protected RepositoryComponent component;
+	protected IECComponent component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,10 +107,10 @@ public class IECMetadataFileAggregationImpl extends IECFileAggregationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryComponent getComponent() {
-		if (component != null && ((EObject)component).eIsProxy()) {
+	public IECComponent getComponent() {
+		if (component != null && component.eIsProxy()) {
 			InternalEObject oldComponent = (InternalEObject)component;
-			component = (RepositoryComponent)eResolveProxy(oldComponent);
+			component = (IECComponent)eResolveProxy(oldComponent);
 			if (component != oldComponent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE_AGGREGATION__COMPONENT, oldComponent, component));
@@ -126,7 +124,7 @@ public class IECMetadataFileAggregationImpl extends IECFileAggregationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RepositoryComponent basicGetComponent() {
+	public IECComponent basicGetComponent() {
 		return component;
 	}
 
@@ -135,8 +133,8 @@ public class IECMetadataFileAggregationImpl extends IECFileAggregationImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComponent(RepositoryComponent newComponent) {
-		RepositoryComponent oldComponent = component;
+	public void setComponent(IECComponent newComponent) {
+		IECComponent oldComponent = component;
 		component = newComponent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE_AGGREGATION__COMPONENT, oldComponent, component));
@@ -215,7 +213,7 @@ public class IECMetadataFileAggregationImpl extends IECFileAggregationImpl imple
 				setParent((IECDevelopmentArtefactSpecification)newValue);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE_AGGREGATION__COMPONENT:
-				setComponent((RepositoryComponent)newValue);
+				setComponent((IECComponent)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,7 +231,7 @@ public class IECMetadataFileAggregationImpl extends IECFileAggregationImpl imple
 				setParent((IECDevelopmentArtefactSpecification)null);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE_AGGREGATION__COMPONENT:
-				setComponent((RepositoryComponent)null);
+				setComponent((IECComponent)null);
 				return;
 		}
 		super.eUnset(featureID);

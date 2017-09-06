@@ -14,8 +14,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable} object.
@@ -45,29 +43,29 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addTypePropertyDescriptor(object);
+			addHasDerivedTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
+	 * This adds a property descriptor for the Has Derived Type feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTypePropertyDescriptor(Object object) {
+	protected void addHasDerivedTypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_GlobalVariable_Type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_Type_feature", "_UI_GlobalVariable_type"),
-				 IECRepositoryPackage.Literals.GLOBAL_VARIABLE__TYPE,
+				 getString("_UI_GlobalVariable_HasDerivedType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_HasDerivedType_feature", "_UI_GlobalVariable_type"),
+				 IECRepositoryPackage.Literals.GLOBAL_VARIABLE__HAS_DERIVED_TYPE,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -108,12 +106,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(GlobalVariable.class)) {
-			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 

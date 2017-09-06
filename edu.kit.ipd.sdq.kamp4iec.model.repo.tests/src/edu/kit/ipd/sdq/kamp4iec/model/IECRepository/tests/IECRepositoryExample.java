@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class IECRepositoryExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.iecrepository"));
-				FunctionBlock root = IECRepositoryFactory.eINSTANCE.createFunctionBlock();
+				Repository root = IECRepositoryFactory.eINSTANCE.createRepository();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

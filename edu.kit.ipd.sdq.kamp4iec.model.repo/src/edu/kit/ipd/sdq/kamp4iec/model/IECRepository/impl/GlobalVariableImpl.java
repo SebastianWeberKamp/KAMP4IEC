@@ -2,11 +2,14 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -18,31 +21,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getHasDerivedType <em>Has Derived Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable {
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getHasDerivedType() <em>Has Derived Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getHasDerivedType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VariableType TYPE_EDEFAULT = VariableType.NONE;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected VariableType type = TYPE_EDEFAULT;
+	protected DerivedType hasDerivedType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +61,16 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariableType getType() {
-		return type;
+	public DerivedType getHasDerivedType() {
+		if (hasDerivedType != null && hasDerivedType.eIsProxy()) {
+			InternalEObject oldHasDerivedType = (InternalEObject)hasDerivedType;
+			hasDerivedType = (DerivedType)eResolveProxy(oldHasDerivedType);
+			if (hasDerivedType != oldHasDerivedType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECRepositoryPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE, oldHasDerivedType, hasDerivedType));
+			}
+		}
+		return hasDerivedType;
 	}
 
 	/**
@@ -77,11 +78,20 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(VariableType newType) {
-		VariableType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
+	public DerivedType basicGetHasDerivedType() {
+		return hasDerivedType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHasDerivedType(DerivedType newHasDerivedType) {
+		DerivedType oldHasDerivedType = hasDerivedType;
+		hasDerivedType = newHasDerivedType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.GLOBAL_VARIABLE__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE, oldHasDerivedType, hasDerivedType));
 	}
 
 	/**
@@ -92,8 +102,9 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
-				return getType();
+			case IECRepositoryPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				if (resolve) return getHasDerivedType();
+				return basicGetHasDerivedType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -103,12 +114,11 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
-				setType((VariableType)newValue);
+			case IECRepositoryPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				setHasDerivedType((DerivedType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +132,8 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
-				setType(TYPE_EDEFAULT);
+			case IECRepositoryPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				setHasDerivedType((DerivedType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,26 +147,10 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
-				return type != TYPE_EDEFAULT;
+			case IECRepositoryPackage.GLOBAL_VARIABLE__HAS_DERIVED_TYPE:
+				return hasDerivedType != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Type: ");
-		result.append(type);
-		result.append(')');
-		return result.toString();
 	}
 
 } //GlobalVariableImpl

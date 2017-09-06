@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
  * @model
  * @generated
  */
-public interface IECModifyGlobalVariable extends IECModifyElement<GlobalVariable> {
+public interface IECModifyGlobalVariable extends IECModifyComponent<GlobalVariable> {
 } // IECModifyGlobalVariable

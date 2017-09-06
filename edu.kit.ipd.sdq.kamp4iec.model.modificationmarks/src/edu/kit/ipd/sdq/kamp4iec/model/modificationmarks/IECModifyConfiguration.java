@@ -14,5 +14,5 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
  * @model
  * @generated
  */
-public interface IECModifyConfiguration extends IECModifyElement<Configuration> {
+public interface IECModifyConfiguration extends IECModifyComponent<Configuration> {
 } // IECModifyConfiguration

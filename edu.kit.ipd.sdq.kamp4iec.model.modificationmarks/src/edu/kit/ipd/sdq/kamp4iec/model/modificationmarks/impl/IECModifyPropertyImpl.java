@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty;
 
@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class IECModifyPropertyImpl extends IECModifyElementImpl<IECProperty> implements IECModifyProperty {
+public class IECModifyPropertyImpl extends IECModifyComponentImpl<IECProperty> implements IECModifyProperty {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

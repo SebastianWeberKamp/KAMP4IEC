@@ -12,7 +12,7 @@ import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 
 public class IECDifferenceCalculation extends AbstractDifferenceCalculation<IECArchitectureVersion>{
@@ -54,7 +54,7 @@ public class IECDifferenceCalculation extends AbstractDifferenceCalculation<IECA
 						architectureElement, architectureElement.getName(), null, BasicActivity.ADD, 
 						IECDifferenceCalculation.createAddElementDescription(architectureElement));
 				workplan.add(newActivity);
-				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
+//				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
 				break;
 			} 
 			if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
@@ -63,7 +63,7 @@ public class IECDifferenceCalculation extends AbstractDifferenceCalculation<IECA
 						architectureElement, architectureElement.getName(), null, BasicActivity.REMOVE, 
 						IECDifferenceCalculation.createRemoveElementDescription(architectureElement));
 				workplan.add(newActivity);
-				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
+//				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
 				break;
 			}
 		}

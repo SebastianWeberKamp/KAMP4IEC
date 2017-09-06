@@ -2,6 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -13,13 +17,12 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getContainsProgram <em>Contains Program</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInstantiatesProgram <em>Instantiates Program</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getDeclaresGlobalVariable <em>Declares Global Variable</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getAccessesProperty <em>Accesses Property</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum <em>Uses Enum</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getType <em>Type</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces <em>Interfaces</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getReadsGlobalVariable <em>Reads Global Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getWritesGlobalVariable <em>Writes Global Variable</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getReadsProperty <em>Reads Property</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getWritesProperty <em>Writes Property</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration()
@@ -28,24 +31,24 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Configuration extends IECComponent {
 	/**
-	 * Returns the value of the '<em><b>Contains Program</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Instantiates Program</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Contains Program</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Instantiates Program</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains Program</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_ContainsProgram()
+	 * @return the value of the '<em>Instantiates Program</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_InstantiatesProgram()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Program> getContainsProgram();
+	EList<Program> getInstantiatesProgram();
 
 	/**
 	 * Returns the value of the '<em><b>Declares Global Variable</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Declares Global Variable</em>' containment reference list isn't clear,
@@ -60,113 +63,67 @@ public interface Configuration extends IECComponent {
 	EList<GlobalVariable> getDeclaresGlobalVariable();
 
 	/**
-	 * Returns the value of the '<em><b>Accesses Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty}.
+	 * Returns the value of the '<em><b>Reads Global Variable</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Accesses Property</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Reads Global Variable</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accesses Property</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_AccessesProperty()
+	 * @return the value of the '<em>Reads Global Variable</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_ReadsGlobalVariable()
 	 * @model
 	 * @generated
 	 */
-	EList<IECProperty> getAccessesProperty();
+	EList<GlobalVariable> getReadsGlobalVariable();
 
 	/**
-	 * Returns the value of the '<em><b>Accesses Global Variable</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable}.
+	 * Returns the value of the '<em><b>Writes Global Variable</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Accesses Global Variable</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Writes Global Variable</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accesses Global Variable</em>' reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_AccessesGlobalVariable()
+	 * @return the value of the '<em>Writes Global Variable</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_WritesGlobalVariable()
 	 * @model
 	 * @generated
 	 */
-	EList<GlobalVariable> getAccessesGlobalVariable();
+	EList<GlobalVariable> getWritesGlobalVariable();
 
 	/**
-	 * Returns the value of the '<em><b>Uses Enum</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Reads Property</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Uses Enum</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Reads Property</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uses Enum</em>' containment reference.
-	 * @see #setUsesEnum(Enums)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_UsesEnum()
-	 * @model containment="true"
+	 * @return the value of the '<em>Reads Property</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_ReadsProperty()
+	 * @model
 	 * @generated
 	 */
-	Enums getUsesEnum();
+	EList<IECProperty> getReadsProperty();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getUsesEnum <em>Uses Enum</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uses Enum</em>' containment reference.
-	 * @see #getUsesEnum()
-	 * @generated
-	 */
-	void setUsesEnum(Enums value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Writes Property</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type</em>' reference isn't clear,
+	 * If the meaning of the '<em>Writes Property</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_Type()
-	 * @model required="true"
+	 * @return the value of the '<em>Writes Property</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_WritesProperty()
+	 * @model
 	 * @generated
 	 */
-	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration getType();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getType <em>Type</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' reference.
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Configuration value);
-
-	/**
-	 * Returns the value of the '<em><b>Interfaces</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Interfaces</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Interfaces</em>' containment reference.
-	 * @see #setInterfaces(Interfaces)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_Interfaces()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Interfaces getInterfaces();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getInterfaces <em>Interfaces</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Interfaces</em>' containment reference.
-	 * @see #getInterfaces()
-	 * @generated
-	 */
-	void setInterfaces(Interfaces value);
+	EList<IECProperty> getWritesProperty();
 
 } // Configuration

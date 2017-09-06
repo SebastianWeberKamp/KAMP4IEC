@@ -7,9 +7,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -104,17 +102,17 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECModificationmarksPackage.IEC_MODIFY_ELEMENT: {
-				IECModifyElement<?> iecModifyElement = (IECModifyElement<?>)theEObject;
-				T1 result = caseIECModifyElement(iecModifyElement);
-				if (result == null) result = caseAbstractModification(iecModifyElement);
+			case IECModificationmarksPackage.IEC_MODIFY_COMPONENT: {
+				IECModifyComponent<?> iecModifyComponent = (IECModifyComponent<?>)theEObject;
+				T1 result = caseIECModifyComponent(iecModifyComponent);
+				if (result == null) result = caseAbstractModification(iecModifyComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModificationmarksPackage.IEC_MODIFY_GLOBAL_VARIABLE: {
 				IECModifyGlobalVariable iecModifyGlobalVariable = (IECModifyGlobalVariable)theEObject;
 				T1 result = caseIECModifyGlobalVariable(iecModifyGlobalVariable);
-				if (result == null) result = caseIECModifyElement(iecModifyGlobalVariable);
+				if (result == null) result = caseIECModifyComponent(iecModifyGlobalVariable);
 				if (result == null) result = caseAbstractModification(iecModifyGlobalVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -122,7 +120,7 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 			case IECModificationmarksPackage.IEC_MODIFY_FUNCTION_BLOCK: {
 				IECModifyFunctionBlock iecModifyFunctionBlock = (IECModifyFunctionBlock)theEObject;
 				T1 result = caseIECModifyFunctionBlock(iecModifyFunctionBlock);
-				if (result == null) result = caseIECModifyElement(iecModifyFunctionBlock);
+				if (result == null) result = caseIECModifyComponent(iecModifyFunctionBlock);
 				if (result == null) result = caseAbstractModification(iecModifyFunctionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -130,7 +128,7 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 			case IECModificationmarksPackage.IEC_MODIFY_FUNCTION: {
 				IECModifyFunction iecModifyFunction = (IECModifyFunction)theEObject;
 				T1 result = caseIECModifyFunction(iecModifyFunction);
-				if (result == null) result = caseIECModifyElement(iecModifyFunction);
+				if (result == null) result = caseIECModifyComponent(iecModifyFunction);
 				if (result == null) result = caseAbstractModification(iecModifyFunction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -138,7 +136,7 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 			case IECModificationmarksPackage.IEC_MODIFY_INTERFACE: {
 				IECModifyInterface iecModifyInterface = (IECModifyInterface)theEObject;
 				T1 result = caseIECModifyInterface(iecModifyInterface);
-				if (result == null) result = caseIECModifyElement(iecModifyInterface);
+				if (result == null) result = caseIECModifyComponent(iecModifyInterface);
 				if (result == null) result = caseAbstractModification(iecModifyInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -146,7 +144,7 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 			case IECModificationmarksPackage.IEC_MODIFY_METHOD: {
 				IECModifyMethod iecModifyMethod = (IECModifyMethod)theEObject;
 				T1 result = caseIECModifyMethod(iecModifyMethod);
-				if (result == null) result = caseIECModifyElement(iecModifyMethod);
+				if (result == null) result = caseIECModifyComponent(iecModifyMethod);
 				if (result == null) result = caseAbstractModification(iecModifyMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -154,47 +152,39 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 			case IECModificationmarksPackage.IEC_MODIFY_ABSTRACT_METHOD: {
 				IECModifyAbstractMethod iecModifyAbstractMethod = (IECModifyAbstractMethod)theEObject;
 				T1 result = caseIECModifyAbstractMethod(iecModifyAbstractMethod);
-				if (result == null) result = caseIECModifyElement(iecModifyAbstractMethod);
+				if (result == null) result = caseIECModifyComponent(iecModifyAbstractMethod);
 				if (result == null) result = caseAbstractModification(iecModifyAbstractMethod);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECModificationmarksPackage.IEC_MODIFY_ABSTRACT_PROPERTY: {
-				IECModifyAbstractProperty iecModifyAbstractProperty = (IECModifyAbstractProperty)theEObject;
-				T1 result = caseIECModifyAbstractProperty(iecModifyAbstractProperty);
-				if (result == null) result = caseIECModifyElement(iecModifyAbstractProperty);
-				if (result == null) result = caseAbstractModification(iecModifyAbstractProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModificationmarksPackage.IEC_MODIFY_PROPERTY: {
 				IECModifyProperty iecModifyProperty = (IECModifyProperty)theEObject;
 				T1 result = caseIECModifyProperty(iecModifyProperty);
-				if (result == null) result = caseIECModifyElement(iecModifyProperty);
+				if (result == null) result = caseIECModifyComponent(iecModifyProperty);
 				if (result == null) result = caseAbstractModification(iecModifyProperty);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECModificationmarksPackage.IEC_MODIFY_ABSTRACT_PROPERTY: {
+				IECModifyAbstractProperty iecModifyAbstractProperty = (IECModifyAbstractProperty)theEObject;
+				T1 result = caseIECModifyAbstractProperty(iecModifyAbstractProperty);
+				if (result == null) result = caseIECModifyComponent(iecModifyAbstractProperty);
+				if (result == null) result = caseAbstractModification(iecModifyAbstractProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModificationmarksPackage.IEC_MODIFY_PROGRAM: {
 				IECModifyProgram iecModifyProgram = (IECModifyProgram)theEObject;
 				T1 result = caseIECModifyProgram(iecModifyProgram);
-				if (result == null) result = caseIECModifyElement(iecModifyProgram);
+				if (result == null) result = caseIECModifyComponent(iecModifyProgram);
 				if (result == null) result = caseAbstractModification(iecModifyProgram);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECModificationmarksPackage.IEC_MODIFY_ENUM: {
-				IECModifyEnum iecModifyEnum = (IECModifyEnum)theEObject;
-				T1 result = caseIECModifyEnum(iecModifyEnum);
-				if (result == null) result = caseIECModifyElement(iecModifyEnum);
-				if (result == null) result = caseAbstractModification(iecModifyEnum);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECModificationmarksPackage.IEC_MODIFY_CONFIGURATION: {
 				IECModifyConfiguration iecModifyConfiguration = (IECModifyConfiguration)theEObject;
 				T1 result = caseIECModifyConfiguration(iecModifyConfiguration);
-				if (result == null) result = caseIECModifyElement(iecModifyConfiguration);
+				if (result == null) result = caseIECModifyComponent(iecModifyConfiguration);
 				if (result == null) result = caseAbstractModification(iecModifyConfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -264,17 +254,17 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Modify Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>IEC Modify Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Modify Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>IEC Modify Component</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends IECComponent> T1 caseIECModifyElement(IECModifyElement<T> object) {
+	public <T extends IECComponent> T1 caseIECModifyComponent(IECModifyComponent<T> object) {
 		return null;
 	}
 
@@ -410,21 +400,6 @@ public class IECModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseIECModifyProgram(IECModifyProgram object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Modify Enum</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Modify Enum</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T1 caseIECModifyEnum(IECModifyEnum object) {
 		return null;
 	}
 

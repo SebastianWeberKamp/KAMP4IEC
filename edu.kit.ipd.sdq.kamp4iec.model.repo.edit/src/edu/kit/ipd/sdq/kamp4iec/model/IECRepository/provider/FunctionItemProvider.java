@@ -4,11 +4,15 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -39,8 +43,54 @@ public class FunctionItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addCallsFunctionPropertyDescriptor(object);
+			addHasDerivedReturnTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Calls Function feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsFunctionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_CallsFunction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_CallsFunction_feature", "_UI_Function_type"),
+				 IECRepositoryPackage.Literals.FUNCTION__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Has Derived Return Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHasDerivedReturnTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_HasDerivedReturnType_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_HasDerivedReturnType_feature", "_UI_Function_type"),
+				 IECRepositoryPackage.Literals.FUNCTION__HAS_DERIVED_RETURN_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**

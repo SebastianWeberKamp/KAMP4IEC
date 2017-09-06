@@ -8,7 +8,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 //import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 import edu.kit.ipd.sdq.kamp.util.FileAndFolderManagement;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion.ArchitectureVersionParams;
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.AbstractKAMP4IECModificationRepository;
@@ -31,7 +30,6 @@ public class IECArchitectureVersionPersistency extends AbstractKAMP4IECArchitect
 		archParams.fieldOfActivityRepository = (IECFieldOfActivityAnnotationsRepository)loadEmfModelFromResource(folderpath, internalFieldOfActivityFilePath, loadResourceSet);
 		archParams.iecRepository = (Repository)loadEmfModelFromResource(folderpath, internalIecRepositoryFilePath, loadResourceSet);
 		archParams.configuration = (Configuration)loadEmfModelFromResource(folderpath, internalConfigurationFilePath, loadResourceSet);
-		archParams.componentInternalDependencyRepository = (ComponentInternalDependenciesRepository)loadEmfModelFromResource(folderpath, internalComponentInternalDependencyRepositoryFilePath, loadResourceSet);
 		archParams.modificationMarkRepository = (AbstractKAMP4IECModificationRepository<?>)loadEmfModelFromResource(folderpath, internalModFilePath, loadResourceSet);
 		
 		return new IECArchitectureVersion(archParams);
@@ -49,7 +47,6 @@ public class IECArchitectureVersionPersistency extends AbstractKAMP4IECArchitect
 		archParams.fieldOfActivityRepository = null;
 		archParams.iecRepository = null;
 		archParams.configuration = null;
-		archParams.componentInternalDependencyRepository = null;
 		archParams.modificationMarkRepository = null;
 		
 		archParams.name = versionname;
@@ -59,8 +56,6 @@ public class IECArchitectureVersionPersistency extends AbstractKAMP4IECArchitect
 			archParams.iecRepository = (Repository)loadEmfModelFromResource(internalIecRepositoryFile.getFullPath().toString(), null, loadResourceSet);
 		if (internalConfigurationFile != null && internalConfigurationFile.exists())
 			archParams.configuration = (Configuration)loadEmfModelFromResource(internalConfigurationFile.getFullPath().toString(), null, loadResourceSet);
-		if (internalComponentInternalDependencyRepositoryFile != null && internalComponentInternalDependencyRepositoryFile.exists())
-			archParams.componentInternalDependencyRepository = (ComponentInternalDependenciesRepository)loadEmfModelFromResource(internalComponentInternalDependencyRepositoryFile.getFullPath().toString(), null, loadResourceSet);
 		if (internalModFile != null && internalModFile.exists())
 			archParams.modificationMarkRepository = (AbstractKAMP4IECModificationRepository<?>)loadEmfModelFromResource(internalModFile.getFullPath().toString(), null, loadResourceSet);
 		return new IECArchitectureVersion(archParams);

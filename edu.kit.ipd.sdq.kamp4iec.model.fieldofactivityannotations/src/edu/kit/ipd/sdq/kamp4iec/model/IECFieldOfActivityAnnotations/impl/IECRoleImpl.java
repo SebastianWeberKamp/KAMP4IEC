@@ -6,9 +6,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfAc
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECPerson;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRole;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRoleList;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -82,7 +79,7 @@ public abstract class IECRoleImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECComponent> components;
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent> components;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -182,9 +179,9 @@ public abstract class IECRoleImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECComponent> getComponents() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent> getComponents() {
 		if (components == null) {
-			components = new EObjectResolvingEList<IECComponent>(IECComponent.class, this, IECFieldOfActivityAnnotationsPackage.IEC_ROLE__COMPONENTS);
+			components = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent.class, this, IECFieldOfActivityAnnotationsPackage.IEC_ROLE__COMPONENTS);
 		}
 		return components;
 	}
@@ -279,7 +276,7 @@ public abstract class IECRoleImpl extends MinimalEObjectImpl.Container implement
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_ROLE__COMPONENTS:
 				getComponents().clear();
-				getComponents().addAll((Collection<? extends IECComponent>)newValue);
+				getComponents().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

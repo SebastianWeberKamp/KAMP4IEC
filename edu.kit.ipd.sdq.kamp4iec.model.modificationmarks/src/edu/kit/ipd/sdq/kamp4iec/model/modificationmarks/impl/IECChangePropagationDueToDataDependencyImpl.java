@@ -9,7 +9,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPack
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
@@ -45,7 +44,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getPropertyModifications <em>Property Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getProgramModifications <em>Program Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getConfigurationModifications <em>Configuration Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getEnumModifications <em>Enum Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getMethodImplementationModifications <em>Method Implementation Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl#getPropertyImplementationModifications <em>Property Implementation Modifications</em>}</li>
  * </ul>
@@ -132,16 +130,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * @ordered
 	 */
 	protected EList<IECModifyConfiguration> configurationModifications;
-
-	/**
-	 * The cached value of the '{@link #getEnumModifications() <em>Enum Modifications</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEnumModifications()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IECModifyEnum> enumModifications;
 
 	/**
 	 * The cached value of the '{@link #getMethodImplementationModifications() <em>Method Implementation Modifications</em>}' containment reference list.
@@ -283,18 +271,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECModifyEnum> getEnumModifications() {
-		if (enumModifications == null) {
-			enumModifications = new EObjectContainmentEList<IECModifyEnum>(IECModifyEnum.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS);
-		}
-		return enumModifications;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<IECModifyMethod> getMethodImplementationModifications() {
 		if (methodImplementationModifications == null) {
 			methodImplementationModifications = new EObjectContainmentEList<IECModifyMethod>(IECModifyMethod.class, this, IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS);
@@ -338,8 +314,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return ((InternalEList<?>)getProgramModifications()).basicRemove(otherEnd, msgs);
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS:
 				return ((InternalEList<?>)getConfigurationModifications()).basicRemove(otherEnd, msgs);
-			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
-				return ((InternalEList<?>)getEnumModifications()).basicRemove(otherEnd, msgs);
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
 				return ((InternalEList<?>)getMethodImplementationModifications()).basicRemove(otherEnd, msgs);
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
@@ -372,8 +346,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return getProgramModifications();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS:
 				return getConfigurationModifications();
-			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
-				return getEnumModifications();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
 				return getMethodImplementationModifications();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:
@@ -423,10 +395,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				getConfigurationModifications().clear();
 				getConfigurationModifications().addAll((Collection<? extends IECModifyConfiguration>)newValue);
 				return;
-			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
-				getEnumModifications().clear();
-				getEnumModifications().addAll((Collection<? extends IECModifyEnum>)newValue);
-				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
 				getMethodImplementationModifications().clear();
 				getMethodImplementationModifications().addAll((Collection<? extends IECModifyMethod>)newValue);
@@ -471,9 +439,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS:
 				getConfigurationModifications().clear();
 				return;
-			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
-				getEnumModifications().clear();
-				return;
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
 				getMethodImplementationModifications().clear();
 				return;
@@ -508,8 +473,6 @@ public class IECChangePropagationDueToDataDependencyImpl extends ChangePropagati
 				return programModifications != null && !programModifications.isEmpty();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS:
 				return configurationModifications != null && !configurationModifications.isEmpty();
-			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ENUM_MODIFICATIONS:
-				return enumModifications != null && !enumModifications.isEmpty();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS:
 				return methodImplementationModifications != null && !methodImplementationModifications.isEmpty();
 			case IECModificationmarksPackage.IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS:

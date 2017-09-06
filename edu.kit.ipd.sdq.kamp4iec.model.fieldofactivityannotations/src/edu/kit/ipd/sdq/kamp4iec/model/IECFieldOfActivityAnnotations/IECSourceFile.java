@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IEC Source File</b></em>'.
@@ -59,12 +57,12 @@ public interface IECSourceFile extends IECFile {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component</em>' reference.
-	 * @see #setComponent(IECComponent)
+	 * @see #setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECSourceFile_Component()
 	 * @model
 	 * @generated
 	 */
-	IECComponent getComponent();
+	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent getComponent();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFile#getComponent <em>Component</em>}' reference.
@@ -74,6 +72,6 @@ public interface IECSourceFile extends IECFile {
 	 * @see #getComponent()
 	 * @generated
 	 */
-	void setComponent(IECComponent value);
+	void setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent value);
 
 } // IECSourceFile

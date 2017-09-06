@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -102,7 +100,7 @@ public interface IECRole extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Components</em>' reference list isn't clear,
@@ -114,6 +112,6 @@ public interface IECRole extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<IECComponent> getComponents();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent> getComponents();
 
 } // IECRole

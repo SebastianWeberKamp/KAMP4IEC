@@ -2,8 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import org.eclipse.emf.ecore.EFactory;
 
 /**
@@ -51,13 +50,13 @@ public interface IECModificationmarksFactory extends EFactory {
 	IECChangePropagationDueToDataDependency createIECChangePropagationDueToDataDependency();
 
 	/**
-	 * Returns a new object of class '<em>IEC Modify Element</em>'.
+	 * Returns a new object of class '<em>IEC Modify Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Modify Element</em>'.
+	 * @return a new object of class '<em>IEC Modify Component</em>'.
 	 * @generated
 	 */
-	<T extends IECComponent> IECModifyElement<T> createIECModifyElement();
+	<T extends IECComponent> IECModifyComponent<T> createIECModifyComponent();
 
 	/**
 	 * Returns a new object of class '<em>IEC Modify Global Variable</em>'.
@@ -139,15 +138,6 @@ public interface IECModificationmarksFactory extends EFactory {
 	 * @generated
 	 */
 	IECModifyProgram createIECModifyProgram();
-
-	/**
-	 * Returns a new object of class '<em>IEC Modify Enum</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Modify Enum</em>'.
-	 * @generated
-	 */
-	IECModifyEnum createIECModifyEnum();
 
 	/**
 	 * Returns a new object of class '<em>IEC Modify Configuration</em>'.

@@ -141,26 +141,26 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement} instances.
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IECModifyElementItemProvider iecModifyElementItemProvider;
+	protected IECModifyComponentItemProvider iecModifyComponentItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement}.
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIECModifyElementAdapter() {
-		if (iecModifyElementItemProvider == null) {
-			iecModifyElementItemProvider = new IECModifyElementItemProvider(this);
+	public Adapter createIECModifyComponentAdapter() {
+		if (iecModifyComponentItemProvider == null) {
+			iecModifyComponentItemProvider = new IECModifyComponentItemProvider(this);
 		}
 
-		return iecModifyElementItemProvider;
+		return iecModifyComponentItemProvider;
 	}
 
 	/**
@@ -371,29 +371,6 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECModifyEnumItemProvider iecModifyEnumItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyEnum}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECModifyEnumAdapter() {
-		if (iecModifyEnumItemProvider == null) {
-			iecModifyEnumItemProvider = new IECModifyEnumItemProvider(this);
-		}
-
-		return iecModifyEnumItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -518,17 +495,16 @@ public class IECModificationmarksItemProviderAdapterFactory extends IECModificat
 		if (iecModificationRepositoryItemProvider != null) iecModificationRepositoryItemProvider.dispose();
 		if (iecSeedModificationsItemProvider != null) iecSeedModificationsItemProvider.dispose();
 		if (iecChangePropagationDueToDataDependencyItemProvider != null) iecChangePropagationDueToDataDependencyItemProvider.dispose();
-		if (iecModifyElementItemProvider != null) iecModifyElementItemProvider.dispose();
+		if (iecModifyComponentItemProvider != null) iecModifyComponentItemProvider.dispose();
 		if (iecModifyGlobalVariableItemProvider != null) iecModifyGlobalVariableItemProvider.dispose();
 		if (iecModifyFunctionBlockItemProvider != null) iecModifyFunctionBlockItemProvider.dispose();
 		if (iecModifyFunctionItemProvider != null) iecModifyFunctionItemProvider.dispose();
 		if (iecModifyInterfaceItemProvider != null) iecModifyInterfaceItemProvider.dispose();
 		if (iecModifyMethodItemProvider != null) iecModifyMethodItemProvider.dispose();
 		if (iecModifyAbstractMethodItemProvider != null) iecModifyAbstractMethodItemProvider.dispose();
-		if (iecModifyAbstractPropertyItemProvider != null) iecModifyAbstractPropertyItemProvider.dispose();
 		if (iecModifyPropertyItemProvider != null) iecModifyPropertyItemProvider.dispose();
+		if (iecModifyAbstractPropertyItemProvider != null) iecModifyAbstractPropertyItemProvider.dispose();
 		if (iecModifyProgramItemProvider != null) iecModifyProgramItemProvider.dispose();
-		if (iecModifyEnumItemProvider != null) iecModifyEnumItemProvider.dispose();
 		if (iecModifyConfigurationItemProvider != null) iecModifyConfigurationItemProvider.dispose();
 	}
 

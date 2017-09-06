@@ -1,20 +1,21 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
+import java.util.function.Function;
+
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 
 public enum IECActivityElementType implements AbstractActivityElementType {
 	//IEC-related
@@ -28,7 +29,6 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	PROPERTY(IECProperty.class),
 	ABSTRACTMETHOD(IECAbstractMethod.class),
 	METHOD(IECMethod.class),
-	ENUM(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum.class),
 	// annotation-related
 	SOURCECODEFILES(IECSourceFile.class),
 	METADATAFILES(IECMetadataFile.class),
@@ -53,7 +53,7 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	}
 
 	public static IECActivityElementType[] getTopLevelArchitectureActivityElementTypes() {	
-		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, ABSTRACTPROPERTY, ABSTRACTMETHOD, ENUM};
+		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, ABSTRACTPROPERTY, ABSTRACTMETHOD};
 	}
 
 }

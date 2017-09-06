@@ -2,20 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enums;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECAbstractProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Interfaces;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -69,42 +56,11 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case IECModelPackage.FUNCTION_BLOCK: return createFunctionBlock();
-			case IECModelPackage.FUNCTION: return createFunction();
 			case IECModelPackage.PROGRAM: return createProgram();
 			case IECModelPackage.CONFIGURATION: return createConfiguration();
-			case IECModelPackage.GLOBAL_VARIABLE: return createGlobalVariable();
-			case IECModelPackage.IEC_METHOD: return createIECMethod();
-			case IECModelPackage.IEC_PROPERTY: return createIECProperty();
-			case IECModelPackage.IEC_ABSTRACT_PROPERTY: return createIECAbstractProperty();
-			case IECModelPackage.IEC_ABSTRACT_METHOD: return createIECAbstractMethod();
-			case IECModelPackage.INTERFACES: return createInterfaces();
-			case IECModelPackage.IEC_INTERFACE: return createIECInterface();
-			case IECModelPackage.ENUMS: return createEnums();
-			case IECModelPackage.ENUM: return createEnum();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FunctionBlock createFunctionBlock() {
-		FunctionBlockImpl functionBlock = new FunctionBlockImpl();
-		return functionBlock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Function createFunction() {
-		FunctionImpl function = new FunctionImpl();
-		return function;
 	}
 
 	/**
@@ -125,96 +81,6 @@ public class IECModelFactoryImpl extends EFactoryImpl implements IECModelFactory
 	public Configuration createConfiguration() {
 		ConfigurationImpl configuration = new ConfigurationImpl();
 		return configuration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECInterface createIECInterface() {
-		IECInterfaceImpl iecInterface = new IECInterfaceImpl();
-		return iecInterface;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public GlobalVariable createGlobalVariable() {
-		GlobalVariableImpl globalVariable = new GlobalVariableImpl();
-		return globalVariable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum createEnum() {
-		EnumImpl enum_ = new EnumImpl();
-		return enum_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECProperty createIECProperty() {
-		IECPropertyImpl iecProperty = new IECPropertyImpl();
-		return iecProperty;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECAbstractProperty createIECAbstractProperty() {
-		IECAbstractPropertyImpl iecAbstractProperty = new IECAbstractPropertyImpl();
-		return iecAbstractProperty;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECAbstractMethod createIECAbstractMethod() {
-		IECAbstractMethodImpl iecAbstractMethod = new IECAbstractMethodImpl();
-		return iecAbstractMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECMethod createIECMethod() {
-		IECMethodImpl iecMethod = new IECMethodImpl();
-		return iecMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Interfaces createInterfaces() {
-		InterfacesImpl interfaces = new InterfacesImpl();
-		return interfaces;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Enums createEnums() {
-		EnumsImpl enums = new EnumsImpl();
-		return enums;
 	}
 
 	/**

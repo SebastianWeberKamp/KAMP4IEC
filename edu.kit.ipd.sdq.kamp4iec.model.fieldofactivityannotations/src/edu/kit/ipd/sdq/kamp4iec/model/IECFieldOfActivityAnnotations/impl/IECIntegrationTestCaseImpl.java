@@ -5,9 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -41,7 +38,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * @generated
 	 * @ordered
 	 */
-	protected IECComponent component;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,10 +105,10 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECComponent getComponent() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent getComponent() {
 		if (component != null && component.eIsProxy()) {
 			InternalEObject oldComponent = (InternalEObject)component;
-			component = (IECComponent)eResolveProxy(oldComponent);
+			component = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)eResolveProxy(oldComponent);
 			if (component != oldComponent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT, oldComponent, component));
@@ -125,7 +122,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECComponent basicGetComponent() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent basicGetComponent() {
 		return component;
 	}
 
@@ -134,8 +131,8 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComponent(IECComponent newComponent) {
-		IECComponent oldComponent = component;
+	public void setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent newComponent) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent oldComponent = component;
 		component = newComponent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT, oldComponent, component));
@@ -214,7 +211,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 				setParent((IECTestSpecification)newValue);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT:
-				setComponent((IECComponent)newValue);
+				setComponent((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -232,7 +229,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 				setParent((IECTestSpecification)null);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT:
-				setComponent((IECComponent)null);
+				setComponent((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)null);
 				return;
 		}
 		super.eUnset(featureID);
