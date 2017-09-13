@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+
 import org.eclipse.emf.ecore.EFactory;
 
 /**
@@ -113,15 +114,6 @@ public interface IECModificationmarksFactory extends EFactory {
 	IECModifyAbstractMethod createIECModifyAbstractMethod();
 
 	/**
-	 * Returns a new object of class '<em>IEC Modify Abstract Property</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Modify Abstract Property</em>'.
-	 * @generated
-	 */
-	IECModifyAbstractProperty createIECModifyAbstractProperty();
-
-	/**
 	 * Returns a new object of class '<em>IEC Modify Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,6 +121,15 @@ public interface IECModificationmarksFactory extends EFactory {
 	 * @generated
 	 */
 	IECModifyProperty createIECModifyProperty();
+
+	/**
+	 * Returns a new object of class '<em>IEC Modify Abstract Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>IEC Modify Abstract Property</em>'.
+	 * @generated
+	 */
+	IECModifyAbstractProperty createIECModifyAbstractProperty();
 
 	/**
 	 * Returns a new object of class '<em>IEC Modify Program</em>'.

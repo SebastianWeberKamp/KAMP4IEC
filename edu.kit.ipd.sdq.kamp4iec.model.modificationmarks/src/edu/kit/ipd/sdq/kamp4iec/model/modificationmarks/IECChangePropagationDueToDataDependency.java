@@ -19,12 +19,12 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getGlobalVariableModifications <em>Global Variable Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getFunctionModifications <em>Function Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getInterfaceModifications <em>Interface Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodModifications <em>Method Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyModifications <em>Property Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getAbstractMethodModifications <em>Abstract Method Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getAbstractPropertyModifications <em>Abstract Property Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getProgramModifications <em>Program Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getConfigurationModifications <em>Configuration Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodImplementationModifications <em>Method Implementation Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyImplementationModifications <em>Property Implementation Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodModifications <em>Method Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyModifications <em>Property Modifications</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency()
@@ -97,7 +97,7 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	EList<IECModifyInterface> getInterfaceModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Method Modifications</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Abstract Method Modifications</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -105,15 +105,15 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Method Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_MethodModifications()
+	 * @return the value of the '<em>Abstract Method Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_AbstractMethodModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECModifyAbstractMethod> getMethodModifications();
+	EList<IECModifyAbstractMethod> getAbstractMethodModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Property Modifications</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Abstract Property Modifications</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -121,12 +121,12 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Property Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_PropertyModifications()
+	 * @return the value of the '<em>Abstract Property Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_AbstractPropertyModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECModifyAbstractProperty> getPropertyModifications();
+	EList<IECModifyAbstractProperty> getAbstractPropertyModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Program Modifications</b></em>' containment reference list.
@@ -161,7 +161,7 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	EList<IECModifyConfiguration> getConfigurationModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Method Implementation Modifications</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Method Modifications</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -169,15 +169,15 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Method Implementation Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_MethodImplementationModifications()
+	 * @return the value of the '<em>Method Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_MethodModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECModifyMethod> getMethodImplementationModifications();
+	EList<IECModifyMethod> getMethodModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Property Implementation Modifications</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Property Modifications</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -185,11 +185,11 @@ public interface IECChangePropagationDueToDataDependency extends ChangePropagati
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Property Implementation Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_PropertyImplementationModifications()
+	 * @return the value of the '<em>Property Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECChangePropagationDueToDataDependency_PropertyModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECModifyProperty> getPropertyImplementationModifications();
+	EList<IECModifyProperty> getPropertyModifications();
 
 } // IECChangePropagationDueToDataDependency

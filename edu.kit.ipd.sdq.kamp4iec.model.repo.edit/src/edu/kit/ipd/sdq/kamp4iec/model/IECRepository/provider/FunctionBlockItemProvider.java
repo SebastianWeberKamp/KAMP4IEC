@@ -47,7 +47,9 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addImplementsPropertyDescriptor(object);
 			addInstantiatesInterfacePropertyDescriptor(object);
+			addInstantiatesFunctionBlockPropertyDescriptor(object);
 			addReadsGlobalVariablePropertyDescriptor(object);
 			addWritesGlobalVariablePropertyDescriptor(object);
 			addReadsPropertyPropertyDescriptor(object);
@@ -56,6 +58,28 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			addCallsFunctionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Implements feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addImplementsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_Implements_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_Implements_feature", "_UI_FunctionBlock_type"),
+				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__IMPLEMENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -72,6 +96,28 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 				 getString("_UI_FunctionBlock_InstantiatesInterface_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_InstantiatesInterface_feature", "_UI_FunctionBlock_type"),
 				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__INSTANTIATES_INTERFACE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Instantiates Function Block feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInstantiatesFunctionBlockPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_InstantiatesFunctionBlock_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_InstantiatesFunctionBlock_feature", "_UI_FunctionBlock_type"),
+				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK,
 				 true,
 				 false,
 				 true,
@@ -226,8 +272,6 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_METHOD);
 			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY);
-			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__IMPLEMENTS);
-			childrenFeatures.add(IECRepositoryPackage.Literals.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK);
 		}
 		return childrenFeatures;
 	}
@@ -285,8 +329,6 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 		switch (notification.getFeatureID(FunctionBlock.class)) {
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_METHOD:
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_PROPERTY:
-			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
-			case IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -313,16 +355,6 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_PROPERTY,
 				 IECRepositoryFactory.eINSTANCE.createIECProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__IMPLEMENTS,
-				 IECRepositoryFactory.eINSTANCE.createIECInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK,
-				 IECRepositoryFactory.eINSTANCE.createFunctionBlock()));
 	}
 
 }

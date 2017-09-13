@@ -10,18 +10,15 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty;
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -71,14 +68,14 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	protected EList<IECProperty> hasProperty;
 
 	/**
-	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' containment reference.
+	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getImplements()
 	 * @generated
 	 * @ordered
 	 */
-	protected IECInterface implements_;
+	protected EList<IECInterface> implements_;
 
 	/**
 	 * The cached value of the '{@link #getInstantiatesInterface() <em>Instantiates Interface</em>}' reference list.
@@ -91,7 +88,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	protected EList<IECInterface> instantiatesInterface;
 
 	/**
-	 * The cached value of the '{@link #getInstantiatesFunctionBlock() <em>Instantiates Function Block</em>}' containment reference list.
+	 * The cached value of the '{@link #getInstantiatesFunctionBlock() <em>Instantiates Function Block</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInstantiatesFunctionBlock()
@@ -128,7 +125,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> readsProperty;
+	protected EList<IsProperty> readsProperty;
 
 	/**
 	 * The cached value of the '{@link #getWritesProperty() <em>Writes Property</em>}' reference list.
@@ -138,7 +135,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> writesProperty;
+	protected EList<IsProperty> writesProperty;
 
 	/**
 	 * The cached value of the '{@link #getCallsMethod() <em>Calls Method</em>}' reference list.
@@ -148,7 +145,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethod> callsMethod;
+	protected EList<IsMethod> callsMethod;
 
 	/**
 	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
@@ -208,42 +205,11 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECInterface getImplements() {
+	public EList<IECInterface> getImplements() {
+		if (implements_ == null) {
+			implements_ = new EObjectResolvingEList<IECInterface>(IECInterface.class, this, IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS);
+		}
 		return implements_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetImplements(IECInterface newImplements, NotificationChain msgs) {
-		IECInterface oldImplements = implements_;
-		implements_ = newImplements;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, oldImplements, newImplements);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImplements(IECInterface newImplements) {
-		if (newImplements != implements_) {
-			NotificationChain msgs = null;
-			if (implements_ != null)
-				msgs = ((InternalEObject)implements_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, null, msgs);
-			if (newImplements != null)
-				msgs = ((InternalEObject)newImplements).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, null, msgs);
-			msgs = basicSetImplements(newImplements, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS, newImplements, newImplements));
 	}
 
 	/**
@@ -265,7 +231,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 */
 	public EList<FunctionBlock> getInstantiatesFunctionBlock() {
 		if (instantiatesFunctionBlock == null) {
-			instantiatesFunctionBlock = new EObjectContainmentEList<FunctionBlock>(FunctionBlock.class, this, IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK);
+			instantiatesFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK);
 		}
 		return instantiatesFunctionBlock;
 	}
@@ -299,9 +265,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getReadsProperty() {
+	public EList<IsProperty> getReadsProperty() {
 		if (readsProperty == null) {
-			readsProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECRepositoryPackage.FUNCTION_BLOCK__READS_PROPERTY);
+			readsProperty = new EObjectResolvingEList<IsProperty>(IsProperty.class, this, IECRepositoryPackage.FUNCTION_BLOCK__READS_PROPERTY);
 		}
 		return readsProperty;
 	}
@@ -311,9 +277,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getWritesProperty() {
+	public EList<IsProperty> getWritesProperty() {
 		if (writesProperty == null) {
-			writesProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECRepositoryPackage.FUNCTION_BLOCK__WRITES_PROPERTY);
+			writesProperty = new EObjectResolvingEList<IsProperty>(IsProperty.class, this, IECRepositoryPackage.FUNCTION_BLOCK__WRITES_PROPERTY);
 		}
 		return writesProperty;
 	}
@@ -323,9 +289,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethod> getCallsMethod() {
+	public EList<IsMethod> getCallsMethod() {
 		if (callsMethod == null) {
-			callsMethod = new EObjectResolvingEList<IECMethod>(IECMethod.class, this, IECRepositoryPackage.FUNCTION_BLOCK__CALLS_METHOD);
+			callsMethod = new EObjectResolvingEList<IsMethod>(IsMethod.class, this, IECRepositoryPackage.FUNCTION_BLOCK__CALLS_METHOD);
 		}
 		return callsMethod;
 	}
@@ -354,10 +320,6 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return ((InternalEList<?>)getHasMethod()).basicRemove(otherEnd, msgs);
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				return ((InternalEList<?>)getHasProperty()).basicRemove(otherEnd, msgs);
-			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
-				return basicSetImplements(null, msgs);
-			case IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK:
-				return ((InternalEList<?>)getInstantiatesFunctionBlock()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -414,7 +376,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				getHasProperty().addAll((Collection<? extends IECProperty>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
-				setImplements((IECInterface)newValue);
+				getImplements().clear();
+				getImplements().addAll((Collection<? extends IECInterface>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_INTERFACE:
 				getInstantiatesInterface().clear();
@@ -434,15 +397,15 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__READS_PROPERTY:
 				getReadsProperty().clear();
-				getReadsProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getReadsProperty().addAll((Collection<? extends IsProperty>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__WRITES_PROPERTY:
 				getWritesProperty().clear();
-				getWritesProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getWritesProperty().addAll((Collection<? extends IsProperty>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_METHOD:
 				getCallsMethod().clear();
-				getCallsMethod().addAll((Collection<? extends IECMethod>)newValue);
+				getCallsMethod().addAll((Collection<? extends IsMethod>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				getCallsFunction().clear();
@@ -467,7 +430,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				getHasProperty().clear();
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
-				setImplements((IECInterface)null);
+				getImplements().clear();
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_INTERFACE:
 				getInstantiatesInterface().clear();
@@ -510,7 +473,7 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECRepositoryPackage.FUNCTION_BLOCK__HAS_PROPERTY:
 				return hasProperty != null && !hasProperty.isEmpty();
 			case IECRepositoryPackage.FUNCTION_BLOCK__IMPLEMENTS:
-				return implements_ != null;
+				return implements_ != null && !implements_.isEmpty();
 			case IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_INTERFACE:
 				return instantiatesInterface != null && !instantiatesInterface.isEmpty();
 			case IECRepositoryPackage.FUNCTION_BLOCK__INSTANTIATES_FUNCTION_BLOCK:

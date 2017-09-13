@@ -7,9 +7,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -54,7 +53,7 @@ public interface Program extends IECComponent {
 	EList<IECInterface> getInstantiatesInterface();
 
 	/**
-	 * Returns the value of the '<em><b>Instantiates Function Block</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Instantiates Function Block</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -62,9 +61,9 @@ public interface Program extends IECComponent {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Instantiates Function Block</em>' containment reference list.
+	 * @return the value of the '<em>Instantiates Function Block</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_InstantiatesFunctionBlock()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<FunctionBlock> getInstantiatesFunctionBlock();
@@ -119,7 +118,7 @@ public interface Program extends IECComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Reads Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reads Property</em>' reference list isn't clear,
@@ -131,11 +130,11 @@ public interface Program extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<IECProperty> getReadsProperty();
+	EList<IsProperty> getReadsProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Writes Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Writes Property</em>' reference list isn't clear,
@@ -147,11 +146,11 @@ public interface Program extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<IECProperty> getWritesProperty();
+	EList<IsProperty> getWritesProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Method</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calls Method</em>' reference list isn't clear,
@@ -163,7 +162,7 @@ public interface Program extends IECComponent {
 	 * @model
 	 * @generated
 	 */
-	EList<IECMethod> getCallsMethod();
+	EList<IsMethod> getCallsMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.

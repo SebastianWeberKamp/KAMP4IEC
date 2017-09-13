@@ -101,6 +101,7 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECMethod iecMethod = (IECMethod)theEObject;
 				T result = caseIECMethod(iecMethod);
 				if (result == null) result = caseIECComponent(iecMethod);
+				if (result == null) result = caseIsMethod(iecMethod);
 				if (result == null) result = caseIdentifier(iecMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -109,6 +110,7 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
 				if (result == null) result = caseIECComponent(iecInterface);
+				if (result == null) result = caseDerivedType(iecInterface);
 				if (result == null) result = caseIdentifier(iecInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -117,6 +119,7 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECProperty iecProperty = (IECProperty)theEObject;
 				T result = caseIECProperty(iecProperty);
 				if (result == null) result = caseIECComponent(iecProperty);
+				if (result == null) result = caseIsProperty(iecProperty);
 				if (result == null) result = caseIdentifier(iecProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -125,6 +128,7 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECAbstractProperty iecAbstractProperty = (IECAbstractProperty)theEObject;
 				T result = caseIECAbstractProperty(iecAbstractProperty);
 				if (result == null) result = caseIECComponent(iecAbstractProperty);
+				if (result == null) result = caseIsProperty(iecAbstractProperty);
 				if (result == null) result = caseIdentifier(iecAbstractProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -133,6 +137,7 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				IECAbstractMethod iecAbstractMethod = (IECAbstractMethod)theEObject;
 				T result = caseIECAbstractMethod(iecAbstractMethod);
 				if (result == null) result = caseIECComponent(iecAbstractMethod);
+				if (result == null) result = caseIsMethod(iecAbstractMethod);
 				if (result == null) result = caseIdentifier(iecAbstractMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -153,6 +158,18 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 			case IECRepositoryPackage.DERIVED_TYPE: {
 				DerivedType derivedType = (DerivedType)theEObject;
 				T result = caseDerivedType(derivedType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.IS_METHOD: {
+				IsMethod isMethod = (IsMethod)theEObject;
+				T result = caseIsMethod(isMethod);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.IS_PROPERTY: {
+				IsProperty isProperty = (IsProperty)theEObject;
+				T result = caseIsProperty(isProperty);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -337,6 +354,36 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseDerivedType(DerivedType object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Is Method</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Is Method</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIsMethod(IsMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Is Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Is Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIsProperty(IsProperty object) {
 		return null;
 	}
 

@@ -4,8 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.provider;
 
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationItemProvider;
-
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyElement;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent;
 
 import java.util.Collection;
 import java.util.List;
@@ -68,7 +67,7 @@ public class IECModifyElementItemProvider extends AbstractModificationItemProvid
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((IECModifyElement<?>)object).getId();
+		String label = ((IECModifyComponent<?>)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_IECModifyElement_type") :
 			getString("_UI_IECModifyElement_type") + " " + label;

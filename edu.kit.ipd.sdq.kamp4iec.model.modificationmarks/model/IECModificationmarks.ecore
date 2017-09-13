@@ -31,17 +31,17 @@
         upperBound="-1" eType="#//IECModifyFunction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
         upperBound="-1" eType="#//IECModifyInterface" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="methodModifications" upperBound="-1"
-        eType="#//IECModifyAbstractMethod" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyModifications"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractMethodModifications"
+        upperBound="-1" eType="#//IECModifyAbstractMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractPropertyModifications"
         upperBound="-1" eType="#//IECModifyAbstractProperty" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="programModifications" upperBound="-1"
         eType="#//IECModifyProgram" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configurationModifications"
         upperBound="-1" eType="#//IECModifyConfiguration" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="methodImplementationModifications"
-        upperBound="-1" eType="#//IECModifyMethod" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyImplementationModifications"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodModifications" upperBound="-1"
+        eType="#//IECModifyMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyModifications"
         upperBound="-1" eType="#//IECModifyProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECModifyComponent">

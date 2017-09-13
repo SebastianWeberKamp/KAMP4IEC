@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.*;
 
 import org.eclipse.emf.ecore.EClass;
@@ -181,9 +182,9 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECModifyAbstractProperty createIECModifyAbstractProperty() {
-		IECModifyAbstractPropertyImpl iecModifyAbstractProperty = new IECModifyAbstractPropertyImpl();
-		return iecModifyAbstractProperty;
+	public IECModifyProperty createIECModifyProperty() {
+		IECModifyPropertyImpl iecModifyProperty = new IECModifyPropertyImpl();
+		return iecModifyProperty;
 	}
 
 	/**
@@ -191,9 +192,9 @@ public class IECModificationmarksFactoryImpl extends EFactoryImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECModifyProperty createIECModifyProperty() {
-		IECModifyPropertyImpl iecModifyProperty = new IECModifyPropertyImpl();
-		return iecModifyProperty;
+	public IECModifyAbstractProperty createIECModifyAbstractProperty() {
+		IECModifyAbstractPropertyImpl iecModifyAbstractProperty = new IECModifyAbstractPropertyImpl();
+		return iecModifyAbstractProperty;
 	}
 
 	/**

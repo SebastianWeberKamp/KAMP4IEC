@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IECInterface extends IECComponent {
+public interface IECInterface extends IECComponent, DerivedType {
 	/**
 	 * Returns the value of the '<em><b>Has Method</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod}.
@@ -56,19 +56,29 @@ public interface IECInterface extends IECComponent {
 	EList<IECAbstractProperty> getHasProperty();
 
 	/**
-	 * Returns the value of the '<em><b>Extends Interface</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
+	 * Returns the value of the '<em><b>Extends Interface</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Extends Interface</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Extends Interface</em>' reference list.
+	 * @return the value of the '<em>Extends Interface</em>' reference.
+	 * @see #setExtendsInterface(IECInterface)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getIECInterface_ExtendsInterface()
 	 * @model
 	 * @generated
 	 */
-	EList<IECInterface> getExtendsInterface();
+	IECInterface getExtendsInterface();
+
+	/**
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getExtendsInterface <em>Extends Interface</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Extends Interface</em>' reference.
+	 * @see #getExtendsInterface()
+	 * @generated
+	 */
+	void setExtendsInterface(IECInterface value);
 
 } // IECInterface

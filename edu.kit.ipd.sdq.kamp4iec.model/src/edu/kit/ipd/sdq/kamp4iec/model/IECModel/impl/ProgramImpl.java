@@ -9,9 +9,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -60,7 +59,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	protected EList<IECInterface> instantiatesInterface;
 
 	/**
-	 * The cached value of the '{@link #getInstantiatesFunctionBlock() <em>Instantiates Function Block</em>}' containment reference list.
+	 * The cached value of the '{@link #getInstantiatesFunctionBlock() <em>Instantiates Function Block</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInstantiatesFunctionBlock()
@@ -107,7 +106,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> readsProperty;
+	protected EList<IsProperty> readsProperty;
 
 	/**
 	 * The cached value of the '{@link #getWritesProperty() <em>Writes Property</em>}' reference list.
@@ -117,7 +116,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> writesProperty;
+	protected EList<IsProperty> writesProperty;
 
 	/**
 	 * The cached value of the '{@link #getCallsMethod() <em>Calls Method</em>}' reference list.
@@ -127,7 +126,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECMethod> callsMethod;
+	protected EList<IsMethod> callsMethod;
 
 	/**
 	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
@@ -177,7 +176,7 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 */
 	public EList<FunctionBlock> getInstantiatesFunctionBlock() {
 		if (instantiatesFunctionBlock == null) {
-			instantiatesFunctionBlock = new EObjectContainmentEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK);
+			instantiatesFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK);
 		}
 		return instantiatesFunctionBlock;
 	}
@@ -223,9 +222,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getReadsProperty() {
+	public EList<IsProperty> getReadsProperty() {
 		if (readsProperty == null) {
-			readsProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.PROGRAM__READS_PROPERTY);
+			readsProperty = new EObjectResolvingEList<IsProperty>(IsProperty.class, this, IECModelPackage.PROGRAM__READS_PROPERTY);
 		}
 		return readsProperty;
 	}
@@ -235,9 +234,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getWritesProperty() {
+	public EList<IsProperty> getWritesProperty() {
 		if (writesProperty == null) {
-			writesProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.PROGRAM__WRITES_PROPERTY);
+			writesProperty = new EObjectResolvingEList<IsProperty>(IsProperty.class, this, IECModelPackage.PROGRAM__WRITES_PROPERTY);
 		}
 		return writesProperty;
 	}
@@ -247,9 +246,9 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECMethod> getCallsMethod() {
+	public EList<IsMethod> getCallsMethod() {
 		if (callsMethod == null) {
-			callsMethod = new EObjectResolvingEList<IECMethod>(IECMethod.class, this, IECModelPackage.PROGRAM__CALLS_METHOD);
+			callsMethod = new EObjectResolvingEList<IsMethod>(IsMethod.class, this, IECModelPackage.PROGRAM__CALLS_METHOD);
 		}
 		return callsMethod;
 	}
@@ -274,8 +273,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
-				return ((InternalEList<?>)getInstantiatesFunctionBlock()).basicRemove(otherEnd, msgs);
 			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
 				return ((InternalEList<?>)getDeclaresGlobalVariable()).basicRemove(otherEnd, msgs);
 		}
@@ -343,15 +340,15 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return;
 			case IECModelPackage.PROGRAM__READS_PROPERTY:
 				getReadsProperty().clear();
-				getReadsProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getReadsProperty().addAll((Collection<? extends IsProperty>)newValue);
 				return;
 			case IECModelPackage.PROGRAM__WRITES_PROPERTY:
 				getWritesProperty().clear();
-				getWritesProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getWritesProperty().addAll((Collection<? extends IsProperty>)newValue);
 				return;
 			case IECModelPackage.PROGRAM__CALLS_METHOD:
 				getCallsMethod().clear();
-				getCallsMethod().addAll((Collection<? extends IECMethod>)newValue);
+				getCallsMethod().addAll((Collection<? extends IsMethod>)newValue);
 				return;
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				getCallsFunction().clear();

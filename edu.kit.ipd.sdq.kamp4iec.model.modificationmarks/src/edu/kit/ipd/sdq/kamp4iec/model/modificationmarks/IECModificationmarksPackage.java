@@ -233,22 +233,22 @@ public interface IECModificationmarksPackage extends EPackage {
 	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__INTERFACE_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Method Modifications</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Abstract Method Modifications</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 4;
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ABSTRACT_METHOD_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Property Modifications</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Abstract Property Modifications</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 5;
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ABSTRACT_PROPERTY_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Program Modifications</b></em>' containment reference list.
@@ -269,22 +269,22 @@ public interface IECModificationmarksPackage extends EPackage {
 	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Method Implementation Modifications</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Method Modifications</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 8;
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 8;
 
 	/**
-	 * The feature id for the '<em><b>Property Implementation Modifications</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Property Modifications</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 9;
+	int IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of structural features of the '<em>IEC Change Propagation Due To Data Dependency</em>' class.
@@ -522,7 +522,6 @@ public interface IECModificationmarksPackage extends EPackage {
 	 * @ordered
 	 */
 	int IEC_MODIFY_FUNCTION_BLOCK_OPERATION_COUNT = IEC_MODIFY_COMPONENT_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyFunctionImpl <em>IEC Modify Function</em>}' class.
@@ -817,16 +816,6 @@ public interface IECModificationmarksPackage extends EPackage {
 	int IEC_MODIFY_ABSTRACT_METHOD_OPERATION_COUNT = IEC_MODIFY_COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl <em>IEC Modify Abstract Property</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyAbstractProperty()
-	 * @generated
-	 */
-	int IEC_MODIFY_ABSTRACT_PROPERTY = 12;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl <em>IEC Modify Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -898,6 +887,16 @@ public interface IECModificationmarksPackage extends EPackage {
 	 * @ordered
 	 */
 	int IEC_MODIFY_PROPERTY_OPERATION_COUNT = IEC_MODIFY_COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl <em>IEC Modify Abstract Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyAbstractProperty()
+	 * @generated
+	 */
+	int IEC_MODIFY_ABSTRACT_PROPERTY = 12;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -1205,6 +1204,28 @@ public interface IECModificationmarksPackage extends EPackage {
 	EReference getIECChangePropagationDueToDataDependency_InterfaceModifications();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getAbstractMethodModifications <em>Abstract Method Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abstract Method Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getAbstractMethodModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_AbstractMethodModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getAbstractPropertyModifications <em>Abstract Property Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Abstract Property Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getAbstractPropertyModifications()
+	 * @see #getIECChangePropagationDueToDataDependency()
+	 * @generated
+	 */
+	EReference getIECChangePropagationDueToDataDependency_AbstractPropertyModifications();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodModifications <em>Method Modifications</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1247,28 +1268,6 @@ public interface IECModificationmarksPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIECChangePropagationDueToDataDependency_ConfigurationModifications();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodImplementationModifications <em>Method Implementation Modifications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Method Implementation Modifications</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getMethodImplementationModifications()
-	 * @see #getIECChangePropagationDueToDataDependency()
-	 * @generated
-	 */
-	EReference getIECChangePropagationDueToDataDependency_MethodImplementationModifications();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyImplementationModifications <em>Property Implementation Modifications</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Property Implementation Modifications</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency#getPropertyImplementationModifications()
-	 * @see #getIECChangePropagationDueToDataDependency()
-	 * @generated
-	 */
-	EReference getIECChangePropagationDueToDataDependency_PropertyImplementationModifications();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent <em>IEC Modify Component</em>}'.
@@ -1341,16 +1340,6 @@ public interface IECModificationmarksPackage extends EPackage {
 	EClass getIECModifyAbstractMethod();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty <em>IEC Modify Abstract Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IEC Modify Abstract Property</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty
-	 * @generated
-	 */
-	EClass getIECModifyAbstractProperty();
-
-	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty <em>IEC Modify Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1359,6 +1348,16 @@ public interface IECModificationmarksPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIECModifyProperty();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty <em>IEC Modify Abstract Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>IEC Modify Abstract Property</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty
+	 * @generated
+	 */
+	EClass getIECModifyAbstractProperty();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram <em>IEC Modify Program</em>}'.
@@ -1484,6 +1483,22 @@ public interface IECModificationmarksPackage extends EPackage {
 		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__INTERFACE_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_InterfaceModifications();
 
 		/**
+		 * The meta object literal for the '<em><b>Abstract Method Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ABSTRACT_METHOD_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_AbstractMethodModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Abstract Property Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__ABSTRACT_PROPERTY_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_AbstractPropertyModifications();
+
+		/**
 		 * The meta object literal for the '<em><b>Method Modifications</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1514,22 +1529,6 @@ public interface IECModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__CONFIGURATION_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_ConfigurationModifications();
-
-		/**
-		 * The meta object literal for the '<em><b>Method Implementation Modifications</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__METHOD_IMPLEMENTATION_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_MethodImplementationModifications();
-
-		/**
-		 * The meta object literal for the '<em><b>Property Implementation Modifications</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__PROPERTY_IMPLEMENTATION_MODIFICATIONS = eINSTANCE.getIECChangePropagationDueToDataDependency_PropertyImplementationModifications();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyComponentImpl <em>IEC Modify Component</em>}' class.
@@ -1602,16 +1601,6 @@ public interface IECModificationmarksPackage extends EPackage {
 		EClass IEC_MODIFY_ABSTRACT_METHOD = eINSTANCE.getIECModifyAbstractMethod();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl <em>IEC Modify Abstract Property</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyAbstractProperty()
-		 * @generated
-		 */
-		EClass IEC_MODIFY_ABSTRACT_PROPERTY = eINSTANCE.getIECModifyAbstractProperty();
-
-		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyPropertyImpl <em>IEC Modify Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1620,6 +1609,16 @@ public interface IECModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EClass IEC_MODIFY_PROPERTY = eINSTANCE.getIECModifyProperty();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl <em>IEC Modify Abstract Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyAbstractPropertyImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModificationmarksPackageImpl#getIECModifyAbstractProperty()
+		 * @generated
+		 */
+		EClass IEC_MODIFY_ABSTRACT_PROPERTY = eINSTANCE.getIECModifyAbstractProperty();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECModifyProgramImpl <em>IEC Modify Program</em>}' class.

@@ -20,7 +20,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
  * @model
  * @generated
  */
-public interface IECProperty extends IECComponent {
+public interface IECProperty extends IECComponent, IsProperty {
 	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference.
 	 * <!-- begin-user-doc -->

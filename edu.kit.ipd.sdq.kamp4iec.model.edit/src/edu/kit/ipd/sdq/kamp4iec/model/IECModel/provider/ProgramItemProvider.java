@@ -53,6 +53,7 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addInstantiatesInterfacePropertyDescriptor(object);
+			addInstantiatesFunctionBlockPropertyDescriptor(object);
 			addReadsGlobalVariablePropertyDescriptor(object);
 			addWritesGlobalVariablePropertyDescriptor(object);
 			addReadsPropertyPropertyDescriptor(object);
@@ -76,6 +77,28 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Program_InstantiatesInterface_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Program_InstantiatesInterface_feature", "_UI_Program_type"),
 				 IECModelPackage.Literals.PROGRAM__INSTANTIATES_INTERFACE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Instantiates Function Block feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInstantiatesFunctionBlockPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Program_InstantiatesFunctionBlock_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_InstantiatesFunctionBlock_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK,
 				 true,
 				 false,
 				 true,
@@ -206,7 +229,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
 		}
@@ -264,7 +286,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Program.class)) {
-			case IECModelPackage.PROGRAM__INSTANTIATES_FUNCTION_BLOCK:
 			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -283,11 +304,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__INSTANTIATES_FUNCTION_BLOCK,
-				 IECRepositoryFactory.eINSTANCE.createFunctionBlock()));
 
 		newChildDescriptors.add
 			(createChildParameter

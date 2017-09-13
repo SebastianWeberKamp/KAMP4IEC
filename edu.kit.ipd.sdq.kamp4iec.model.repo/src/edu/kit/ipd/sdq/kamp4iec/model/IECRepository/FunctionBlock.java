@@ -64,30 +64,20 @@ public interface FunctionBlock extends IECComponent, DerivedType {
 	EList<IECProperty> getHasProperty();
 
 	/**
-	 * Returns the value of the '<em><b>Implements</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Implements</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Implements</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Implements</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implements</em>' containment reference.
-	 * @see #setImplements(IECInterface)
+	 * @return the value of the '<em>Implements</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_Implements()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	IECInterface getImplements();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements <em>Implements</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Implements</em>' containment reference.
-	 * @see #getImplements()
-	 * @generated
-	 */
-	void setImplements(IECInterface value);
+	EList<IECInterface> getImplements();
 
 	/**
 	 * Returns the value of the '<em><b>Instantiates Interface</b></em>' reference list.
@@ -106,17 +96,17 @@ public interface FunctionBlock extends IECComponent, DerivedType {
 	EList<IECInterface> getInstantiatesInterface();
 
 	/**
-	 * Returns the value of the '<em><b>Instantiates Function Block</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Instantiates Function Block</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Instantiates Function Block</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Instantiates Function Block</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Instantiates Function Block</em>' containment reference list.
+	 * @return the value of the '<em>Instantiates Function Block</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_InstantiatesFunctionBlock()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<FunctionBlock> getInstantiatesFunctionBlock();
@@ -155,7 +145,7 @@ public interface FunctionBlock extends IECComponent, DerivedType {
 
 	/**
 	 * Returns the value of the '<em><b>Reads Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reads Property</em>' reference list isn't clear,
@@ -167,11 +157,11 @@ public interface FunctionBlock extends IECComponent, DerivedType {
 	 * @model
 	 * @generated
 	 */
-	EList<IECProperty> getReadsProperty();
+	EList<IsProperty> getReadsProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Writes Property</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Writes Property</em>' reference list isn't clear,
@@ -183,11 +173,11 @@ public interface FunctionBlock extends IECComponent, DerivedType {
 	 * @model
 	 * @generated
 	 */
-	EList<IECProperty> getWritesProperty();
+	EList<IsProperty> getWritesProperty();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Method</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calls Method</em>' reference list isn't clear,
@@ -199,7 +189,7 @@ public interface FunctionBlock extends IECComponent, DerivedType {
 	 * @model
 	 * @generated
 	 */
-	EList<IECMethod> getCallsMethod();
+	EList<IsMethod> getCallsMethod();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.

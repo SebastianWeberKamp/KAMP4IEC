@@ -15,9 +15,9 @@
     <genClasses ecoreClass="IECRepository.ecore#//FunctionBlock">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/HasMethod"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/HasProperty"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/Implements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/Implements"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/InstantiatesInterface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/InstantiatesFunctionBlock"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/InstantiatesFunctionBlock"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/ReadsGlobalVariable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/WritesGlobalVariable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//FunctionBlock/ReadsProperty"/>
@@ -36,7 +36,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/implements"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/HasDerivedReturnType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/InstantiatesInterface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/InstantiatesFunctionBlock"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/InstantiatesFunctionBlock"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/ReadsGlobalVariable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/WritesGlobalVariable"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECRepository.ecore#//IECMethod/ReadsProperty"/>

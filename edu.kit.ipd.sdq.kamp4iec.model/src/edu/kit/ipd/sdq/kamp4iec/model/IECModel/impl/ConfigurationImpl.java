@@ -7,8 +7,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 
 import java.util.Collection;
@@ -91,7 +90,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> readsProperty;
+	protected EList<IsProperty> readsProperty;
 
 	/**
 	 * The cached value of the '{@link #getWritesProperty() <em>Writes Property</em>}' reference list.
@@ -101,7 +100,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECProperty> writesProperty;
+	protected EList<IsProperty> writesProperty;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,9 +174,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getReadsProperty() {
+	public EList<IsProperty> getReadsProperty() {
 		if (readsProperty == null) {
-			readsProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.CONFIGURATION__READS_PROPERTY);
+			readsProperty = new EObjectResolvingEList<IsProperty>(IsProperty.class, this, IECModelPackage.CONFIGURATION__READS_PROPERTY);
 		}
 		return readsProperty;
 	}
@@ -187,9 +186,9 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECProperty> getWritesProperty() {
+	public EList<IsProperty> getWritesProperty() {
 		if (writesProperty == null) {
-			writesProperty = new EObjectResolvingEList<IECProperty>(IECProperty.class, this, IECModelPackage.CONFIGURATION__WRITES_PROPERTY);
+			writesProperty = new EObjectResolvingEList<IsProperty>(IsProperty.class, this, IECModelPackage.CONFIGURATION__WRITES_PROPERTY);
 		}
 		return writesProperty;
 	}
@@ -261,11 +260,11 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 				return;
 			case IECModelPackage.CONFIGURATION__READS_PROPERTY:
 				getReadsProperty().clear();
-				getReadsProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getReadsProperty().addAll((Collection<? extends IsProperty>)newValue);
 				return;
 			case IECModelPackage.CONFIGURATION__WRITES_PROPERTY:
 				getWritesProperty().clear();
-				getWritesProperty().addAll((Collection<? extends IECProperty>)newValue);
+				getWritesProperty().addAll((Collection<? extends IsProperty>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -5,6 +5,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

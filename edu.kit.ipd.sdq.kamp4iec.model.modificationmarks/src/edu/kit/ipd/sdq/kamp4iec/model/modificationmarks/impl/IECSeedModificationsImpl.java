@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractSeedModificatio
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

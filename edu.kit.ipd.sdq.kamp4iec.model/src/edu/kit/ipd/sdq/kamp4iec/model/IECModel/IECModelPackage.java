@@ -95,7 +95,7 @@ public interface IECModelPackage extends EPackage {
 	int PROGRAM__INSTANTIATES_INTERFACE = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Instantiates Function Block</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Instantiates Function Block</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -307,10 +307,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getProgram_InstantiatesInterface();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getInstantiatesFunctionBlock <em>Instantiates Function Block</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getInstantiatesFunctionBlock <em>Instantiates Function Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Instantiates Function Block</em>'.
+	 * @return the meta object for the reference list '<em>Instantiates Function Block</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getInstantiatesFunctionBlock()
 	 * @see #getProgram()
 	 * @generated
@@ -512,7 +512,7 @@ public interface IECModelPackage extends EPackage {
 		EReference PROGRAM__INSTANTIATES_INTERFACE = eINSTANCE.getProgram_InstantiatesInterface();
 
 		/**
-		 * The meta object literal for the '<em><b>Instantiates Function Block</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Instantiates Function Block</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

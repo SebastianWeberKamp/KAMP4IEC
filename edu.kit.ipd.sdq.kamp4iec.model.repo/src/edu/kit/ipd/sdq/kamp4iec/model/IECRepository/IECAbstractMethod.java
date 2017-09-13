@@ -19,7 +19,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
  * @model
  * @generated
  */
-public interface IECAbstractMethod extends IECComponent {
+public interface IECAbstractMethod extends IECComponent, IsMethod {
 	/**
 	 * Returns the value of the '<em><b>Has Derived Return Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

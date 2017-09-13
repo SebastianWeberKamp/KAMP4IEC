@@ -116,6 +116,14 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createDerivedTypeAdapter();
 			}
 			@Override
+			public Adapter caseIsMethod(IsMethod object) {
+				return createIsMethodAdapter();
+			}
+			@Override
+			public Adapter caseIsProperty(IsProperty object) {
+				return createIsPropertyAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -300,6 +308,34 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDerivedTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod <em>Is Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsMethod
+	 * @generated
+	 */
+	public Adapter createIsMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty <em>Is Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty
+	 * @generated
+	 */
+	public Adapter createIsPropertyAdapter() {
 		return null;
 	}
 
