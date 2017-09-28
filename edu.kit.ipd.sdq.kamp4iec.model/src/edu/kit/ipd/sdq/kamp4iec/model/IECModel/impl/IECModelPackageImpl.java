@@ -222,42 +222,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConfiguration_ReadsGlobalVariable() {
-		return (EReference)configurationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConfiguration_WritesGlobalVariable() {
-		return (EReference)configurationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConfiguration_ReadsProperty() {
-		return (EReference)configurationEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConfiguration_WritesProperty() {
-		return (EReference)configurationEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IECModelFactory getIECModelFactory() {
 		return (IECModelFactory)getEFactoryInstance();
 	}
@@ -295,10 +259,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		configurationEClass = createEClass(CONFIGURATION);
 		createEReference(configurationEClass, CONFIGURATION__INSTANTIATES_PROGRAM);
 		createEReference(configurationEClass, CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
-		createEReference(configurationEClass, CONFIGURATION__READS_GLOBAL_VARIABLE);
-		createEReference(configurationEClass, CONFIGURATION__WRITES_GLOBAL_VARIABLE);
-		createEReference(configurationEClass, CONFIGURATION__READS_PROPERTY);
-		createEReference(configurationEClass, CONFIGURATION__WRITES_PROPERTY);
 	}
 
 	/**
@@ -350,10 +310,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		initEClass(configurationEClass, Configuration.class, "Configuration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConfiguration_InstantiatesProgram(), this.getProgram(), null, "InstantiatesProgram", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConfiguration_DeclaresGlobalVariable(), theIECRepositoryPackage.getGlobalVariable(), null, "DeclaresGlobalVariable", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_ReadsGlobalVariable(), theIECRepositoryPackage.getGlobalVariable(), null, "ReadsGlobalVariable", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_WritesGlobalVariable(), theIECRepositoryPackage.getGlobalVariable(), null, "WritesGlobalVariable", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_ReadsProperty(), theIECRepositoryPackage.getIsProperty(), null, "ReadsProperty", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConfiguration_WritesProperty(), theIECRepositoryPackage.getIsProperty(), null, "WritesProperty", null, 0, -1, Configuration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

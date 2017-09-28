@@ -28,13 +28,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresGlobalVariable"
         upperBound="-1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//GlobalVariable"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ReadsGlobalVariable" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//GlobalVariable"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="WritesGlobalVariable" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//GlobalVariable"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ReadsProperty" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IsProperty"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="WritesProperty" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IsProperty"/>
   </eClassifiers>
 </ecore:EPackage>

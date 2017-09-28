@@ -1,0 +1,5 @@
+1506159487860	Rename method 'derivePropertyModifications'
+1506159495472	Rename method 'derivePropertyImplementationModifications'
+1506159528223	Rename method 'deriveAbstractPropertyImplementationModifications'
+1506159598354	Rename method 'deriveMethodModifications'
+1506159608616	Rename method 'deriveMethodImplementationModifications'

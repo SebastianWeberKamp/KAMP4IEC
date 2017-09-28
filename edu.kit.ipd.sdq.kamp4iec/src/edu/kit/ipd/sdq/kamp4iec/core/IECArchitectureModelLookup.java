@@ -485,27 +485,6 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link GlobalVariable}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link Function}s.
-	 * @param version The current {@link IECArchitectureVersion}.
-	 * @param functions The {@link Function}s to look up.
-	 * @return A map of all {@link GlobalVariable}s and which {@link Function}s they are accessing.
-	 */
-	public static Map<GlobalVariable, Set<Function>> lookUpGlobalVariablesOfFunction(
-			IECArchitectureVersion version, Collection<Function> functions) {
-		Map<GlobalVariable, Set<Function>> results = new HashMap<GlobalVariable, Set<Function>>();
-		for(GlobalVariable calling : getGlobalVariablesOfVersion(version)) {
-			if(calling.getHasDerivedType() != null) {
-				for(Function funct : functions) {
-					if(calling.getHasDerivedType() instanceof Function) {
-						putOrAddToMap(results, calling, (Function) calling.getHasDerivedType(), funct);
-					}
-				}
-			}
-		}
-		return results;
-	}
-
-	/**
 	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link GlobalVariable}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param globalVariables The {@link GlobalVariable}s to look up.
@@ -587,12 +566,6 @@ public class IECArchitectureModelLookup {
 		Map<Configuration, Set<GlobalVariable>> results = new HashMap<Configuration, Set<GlobalVariable>>();
 		Configuration config = version.getConfiguration();
 		for(GlobalVariable toCompare : globalVariables) {
-			for(GlobalVariable accesed : config.getWritesGlobalVariable()) {
-				putOrAddToMap(results, config, accesed, toCompare);
-			}
-			for(GlobalVariable accesed : config.getReadsGlobalVariable()) {
-				putOrAddToMap(results, config, accesed, toCompare);
-			}
 			for(GlobalVariable declared : config.getDeclaresGlobalVariable()) {
 				putOrAddToMap(results, config, declared, toCompare);
 			}
@@ -613,6 +586,26 @@ public class IECArchitectureModelLookup {
 			for(IECAbstractMethod toCompare: methods) {
 				for(IECAbstractMethod method: iecInterface.getHasMethod()) {
 					putOrAddToMap(results, iecInterface, method, toCompare);
+				}
+			}
+		}
+		return results;
+	}
+	
+	/**
+	 * Looks up the {@link Program} of the {@link IECArchitectureVersion} which access the given {@link IECAbstractMethod}s and lists it in a Map.
+	 * @param version The current {@link IECArchitectureVersion}.
+	 * @param method The {@link IECAbstractMethod}s to look up.
+	 * @return The {@link Program}s which access the {@link IECMethod}s in a Map.
+	 */
+	public static Map<Program, Set<IECAbstractMethod>> lookUpProgramsOfAbstractMethod(
+			IECArchitectureVersion version, Collection<IECAbstractMethod> methods) {
+		Map<Program, Set<IECAbstractMethod>> results = new HashMap<Program, Set<IECAbstractMethod>>();
+		for(Program prog : version.getConfiguration().getInstantiatesProgram()) {
+			for(IECAbstractMethod toCompare: methods) {
+				for(IsMethod accessed: prog.getCallsMethod()) {
+					if(accessed instanceof IECAbstractMethod)
+					putOrAddToMap(results, prog, (IECAbstractMethod)accessed, toCompare);
 				}
 			}
 		}
@@ -684,6 +677,30 @@ public class IECArchitectureModelLookup {
 		}
 		return results;
 	}
+	
+	/**
+	 * Looks up the {@link Program} of the {@link IECArchitectureVersion} which access the given {@link IECMethod}s and lists it in a Map.
+	 * @param version The current {@link IECArchitectureVersion}.
+	 * @param method The {@link IECMethod}s to look up.
+	 * @return The {@link Program}s which access the {@link IECMethod}s in a Map.
+	 */
+	public static Map<Program, Set<IECAbstractProperty>> lookUpProgramsOfAbstractProperty(
+			IECArchitectureVersion version, Collection<IECAbstractProperty> properties) {
+		Map<Program, Set<IECAbstractProperty>> results = new HashMap<Program, Set<IECAbstractProperty>>();
+		for(Program prog : version.getConfiguration().getInstantiatesProgram()) {
+			for(IECAbstractProperty toCompare: properties) {
+				for(IsProperty property: prog.getReadsProperty()) {
+					if(property instanceof IECAbstractProperty)
+						putOrAddToMap(results, prog, (IECAbstractProperty)property, toCompare);
+				}
+				for(IsProperty property: prog.getWritesProperty()) {
+					if(property instanceof IECAbstractProperty)
+						putOrAddToMap(results, prog, (IECAbstractProperty)property, toCompare);
+				}
+			}
+		}
+		return results;
+	}
 
 	/**
 	 * Looks up the {@link FunctionBlock} of the {@link IECArchitectureVersion} which access the given {@link IECAbstractProperty}s and lists it in a Map.
@@ -740,10 +757,10 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up the {@link IECMethod} of the {@link IECArchitectureVersion} which access the given {@link IECAbstractMethod}s and lists it in a Map.
+	 * Looks up the {@link IECProperty} of the {@link IECArchitectureVersion} which access the given {@link IECAbstractMethod}s and lists it in a Map.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param method The {@link IECAbstractMethod}s to look up.
-	 * @return The {@link IECMethod}s which access the {@link IECAbstractMethod}s in a Map.
+	 * @return The {@link IECProperty}s which access the {@link IECAbstractMethod}s in a Map.
 	 */
 	public static Map<IECProperty, Set<IECAbstractProperty>> lookUpPropertiesOfAbstractProperty(
 			IECArchitectureVersion version, Collection<IECAbstractProperty> properties) {
@@ -775,6 +792,11 @@ public class IECArchitectureModelLookup {
 					for(IECMethod compared : methods) {
 						putOrAddToMap(results, calling, (IECMethod) accessed, compared);
 					}
+				}
+			}
+			for(IECMethod accessed : calling.getHasMethod()) {
+				for(IECMethod compared : methods) {
+					putOrAddToMap(results, calling, (IECMethod) accessed, compared);
 				}
 			}
 		}
@@ -906,27 +928,27 @@ public class IECArchitectureModelLookup {
 		return results;
 	}
 	
-	/**
-	 * Looks up the {@link Configuration} of the {@link IECArchitectureVersion} which access the given {@link IECMethod}s and lists it in a Map.
-	 * @param version The current {@link IECArchitectureVersion}.
-	 * @param method The {@link IECMethod}s to look up.
-	 * @return The {@link Configuration} which accesses the {@link IECMethod}s in a Map.
-	 */
-	public static Map<Configuration, Set<IECProperty>> lookUpConfigurationsOfProperty(
-			IECArchitectureVersion version, Collection<IECProperty> properties) {
-		Map<Configuration, Set<IECProperty>> results = new HashMap<Configuration, Set<IECProperty>>();
-		for(IECProperty toCompare: properties) {
-			for(IsProperty property: version.getConfiguration().getReadsProperty()) {
-				if(property instanceof IECProperty)
-				putOrAddToMap(results, version.getConfiguration(), (IECProperty) property, toCompare);
-			}
-			for(IsProperty property: version.getConfiguration().getWritesProperty()) {
-				if(property instanceof IECProperty)
-				putOrAddToMap(results, version.getConfiguration(), (IECProperty) property, toCompare);
-			}
-		}
-		return results;
-	}
+//	/**
+//	 * Looks up the {@link Configuration} of the {@link IECArchitectureVersion} which access the given {@link IECMethod}s and lists it in a Map.
+//	 * @param version The current {@link IECArchitectureVersion}.
+//	 * @param method The {@link IECMethod}s to look up.
+//	 * @return The {@link Configuration} which accesses the {@link IECMethod}s in a Map.
+//	 */
+//	public static Map<Configuration, Set<IECProperty>> lookUpConfigurationsOfProperty(
+//			IECArchitectureVersion version, Collection<IECProperty> properties) {
+//		Map<Configuration, Set<IECProperty>> results = new HashMap<Configuration, Set<IECProperty>>();
+//		for(IECProperty toCompare: properties) {
+//			for(IsProperty property: version.getConfiguration().getReadsProperty()) {
+//				if(property instanceof IECProperty)
+//				putOrAddToMap(results, version.getConfiguration(), (IECProperty) property, toCompare);
+//			}
+//			for(IsProperty property: version.getConfiguration().getWritesProperty()) {
+//				if(property instanceof IECProperty)
+//				putOrAddToMap(results, version.getConfiguration(), (IECProperty) property, toCompare);
+//			}
+//		}
+//		return results;
+//	}
 	
 	/**
 	 * Looks up the {@link Configuration} of the {@link IECArchitectureVersion} which access the given {@link Program}s and lists it in a Map.

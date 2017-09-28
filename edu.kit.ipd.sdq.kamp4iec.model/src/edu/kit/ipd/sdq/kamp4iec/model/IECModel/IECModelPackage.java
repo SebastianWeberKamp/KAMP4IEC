@@ -231,49 +231,13 @@ public interface IECModelPackage extends EPackage {
 	int CONFIGURATION__DECLARES_GLOBAL_VARIABLE = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Reads Global Variable</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFIGURATION__READS_GLOBAL_VARIABLE = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Writes Global Variable</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFIGURATION__WRITES_GLOBAL_VARIABLE = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Reads Property</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFIGURATION__READS_PROPERTY = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Writes Property</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONFIGURATION__WRITES_PROPERTY = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 5;
-
-	/**
 	 * The number of structural features of the '<em>Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONFIGURATION_FEATURE_COUNT = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 6;
+	int CONFIGURATION_FEATURE_COUNT = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Configuration</em>' class.
@@ -427,50 +391,6 @@ public interface IECModelPackage extends EPackage {
 	EReference getConfiguration_DeclaresGlobalVariable();
 
 	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getReadsGlobalVariable <em>Reads Global Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Reads Global Variable</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getReadsGlobalVariable()
-	 * @see #getConfiguration()
-	 * @generated
-	 */
-	EReference getConfiguration_ReadsGlobalVariable();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getWritesGlobalVariable <em>Writes Global Variable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Writes Global Variable</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getWritesGlobalVariable()
-	 * @see #getConfiguration()
-	 * @generated
-	 */
-	EReference getConfiguration_WritesGlobalVariable();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getReadsProperty <em>Reads Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Reads Property</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getReadsProperty()
-	 * @see #getConfiguration()
-	 * @generated
-	 */
-	EReference getConfiguration_ReadsProperty();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getWritesProperty <em>Writes Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Writes Property</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getWritesProperty()
-	 * @see #getConfiguration()
-	 * @generated
-	 */
-	EReference getConfiguration_WritesProperty();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -600,38 +520,6 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONFIGURATION__DECLARES_GLOBAL_VARIABLE = eINSTANCE.getConfiguration_DeclaresGlobalVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Reads Global Variable</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONFIGURATION__READS_GLOBAL_VARIABLE = eINSTANCE.getConfiguration_ReadsGlobalVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Writes Global Variable</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONFIGURATION__WRITES_GLOBAL_VARIABLE = eINSTANCE.getConfiguration_WritesGlobalVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Reads Property</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONFIGURATION__READS_PROPERTY = eINSTANCE.getConfiguration_ReadsProperty();
-
-		/**
-		 * The meta object literal for the '<em><b>Writes Property</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONFIGURATION__WRITES_PROPERTY = eINSTANCE.getConfiguration_WritesProperty();
 
 	}
 

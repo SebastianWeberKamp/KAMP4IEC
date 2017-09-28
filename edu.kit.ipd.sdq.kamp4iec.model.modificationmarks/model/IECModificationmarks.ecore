@@ -20,6 +20,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECSeedModifications" eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractSeedModifications">
     <eStructuralFeatures xsi:type="ecore:EReference" name="globalVariableModifications"
         upperBound="-1" eType="#//IECModifyGlobalVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceModifications"
+        upperBound="-1" eType="#//IECModifyInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractMethodModifications"
+        upperBound="-1" eType="#//IECModifyAbstractMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractPropertyModifications"
+        upperBound="-1" eType="#//IECModifyAbstractProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionBlockModifications"
+        upperBound="-1" eType="#//IECModifyFunctionBlock" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodModifications" upperBound="-1"
+        eType="#//IECModifyMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyModifications"
+        upperBound="-1" eType="#//IECModifyProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECChangePropagationDueToDataDependency"
       eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep">

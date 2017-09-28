@@ -40,66 +40,71 @@ public class IECSubactivityDerivation {
 //		}*/
 //	}
 //
-//	private void deriveSubactivity(GlobalVariable globalVariable, Activity parentActivity, IECArchitectureVersion version) {
-//		if (globalVariable instanceof GlobalVariable) {
-//			Configuration configuration = version.getConfiguration();
-//			for(Program program : configuration.getContainsProgram()) {
-//				for(FunctionBlock functionBlock : program.getDeclaresFunctionBlock()) {
-//					for(GlobalVariable globVar : functionBlock.getAccessesGlobalVariable()) {
-//						if(globalVariable.getId() == globVar.getId()) {
-//							addSubActivity(globalVariable, IECActivityElementType.FUNCTIONBLOCK, functionBlock, parentActivity);
-//						}
-//					}
-//					for(IECMethod method : functionBlock.getHasMethod()) {
-//						for(GlobalVariable globVar : method.getAccessesGlobalVariable()) {
-//							if(globalVariable.getId() == globVar.getId()) {
-//								addSubActivity(globalVariable, IECActivityElementType.ABSTRACTMETHOD, method, parentActivity);
-//							}
-//						}
-//					}
-//				}
-//				for(GlobalVariable globVar : program.getAccessesGlobalVariable()) {
-//					if(globalVariable.getId() == globVar.getId()) {
-//						addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
-//					}
-//				}
-//				for(GlobalVariable globVar : program.getDeclaresGlobalVariable()) {
-//					if(globalVariable.getId() == globVar.getId()) {
-//						addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
-//					}
-//				}
-//			}
-//			for(GlobalVariable globVar : configuration.getDeclaresGlobalVariable()) {
-//				if(globalVariable.getId() == globVar.getId()) {
-//					addSubActivity(globalVariable, IECActivityElementType.CONFIGURATION, configuration, parentActivity);
-//				}
-//			}
-//			for(GlobalVariable globVar : configuration.getAccessesGlobalVariable()) {
-//				if(globalVariable.getId() == globVar.getId()) {
-//					addSubActivity(globalVariable, IECActivityElementType.CONFIGURATION, configuration, parentActivity);
+	private void deriveSubactivity(GlobalVariable globalVariable, Activity parentActivity, IECArchitectureVersion version) {
+		for(Program program : version.getConfiguration().getInstantiatesProgram()) {
+			for(GlobalVariable globVar : program.getDeclaresGlobalVariable()) {
+				if(globalVariable.getId() == globVar.getId()) {
+					addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
+				}
+			}
+			for(GlobalVariable globVar : program.getReadsGlobalVariable()) {
+				if(globalVariable.getId() == globVar.getId()) {
+					addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
+				}
+			}
+			for(GlobalVariable globVar : program.getWritesGlobalVariable()) {
+				if(globalVariable.getId() == globVar.getId()) {
+					addSubActivity(globalVariable, IECActivityElementType.PROGRAM, program, parentActivity);
+				}
+			}
+		}
+		for(FunctionBlock fb : version.getIECRepository().getContainsFunctionBlock()) {
+			for(GlobalVariable globVar : fb.getReadsGlobalVariable()) {
+				if(globalVariable.getId() == globVar.getId()) {
+					addSubActivity(globalVariable, IECActivityElementType.FUNCTIONBLOCK, fb, parentActivity);
+				}
+			}
+			for(GlobalVariable globVar : fb.getWritesGlobalVariable()) {
+				if(globalVariable.getId() == globVar.getId()) {
+					addSubActivity(globalVariable, IECActivityElementType.FUNCTIONBLOCK, fb, parentActivity);
+				}
+			}
+			for(IECMethod method : fb.getHasMethod()) {
+				for(GlobalVariable globVar : method.getReadsGlobalVariable()) {
+					if(globalVariable.getId() == globVar.getId()) {
+						addSubActivity(globalVariable, IECActivityElementType.METHOD, method, parentActivity);
+					}
+				}
+				for(GlobalVariable globVar : method.getWritesGlobalVariable()) {
+					if(globalVariable.getId() == globVar.getId()) {
+						addSubActivity(globalVariable, IECActivityElementType.METHOD, method, parentActivity);
+					}
+				}
+			}
+		}
+		for(GlobalVariable globVar : version.getConfiguration().getDeclaresGlobalVariable()) {
+			if(globalVariable.getId() == globVar.getId()) {
+				addSubActivity(globalVariable, IECActivityElementType.CONFIGURATION, version.getConfiguration(), parentActivity);
+			}
+		}
+	}
+
+//	private void deriveSubactivity(FunctionBlock functionBlock, Activity parentActivity, IECArchitectureVersion version) {
+//		Configuration configuration = version.getConfiguration();
+//		for(Program program : configuration.getContainsProgram()) {
+//			for(FunctionBlock fb : program.getDeclaresFunctionBlock()) {
+//				if(functionBlock.getId() == fb.getId()) {
+//					addSubActivity(functionBlock, IECActivityElementType.PROGRAM, program, parentActivity);
 //				}
 //			}
 //		}
-//	}
-//
-//	private void deriveSubactivity(FunctionBlock functionBlock, Activity parentActivity, IECArchitectureVersion version) {
-//		if (functionBlock instanceof FunctionBlock) {
-//			Configuration configuration = version.getConfiguration();
-//			for(Program program : configuration.getContainsProgram()) {
-//				for(FunctionBlock fb : program.getDeclaresFunctionBlock()) {
-//					if(functionBlock.getId() == fb.getId()) {
-//						addSubActivity(functionBlock, IECActivityElementType.PROGRAM, program, parentActivity);
-//					}
-//				}
+//		for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
+//			if (fbDependency.getRequiredResource().getId() == functionBlock.getId()) {
+//				addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, fbDependency.getProvidedFunctionBlock(), parentActivity);
 //			}
-//			for(FunctionblockDependency fbDependency : version.getComponentInternalDependencyRepository().getHasFunctionblockDependency()) {
+//			for(MethodDependency methodDependency : fbDependency.getHasMethodDependency()) {
 //				if (fbDependency.getRequiredResource().getId() == functionBlock.getId()) {
-//					addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, fbDependency.getProvidedFunctionBlock(), parentActivity);
-//				}
-//				for(MethodDependency methodDependency : fbDependency.getHasMethodDependency()) {
-//					if (fbDependency.getRequiredResource().getId() == functionBlock.getId()) {
-//						addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, methodDependency.getProvidedMethod(), parentActivity);
-//					}
+//					addSubActivity(functionBlock, IECActivityElementType.FUNCTIONBLOCK, methodDependency.getProvidedMethod(), parentActivity);
 //				}
 //			}
 //		}
@@ -197,6 +202,20 @@ public class IECSubactivityDerivation {
 	private Activity addSubActivity(IECInterface iecInterface, IECActivityElementType elementType, IECComponent parentElement, Activity parentActivity) {
 		Activity result = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, iecInterface, iecInterface.getId(), null, parentActivity.getBasicActivity(), 
 				generateDescription(parentElement, iecInterface, parentActivity.getBasicActivity()));
+		parentActivity.addSubActivity(result);
+		return parentActivity;
+	}
+
+	private Activity addSubActivity(IECAbstractProperty property, IECActivityElementType elementType, IECComponent parentElement, Activity parentActivity) {
+		Activity result = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, property, property.getId(), null, parentActivity.getBasicActivity(), 
+				generateDescription(parentElement, property, parentActivity.getBasicActivity()));
+		parentActivity.addSubActivity(result);
+		return parentActivity;
+	}
+
+	private Activity addSubActivity(IECAbstractMethod method, IECActivityElementType elementType, IECComponent parentElement, Activity parentActivity) {
+		Activity result = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, method, method.getId(), null, parentActivity.getBasicActivity(), 
+				generateDescription(parentElement, method, parentActivity.getBasicActivity()));
 		parentActivity.addSubActivity(result);
 		return parentActivity;
 	}

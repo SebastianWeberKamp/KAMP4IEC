@@ -67,6 +67,12 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS);
+			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS);
+			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS);
+			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS);
+			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS);
+			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS);
+			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -120,6 +126,12 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 
 		switch (notification.getFeatureID(IECSeedModifications.class)) {
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS:
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS:
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS:
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS:
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -141,6 +153,36 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 			(createChildParameter
 				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS,
 				 IECModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyInterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS,
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyAbstractMethod()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS,
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyAbstractProperty()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS,
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyFunctionBlock()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS,
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyMethod()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS,
+				 IECModificationmarksFactory.eINSTANCE.createIECModifyProperty()));
 	}
 
 	/**

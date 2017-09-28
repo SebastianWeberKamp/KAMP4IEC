@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository"/>
@@ -48,16 +47,17 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECProperty"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethod"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECComponent"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.util.EcoreUtil"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IsProperty"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod"/>
 </qualifiedTypeNameHistroy>

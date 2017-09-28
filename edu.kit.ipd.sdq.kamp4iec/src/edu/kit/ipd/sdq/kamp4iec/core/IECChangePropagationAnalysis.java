@@ -90,22 +90,80 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				new HashMap<EObject, AbstractModification<?,EObject>>();
 		
 //		// Add seed modifications
-		calculateAndMarkGlobalVariableSeedModifications(version);
-
-//		// 1 GlobalVariable -> Configuration
-		calculateAndMarkGlobalVariableToConfigurationPropagation(version, elementsMarkedInThisStep);
-//		// 2 GlobalVariable -> Program
-		calculateAndMarkGlobalVariableToProgramPropagation(version, elementsMarkedInThisStep);
-//		// 3 GlobalVariable -> FunctionBlock
-		calculateAndMarkGlobalVariableToFunctionBlockPropagation(version, elementsMarkedInThisStep);
-//		// 4 GlobalVariable -> Method
-		calculateAndMarkGlobalVariableToMethodPropagation(version, elementsMarkedInThisStep);
+//		calculateAndMarkGlobalVariableSeedModifications(version);
 		
+		calculateAndMarkSeedModifications(version);
+
+////		// 1 GlobalVariable -> Configuration
+//		calculateAndMarkGlobalVariableToConfigurationPropagation(version, elementsMarkedInThisStep);
+////		// 2 GlobalVariable -> Program
+//		calculateAndMarkGlobalVariableToProgramPropagation(version, elementsMarkedInThisStep);
+////		// 3 GlobalVariable -> FunctionBlock
+//		calculateAndMarkGlobalVariableToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+////		// 4 GlobalVariable -> Method
+//		calculateAndMarkGlobalVariableToMethodPropagation(version, elementsMarkedInThisStep);
+		
+		// All changes
+		calculateAndMarkGlobalVariableToConfigurationPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkGlobalVariableToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkGlobalVariableToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkGlobalVariableToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionToFunctionPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToAbstractMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToAbstractPropertyPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToFunctionPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToPropertyPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkFunctionBlockToGlobalVariablePropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToPropertyPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToInterfacePropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToFunctionPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToGlobalVariablePropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToAbstractPropertyPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkInterfaceToAbstractMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractMethodToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractMethodToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractPropertyToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractPropertyToPropertyPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkAbstractPropertyToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkMethodToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkMethodToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkPropertyToMethodPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkPropertyToProgramPropagation(version, elementsMarkedInThisStep);
+		calculateAndMarkProgramToConfigurationPropagation(version, elementsMarkedInThisStep);
+
 		//If no at all changes: remove top-level element from tree
 		if (this.getIECChangePropagationDueToDataDependencies().eContents().isEmpty()) {			
 			version.getModificationMarkRepository().getChangePropagationSteps().remove(
 					this.getIECChangePropagationDueToDataDependencies());	
 		}
+	}
+	
+	protected void calculateAndMarkSeedModifications(IECArchitectureVersion version) {
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, GlobalVariable.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, FunctionBlock.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Function.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECProperty.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECMethod.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractProperty.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractMethod.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECInterface.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Program.class));
+		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Configuration.class));
 	}
 	
 	protected void calculateAndMarkGlobalVariableSeedModifications(IECArchitectureVersion version) {
@@ -658,42 +716,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		 }
 	}
 	
-	protected void calculateAndMarkFunctionToGlobalVariablePropagation(IECArchitectureVersion version,
-			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<Function> markedFunctions = new ArrayList<>();
-		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof Function) {
-				markedFunctions.add((Function) marked);
-			}
-		}
-		Map<GlobalVariable, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
-				lookUpGlobalVariablesOfFunction(version, markedFunctions);
-
-		 for(Map.Entry<GlobalVariable, Set<Function>> elementsToBeMarkedEntry: 
-			 	elementsToBeMarked.entrySet()) {
-			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
-				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
-					if (!elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
-							getCausingElements().contains(cause)) {
-						elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
-							getCausingElements().add(cause);	
-					}
-				}	
-			} else {
-				IECModifyGlobalVariable modification = IECModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable();
-				modification.setToolderived(true);
-				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
-				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
-				
-				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
-				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
-				this.getIECChangePropagationDueToDataDependencies().getGlobalVariableModifications().
-						add(modification);
-				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
-			}
-		 }
-	}
-	
 	protected void calculateAndMarkFunctionToFunctionPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
 		List<Function> markedFunctions = new ArrayList<>();
@@ -1094,6 +1116,42 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		 }
 	}
 	
+	protected void calculateAndMarkAbstractMethodToProgramPropagation(IECArchitectureVersion version,
+			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
+		List<IECAbstractMethod> markedMethods = new ArrayList<>();
+		for(IECComponent marked : getMarkedComponents()) {
+			if(marked instanceof IECAbstractMethod) {
+				markedMethods.add((IECAbstractMethod) marked);
+			}
+		}
+		Map<Program, Set<IECAbstractMethod>> elementsToBeMarked = IECArchitectureModelLookup.
+				lookUpProgramsOfAbstractMethod(version, markedMethods);
+
+		 for(Map.Entry<Program, Set<IECAbstractMethod>> elementsToBeMarkedEntry: 
+			 	elementsToBeMarked.entrySet()) {
+			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
+				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
+					if (!elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().contains(cause)) {
+						elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().add(cause);	
+					}
+				}	
+			} else {
+				IECModifyProgram modification = IECModificationmarksFactory.eINSTANCE.createIECModifyProgram();
+				modification.setToolderived(true);
+				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
+				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
+				
+				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
+				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
+				this.getIECChangePropagationDueToDataDependencies().getProgramModifications().
+						add(modification);
+				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
+			}
+		 }
+	}
+	
 	protected void calculateAndMarkAbstractMethodToMethodPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
 		List<IECAbstractMethod> markedMethods = new ArrayList<>();
@@ -1204,6 +1262,42 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		 }
 	}
 	
+	protected void calculateAndMarkAbstractPropertyToProgramPropagation(IECArchitectureVersion version,
+			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
+		List<IECAbstractProperty> properties = new ArrayList<>();
+		for(IECComponent marked : getMarkedComponents()) {
+			if(marked instanceof IECAbstractProperty) {
+				properties.add((IECAbstractProperty) marked);
+			}
+		}
+		Map<Program, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
+				lookUpProgramsOfAbstractProperty(version, properties);
+
+		 for(Map.Entry<Program, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
+			 	elementsToBeMarked.entrySet()) {
+			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
+				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
+					if (!elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().contains(cause)) {
+						elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().add(cause);	
+					}
+				}	
+			} else {
+				IECModifyProgram modification = IECModificationmarksFactory.eINSTANCE.createIECModifyProgram();
+				modification.setToolderived(true);
+				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
+				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
+				
+				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
+				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
+				this.getIECChangePropagationDueToDataDependencies().getProgramModifications().
+						add(modification);
+				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
+			}
+		 }
+	}
+	
 	protected void calculateAndMarkAbstractPropertyToPropertyPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
 		List<IECAbstractProperty> properties = new ArrayList<>();
@@ -1270,6 +1364,42 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
 				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
 				this.getIECChangePropagationDueToDataDependencies().getFunctionBlockModifications().
+						add(modification);
+				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
+			}
+		 }
+	}
+	
+	protected void calculateAndMarkAbstractPropertyToMethodPropagation(IECArchitectureVersion version,
+			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
+		List<IECAbstractProperty> properties = new ArrayList<>();
+		for(IECComponent marked : getMarkedComponents()) {
+			if(marked instanceof IECAbstractProperty) {
+				properties.add((IECAbstractProperty) marked);
+			}
+		}
+		Map<IECMethod, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
+				lookUpMethodsOfAbstractProperty(version, properties);
+
+		 for(Map.Entry<IECMethod, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
+			 	elementsToBeMarked.entrySet()) {
+			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
+				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
+					if (!elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().contains(cause)) {
+						elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
+							getCausingElements().add(cause);	
+					}
+				}	
+			} else {
+				IECModifyMethod modification = IECModificationmarksFactory.eINSTANCE.createIECModifyMethod();
+				modification.setToolderived(true);
+				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
+				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
+				
+				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
+				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
+				this.getIECChangePropagationDueToDataDependencies().getMethodModifications().
 						add(modification);
 				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
 			}
@@ -1498,42 +1628,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		 }
 	}
 	
-	protected void calculateAndMarkPropertyToConfigurationPropagation(IECArchitectureVersion version,
-			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
-		List<IECProperty> markedProperties = new ArrayList<>();
-		for(IECComponent marked : getMarkedComponents()) {
-			if(marked instanceof IECProperty) {
-				markedProperties.add((IECProperty) marked);
-			}
-		}
-		Map<Configuration, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
-				lookUpConfigurationsOfProperty(version, markedProperties);
-
-		 for(Map.Entry<Configuration, Set<IECProperty>> elementsToBeMarkedEntry: 
-			 	elementsToBeMarked.entrySet()) {
-			if (elementsMarkedInThisStep.containsKey(elementsToBeMarkedEntry.getKey())) {
-				for(IECComponent cause: elementsToBeMarkedEntry.getValue()) {
-					if (!elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
-							getCausingElements().contains(cause)) {
-						elementsMarkedInThisStep.get(elementsToBeMarkedEntry.getKey()).
-							getCausingElements().add(cause);	
-					}
-				}	
-			} else {
-				IECModifyConfiguration modification = IECModificationmarksFactory.eINSTANCE.createIECModifyConfiguration();
-				modification.setToolderived(true);
-				modification.setAffectedElement(elementsToBeMarkedEntry.getKey());
-				modification.getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
-				
-				elementsMarkedInThisStep.put(elementsToBeMarkedEntry.getKey(), modification);
-				this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
-				this.getIECChangePropagationDueToDataDependencies().getConfigurationModifications().
-						add(modification);
-				continuePropagation(version, elementsToBeMarkedEntry, elementsMarkedInThisStep);
-			}
-		 }
-	}
-	
 	protected void calculateAndMarkPropertyToProgramPropagation(IECArchitectureVersion version,
 			Map<EObject, AbstractModification<?,EObject>> elementsMarkedInThisStep) {
 		List<IECProperty> markedProperties = new ArrayList<>();
@@ -1585,13 +1679,32 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkFunctionBlockToProgramPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkFunctionBlockToMethodPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkFunctionBlockToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkFunctionBlockToAbstractMethodPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkFunctionBlockToAbstractPropertyPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkFunctionBlockToFunctionPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkFunctionBlockToPropertyPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkFunctionBlockToGlobalVariablePropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof IECInterface) {
 			calculateAndMarkInterfaceToProgramPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkInterfaceToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToPropertyPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToInterfacePropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToFunctionPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToMethodPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToGlobalVariablePropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToAbstractPropertyPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkInterfaceToAbstractMethodPropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof IECAbstractMethod) {
 			calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractMethodToProgramPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractMethodToMethodPropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof IECAbstractProperty) {
 			calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractPropertyToProgramPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractPropertyToPropertyPropagation(version, elementsMarkedInThisStep);
+			calculateAndMarkAbstractPropertyToMethodPropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof IECMethod) {
 			calculateAndMarkMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkMethodToMethodPropagation(version, elementsMarkedInThisStep);
@@ -1600,9 +1713,8 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkPropertyToMethodPropagation(version, elementsMarkedInThisStep);
 			calculateAndMarkPropertyToProgramPropagation(version, elementsMarkedInThisStep);
-			calculateAndMarkPropertyToConfigurationPropagation(version, elementsMarkedInThisStep);
 		} else if (entry.getKey() instanceof Program) {
-			calculateAndMarkProgramToConfigurationPropagation(version, elementsMarkedInThisStep);
+//			calculateAndMarkProgramToConfigurationPropagation(version, elementsMarkedInThisStep); Nicht sinnvoll, Änderungen werden immer in Program angepasst
 		}
 	}
 	
