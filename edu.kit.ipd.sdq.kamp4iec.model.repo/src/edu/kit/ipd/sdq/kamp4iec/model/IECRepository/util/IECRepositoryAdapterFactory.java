@@ -84,12 +84,12 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createFunctionAdapter();
 			}
 			@Override
-			public Adapter caseIECMethod(IECMethod object) {
-				return createIECMethodAdapter();
-			}
-			@Override
 			public Adapter caseIECInterface(IECInterface object) {
 				return createIECInterfaceAdapter();
+			}
+			@Override
+			public Adapter caseIECMethod(IECMethod object) {
+				return createIECMethodAdapter();
 			}
 			@Override
 			public Adapter caseIECProperty(IECProperty object) {

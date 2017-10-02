@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod#getWritesProperty <em>Writes Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod#getCallsFunction <em>Calls Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod#getAccesesInternalVariablesOfFunctionBlock <em>Acceses Internal Variables Of Function Block</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getIECMethod()
@@ -209,5 +210,21 @@ public interface IECMethod extends IECComponent, IsMethod {
 	 * @generated
 	 */
 	EList<Function> getCallsFunction();
+
+	/**
+	 * Returns the value of the '<em><b>Acceses Internal Variables Of Function Block</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Acceses Internal Variables Of Function Block</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Acceses Internal Variables Of Function Block</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getIECMethod_AccesesInternalVariablesOfFunctionBlock()
+	 * @model
+	 * @generated
+	 */
+	EList<FunctionBlock> getAccesesInternalVariablesOfFunctionBlock();
 
 } // IECMethod

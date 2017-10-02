@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="FunctionBlocksOfMeth" key="selection"/>
+		<item value="AbstractMethodTo" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="FunctionBlocksOfMeth"/>
-			<item value="MethodsOfFunctionBlock"/>
-			<item value="MethodOfFunctionBlock"/>
-			<item value="MethodToFunctionBlock"/>
-			<item value="PropertiesOfAb"/>
-			<item value="PropertiessOfAb"/>
-			<item value="MethodsOfAb"/>
-			<item value="MethodsOf"/>
+			<item value="abstractMethodto"/>
+			<item value="abstractPropertyto"/>
+			<item value="ofabstractpro"/>
+			<item value="programsofpro"/>
+			<item value="ofabs"/>
+			<item value="programsofa"/>
+			<item value="programsof"/>
+			<item value="programof"/>
 		</list>
 		<list key="replacehistory">
 			<item value="getDeclaresFunctionBlock"/>

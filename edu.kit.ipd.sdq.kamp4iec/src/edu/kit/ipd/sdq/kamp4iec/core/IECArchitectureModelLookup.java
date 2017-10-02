@@ -288,6 +288,11 @@ public class IECArchitectureModelLookup {
 						putOrAddToMap(results, calling, accessed, funct);
 					}
 				}
+				for(FunctionBlock accessed : calling.getAccesesInternalVariablesOfFunctionBlock()) {
+					for(FunctionBlock funct : functionBlocks) {
+						putOrAddToMap(results, calling, accessed, funct);
+					}
+				}
 			}
 		}
 		return results;

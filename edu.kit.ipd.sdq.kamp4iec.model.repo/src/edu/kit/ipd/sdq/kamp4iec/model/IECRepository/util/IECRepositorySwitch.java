@@ -97,21 +97,21 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECRepositoryPackage.IEC_METHOD: {
-				IECMethod iecMethod = (IECMethod)theEObject;
-				T result = caseIECMethod(iecMethod);
-				if (result == null) result = caseIECComponent(iecMethod);
-				if (result == null) result = caseIsMethod(iecMethod);
-				if (result == null) result = caseIdentifier(iecMethod);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IECRepositoryPackage.IEC_INTERFACE: {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
 				if (result == null) result = caseIECComponent(iecInterface);
 				if (result == null) result = caseDerivedType(iecInterface);
 				if (result == null) result = caseIdentifier(iecInterface);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.IEC_METHOD: {
+				IECMethod iecMethod = (IECMethod)theEObject;
+				T result = caseIECMethod(iecMethod);
+				if (result == null) result = caseIECComponent(iecMethod);
+				if (result == null) result = caseIsMethod(iecMethod);
+				if (result == null) result = caseIdentifier(iecMethod);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

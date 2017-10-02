@@ -104,6 +104,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 //		calculateAndMarkGlobalVariableToMethodPropagation(version, elementsMarkedInThisStep);
 		
 		// All changes
+		calculateAndMarkProgramToConfigurationPropagation(version, elementsMarkedInThisStep);
 		calculateAndMarkGlobalVariableToConfigurationPropagation(version, elementsMarkedInThisStep);
 		calculateAndMarkGlobalVariableToProgramPropagation(version, elementsMarkedInThisStep);
 		calculateAndMarkGlobalVariableToFunctionBlockPropagation(version, elementsMarkedInThisStep);
@@ -144,7 +145,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		calculateAndMarkPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep);
 		calculateAndMarkPropertyToMethodPropagation(version, elementsMarkedInThisStep);
 		calculateAndMarkPropertyToProgramPropagation(version, elementsMarkedInThisStep);
-		calculateAndMarkProgramToConfigurationPropagation(version, elementsMarkedInThisStep);
 
 		//If no at all changes: remove top-level element from tree
 		if (this.getIECChangePropagationDueToDataDependencies().eContents().isEmpty()) {			

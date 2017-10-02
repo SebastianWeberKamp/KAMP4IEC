@@ -51,7 +51,6 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty"/>
-<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.util.EcoreUtil"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod"/>
 </qualifiedTypeNameHistroy>

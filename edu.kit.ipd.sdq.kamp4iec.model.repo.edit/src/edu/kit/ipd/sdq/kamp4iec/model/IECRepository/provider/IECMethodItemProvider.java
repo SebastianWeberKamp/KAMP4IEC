@@ -52,6 +52,7 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 			addWritesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
+			addAccesesInternalVariablesOfFunctionBlockPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -268,6 +269,28 @@ public class IECMethodItemProvider extends IdentifierItemProvider {
 				 getString("_UI_IECMethod_CallsFunction_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_CallsFunction_feature", "_UI_IECMethod_type"),
 				 IECRepositoryPackage.Literals.IEC_METHOD__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Acceses Internal Variables Of Function Block feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccesesInternalVariablesOfFunctionBlockPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_IECMethod_AccesesInternalVariablesOfFunctionBlock_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethod_AccesesInternalVariablesOfFunctionBlock_feature", "_UI_IECMethod_type"),
+				 IECRepositoryPackage.Literals.IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK,
 				 true,
 				 false,
 				 true,

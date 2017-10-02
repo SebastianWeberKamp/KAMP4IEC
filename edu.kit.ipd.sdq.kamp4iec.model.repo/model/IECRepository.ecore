@@ -68,6 +68,8 @@
         eType="#//IsMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
         eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AccesesInternalVariablesOfFunctionBlock"
+        upperBound="-1" eType="#//FunctionBlock"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECProperty" eSuperTypes="#//IECComponent #//IsProperty">
     <eStructuralFeatures xsi:type="ecore:EReference" name="implements" eType="#//IECAbstractProperty"/>

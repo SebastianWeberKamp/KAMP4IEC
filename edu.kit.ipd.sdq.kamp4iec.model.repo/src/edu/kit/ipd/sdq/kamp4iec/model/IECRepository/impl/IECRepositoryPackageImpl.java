@@ -485,6 +485,15 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIECMethod_AccesesInternalVariablesOfFunctionBlock() {
+		return (EReference)iecMethodEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIECInterface() {
 		return iecInterfaceEClass;
 	}
@@ -695,6 +704,11 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		createEReference(functionEClass, FUNCTION__CALLS_FUNCTION);
 		createEReference(functionEClass, FUNCTION__HAS_DERIVED_RETURN_TYPE);
 
+		iecInterfaceEClass = createEClass(IEC_INTERFACE);
+		createEReference(iecInterfaceEClass, IEC_INTERFACE__HAS_METHOD);
+		createEReference(iecInterfaceEClass, IEC_INTERFACE__HAS_PROPERTY);
+		createEReference(iecInterfaceEClass, IEC_INTERFACE__EXTENDS_INTERFACE);
+
 		iecMethodEClass = createEClass(IEC_METHOD);
 		createEReference(iecMethodEClass, IEC_METHOD__IMPLEMENTS);
 		createEReference(iecMethodEClass, IEC_METHOD__HAS_DERIVED_RETURN_TYPE);
@@ -706,11 +720,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		createEReference(iecMethodEClass, IEC_METHOD__WRITES_PROPERTY);
 		createEReference(iecMethodEClass, IEC_METHOD__CALLS_METHOD);
 		createEReference(iecMethodEClass, IEC_METHOD__CALLS_FUNCTION);
-
-		iecInterfaceEClass = createEClass(IEC_INTERFACE);
-		createEReference(iecInterfaceEClass, IEC_INTERFACE__HAS_METHOD);
-		createEReference(iecInterfaceEClass, IEC_INTERFACE__HAS_PROPERTY);
-		createEReference(iecInterfaceEClass, IEC_INTERFACE__EXTENDS_INTERFACE);
+		createEReference(iecMethodEClass, IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK);
 
 		iecPropertyEClass = createEClass(IEC_PROPERTY);
 		createEReference(iecPropertyEClass, IEC_PROPERTY__IMPLEMENTS);
@@ -767,10 +777,10 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		functionBlockEClass.getESuperTypes().add(this.getDerivedType());
 		globalVariableEClass.getESuperTypes().add(this.getIECComponent());
 		functionEClass.getESuperTypes().add(this.getIECComponent());
-		iecMethodEClass.getESuperTypes().add(this.getIECComponent());
-		iecMethodEClass.getESuperTypes().add(this.getIsMethod());
 		iecInterfaceEClass.getESuperTypes().add(this.getIECComponent());
 		iecInterfaceEClass.getESuperTypes().add(this.getDerivedType());
+		iecMethodEClass.getESuperTypes().add(this.getIECComponent());
+		iecMethodEClass.getESuperTypes().add(this.getIsMethod());
 		iecPropertyEClass.getESuperTypes().add(this.getIECComponent());
 		iecPropertyEClass.getESuperTypes().add(this.getIsProperty());
 		iecAbstractPropertyEClass.getESuperTypes().add(this.getIECComponent());
@@ -805,6 +815,11 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		initEReference(getFunction_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunction_HasDerivedReturnType(), this.getDerivedType(), null, "HasDerivedReturnType", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(iecInterfaceEClass, IECInterface.class, "IECInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIECInterface_HasMethod(), this.getIECAbstractMethod(), null, "HasMethod", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECInterface_HasProperty(), this.getIECAbstractProperty(), null, "HasProperty", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECInterface_ExtendsInterface(), this.getIECInterface(), null, "ExtendsInterface", null, 0, 1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(iecMethodEClass, IECMethod.class, "IECMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECMethod_Implements(), this.getIECAbstractMethod(), null, "implements", null, 0, 1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECMethod_HasDerivedReturnType(), this.getDerivedType(), null, "HasDerivedReturnType", null, 0, 1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -816,11 +831,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		initEReference(getIECMethod_WritesProperty(), this.getIsProperty(), null, "WritesProperty", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECMethod_CallsMethod(), this.getIsMethod(), null, "CallsMethod", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECMethod_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(iecInterfaceEClass, IECInterface.class, "IECInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIECInterface_HasMethod(), this.getIECAbstractMethod(), null, "HasMethod", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECInterface_HasProperty(), this.getIECAbstractProperty(), null, "HasProperty", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECInterface_ExtendsInterface(), this.getIECInterface(), null, "ExtendsInterface", null, 0, 1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECMethod_AccesesInternalVariablesOfFunctionBlock(), this.getFunctionBlock(), null, "AccesesInternalVariablesOfFunctionBlock", null, 0, -1, IECMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecPropertyEClass, IECProperty.class, "IECProperty", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECProperty_Implements(), this.getIECAbstractProperty(), null, "implements", null, 0, 1, IECProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -60,8 +60,8 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 			case IECRepositoryPackage.FUNCTION_BLOCK: return createFunctionBlock();
 			case IECRepositoryPackage.GLOBAL_VARIABLE: return createGlobalVariable();
 			case IECRepositoryPackage.FUNCTION: return createFunction();
-			case IECRepositoryPackage.IEC_METHOD: return createIECMethod();
 			case IECRepositoryPackage.IEC_INTERFACE: return createIECInterface();
+			case IECRepositoryPackage.IEC_METHOD: return createIECMethod();
 			case IECRepositoryPackage.IEC_PROPERTY: return createIECProperty();
 			case IECRepositoryPackage.IEC_ABSTRACT_PROPERTY: return createIECAbstractProperty();
 			case IECRepositoryPackage.IEC_ABSTRACT_METHOD: return createIECAbstractMethod();

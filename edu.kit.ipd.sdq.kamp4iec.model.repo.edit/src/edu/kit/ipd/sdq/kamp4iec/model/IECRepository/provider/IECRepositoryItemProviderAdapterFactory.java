@@ -381,8 +381,8 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 		if (functionBlockItemProvider != null) functionBlockItemProvider.dispose();
 		if (globalVariableItemProvider != null) globalVariableItemProvider.dispose();
 		if (functionItemProvider != null) functionItemProvider.dispose();
-		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
 		if (iecInterfaceItemProvider != null) iecInterfaceItemProvider.dispose();
+		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
 		if (iecPropertyItemProvider != null) iecPropertyItemProvider.dispose();
 		if (iecAbstractPropertyItemProvider != null) iecAbstractPropertyItemProvider.dispose();
 		if (iecAbstractMethodItemProvider != null) iecAbstractMethodItemProvider.dispose();
