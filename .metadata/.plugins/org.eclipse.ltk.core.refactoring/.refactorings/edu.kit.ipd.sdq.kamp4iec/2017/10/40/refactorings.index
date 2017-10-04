@@ -4,3 +4,10 @@
 1507103496159	Rename local variable 'id'
 1507103498791	Rename local variable 'id'
 1507103507529	Rename local variable 'id'
+1507110756755	Rename type 'IECModificationTypes'
+1507111867045	Delete element
+1507123804026	Rename local variable 'markedMethods'
+1507124990461	Rename method 'getMarkedComponents'
+1507125010329	Rename field 'markedComponents'
+1507125020402	Rename method 'setMarkedComponents'
+1507125049625	Rename method 'calculateAndMarkSeedModifications'
