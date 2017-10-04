@@ -659,22 +659,13 @@ public interface IECRepositoryPackage extends EPackage {
 	int IEC_METHOD__CALLS_FUNCTION = IEC_COMPONENT_FEATURE_COUNT + 9;
 
 	/**
-	 * The feature id for the '<em><b>Acceses Internal Variables Of Function Block</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK = IEC_COMPONENT_FEATURE_COUNT + 10;
-
-	/**
 	 * The number of structural features of the '<em>IEC Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 11;
+	int IEC_METHOD_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The number of operations of the '<em>IEC Method</em>' class.
@@ -1293,17 +1284,6 @@ public interface IECRepositoryPackage extends EPackage {
 	EReference getIECMethod_CallsFunction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod#getAccesesInternalVariablesOfFunctionBlock <em>Acceses Internal Variables Of Function Block</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Acceses Internal Variables Of Function Block</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod#getAccesesInternalVariablesOfFunctionBlock()
-	 * @see #getIECMethod()
-	 * @generated
-	 */
-	EReference getIECMethod_AccesesInternalVariablesOfFunctionBlock();
-
-	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface <em>IEC Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1780,14 +1760,6 @@ public interface IECRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_METHOD__CALLS_FUNCTION = eINSTANCE.getIECMethod_CallsFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Acceses Internal Variables Of Function Block</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK = eINSTANCE.getIECMethod_AccesesInternalVariablesOfFunctionBlock();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl <em>IEC Interface</em>}' class.

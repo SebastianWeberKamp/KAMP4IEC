@@ -44,7 +44,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl#getWritesProperty <em>Writes Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl#getCallsFunction <em>Calls Function</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl#getAccesesInternalVariablesOfFunctionBlock <em>Acceses Internal Variables Of Function Block</em>}</li>
  * </ul>
  *
  * @generated
@@ -149,16 +148,6 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	 * @ordered
 	 */
 	protected EList<Function> callsFunction;
-
-	/**
-	 * The cached value of the '{@link #getAccesesInternalVariablesOfFunctionBlock() <em>Acceses Internal Variables Of Function Block</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccesesInternalVariablesOfFunctionBlock()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FunctionBlock> accesesInternalVariablesOfFunctionBlock;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -356,18 +345,6 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FunctionBlock> getAccesesInternalVariablesOfFunctionBlock() {
-		if (accesesInternalVariablesOfFunctionBlock == null) {
-			accesesInternalVariablesOfFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECRepositoryPackage.IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK);
-		}
-		return accesesInternalVariablesOfFunctionBlock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -393,8 +370,6 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 				return getCallsMethod();
 			case IECRepositoryPackage.IEC_METHOD__CALLS_FUNCTION:
 				return getCallsFunction();
-			case IECRepositoryPackage.IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK:
-				return getAccesesInternalVariablesOfFunctionBlock();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -446,10 +421,6 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 				getCallsFunction().clear();
 				getCallsFunction().addAll((Collection<? extends Function>)newValue);
 				return;
-			case IECRepositoryPackage.IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK:
-				getAccesesInternalVariablesOfFunctionBlock().clear();
-				getAccesesInternalVariablesOfFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -492,9 +463,6 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 			case IECRepositoryPackage.IEC_METHOD__CALLS_FUNCTION:
 				getCallsFunction().clear();
 				return;
-			case IECRepositoryPackage.IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK:
-				getAccesesInternalVariablesOfFunctionBlock().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -527,8 +495,6 @@ public class IECMethodImpl extends IdentifierImpl implements IECMethod {
 				return callsMethod != null && !callsMethod.isEmpty();
 			case IECRepositoryPackage.IEC_METHOD__CALLS_FUNCTION:
 				return callsFunction != null && !callsFunction.isEmpty();
-			case IECRepositoryPackage.IEC_METHOD__ACCESES_INTERNAL_VARIABLES_OF_FUNCTION_BLOCK:
-				return accesesInternalVariablesOfFunctionBlock != null && !accesesInternalVariablesOfFunctionBlock.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

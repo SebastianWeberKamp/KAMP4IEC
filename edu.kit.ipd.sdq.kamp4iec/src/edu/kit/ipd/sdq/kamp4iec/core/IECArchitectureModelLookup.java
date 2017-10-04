@@ -247,7 +247,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link FunctionBlock}s and which {@link FunctionBlock}s they are accessing.
@@ -266,7 +266,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link IECMethod}s and which {@link FunctionBlock}s they are accessing.
@@ -288,10 +288,8 @@ public class IECArchitectureModelLookup {
 						putOrAddToMap(results, calling, accessed, funct);
 					}
 				}
-				for(FunctionBlock accessed : calling.getAccesesInternalVariablesOfFunctionBlock()) {
-					for(FunctionBlock funct : functionBlocks) {
-						putOrAddToMap(results, calling, accessed, funct);
-					}
+				for(FunctionBlock funct : functionBlocks) {
+					putOrAddToMap(results, calling, fb, funct);
 				}
 			}
 		}
@@ -299,7 +297,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link IECAbstractMethod}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link IECAbstractMethod}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link IECAbstractMethod}s and which {@link FunctionBlock}s they are accessing.
@@ -322,7 +320,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link IECProperty}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link IECProperty}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link IECProperty}s and which {@link FunctionBlock}s they are accessing.
@@ -345,7 +343,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link IECAbstractProperty}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link IECAbstractProperty}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link IECAbstractProperty}s and which {@link FunctionBlock}s they are accessing.
@@ -368,7 +366,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link GlobalVariable}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link GlobalVariable}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link GlobalVariable}s and which {@link FunctionBlock}s they are accessing.
@@ -389,7 +387,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link Function}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s via ComponentInternalDependencies.
+	 * Looks up all {@link Function}s of the {@link IECArchitectureVersion}s {@link IECInterface} which access the given {@link FunctionBlock}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param functionBlocks The {@link FunctionBlock}s to look up.
 	 * @return A map of all {@link Function}s and which {@link FunctionBlock}s they are accessing.
@@ -783,7 +781,7 @@ public class IECArchitectureModelLookup {
 	}
 
 	/**
-	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link FunctionBlock} which access the given {@link IECMethod}s via ComponentInternalDependencies.
+	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link FunctionBlock} which access the given {@link IECMethod}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param methods The {@link IECMethod}s to look up.
 	 * @return A map of all {@link FunctionBlock}s and which {@link IECMethod}s they are accessing.
@@ -799,17 +797,18 @@ public class IECArchitectureModelLookup {
 					}
 				}
 			}
-			for(IECMethod accessed : calling.getHasMethod()) {
-				for(IECMethod compared : methods) {
-					putOrAddToMap(results, calling, (IECMethod) accessed, compared);
-				}
-			}
+//			Üver diese Verbindung soll nicht propagiert werden, einen ganzen FB zu markieren wenn sich eine Methode ändert macht keinen Sinn
+//			for(IECMethod accessed : calling.getHasMethod()) {
+//				for(IECMethod compared : methods) {
+//					putOrAddToMap(results, calling, (IECMethod) accessed, compared);
+//				}
+//			}
 		}
 		return results;
 	}
 
 	/**
-	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECMethod} which access the given {@link IECMethod}s via ComponentInternalDependencies.
+	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECMethod} which access the given {@link IECMethod}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param methods The {@link IECMethod}s to look up.
 	 * @return A map of all {@link IECMethod}s and which {@link IECMethod}s they are accessing.
@@ -852,7 +851,7 @@ public class IECArchitectureModelLookup {
 	}
 	
 	/**
-	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECMethod} which access the given {@link IECProperty}s via ComponentInternalDependencies.
+	 * Looks up all {@link IECMethod}s of the {@link IECArchitectureVersion}s {@link IECMethod} which access the given {@link IECProperty}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param properties The {@link IECProperty}s to look up.
 	 * @return The {@link IECMethod}s which access the {@link IECProperty}s in a Map.
@@ -882,7 +881,7 @@ public class IECArchitectureModelLookup {
 	}
 	
 	/**
-	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link IECMethod} which access the given {@link IECProperty}s via ComponentInternalDependencies.
+	 * Looks up all {@link FunctionBlock}s of the {@link IECArchitectureVersion}s {@link IECMethod} which access the given {@link IECProperty}s.
 	 * @param version The current {@link IECArchitectureVersion}.
 	 * @param properties The {@link IECProperty}s to look up.
 	 * @return The {@link FunctionBlock}s which access the {@link IECProperty}s in a Map.
