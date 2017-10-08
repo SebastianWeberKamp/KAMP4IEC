@@ -178,6 +178,13 @@ public class IECArchitectureModelLookup {
 				}
 			}
 		}
+		for(IECInterface iecInter : version.getIECRepository().getContainsInterface()) {
+			for(IECAbstractMethod method : iecInter.getHasMethod()) {
+				for(IECInterface interf : interfaces) {
+					putOrAddToMap(results, method, iecInter, interf);
+				}
+			}
+		}
 		return results;
 	}
 
@@ -221,6 +228,13 @@ public class IECArchitectureModelLookup {
 							putOrAddToMap(results, property, (IECInterface)property.getHasDerivedType(), interf);
 						}
 					}
+				}
+			}
+		}
+		for(IECInterface iecInter : version.getIECRepository().getContainsInterface()) {
+			for(IECAbstractProperty prop : iecInter.getHasProperty()) {
+				for(IECInterface interf : interfaces) {
+					putOrAddToMap(results, prop, iecInter, interf);
 				}
 			}
 		}
@@ -912,6 +926,11 @@ public class IECArchitectureModelLookup {
 					for(IECProperty compared : properties) {
 						putOrAddToMap(results, calling, (IECProperty)accessed, compared);
 					}
+				}
+			}
+			for(IECProperty accessed : calling.getHasProperty()) {
+				for(IECProperty compared : properties) {
+					putOrAddToMap(results, calling, (IECProperty)accessed, compared);
 				}
 			}
 		}
