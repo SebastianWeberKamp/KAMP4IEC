@@ -45,6 +45,7 @@ public class FunctionItemProvider extends IdentifierItemProvider {
 
 			addCallsFunctionPropertyDescriptor(object);
 			addHasDerivedReturnTypePropertyDescriptor(object);
+			addCallsFunctionBlockConstructorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -85,6 +86,28 @@ public class FunctionItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Function_HasDerivedReturnType_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Function_HasDerivedReturnType_feature", "_UI_Function_type"),
 				 IECRepositoryPackage.Literals.FUNCTION__HAS_DERIVED_RETURN_TYPE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Calls Function Block Constructor feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsFunctionBlockConstructorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Function_CallsFunctionBlockConstructor_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Function_CallsFunctionBlockConstructor_feature", "_UI_Function_type"),
+				 IECRepositoryPackage.Literals.FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR,
 				 true,
 				 false,
 				 true,

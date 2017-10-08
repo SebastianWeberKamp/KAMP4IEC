@@ -42,6 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getWritesProperty <em>Writes Property</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getCallsMethod <em>Calls Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getCallsFunction <em>Calls Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl#getExtendsFunctionBlock <em>Extends Function Block</em>}</li>
  * </ul>
  *
  * @generated
@@ -156,6 +157,16 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * @ordered
 	 */
 	protected EList<Function> callsFunction;
+
+	/**
+	 * The cached value of the '{@link #getExtendsFunctionBlock() <em>Extends Function Block</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtendsFunctionBlock()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionBlock> extendsFunctionBlock;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -313,6 +324,18 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<FunctionBlock> getExtendsFunctionBlock() {
+		if (extendsFunctionBlock == null) {
+			extendsFunctionBlock = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECRepositoryPackage.FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK);
+		}
+		return extendsFunctionBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -354,6 +377,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return getCallsMethod();
 			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				return getCallsFunction();
+			case IECRepositoryPackage.FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK:
+				return getExtendsFunctionBlock();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -411,6 +436,10 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				getCallsFunction().clear();
 				getCallsFunction().addAll((Collection<? extends Function>)newValue);
 				return;
+			case IECRepositoryPackage.FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK:
+				getExtendsFunctionBlock().clear();
+				getExtendsFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -456,6 +485,9 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				getCallsFunction().clear();
 				return;
+			case IECRepositoryPackage.FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK:
+				getExtendsFunctionBlock().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -490,6 +522,8 @@ public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 				return callsMethod != null && !callsMethod.isEmpty();
 			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				return callsFunction != null && !callsFunction.isEmpty();
+			case IECRepositoryPackage.FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK:
+				return extendsFunctionBlock != null && !extendsFunctionBlock.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

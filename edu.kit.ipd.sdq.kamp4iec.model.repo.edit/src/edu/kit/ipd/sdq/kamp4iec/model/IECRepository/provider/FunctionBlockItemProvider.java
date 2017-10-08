@@ -56,6 +56,7 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 			addWritesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
 			addCallsFunctionPropertyDescriptor(object);
+			addExtendsFunctionBlockPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -250,6 +251,28 @@ public class FunctionBlockItemProvider extends IdentifierItemProvider {
 				 getString("_UI_FunctionBlock_CallsFunction_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_CallsFunction_feature", "_UI_FunctionBlock_type"),
 				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Extends Function Block feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExtendsFunctionBlockPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_ExtendsFunctionBlock_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_ExtendsFunctionBlock_feature", "_UI_FunctionBlock_type"),
+				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK,
 				 true,
 				 false,
 				 true,

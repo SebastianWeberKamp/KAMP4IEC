@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.DerivedType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
 import java.util.Collection;
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionImpl#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionImpl#getHasDerivedReturnType <em>Has Derived Return Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionImpl#getCallsFunctionBlockConstructor <em>Calls Function Block Constructor</em>}</li>
  * </ul>
  *
  * @generated
@@ -53,6 +55,16 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	 * @ordered
 	 */
 	protected DerivedType hasDerivedReturnType;
+
+	/**
+	 * The cached value of the '{@link #getCallsFunctionBlockConstructor() <em>Calls Function Block Constructor</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCallsFunctionBlockConstructor()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FunctionBlock> callsFunctionBlockConstructor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,6 +140,18 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<FunctionBlock> getCallsFunctionBlockConstructor() {
+		if (callsFunctionBlockConstructor == null) {
+			callsFunctionBlockConstructor = new EObjectResolvingEList<FunctionBlock>(FunctionBlock.class, this, IECRepositoryPackage.FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR);
+		}
+		return callsFunctionBlockConstructor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -136,6 +160,8 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 			case IECRepositoryPackage.FUNCTION__HAS_DERIVED_RETURN_TYPE:
 				if (resolve) return getHasDerivedReturnType();
 				return basicGetHasDerivedReturnType();
+			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR:
+				return getCallsFunctionBlockConstructor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,6 +182,10 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 			case IECRepositoryPackage.FUNCTION__HAS_DERIVED_RETURN_TYPE:
 				setHasDerivedReturnType((DerivedType)newValue);
 				return;
+			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR:
+				getCallsFunctionBlockConstructor().clear();
+				getCallsFunctionBlockConstructor().addAll((Collection<? extends FunctionBlock>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -174,6 +204,9 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 			case IECRepositoryPackage.FUNCTION__HAS_DERIVED_RETURN_TYPE:
 				setHasDerivedReturnType((DerivedType)null);
 				return;
+			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR:
+				getCallsFunctionBlockConstructor().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -190,6 +223,8 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 				return callsFunction != null && !callsFunction.isEmpty();
 			case IECRepositoryPackage.FUNCTION__HAS_DERIVED_RETURN_TYPE:
 				return hasDerivedReturnType != null;
+			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR:
+				return callsFunctionBlockConstructor != null && !callsFunctionBlockConstructor.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -8,82 +8,20 @@
   <foreignModel>IECModel.ecore</foreignModel>
   <genPackages prefix="IECModel" basePackage="edu.kit.ipd.sdq.kamp4iec.model" disposableProviderFactory="true"
       ecorePackage="IECModel.ecore#/">
-    <genClasses ecoreClass="IECModel.ecore#//FunctionBlock">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/AccessesProperty"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/AccessesGlobalVariable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/HasMethod"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/HasProperty"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/UsesEnum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/CallsFunction"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//FunctionBlock/Implements"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//Function">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Function/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Function/CallsFunction"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Function/UsesEnum"/>
-    </genClasses>
     <genClasses ecoreClass="IECModel.ecore#//Program">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsFunction"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsFunctionBlock"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/ImplementsInterface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/DeclaresVariable"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/UsesEnum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/AccessesProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/InstantiatesInterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/InstantiatesFunctionBlock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/DeclaresGlobalVariable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/ReadsGlobalVariable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/WritesGlobalVariable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/ReadsProperty"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/WritesProperty"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsMethod"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/AccessesGlobalVariable"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Program/CallsFunction"/>
     </genClasses>
     <genClasses ecoreClass="IECModel.ecore#//Configuration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/ContainsProgram"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/DeclaresVariable"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/AccessesProperty"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/AccessesGlobalVariable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/UsesEnum"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/Interfaces"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//IECInterface">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECInterface/Type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECInterface/HasMethod"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECInterface/HasProperty"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//GlobalVariable">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//GlobalVariable/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//GlobalVariable/UsesEnum"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//IECMethodImplementation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/AccessesGlobalVariable"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/AccessesProperty"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/UsesEnum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/CallsFunction"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethodImplementation/Implements"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//IECPropertyImplementation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECPropertyImplementation/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECPropertyImplementation/UsesEnum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECPropertyImplementation/Implements"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//Enum">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//Enum/Type"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="IECModel.ecore#//IECComponent"/>
-    <genClasses image="false" ecoreClass="IECModel.ecore#//DependencyResource"/>
-    <genClasses ecoreClass="IECModel.ecore#//IECProperty">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECProperty/UsesEnum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECProperty/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECProperty/Implements"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//IECMethod">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethod/UsesEnum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethod/Type"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECModel.ecore#//IECMethod/Implements"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//Interfaces">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Interfaces/ContainsInterface"/>
-    </genClasses>
-    <genClasses ecoreClass="IECModel.ecore#//Enums">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Enums/ContainsEnums"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/InstantiatesProgram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECModel.ecore#//Configuration/DeclaresGlobalVariable"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

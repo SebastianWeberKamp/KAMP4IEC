@@ -59,6 +59,7 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			addReadsPropertyPropertyDescriptor(object);
 			addWritesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
+			addCallsFunctionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -218,6 +219,28 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Calls Function feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCallsFunctionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Program_CallsFunction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Program_CallsFunction_feature", "_UI_Program_type"),
+				 IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -230,7 +253,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE);
-			childrenFeatures.add(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION);
 		}
 		return childrenFeatures;
 	}
@@ -287,7 +309,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 
 		switch (notification.getFeatureID(Program.class)) {
 			case IECModelPackage.PROGRAM__DECLARES_GLOBAL_VARIABLE:
-			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -309,11 +330,6 @@ public class ProgramItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(IECModelPackage.Literals.PROGRAM__DECLARES_GLOBAL_VARIABLE,
 				 IECRepositoryFactory.eINSTANCE.createGlobalVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.PROGRAM__CALLS_FUNCTION,
-				 IECRepositoryFactory.eINSTANCE.createFunction()));
 	}
 
 	/**

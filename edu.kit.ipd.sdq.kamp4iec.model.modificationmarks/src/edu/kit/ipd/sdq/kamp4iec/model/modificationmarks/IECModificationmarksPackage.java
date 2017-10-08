@@ -223,13 +223,31 @@ public interface IECModificationmarksPackage extends EPackage {
 	int IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 6;
 
 	/**
+	 * The feature id for the '<em><b>Function Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Program Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>IEC Seed Modifications</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_SEED_MODIFICATIONS_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 7;
+	int IEC_SEED_MODIFICATIONS_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_SEED_MODIFICATIONS_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>IEC Seed Modifications</em>' class.
@@ -1270,6 +1288,28 @@ public interface IECModificationmarksPackage extends EPackage {
 	EReference getIECSeedModifications_PropertyModifications();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionModifications <em>Function Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Function Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionModifications()
+	 * @see #getIECSeedModifications()
+	 * @generated
+	 */
+	EReference getIECSeedModifications_FunctionModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getProgramModifications <em>Program Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Program Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getProgramModifications()
+	 * @see #getIECSeedModifications()
+	 * @generated
+	 */
+	EReference getIECSeedModifications_ProgramModifications();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency <em>IEC Change Propagation Due To Data Dependency</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1607,6 +1647,22 @@ public interface IECModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS = eINSTANCE.getIECSeedModifications_PropertyModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Function Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS = eINSTANCE.getIECSeedModifications_FunctionModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Program Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS = eINSTANCE.getIECSeedModifications_ProgramModifications();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECChangePropagationDueToDataDependencyImpl <em>IEC Change Propagation Due To Data Dependency</em>}' class.

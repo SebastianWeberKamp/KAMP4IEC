@@ -331,13 +331,22 @@ public interface IECRepositoryPackage extends EPackage {
 	int FUNCTION_BLOCK__CALLS_FUNCTION = IEC_COMPONENT_FEATURE_COUNT + 10;
 
 	/**
+	 * The feature id for the '<em><b>Extends Function Block</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK = IEC_COMPONENT_FEATURE_COUNT + 11;
+
+	/**
 	 * The number of structural features of the '<em>Function Block</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 11;
+	int FUNCTION_BLOCK_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>Function Block</em>' class.
@@ -450,13 +459,22 @@ public interface IECRepositoryPackage extends EPackage {
 	int FUNCTION__HAS_DERIVED_RETURN_TYPE = IEC_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Calls Function Block Constructor</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR = IEC_COMPONENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 2;
+	int FUNCTION_FEATURE_COUNT = IEC_COMPONENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -1111,6 +1129,17 @@ public interface IECRepositoryPackage extends EPackage {
 	EReference getFunctionBlock_CallsFunction();
 
 	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getExtendsFunctionBlock <em>Extends Function Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Extends Function Block</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getExtendsFunctionBlock()
+	 * @see #getFunctionBlock()
+	 * @generated
+	 */
+	EReference getFunctionBlock_ExtendsFunctionBlock();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable <em>Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1162,6 +1191,17 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunction_HasDerivedReturnType();
+
+	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getCallsFunctionBlockConstructor <em>Calls Function Block Constructor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Calls Function Block Constructor</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getCallsFunctionBlockConstructor()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_CallsFunctionBlockConstructor();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod <em>IEC Method</em>}'.
@@ -1628,6 +1668,14 @@ public interface IECRepositoryPackage extends EPackage {
 		EReference FUNCTION_BLOCK__CALLS_FUNCTION = eINSTANCE.getFunctionBlock_CallsFunction();
 
 		/**
+		 * The meta object literal for the '<em><b>Extends Function Block</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK = eINSTANCE.getFunctionBlock_ExtendsFunctionBlock();
+
+		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1670,6 +1718,14 @@ public interface IECRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FUNCTION__HAS_DERIVED_RETURN_TYPE = eINSTANCE.getFunction_HasDerivedReturnType();
+
+		/**
+		 * The meta object literal for the '<em><b>Calls Function Block Constructor</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR = eINSTANCE.getFunction_CallsFunctionBlockConstructor();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECMethodImpl <em>IEC Method</em>}' class.

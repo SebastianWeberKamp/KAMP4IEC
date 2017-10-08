@@ -33,6 +33,8 @@
         eType="#//IsMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
         eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ExtendsFunctionBlock" upperBound="-1"
+        eType="#//FunctionBlock"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//IECComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasDerivedType" eType="#//DerivedType"/>
@@ -41,6 +43,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
         eType="#//Function"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasDerivedReturnType" eType="#//DerivedType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunctionBlockConstructor"
+        upperBound="-1" eType="#//FunctionBlock"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECInterface" eSuperTypes="#//IECComponent #//DerivedType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethod" upperBound="-1"

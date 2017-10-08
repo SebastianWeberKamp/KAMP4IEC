@@ -3,7 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -22,6 +21,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionBlockModifications <em>Function Block Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getMethodModifications <em>Method Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getPropertyModifications <em>Property Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getFunctionModifications <em>Function Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getProgramModifications <em>Program Modifications</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications()
@@ -140,5 +141,37 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * @generated
 	 */
 	EList<IECModifyProperty> getPropertyModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Function Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Function Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Function Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_FunctionModifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<IECModifyFunction> getFunctionModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Program Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Program Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Program Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_ProgramModifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<IECModifyProgram> getProgramModifications();
 
 } // IECSeedModifications

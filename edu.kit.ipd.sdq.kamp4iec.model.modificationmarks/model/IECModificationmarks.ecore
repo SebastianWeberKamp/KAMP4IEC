@@ -32,6 +32,10 @@
         eType="#//IECModifyMethod" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="propertyModifications"
         upperBound="-1" eType="#//IECModifyProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functionModifications"
+        upperBound="-1" eType="#//IECModifyFunction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="programModifications" upperBound="-1"
+        eType="#//IECModifyProgram" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECChangePropagationDueToDataDependency"
       eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//ChangePropagationStep">

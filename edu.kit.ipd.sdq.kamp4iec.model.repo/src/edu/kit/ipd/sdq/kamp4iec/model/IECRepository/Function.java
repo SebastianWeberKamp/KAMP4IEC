@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getHasDerivedReturnType <em>Has Derived Return Type</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getCallsFunctionBlockConstructor <em>Calls Function Block Constructor</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunction()
@@ -63,5 +64,21 @@ public interface Function extends IECComponent {
 	 * @generated
 	 */
 	void setHasDerivedReturnType(DerivedType value);
+
+	/**
+	 * Returns the value of the '<em><b>Calls Function Block Constructor</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Calls Function Block Constructor</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Calls Function Block Constructor</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunction_CallsFunctionBlockConstructor()
+	 * @model
+	 * @generated
+	 */
+	EList<FunctionBlock> getCallsFunctionBlockConstructor();
 
 } // Function

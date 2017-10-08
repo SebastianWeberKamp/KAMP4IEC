@@ -306,6 +306,24 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIECSeedModifications_FunctionModifications() {
+		return (EReference)iecSeedModificationsEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIECSeedModifications_ProgramModifications() {
+		return (EReference)iecSeedModificationsEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIECChangePropagationDueToDataDependency() {
 		return iecChangePropagationDueToDataDependencyEClass;
 	}
@@ -539,6 +557,8 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 		createEReference(iecSeedModificationsEClass, IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS);
 		createEReference(iecSeedModificationsEClass, IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS);
 		createEReference(iecSeedModificationsEClass, IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS);
+		createEReference(iecSeedModificationsEClass, IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS);
+		createEReference(iecSeedModificationsEClass, IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS);
 
 		iecChangePropagationDueToDataDependencyEClass = createEClass(IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY);
 		createEReference(iecChangePropagationDueToDataDependencyEClass, IEC_CHANGE_PROPAGATION_DUE_TO_DATA_DEPENDENCY__FUNCTION_BLOCK_MODIFICATIONS);
@@ -686,6 +706,8 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 		initEReference(getIECSeedModifications_FunctionBlockModifications(), this.getIECModifyFunctionBlock(), null, "functionBlockModifications", null, 0, -1, IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECSeedModifications_MethodModifications(), this.getIECModifyMethod(), null, "methodModifications", null, 0, -1, IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECSeedModifications_PropertyModifications(), this.getIECModifyProperty(), null, "propertyModifications", null, 0, -1, IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECSeedModifications_FunctionModifications(), this.getIECModifyFunction(), null, "functionModifications", null, 0, -1, IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIECSeedModifications_ProgramModifications(), this.getIECModifyProgram(), null, "programModifications", null, 0, -1, IECSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecChangePropagationDueToDataDependencyEClass, IECChangePropagationDueToDataDependency.class, "IECChangePropagationDueToDataDependency", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECChangePropagationDueToDataDependency_FunctionBlockModifications(), this.getIECModifyFunctionBlock(), null, "functionBlockModifications", null, 0, -1, IECChangePropagationDueToDataDependency.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

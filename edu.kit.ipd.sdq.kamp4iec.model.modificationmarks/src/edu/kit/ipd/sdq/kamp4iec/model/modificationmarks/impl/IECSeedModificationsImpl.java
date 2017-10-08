@@ -3,14 +3,15 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractSeedModificationsImpl;
-
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
 
@@ -41,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getFunctionBlockModifications <em>Function Block Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getMethodModifications <em>Method Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getPropertyModifications <em>Property Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getFunctionModifications <em>Function Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl.IECSeedModificationsImpl#getProgramModifications <em>Program Modifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,6 +115,26 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 	 * @ordered
 	 */
 	protected EList<IECModifyProperty> propertyModifications;
+
+	/**
+	 * The cached value of the '{@link #getFunctionModifications() <em>Function Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFunctionModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECModifyFunction> functionModifications;
+
+	/**
+	 * The cached value of the '{@link #getProgramModifications() <em>Program Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProgramModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<IECModifyProgram> programModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,6 +244,30 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<IECModifyFunction> getFunctionModifications() {
+		if (functionModifications == null) {
+			functionModifications = new EObjectContainmentEList<IECModifyFunction>(IECModifyFunction.class, this, IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS);
+		}
+		return functionModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<IECModifyProgram> getProgramModifications() {
+		if (programModifications == null) {
+			programModifications = new EObjectContainmentEList<IECModifyProgram>(IECModifyProgram.class, this, IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS);
+		}
+		return programModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -238,6 +285,10 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 				return ((InternalEList<?>)getMethodModifications()).basicRemove(otherEnd, msgs);
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
 				return ((InternalEList<?>)getPropertyModifications()).basicRemove(otherEnd, msgs);
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
+				return ((InternalEList<?>)getFunctionModifications()).basicRemove(otherEnd, msgs);
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
+				return ((InternalEList<?>)getProgramModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -264,6 +315,10 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 				return getMethodModifications();
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
 				return getPropertyModifications();
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
+				return getFunctionModifications();
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
+				return getProgramModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -305,6 +360,14 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 				getPropertyModifications().clear();
 				getPropertyModifications().addAll((Collection<? extends IECModifyProperty>)newValue);
 				return;
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
+				getFunctionModifications().clear();
+				getFunctionModifications().addAll((Collection<? extends IECModifyFunction>)newValue);
+				return;
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
+				getProgramModifications().clear();
+				getProgramModifications().addAll((Collection<? extends IECModifyProgram>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -338,6 +401,12 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
 				getPropertyModifications().clear();
 				return;
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
+				getFunctionModifications().clear();
+				return;
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
+				getProgramModifications().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -364,6 +433,10 @@ public class IECSeedModificationsImpl extends AbstractSeedModificationsImpl impl
 				return methodModifications != null && !methodModifications.isEmpty();
 			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
 				return propertyModifications != null && !propertyModifications.isEmpty();
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
+				return functionModifications != null && !functionModifications.isEmpty();
+			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
+				return programModifications != null && !programModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

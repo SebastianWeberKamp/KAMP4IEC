@@ -341,6 +341,15 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFunctionBlock_ExtendsFunctionBlock() {
+		return (EReference)functionBlockEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGlobalVariable() {
 		return globalVariableEClass;
 	}
@@ -379,6 +388,15 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 */
 	public EReference getFunction_HasDerivedReturnType() {
 		return (EReference)functionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunction_CallsFunctionBlockConstructor() {
+		return (EReference)functionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -687,6 +705,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__WRITES_PROPERTY);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__CALLS_METHOD);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__CALLS_FUNCTION);
+		createEReference(functionBlockEClass, FUNCTION_BLOCK__EXTENDS_FUNCTION_BLOCK);
 
 		globalVariableEClass = createEClass(GLOBAL_VARIABLE);
 		createEReference(globalVariableEClass, GLOBAL_VARIABLE__HAS_DERIVED_TYPE);
@@ -694,6 +713,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__CALLS_FUNCTION);
 		createEReference(functionEClass, FUNCTION__HAS_DERIVED_RETURN_TYPE);
+		createEReference(functionEClass, FUNCTION__CALLS_FUNCTION_BLOCK_CONSTRUCTOR);
 
 		iecInterfaceEClass = createEClass(IEC_INTERFACE);
 		createEReference(iecInterfaceEClass, IEC_INTERFACE__HAS_METHOD);
@@ -797,6 +817,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		initEReference(getFunctionBlock_WritesProperty(), this.getIsProperty(), null, "WritesProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_CallsMethod(), this.getIsMethod(), null, "CallsMethod", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_ExtendsFunctionBlock(), this.getFunctionBlock(), null, "ExtendsFunctionBlock", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(globalVariableEClass, GlobalVariable.class, "GlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGlobalVariable_HasDerivedType(), this.getDerivedType(), null, "HasDerivedType", null, 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -804,6 +825,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunction_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunction_HasDerivedReturnType(), this.getDerivedType(), null, "HasDerivedReturnType", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunction_CallsFunctionBlockConstructor(), this.getFunctionBlock(), null, "CallsFunctionBlockConstructor", null, 0, -1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecInterfaceEClass, IECInterface.class, "IECInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECInterface_HasMethod(), this.getIECAbstractMethod(), null, "HasMethod", null, 0, -1, IECInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

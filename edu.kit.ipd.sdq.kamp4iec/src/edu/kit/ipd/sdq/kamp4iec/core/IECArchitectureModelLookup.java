@@ -261,6 +261,11 @@ public class IECArchitectureModelLookup {
 					putOrAddToMap(results, calling, accessed, funct);
 				}
 			}
+			for(FunctionBlock accessed : calling.getExtendsFunctionBlock()) {
+				for(FunctionBlock funct : functionBlocks) {
+					putOrAddToMap(results, calling, accessed, funct);
+				}
+			}
 		}
 		return results;
 	}
@@ -401,6 +406,11 @@ public class IECArchitectureModelLookup {
 					if(calling.getHasDerivedReturnType() instanceof FunctionBlock) {
 						putOrAddToMap(results, calling, (FunctionBlock) calling.getHasDerivedReturnType(), funct);
 					}
+				}
+			}
+			for(FunctionBlock accessed : calling.getCallsFunctionBlockConstructor()) {
+				for(FunctionBlock funct : functionBlocks) {
+						putOrAddToMap(results, calling, accessed, funct);
 				}
 			}
 		}

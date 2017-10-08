@@ -171,8 +171,8 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 
 		this.setSeedModifications(new HashSet<IECComponent>(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractMethod.class)));
 		elementsMarkedInThisStep = new ArrayList<IECComponent>();
-		calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
-		elementsMarkedInThisStep = new ArrayList<IECComponent>();
+//		calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
+//		elementsMarkedInThisStep = new ArrayList<IECComponent>();
 		calculateAndMarkAbstractMethodToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
 		elementsMarkedInThisStep = new ArrayList<IECComponent>();
 		calculateAndMarkAbstractMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
@@ -181,8 +181,8 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		
 		this.setSeedModifications(new HashSet<IECComponent>(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractProperty.class)));
 		elementsMarkedInThisStep = new ArrayList<IECComponent>();
-		calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
-		elementsMarkedInThisStep = new ArrayList<IECComponent>();
+//		calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
+//		elementsMarkedInThisStep = new ArrayList<IECComponent>();
 		calculateAndMarkAbstractPropertyToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
 		elementsMarkedInThisStep = new ArrayList<IECComponent>();
 		calculateAndMarkAbstractPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
@@ -1831,12 +1831,12 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				calculateAndMarkInterfaceToAbstractPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkInterfaceToAbstractMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 			} else if (entry instanceof IECAbstractMethod) {
-				calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
+//				calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 			} else if (entry instanceof IECAbstractProperty) {
-				calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
+//				calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
@@ -1855,12 +1855,12 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			break;
 		case FUNCTIONBLOCK : 
 			if (entry instanceof IECAbstractMethod) {
-				calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
+//				calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 			} else if (entry instanceof IECAbstractProperty) {
-				calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
+//				calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
@@ -1883,16 +1883,17 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				calculateAndMarkGlobalVariableToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.GLOBALVARIABLE);
 				calculateAndMarkGlobalVariableToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.GLOBALVARIABLE);
 				calculateAndMarkGlobalVariableToMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.GLOBALVARIABLE);
-			} else if (entry instanceof FunctionBlock) {
-				calculateAndMarkFunctionBlockToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToAbstractMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToAbstractPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToFunctionPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-				calculateAndMarkFunctionBlockToGlobalVariablePropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
-			}
+			} 
+//			else if (entry instanceof FunctionBlock) {
+//				calculateAndMarkFunctionBlockToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToAbstractMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToAbstractPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToFunctionPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//				calculateAndMarkFunctionBlockToGlobalVariablePropagation(version, elementsMarkedInThisStep, IECModificationType.FUNCTIONBLOCK);
+//			}
 			break;
 		case INTERFACE:
 
@@ -1926,12 +1927,12 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				calculateAndMarkInterfaceToAbstractPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkInterfaceToAbstractMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 			} else if (entry instanceof IECAbstractMethod) {
-				calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
+//				calculateAndMarkAbstractMethodToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 				calculateAndMarkAbstractMethodToMethodPropagation(version, elementsMarkedInThisStep, IECModificationType.INTERFACE);
 			} else if (entry instanceof IECAbstractProperty) {
-				calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
+//				calculateAndMarkAbstractPropertyToInterfacePropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToProgramPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToFunctionBlockPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);
 				calculateAndMarkAbstractPropertyToPropertyPropagation(version, elementsMarkedInThisStep, IECModificationType.ABSTRACTPROPERTY);

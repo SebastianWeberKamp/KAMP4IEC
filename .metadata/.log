@@ -9344,3 +9344,104 @@ java.nio.charset.UnmappableCharacterException: Input length = 1
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
 	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2017-10-05 09:43:51.884 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-10-05 09:43:57.171
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-10-05 09:45:39.915
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\janni'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2017-10-05 10:08:22.056
+!MESSAGE No repository found at http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/neon.
+
+!ENTRY org.eclipse.emf.codegen.ecore 2 0 2017-10-05 15:20:25.957
+!MESSAGE A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:141)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.close(PlatformResourceURIHandlerImpl.java:89)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper$1.close(PlatformResourceURIHandlerImpl.java:175)
+	at org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter.generateGIF(AbstractGeneratorAdapter.java:1848)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenClassGeneratorAdapter.generateCreateChildIcons(GenClassGeneratorAdapter.java:235)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenClassGeneratorAdapter.generateEdit(GenClassGeneratorAdapter.java:170)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenBaseGeneratorAdapter.doGenerate(GenBaseGeneratorAdapter.java:219)
+	at org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter.generate(AbstractGeneratorAdapter.java:317)
+	at org.eclipse.emf.codegen.ecore.generator.Generator.generate(Generator.java:708)
+	at org.eclipse.emf.codegen.ecore.genmodel.presentation.GeneratorUIUtil$GeneratorOperation.execute(GeneratorUIUtil.java:178)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:323)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:128)
+	... 14 more
+
+!ENTRY org.eclipse.emf.codegen.ecore 2 0 2017-10-05 15:21:22.826
+!MESSAGE A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:141)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.close(PlatformResourceURIHandlerImpl.java:89)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper$1.close(PlatformResourceURIHandlerImpl.java:175)
+	at org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter.generateGIF(AbstractGeneratorAdapter.java:1848)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenClassGeneratorAdapter.generateCreateChildIcons(GenClassGeneratorAdapter.java:235)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenClassGeneratorAdapter.generateEdit(GenClassGeneratorAdapter.java:170)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenBaseGeneratorAdapter.doGenerate(GenBaseGeneratorAdapter.java:219)
+	at org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter.generate(AbstractGeneratorAdapter.java:317)
+	at org.eclipse.emf.codegen.ecore.generator.Generator.generate(Generator.java:708)
+	at org.eclipse.emf.codegen.ecore.genmodel.presentation.GeneratorUIUtil$GeneratorOperation.execute(GeneratorUIUtil.java:178)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:323)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:128)
+	... 14 more
+
+!ENTRY org.eclipse.emf.codegen.ecore 2 0 2017-10-08 09:48:45.226
+!MESSAGE A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:141)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.close(PlatformResourceURIHandlerImpl.java:89)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$WorkbenchHelper$1.close(PlatformResourceURIHandlerImpl.java:175)
+	at org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter.generateGIF(AbstractGeneratorAdapter.java:1848)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenClassGeneratorAdapter.generateCreateChildIcons(GenClassGeneratorAdapter.java:235)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenClassGeneratorAdapter.generateEdit(GenClassGeneratorAdapter.java:170)
+	at org.eclipse.emf.codegen.ecore.genmodel.generator.GenBaseGeneratorAdapter.doGenerate(GenBaseGeneratorAdapter.java:219)
+	at org.eclipse.emf.codegen.ecore.generator.AbstractGeneratorAdapter.generate(AbstractGeneratorAdapter.java:317)
+	at org.eclipse.emf.codegen.ecore.generator.Generator.generate(Generator.java:708)
+	at org.eclipse.emf.codegen.ecore.genmodel.presentation.GeneratorUIUtil$GeneratorOperation.execute(GeneratorUIUtil.java:178)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.internal.resources.ResourceException: A resource exists with a different case: '/edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.edit/icons/full/ctool16/CreateIECSeedModifications_functionblockModifications_IECModifyFunctionBlock.gif'.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:323)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.eclipse.emf.ecore.resource.impl.PlatformResourceURIHandlerImpl$PlatformResourceOutputStream.flush(PlatformResourceURIHandlerImpl.java:128)
+	... 14 more
