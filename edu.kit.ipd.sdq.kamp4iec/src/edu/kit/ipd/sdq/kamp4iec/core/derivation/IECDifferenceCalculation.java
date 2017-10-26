@@ -48,23 +48,22 @@ public class IECDifferenceCalculation extends AbstractDifferenceCalculation<IECA
 	@Override
 	public void checkForDifferencesAndAddToWorkplan(Diff diffElement, List<Activity> workplan) {
 		for (IECActivityElementType elementType: IECActivityElementType.getTopLevelArchitectureActivityElementTypes()) {
-			if (detectionRuleAdded(diffElement, elementType.getClass())) {
-				Identifier architectureElement = (IECComponent)(((ReferenceChange)diffElement).getValue());
-				Activity newActivity = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, 
-						architectureElement, architectureElement.getName(), null, BasicActivity.ADD, 
-						IECDifferenceCalculation.createAddElementDescription(architectureElement));
+			if (detectionRuleAdded(diffElement, elementType.getElementClass())) {
+				Identifier architectureElement = (Identifier) (((ReferenceChange) diffElement).getValue());
+				Activity newActivity = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
+						architectureElement.getName(), null, BasicActivity.ADD,
+						createAddElementDescription(architectureElement));
 				workplan.add(newActivity);
-//				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
-				break;
-			} 
-			if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
-				Identifier architectureElement = (Identifier)(((ReferenceChange)diffElement).getValue());
-				Activity newActivity = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType,
-						architectureElement, architectureElement.getName(), null, BasicActivity.REMOVE, 
-						IECDifferenceCalculation.createRemoveElementDescription(architectureElement));
+				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
+				return;
+			} else if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
+				Identifier architectureElement = (Identifier) (((ReferenceChange) diffElement).getValue());
+				Activity newActivity = new Activity(IECActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
+						architectureElement.getName(), null, BasicActivity.REMOVE,
+						createRemoveElementDescription(architectureElement));
 				workplan.add(newActivity);
-//				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
-				break;
+				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
+				return;
 			}
 		}
 	}

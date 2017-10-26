@@ -253,6 +253,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<GlobalVariable>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfGlobalVariable(version, markedGlobalVariables);
 
+		lastModification = IECModificationType.GLOBALVARIABLE;
 		for(Map.Entry<FunctionBlock, Set<GlobalVariable>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -290,6 +291,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Configuration, Set<GlobalVariable>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpConfigurationOfGlobalVariable(version, markedGlobalVariables);
 
+		lastModification = IECModificationType.GLOBALVARIABLE;
 		for(Map.Entry<Configuration, Set<GlobalVariable>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -327,6 +329,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<GlobalVariable>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfGlobalVariable(version, markedGlobalVariables);
 
+		lastModification = IECModificationType.GLOBALVARIABLE;
 		 for(Map.Entry<Program, Set<GlobalVariable>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -364,7 +367,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<GlobalVariable>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfGlobalVariable(version, markedGlobalVariables);
 
-
+		lastModification = IECModificationType.GLOBALVARIABLE;
 		 for(Map.Entry<IECMethod, Set<GlobalVariable>> elementsToBeMarkedEntry: 
 			 	elementsToBeMarked.entrySet()) {
 			 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -405,6 +408,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<Program, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -443,6 +447,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<IECMethod, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -481,6 +486,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<FunctionBlock, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -519,6 +525,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<GlobalVariable, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpGlobalVariablesOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<GlobalVariable, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -557,6 +564,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECAbstractMethod, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpAbstractMethodsOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<IECAbstractMethod, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -595,6 +603,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECAbstractProperty, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpAbstractPropertiesOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<IECAbstractProperty, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -633,6 +642,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECProperty, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpPropertiesOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<IECProperty, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -671,6 +681,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Function, Set<FunctionBlock>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionsOfFunctionBlock(version, markedFunctionBlocks);
 
+		lastModification = IECModificationType.FUNCTIONBLOCK;
 		for(Map.Entry<Function, Set<FunctionBlock>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -711,6 +722,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfFunction(version, markedFunctions);
 
+		lastModification = IECModificationType.FUNCTION;
 		for(Map.Entry<IECMethod, Set<Function>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -749,6 +761,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfFunction(version, markedFunctions);
 
+		lastModification = IECModificationType.FUNCTION;
 		for(Map.Entry<FunctionBlock, Set<Function>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -787,6 +800,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfFunction(version, markedFunctions);
 
+		lastModification = IECModificationType.FUNCTION;
 		for(Map.Entry<Program, Set<Function>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -825,6 +839,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Function, Set<Function>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionsOfFunction(version, markedFunctions);
 
+		lastModification = IECModificationType.FUNCTION;
 		for(Map.Entry<Function, Set<Function>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -865,6 +880,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<FunctionBlock, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -903,6 +919,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECInterface, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpInterfacesOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<IECInterface, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -941,6 +958,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<Program, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -979,6 +997,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Function, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionsOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<Function, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1017,6 +1036,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECProperty, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpPropertiesOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<IECProperty, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1055,6 +1075,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECAbstractProperty, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpAbstractPropertiesOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<IECAbstractProperty, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1093,6 +1114,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<IECMethod, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1131,6 +1153,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECAbstractMethod, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpAbstractMethodsOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<IECAbstractMethod, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1169,6 +1192,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<GlobalVariable, Set<IECInterface>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpGlobalVariablesOfInterface(version, markedInterfaces);
 
+		lastModification = IECModificationType.INTERFACE;
 		for(Map.Entry<GlobalVariable, Set<IECInterface>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1209,6 +1233,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECInterface, Set<IECAbstractMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpInterfacesOfAbstractMethod(version, markedMethods);
 
+		lastModification = IECModificationType.ABSTRACTMETHOD;
 		for(Map.Entry<IECInterface, Set<IECAbstractMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1247,6 +1272,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<IECAbstractMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfAbstractMethod(version, markedMethods);
 
+		lastModification = IECModificationType.ABSTRACTMETHOD;
 		for(Map.Entry<Program, Set<IECAbstractMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1285,6 +1311,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<IECAbstractMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfAbstractMethod(version, markedMethods);
 
+		lastModification = IECModificationType.ABSTRACTMETHOD;
 		for(Map.Entry<IECMethod, Set<IECAbstractMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1323,6 +1350,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<IECAbstractMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfAbstractMethod(version, markedMethods);
 
+		lastModification = IECModificationType.ABSTRACTMETHOD;
 		for(Map.Entry<FunctionBlock, Set<IECAbstractMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1363,6 +1391,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECInterface, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpInterfacesOfAbstractProperty(version, properties);
 
+		lastModification = IECModificationType.ABSTRACTPROPERTY;
 		for(Map.Entry<IECInterface, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1401,6 +1430,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfAbstractProperty(version, properties);
 
+		lastModification = IECModificationType.ABSTRACTPROPERTY;
 		for(Map.Entry<Program, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1439,6 +1469,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECProperty, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpPropertiesOfAbstractProperty(version, properties);
 
+		lastModification = IECModificationType.ABSTRACTPROPERTY;
 		for(Map.Entry<IECProperty, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1477,6 +1508,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfAbstractProperty(version, properties);
 
+		lastModification = IECModificationType.ABSTRACTPROPERTY;
 		for(Map.Entry<FunctionBlock, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1515,6 +1547,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<IECAbstractProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfAbstractProperty(version, properties);
 
+		lastModification = IECModificationType.ABSTRACTPROPERTY;
 		for(Map.Entry<IECMethod, Set<IECAbstractProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1555,6 +1588,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Configuration, Set<Program>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpConfigurationOfProgram(version, markedPrograms);
 
+		lastModification = IECModificationType.PROGRAM;
 		for(Map.Entry<Configuration, Set<Program>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1595,6 +1629,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfMethod(version, markedMethods);
 
+		lastModification = IECModificationType.METHOD;
 		for(Map.Entry<FunctionBlock, Set<IECMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1633,6 +1668,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfMethod(version, markedMethods);
 
+		lastModification = IECModificationType.METHOD;
 		for(Map.Entry<Program, Set<IECMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1671,6 +1707,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<IECMethod>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfMethod(version, markedMethods);
 
+		lastModification = IECModificationType.METHOD;
 		for(Map.Entry<IECMethod, Set<IECMethod>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1711,6 +1748,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<IECMethod, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpMethodsOfProperty(version, markedProperties);
 
+		lastModification = IECModificationType.PROPERTY;
 		for(Map.Entry<IECMethod, Set<IECProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1749,6 +1787,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<FunctionBlock, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpFunctionBlocksOfProperty(version, markedProperties);
 
+		lastModification = IECModificationType.PROPERTY;
 		for(Map.Entry<FunctionBlock, Set<IECProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1779,6 +1818,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		Map<Program, Set<IECProperty>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpProgramsOfProperty(version, markedProperties);
 
+		lastModification = IECModificationType.PROPERTY;
 		for(Map.Entry<Program, Set<IECProperty>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
@@ -1798,7 +1838,18 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		}
 	}
 	
-	public <T extends IECComponent, S extends IECComponent>void continuePropagation(IECArchitectureVersion version, T entry, List<IECComponent> elementsMarkedInThisStep, IECModificationType lastModification) {
+//	private  List<ModificationMarker> modificationPaths;
+//	
+//	private <T extends IECComponent> boolean isNewModification(IECArchitectureVersion version, T entry, List<IECComponent> elementsMarkedInThisStep, IECModificationType lastModification) {
+//		if(modificationPaths.contains(new ModificationMarker(lastModification, IECModificationType.getFomComponent(entry)))) {
+//			return false;
+//		} else {
+//			modificationPaths.add(new ModificationMarker(lastModification, IECModificationType.getFomComponent(entry)));
+//			return true;
+//		}
+//	}
+	
+	public <T extends IECComponent>void continuePropagation(IECArchitectureVersion version, T entry, List<IECComponent> elementsMarkedInThisStep, IECModificationType lastModification) {
 		switch (lastModification) {
 		case SEED:
 			if(entry instanceof GlobalVariable) {
@@ -2007,10 +2058,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		default:
 			break;
 		}
-		
-		
-		
-		
 	}
 	
 	private IECModifyConfiguration getConfigurationModification(IECComponent component) {
