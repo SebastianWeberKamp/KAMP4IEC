@@ -135,8 +135,8 @@ public class IECInternalModificationDerivation {
 	}
 	
 	private void deriveAbstractPropertyModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<IECModifyProperty> modifyComponents = ArchitectureModelLookup.lookUpAllModificationMarksOfAType(targetVersion, IECModifyProperty.class);
-		for (IECModifyProperty modifyComponent : modifyComponents) {
+		Collection<IECModifyAbstractProperty> modifyComponents = ArchitectureModelLookup.lookUpAllModificationMarksOfAType(targetVersion, IECModifyAbstractProperty.class);
+		for (IECModifyAbstractProperty modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, 
 					   IECActivityElementType.ABSTRACTPROPERTY);
 			activityList.add(componentActivity);
@@ -186,42 +186,42 @@ public class IECInternalModificationDerivation {
 		if (modification instanceof IECModifyFunctionBlock){
 			FunctionBlock component = ((IECModifyFunctionBlock) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, component,
-					component.getId(), causingElementNames, BasicActivity.MODIFY, "Modify " + component.eClass().getName() + ".");
+					component.getName(), causingElementNames, BasicActivity.MODIFY, "Modify " + component.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyGlobalVariable){
 			GlobalVariable globalVariable = ((IECModifyGlobalVariable) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, globalVariable, globalVariable.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, globalVariable, globalVariable.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + globalVariable.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyConfiguration){
 			Configuration config = ((IECModifyConfiguration) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, config, config.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, config, config.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + config.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyFunction){
 			Function function = ((IECModifyFunction) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyMethod){
 			IECMethod method = ((IECModifyMethod) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + method.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyAbstractMethod){
 			IECAbstractMethod method = ((IECModifyAbstractMethod) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, method, method.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + method.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyProperty){
 			IECProperty function = ((IECModifyProperty) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyAbstractProperty){
 			IECAbstractProperty function = ((IECModifyAbstractProperty) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, function, function.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + function.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyProgram){
 			Program program = ((IECModifyProgram) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, program, program.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, program, program.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + program.eClass().getName() + ".");
 		} else if (modification instanceof IECModifyInterface){
 			IECInterface iecInterface = ((IECModifyInterface) modification).getAffectedElement();
-			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, iecInterface, iecInterface.getId(), 
+			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, iecInterface, iecInterface.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + iecInterface.eClass().getName() + ".");
 		} else {
 			return null;
