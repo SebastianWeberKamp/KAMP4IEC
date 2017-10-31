@@ -134,3 +134,37 @@
 [2017-10-30 15:11:50] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.editors.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
 [2017-10-30 15:11:50] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.PropertiesFileEditor.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
 [2017-10-30 15:11:50] 
+[2017-10-31 09:29:50] Executing startup tasks
+[2017-10-31 09:29:50] Java(TM) SE Runtime Environment 1.8.0_151-b12
+[2017-10-31 09:29:50] Product self.product.version
+[2017-10-31 09:29:50] Bundle org.eclipse.oomph.setup 1.7.0.v20170224-1311, build=2932, branch=cc66c993507ade50e4b3a824a3adb4e94c4ac25f
+[2017-10-31 09:29:50] Bundle org.eclipse.oomph.setup.core 1.7.0.v20170301-0747, build=2932, branch=cc66c993507ade50e4b3a824a3adb4e94c4ac25f
+[2017-10-31 09:29:50] Bundle org.eclipse.oomph.setup.p2 1.7.0.v20170217-1051, build=2932, branch=cc66c993507ade50e4b3a824a3adb4e94c4ac25f
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.e4.ui.css.swt.theme/themeid = org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.e4.ui.workbench.renderers.swt/enableMRU = true
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.e4.ui.workbench.renderers.swt/themeEnabled = true
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories = Torg.eclipse.jdt.ui.presentation...
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement = Forg.eclipse.jdt.ui.PropertiesFileEditor.textfont
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.internal.ui.compare.JavaMergeViewer = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.internal.ui.compare.PropertiesFileMergeViewer = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.editors.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 09:29:50] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.PropertiesFileEditor.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 09:29:50] 
+[2017-10-31 10:04:54] Executing startup tasks
+[2017-10-31 10:04:54] Java(TM) SE Runtime Environment 1.8.0_151-b12
+[2017-10-31 10:04:54] Product self.product.version
+[2017-10-31 10:04:54] Bundle org.eclipse.oomph.setup 1.7.0.v20170224-1311, build=2932, branch=cc66c993507ade50e4b3a824a3adb4e94c4ac25f
+[2017-10-31 10:04:54] Bundle org.eclipse.oomph.setup.core 1.7.0.v20170301-0747, build=2932, branch=cc66c993507ade50e4b3a824a3adb4e94c4ac25f
+[2017-10-31 10:04:54] Bundle org.eclipse.oomph.setup.p2 1.7.0.v20170217-1051, build=2932, branch=cc66c993507ade50e4b3a824a3adb4e94c4ac25f
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.e4.ui.css.swt.theme/themeid = org.eclipse.e4.ui.css.theme.e4_default6.0,6.1,6.2,6.3,10.0
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.e4.ui.workbench.renderers.swt/enableMRU = true
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.e4.ui.workbench.renderers.swt/themeEnabled = true
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories = Torg.eclipse.jdt.ui.presentation...
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement = Forg.eclipse.jdt.ui.PropertiesFileEditor.textfont
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.internal.ui.compare.JavaMergeViewer = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.internal.ui.compare.PropertiesFileMergeViewer = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.editors.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 10:04:54] Performing Preference /instance/org.eclipse.ui.workbench/org.eclipse.jdt.ui.PropertiesFileEditor.textfont = 1|Consolas|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+[2017-10-31 10:04:54] 

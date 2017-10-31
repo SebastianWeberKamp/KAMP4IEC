@@ -356,6 +356,9 @@ public class IECArchitectureModelLookup {
 						}
 					}
 				}
+				for(FunctionBlock funct : functionBlocks) {
+					putOrAddToMap(results, calling, fb, funct);
+				}
 			}
 		}
 		return results;
@@ -926,11 +929,6 @@ public class IECArchitectureModelLookup {
 					for(IECProperty compared : properties) {
 						putOrAddToMap(results, calling, (IECProperty)accessed, compared);
 					}
-				}
-			}
-			for(IECProperty accessed : calling.getHasProperty()) {
-				for(IECProperty compared : properties) {
-					putOrAddToMap(results, calling, (IECProperty)accessed, compared);
 				}
 			}
 		}
