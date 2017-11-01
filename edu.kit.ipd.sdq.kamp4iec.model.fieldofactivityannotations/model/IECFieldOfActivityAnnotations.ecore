@@ -51,16 +51,11 @@
         eType="#//IECUnitTestCase" containment="true" eOpposite="#//IECUnitTestCase/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="acceptanceTestCases" upperBound="-1"
         eType="#//IECAcceptanceTestCase" containment="true" eOpposite="#//IECAcceptanceTestCase/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="integrationTestCases" upperBound="-1"
-        eType="#//IECIntegrationTestCase" containment="true" eOpposite="#//IECIntegrationTestCase/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="unitTestCaseAggregations"
         upperBound="-1" eType="#//IECUnitTestCaseAggregation" containment="true" eOpposite="#//IECUnitTestCaseAggregation/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="acceptanceTestCaseAggregations"
         upperBound="-1" eType="#//IECAcceptanceTestCaseAggregation" containment="true"
         eOpposite="#//IECAcceptanceTestCaseAggregation/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="integrationTestCaseAggregations"
-        upperBound="-1" eType="#//IECIntegrationTestCaseAggregation" containment="true"
-        eOpposite="#//IECIntegrationTestCaseAggregation/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECDeploymentSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="runtimeInstances" upperBound="-1"
@@ -97,11 +92,6 @@
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/acceptanceTestCases"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECComponent"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECIntegrationTestCase" eSuperTypes="#//IECTestCase">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/integrationTestCases"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECComponent"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECUnitTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/unitTestCaseAggregations"/>
@@ -110,11 +100,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECAcceptanceTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/acceptanceTestCaseAggregations"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECComponent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECIntegrationTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/integrationTestCaseAggregations"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECComponent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECStaffSpecification">

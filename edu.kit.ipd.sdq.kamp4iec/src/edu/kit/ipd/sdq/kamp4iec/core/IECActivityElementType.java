@@ -53,7 +53,17 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	}
 
 	public static IECActivityElementType[] getTopLevelArchitectureActivityElementTypes() {	
-		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, ABSTRACTPROPERTY, ABSTRACTMETHOD};
+		return new IECActivityElementType[]{GLOBALVARIABLE, FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, METHOD, PROPERTY,  ABSTRACTPROPERTY, ABSTRACTMETHOD};
 	}
+
+	public static IECActivityElementType[] getUnitTestedlArchitectureActivityElementTypes() {	
+		return new IECActivityElementType[]{FUNCTIONBLOCK, CONFIGURATION, PROGRAM, FUNCTION, INTERFACE, METHOD, ABSTRACTMETHOD};
+	}
+
+	public static IECActivityElementType[] getAcceptanceTestedlArchitectureActivityElementTypes() {	
+		return new IECActivityElementType[]{FUNCTIONBLOCK, CONFIGURATION, PROGRAM};
+	}
+	
+	
 
 }
