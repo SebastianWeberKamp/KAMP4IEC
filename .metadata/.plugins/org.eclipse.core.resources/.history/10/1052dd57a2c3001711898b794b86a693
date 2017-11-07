@@ -1,0 +1,5 @@
+package edu.kit.ipd.sdq.kamp4iec.core;
+
+enum RoleType {
+
+}

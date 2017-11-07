@@ -6,8 +6,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanc
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase;
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation;
@@ -40,10 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getUnitTestCases <em>Unit Test Cases</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getAcceptanceTestCases <em>Acceptance Test Cases</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getIntegrationTestCases <em>Integration Test Cases</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getUnitTestCaseAggregations <em>Unit Test Case Aggregations</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getAcceptanceTestCaseAggregations <em>Acceptance Test Case Aggregations</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestSpecificationImpl#getIntegrationTestCaseAggregations <em>Integration Test Case Aggregations</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,16 +66,6 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 	protected EList<IECAcceptanceTestCase> acceptanceTestCases;
 
 	/**
-	 * The cached value of the '{@link #getIntegrationTestCases() <em>Integration Test Cases</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIntegrationTestCases()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IECIntegrationTestCase> integrationTestCases;
-
-	/**
 	 * The cached value of the '{@link #getUnitTestCaseAggregations() <em>Unit Test Case Aggregations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,16 +84,6 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<IECAcceptanceTestCaseAggregation> acceptanceTestCaseAggregations;
-
-	/**
-	 * The cached value of the '{@link #getIntegrationTestCaseAggregations() <em>Integration Test Case Aggregations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIntegrationTestCaseAggregations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<IECIntegrationTestCaseAggregation> integrationTestCaseAggregations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,18 +174,6 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECIntegrationTestCase> getIntegrationTestCases() {
-		if (integrationTestCases == null) {
-			integrationTestCases = new EObjectContainmentWithInverseEList<IECIntegrationTestCase>(IECIntegrationTestCase.class, this, IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT);
-		}
-		return integrationTestCases;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<IECUnitTestCaseAggregation> getUnitTestCaseAggregations() {
 		if (unitTestCaseAggregations == null) {
 			unitTestCaseAggregations = new EObjectContainmentWithInverseEList<IECUnitTestCaseAggregation>(IECUnitTestCaseAggregation.class, this, IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS, IECFieldOfActivityAnnotationsPackage.IEC_UNIT_TEST_CASE_AGGREGATION__PARENT);
@@ -234,18 +198,6 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECIntegrationTestCaseAggregation> getIntegrationTestCaseAggregations() {
-		if (integrationTestCaseAggregations == null) {
-			integrationTestCaseAggregations = new EObjectContainmentWithInverseEList<IECIntegrationTestCaseAggregation>(IECIntegrationTestCaseAggregation.class, this, IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT);
-		}
-		return integrationTestCaseAggregations;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -258,14 +210,10 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUnitTestCases()).basicAdd(otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAcceptanceTestCases()).basicAdd(otherEnd, msgs);
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIntegrationTestCases()).basicAdd(otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getUnitTestCaseAggregations()).basicAdd(otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getAcceptanceTestCaseAggregations()).basicAdd(otherEnd, msgs);
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getIntegrationTestCaseAggregations()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -284,14 +232,10 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 				return ((InternalEList<?>)getUnitTestCases()).basicRemove(otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES:
 				return ((InternalEList<?>)getAcceptanceTestCases()).basicRemove(otherEnd, msgs);
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
-				return ((InternalEList<?>)getIntegrationTestCases()).basicRemove(otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 				return ((InternalEList<?>)getUnitTestCaseAggregations()).basicRemove(otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
 				return ((InternalEList<?>)getAcceptanceTestCaseAggregations()).basicRemove(otherEnd, msgs);
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
-				return ((InternalEList<?>)getIntegrationTestCaseAggregations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -324,14 +268,10 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 				return getUnitTestCases();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES:
 				return getAcceptanceTestCases();
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
-				return getIntegrationTestCases();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 				return getUnitTestCaseAggregations();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
 				return getAcceptanceTestCaseAggregations();
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
-				return getIntegrationTestCaseAggregations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -356,10 +296,6 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 				getAcceptanceTestCases().clear();
 				getAcceptanceTestCases().addAll((Collection<? extends IECAcceptanceTestCase>)newValue);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
-				getIntegrationTestCases().clear();
-				getIntegrationTestCases().addAll((Collection<? extends IECIntegrationTestCase>)newValue);
-				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 				getUnitTestCaseAggregations().clear();
 				getUnitTestCaseAggregations().addAll((Collection<? extends IECUnitTestCaseAggregation>)newValue);
@@ -367,10 +303,6 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
 				getAcceptanceTestCaseAggregations().clear();
 				getAcceptanceTestCaseAggregations().addAll((Collection<? extends IECAcceptanceTestCaseAggregation>)newValue);
-				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
-				getIntegrationTestCaseAggregations().clear();
-				getIntegrationTestCaseAggregations().addAll((Collection<? extends IECIntegrationTestCaseAggregation>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -393,17 +325,11 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES:
 				getAcceptanceTestCases().clear();
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
-				getIntegrationTestCases().clear();
-				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 				getUnitTestCaseAggregations().clear();
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
 				getAcceptanceTestCaseAggregations().clear();
-				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
-				getIntegrationTestCaseAggregations().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -423,14 +349,10 @@ public class IECTestSpecificationImpl extends MinimalEObjectImpl.Container imple
 				return unitTestCases != null && !unitTestCases.isEmpty();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES:
 				return acceptanceTestCases != null && !acceptanceTestCases.isEmpty();
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
-				return integrationTestCases != null && !integrationTestCases.isEmpty();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 				return unitTestCaseAggregations != null && !unitTestCaseAggregations.isEmpty();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
 				return acceptanceTestCaseAggregations != null && !acceptanceTestCaseAggregations.isEmpty();
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
-				return integrationTestCaseAggregations != null && !integrationTestCaseAggregations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

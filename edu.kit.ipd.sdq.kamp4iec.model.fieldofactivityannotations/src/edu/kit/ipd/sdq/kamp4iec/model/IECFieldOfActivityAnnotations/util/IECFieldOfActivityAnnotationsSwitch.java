@@ -112,24 +112,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_DEPLOYMENT_SPECIFICATION: {
-				IECDeploymentSpecification iecDeploymentSpecification = (IECDeploymentSpecification)theEObject;
-				T result = caseIECDeploymentSpecification(iecDeploymentSpecification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE: {
-				IECRuntimeInstance iecRuntimeInstance = (IECRuntimeInstance)theEObject;
-				T result = caseIECRuntimeInstance(iecRuntimeInstance);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE_AGGREGATION: {
-				IECRuntimeInstanceAggregation iecRuntimeInstanceAggregation = (IECRuntimeInstanceAggregation)theEObject;
-				T result = caseIECRuntimeInstanceAggregation(iecRuntimeInstanceAggregation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IECFieldOfActivityAnnotationsPackage.IEC_UNIT_TEST_CASE: {
 				IECUnitTestCase iecUnitTestCase = (IECUnitTestCase)theEObject;
 				T result = caseIECUnitTestCase(iecUnitTestCase);
@@ -162,13 +144,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 				IECAcceptanceTestCaseAggregation iecAcceptanceTestCaseAggregation = (IECAcceptanceTestCaseAggregation)theEObject;
 				T result = caseIECAcceptanceTestCaseAggregation(iecAcceptanceTestCaseAggregation);
 				if (result == null) result = caseIECTestCaseAggregation(iecAcceptanceTestCaseAggregation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION: {
-				IECIntegrationTestCaseAggregation iecIntegrationTestCaseAggregation = (IECIntegrationTestCaseAggregation)theEObject;
-				T result = caseIECIntegrationTestCaseAggregation(iecIntegrationTestCaseAggregation);
-				if (result == null) result = caseIECTestCaseAggregation(iecIntegrationTestCaseAggregation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -364,51 +339,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Deployment Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Deployment Specification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECDeploymentSpecification(IECDeploymentSpecification object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Runtime Instance</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Runtime Instance</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECRuntimeInstance(IECRuntimeInstance object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Runtime Instance Aggregation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Runtime Instance Aggregation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECRuntimeInstanceAggregation(IECRuntimeInstanceAggregation object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IEC Unit Test Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -480,21 +410,6 @@ public class IECFieldOfActivityAnnotationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIECAcceptanceTestCaseAggregation(IECAcceptanceTestCaseAggregation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>IEC Integration Test Case Aggregation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IEC Integration Test Case Aggregation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseIECIntegrationTestCaseAggregation(IECIntegrationTestCaseAggregation object) {
 		return null;
 	}
 

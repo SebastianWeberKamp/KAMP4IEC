@@ -5,6 +5,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDevelopmentArtefactSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -38,7 +39,7 @@ public class IECMetadataFileImpl extends IECFileImpl implements IECMetadataFile 
 	 * @generated
 	 * @ordered
 	 */
-	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent component;
+	protected IECComponent component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,10 +106,10 @@ public class IECMetadataFileImpl extends IECFileImpl implements IECMetadataFile 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent getComponent() {
+	public IECComponent getComponent() {
 		if (component != null && component.eIsProxy()) {
 			InternalEObject oldComponent = (InternalEObject)component;
-			component = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)eResolveProxy(oldComponent);
+			component = (IECComponent)eResolveProxy(oldComponent);
 			if (component != oldComponent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE__COMPONENT, oldComponent, component));
@@ -122,7 +123,7 @@ public class IECMetadataFileImpl extends IECFileImpl implements IECMetadataFile 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent basicGetComponent() {
+	public IECComponent basicGetComponent() {
 		return component;
 	}
 
@@ -131,8 +132,8 @@ public class IECMetadataFileImpl extends IECFileImpl implements IECMetadataFile 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent newComponent) {
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent oldComponent = component;
+	public void setComponent(IECComponent newComponent) {
+		IECComponent oldComponent = component;
 		component = newComponent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE__COMPONENT, oldComponent, component));
@@ -211,7 +212,7 @@ public class IECMetadataFileImpl extends IECFileImpl implements IECMetadataFile 
 				setParent((IECDevelopmentArtefactSpecification)newValue);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE__COMPONENT:
-				setComponent((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)newValue);
+				setComponent((IECComponent)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,7 +230,7 @@ public class IECMetadataFileImpl extends IECFileImpl implements IECMetadataFile 
 				setParent((IECDevelopmentArtefactSpecification)null);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE__COMPONENT:
-				setComponent((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)null);
+				setComponent((IECComponent)null);
 				return;
 		}
 		super.eUnset(featureID);

@@ -85,33 +85,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	IECTestSpecification createIECTestSpecification();
 
 	/**
-	 * Returns a new object of class '<em>IEC Deployment Specification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Deployment Specification</em>'.
-	 * @generated
-	 */
-	IECDeploymentSpecification createIECDeploymentSpecification();
-
-	/**
-	 * Returns a new object of class '<em>IEC Runtime Instance</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Runtime Instance</em>'.
-	 * @generated
-	 */
-	IECRuntimeInstance createIECRuntimeInstance();
-
-	/**
-	 * Returns a new object of class '<em>IEC Runtime Instance Aggregation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Runtime Instance Aggregation</em>'.
-	 * @generated
-	 */
-	IECRuntimeInstanceAggregation createIECRuntimeInstanceAggregation();
-
-	/**
 	 * Returns a new object of class '<em>IEC Unit Test Case</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,15 +128,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	 * @generated
 	 */
 	IECAcceptanceTestCaseAggregation createIECAcceptanceTestCaseAggregation();
-
-	/**
-	 * Returns a new object of class '<em>IEC Integration Test Case Aggregation</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Integration Test Case Aggregation</em>'.
-	 * @generated
-	 */
-	IECIntegrationTestCaseAggregation createIECIntegrationTestCaseAggregation();
 
 	/**
 	 * Returns a new object of class '<em>IEC Staff Specification</em>'.

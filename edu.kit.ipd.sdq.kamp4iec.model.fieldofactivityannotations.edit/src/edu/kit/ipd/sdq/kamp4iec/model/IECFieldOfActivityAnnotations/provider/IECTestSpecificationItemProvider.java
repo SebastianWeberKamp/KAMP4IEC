@@ -79,10 +79,8 @@ public class IECTestSpecificationItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__UNIT_TEST_CASES);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -137,10 +135,8 @@ public class IECTestSpecificationItemProvider
 		switch (notification.getFeatureID(IECTestSpecification.class)) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASES:
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES:
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES:
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS:
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS:
-			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -170,11 +166,6 @@ public class IECTestSpecificationItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECIntegrationTestCase()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECUnitTestCaseAggregation()));
 
@@ -182,11 +173,6 @@ public class IECTestSpecificationItemProvider
 			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECAcceptanceTestCaseAggregation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECIntegrationTestCaseAggregation()));
 	}
 
 	/**

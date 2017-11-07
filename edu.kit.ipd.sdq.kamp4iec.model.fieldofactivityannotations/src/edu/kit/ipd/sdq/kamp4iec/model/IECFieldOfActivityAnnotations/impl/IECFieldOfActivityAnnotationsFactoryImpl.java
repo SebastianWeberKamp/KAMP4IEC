@@ -63,15 +63,11 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE: return createIECMetadataFile();
 			case IECFieldOfActivityAnnotationsPackage.IEC_METADATA_FILE_AGGREGATION: return createIECMetadataFileAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION: return createIECTestSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_DEPLOYMENT_SPECIFICATION: return createIECDeploymentSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE: return createIECRuntimeInstance();
-			case IECFieldOfActivityAnnotationsPackage.IEC_RUNTIME_INSTANCE_AGGREGATION: return createIECRuntimeInstanceAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_UNIT_TEST_CASE: return createIECUnitTestCase();
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE: return createIECAcceptanceTestCase();
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE: return createIECIntegrationTestCase();
 			case IECFieldOfActivityAnnotationsPackage.IEC_UNIT_TEST_CASE_AGGREGATION: return createIECUnitTestCaseAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION: return createIECAcceptanceTestCaseAggregation();
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE_AGGREGATION: return createIECIntegrationTestCaseAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_STAFF_SPECIFICATION: return createIECStaffSpecification();
 			case IECFieldOfActivityAnnotationsPackage.IEC_PERSON_LIST: return createIECPersonList();
 			case IECFieldOfActivityAnnotationsPackage.IEC_PERSON: return createIECPerson();
@@ -160,36 +156,6 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECDeploymentSpecification createIECDeploymentSpecification() {
-		IECDeploymentSpecificationImpl iecDeploymentSpecification = new IECDeploymentSpecificationImpl();
-		return iecDeploymentSpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECRuntimeInstance createIECRuntimeInstance() {
-		IECRuntimeInstanceImpl iecRuntimeInstance = new IECRuntimeInstanceImpl();
-		return iecRuntimeInstance;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECRuntimeInstanceAggregation createIECRuntimeInstanceAggregation() {
-		IECRuntimeInstanceAggregationImpl iecRuntimeInstanceAggregation = new IECRuntimeInstanceAggregationImpl();
-		return iecRuntimeInstanceAggregation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IECUnitTestCase createIECUnitTestCase() {
 		IECUnitTestCaseImpl iecUnitTestCase = new IECUnitTestCaseImpl();
 		return iecUnitTestCase;
@@ -233,16 +199,6 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 	public IECAcceptanceTestCaseAggregation createIECAcceptanceTestCaseAggregation() {
 		IECAcceptanceTestCaseAggregationImpl iecAcceptanceTestCaseAggregation = new IECAcceptanceTestCaseAggregationImpl();
 		return iecAcceptanceTestCaseAggregation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECIntegrationTestCaseAggregation createIECIntegrationTestCaseAggregation() {
-		IECIntegrationTestCaseAggregationImpl iecIntegrationTestCaseAggregation = new IECIntegrationTestCaseAggregationImpl();
-		return iecIntegrationTestCaseAggregation;
 	}
 
 	/**

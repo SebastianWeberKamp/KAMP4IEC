@@ -1,9 +1,13 @@
 package edu.kit.ipd.sdq.kamp4iec.core.derivation;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.emf.ecore.EObject;
+
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityType;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractEnrichedWorkplanDerivation;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
@@ -11,8 +15,11 @@ import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.IECRoleType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFileAggregation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECPerson;
+import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRole;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFileAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase;
@@ -69,12 +76,14 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 			int numberOfFiles = determineNumberOfSourceFiles(determineRelevantArchitectureVersion(
 					activity, baseVersion, targetVersion), activity);
 			if (typeEquals(activity.getElementType(), IECActivityElementType.getTopLevelArchitectureActivityElementTypes()) && numberOfFiles > 0) {
-				activity.addFollowupActivity(new Activity(IECActivityType.IMPLEMENTATION_SOURCECODE, 
+				Activity newActivity = new Activity(IECActivityType.IMPLEMENTATION_SOURCECODE, 
 						IECActivityElementType.SOURCECODEFILES, activity.getElement(),
 						numberOfFiles + " source file(s)", null, activity.getBasicActivity(),
 						"Source code implementation: " + activity.getBasicActivity().getName() + 
 						" source file(s) (" + numberOfFiles + " files) of component " + 
-						activity.getElementName() + "."));
+						activity.getElementName() + ".");
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.DEVELOPER);
 			} 
 			deriveCodingActivities(baseVersion, targetVersion, activity.getSubActivities());
 		}
@@ -109,12 +118,14 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 			int numberOfFiles = determineNumberOfMetadataFiles(determineRelevantArchitectureVersion(
 					activity, baseVersion, targetVersion), activity);
 			if (typeEquals(activity.getElementType(), IECActivityElementType.getTopLevelArchitectureActivityElementTypes()) && numberOfFiles > 0) {
-				activity.addFollowupActivity(new Activity(IECActivityType.IMPLEMENTATION_METADATA, 
+				Activity newActivity = new Activity(IECActivityType.IMPLEMENTATION_METADATA, 
 						IECActivityElementType.METADATAFILES, activity.getElement(),
 						numberOfFiles + " meta data file(s)", null, activity.getBasicActivity(), 
 						"Meta data implementation: " + activity.getBasicActivity().getName() + 
 						" meta data file(s) (" + numberOfFiles + " files) of component " + 
-						activity.getElementName() + "."));
+						activity.getElementName() + ".");
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.DEVELOPER);
 			} 
 			deriveMetadataActivities(baseVersion, targetVersion, activity.getSubActivities());
 		}
@@ -141,27 +152,33 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 		for (Activity activity : baseActivityList) {
 			if (typeEquals(activity.getElementType(), IECActivityElementType.getUnitTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.ADD) {
-				activity.addFollowupActivity(new Activity(IECActivityType.TESTDEVELOPMENT, 
+				Activity newActivity = new Activity(IECActivityType.TESTDEVELOPMENT, 
 						IECActivityElementType.TESTCASE, activity.getElement(),
 						"", null, BasicActivity.ADD, 
-						"Test development: Develop unit tests for component."));
+						"Test development: Develop unit tests for component.");
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.TESTDEVELOPER);
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getUnitTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.REMOVE) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(baseVersion, activity);
 				if (numberOfUnitTests > 0) {
-					activity.addFollowupActivity(new Activity(IECActivityType.TESTDEVELOPMENT, 
+					Activity newActivity = new Activity(IECActivityType.TESTDEVELOPMENT, 
 							IECActivityElementType.TESTCASE, activity.getElement(),
 							numberOfUnitTests + " test(s)", null, BasicActivity.REMOVE, 
-							"Test development: Remove unit tests for component."));
+							"Test development: Remove unit tests for component.");
+					activity.addFollowupActivity(newActivity);
+					deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.TESTDEVELOPER);
 				}
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getUnitTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.MODIFY) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(targetVersion, activity);
 				if (numberOfUnitTests > 0) {
-					activity.addFollowupActivity(new Activity(IECActivityType.TESTUPDATE, 
+					Activity newActivity = new Activity(IECActivityType.TESTUPDATE, 
 							IECActivityElementType.TESTCASE, activity.getElement(),
 							numberOfUnitTests + " test(s)", null, BasicActivity.CHECKANDUPDATE, 
-							"Test development: Check and update unit tests for component."));
+							"Test development: Check and update unit tests for component.");
+					activity.addFollowupActivity(newActivity);
+					deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.TESTDEVELOPER);
 				}
 			}
 			deriveUnitTestDevelopmentActivities(baseVersion, targetVersion, activity.getSubActivities());
@@ -173,27 +190,33 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 		for (Activity activity : baseActivityList) {
 			if (typeEquals(activity.getElementType(), IECActivityElementType.getAcceptanceTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.ADD) {
-				activity.addFollowupActivity(new Activity(IECActivityType.TESTDEVELOPMENT, 
+				Activity newActivity = new Activity(IECActivityType.TESTDEVELOPMENT, 
 						IECActivityElementType.TESTCASE, activity.getElement(),
 						"", null, BasicActivity.ADD, 
-						"Test development: Develop acceptance tests for component."));
+						"Test development: Develop acceptance tests for component.");
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.TESTDEVELOPER);
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getAcceptanceTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.REMOVE) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(baseVersion, activity);
 				if (numberOfUnitTests > 0) {
-					activity.addFollowupActivity(new Activity(IECActivityType.TESTDEVELOPMENT, 
+					Activity newActivity = new Activity(IECActivityType.TESTDEVELOPMENT, 
 							IECActivityElementType.TESTCASE, activity.getElement(),
 							numberOfUnitTests + " test(s)", null, BasicActivity.REMOVE, 
-							"Test development: Remove acceptance tests for component."));
+							"Test development: Remove acceptance tests for component.");
+					activity.addFollowupActivity(newActivity);
+					deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.TESTDEVELOPER);
 				}
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getAcceptanceTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity() == BasicActivity.MODIFY) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(targetVersion, activity);
 				if (numberOfUnitTests > 0) {
-					activity.addFollowupActivity(new Activity(IECActivityType.TESTUPDATE, 
+					Activity newActivity = new Activity(IECActivityType.TESTUPDATE, 
 							IECActivityElementType.TESTCASE, activity.getElement(),
 							numberOfUnitTests + " test(s)", null, BasicActivity.CHECKANDUPDATE, 
-							"Test development: Check and update acceptance tests for component."));
+							"Test development: Check and update acceptance tests for component.");
+					activity.addFollowupActivity(newActivity);
+					deriveStaffActivity(determineRelevantArchitectureVersion(newActivity, baseVersion, targetVersion), newActivity, IECRoleType.TESTDEVELOPER);
 				}
 			}
 			deriveUnitTestDevelopmentActivities(baseVersion, targetVersion, activity.getSubActivities());
@@ -221,18 +244,22 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 		for (Activity activity : baseActivityList) {
 			if (typeEquals(activity.getElementType(), IECActivityElementType.getUnitTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity()==BasicActivity.ADD) {
-				activity.addFollowupActivity(new Activity(IECActivityType.TESTEXECUTION, 
+				Activity newActivity = new Activity(IECActivityType.TESTEXECUTION, 
 						IECActivityElementType.TESTCASE, activity.getElement(),
 						"New test cases", null, BasicActivity.EXECUTE, 
-						"Test execution (unit tests): Execute test cases."));
+						"Test execution (unit tests): Execute test cases.");
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(target, newActivity, IECRoleType.TESTER);
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getUnitTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity()==BasicActivity.MODIFY) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(target, activity);
+				Activity newActivity = new Activity(IECActivityType.TESTEXECUTION, 
+						IECActivityElementType.TESTCASE, activity.getElement(),
+						numberOfUnitTests + " test(s)", null, BasicActivity.EXECUTE,
+						"Test execution (unit tests): Execute test cases.");
 				if (numberOfUnitTests>0) {
-					activity.addFollowupActivity(new Activity(IECActivityType.TESTEXECUTION, 
-							IECActivityElementType.TESTCASE, activity.getElement(),
-							numberOfUnitTests + " test(s)", null, BasicActivity.EXECUTE,
-							"Test execution (unit tests): Execute test cases."));
+					activity.addFollowupActivity(newActivity);
+					deriveStaffActivity(target, newActivity, IECRoleType.TESTER);
 				}
 			}
 			deriveUnitTestExecutionActivities(target, activity.getSubActivities());
@@ -245,18 +272,22 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 		for (Activity activity : baseActivityList) {
 			if (typeEquals(activity.getElementType(), IECActivityElementType.getAcceptanceTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity()==BasicActivity.ADD) {
-				activity.addFollowupActivity(new Activity(IECActivityType.TESTEXECUTION, 
+				Activity newActivity = new Activity(IECActivityType.TESTEXECUTION, 
 						IECActivityElementType.TESTCASE, activity.getElement(),
 						"New test cases", null, BasicActivity.EXECUTE, 
-						"Test execution (acceptance tests): Execute test cases."));
+						"Test execution (acceptance tests): Execute test cases.");
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(target, newActivity, IECRoleType.TESTER);
 			} else if (typeEquals(activity.getElementType(), IECActivityElementType.getAcceptanceTestedlArchitectureActivityElementTypes()) && 
 					activity.getBasicActivity()==BasicActivity.MODIFY) {
 				int numberOfUnitTests = numberOfAvailableUnitTests(target, activity);
+				Activity newActivity = new Activity(IECActivityType.TESTEXECUTION, 
+						IECActivityElementType.TESTCASE, activity.getElement(),
+						numberOfUnitTests + " test(s)", null, BasicActivity.EXECUTE,
+						"Test execution (acceptance tests): Execute test cases.");
 				if (numberOfUnitTests>0) {
-					activity.addFollowupActivity(new Activity(IECActivityType.TESTEXECUTION, 
-							IECActivityElementType.TESTCASE, activity.getElement(),
-							numberOfUnitTests + " test(s)", null, BasicActivity.EXECUTE,
-							"Test execution (acceptance tests): Execute test cases."));
+					activity.addFollowupActivity(newActivity);
+					deriveStaffActivity(target, newActivity, IECRoleType.TESTER);
 				}
 			}
 			deriveUnitTestExecutionActivities(target, activity.getSubActivities());
@@ -266,14 +297,33 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 	private static void deriveDeploymentExecutionActivities(
 			IECArchitectureVersion target, List<Activity> baseActivityList) {
 		for (Activity activity : baseActivityList) {
+			Activity newActivity = new Activity(IECActivityType.DEPLOYMENTEXECUTION, 
+					IECActivityElementType.DEPLOYMENTCONFIGURATION, activity.getElement(),
+					"one run-time instance", null, BasicActivity.EXECUTE, 
+					"Deployment execution: Perform deployment.");
 			if (activity.getType() == IECActivityType.RELEASEEXECUTION && 
 					activity.getBasicActivity() == BasicActivity.EXECUTE) {
-				activity.addFollowupActivity(new Activity(IECActivityType.DEPLOYMENTEXECUTION, 
-						IECActivityElementType.DEPLOYMENTCONFIGURATION, activity.getElement(),
-						"one run-time instance", null, BasicActivity.EXECUTE, 
-						"Deployment execution: Perform deployment."));
+				activity.addFollowupActivity(newActivity);
+				deriveStaffActivity(target, newActivity, IECRoleType.DEPLOYER);
 			} 
 			deriveDeploymentExecutionActivities(target, activity.getFollowupActivities());
+		}
+	}
+	
+	private static void deriveStaffActivity(IECArchitectureVersion version, Activity activity, IECRoleType type) {
+		if(activity.getElement() instanceof IECComponent) {
+			IECComponent component = (IECComponent) activity.getElement();
+			List<IECRole> reponsibleRoles = IECArchitectureAnnotationLookup.lookUpResponsibleRolesForIECComponent(version, component);
+			reponsibleRoles = IECArchitectureAnnotationLookup.filterRoles(reponsibleRoles, type);
+			List<IECPerson> reponsiblePersons = new ArrayList<>();
+			for(IECRole responsibleRole : reponsibleRoles) {
+				reponsiblePersons.addAll(IECArchitectureAnnotationLookup.lookUpPersonsForRole(version, responsibleRole));
+			}
+			for(IECPerson responsiblePerson : reponsiblePersons) {
+				activity.addFollowupActivity(new Activity(IECActivityType.STAFFRESPONSIBILITY, 
+						IECActivityElementType.PERSON, activity.getElement(), 
+						activity.getElementName(), null, activity.getBasicActivity(), responsiblePerson.getName() + " is responsible for this task."));
+			}
 		}
 	}
 }

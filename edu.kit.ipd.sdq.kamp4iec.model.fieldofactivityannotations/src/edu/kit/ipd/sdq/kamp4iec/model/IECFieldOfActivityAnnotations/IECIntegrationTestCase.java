@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>IEC Integration Test Case</b></em>'.
@@ -21,28 +23,26 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
  */
 public interface IECIntegrationTestCase extends IECTestCase {
 	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getIntegrationTestCases <em>Integration Test Cases</em>}'.
+	 * Returns the value of the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' container reference.
+	 * @return the value of the '<em>Parent</em>' reference.
 	 * @see #setParent(IECTestSpecification)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECIntegrationTestCase_Parent()
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getIntegrationTestCases
-	 * @model opposite="integrationTestCases" required="true" transient="false"
+	 * @model required="true"
 	 * @generated
 	 */
 	IECTestSpecification getParent();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getParent <em>Parent</em>}' container reference.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getParent <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' container reference.
+	 * @param value the new value of the '<em>Parent</em>' reference.
 	 * @see #getParent()
 	 * @generated
 	 */
@@ -57,12 +57,12 @@ public interface IECIntegrationTestCase extends IECTestCase {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component</em>' reference.
-	 * @see #setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)
+	 * @see #setComponent(IECComponent)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECIntegrationTestCase_Component()
 	 * @model
 	 * @generated
 	 */
-	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent getComponent();
+	IECComponent getComponent();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getComponent <em>Component</em>}' reference.
@@ -72,6 +72,6 @@ public interface IECIntegrationTestCase extends IECTestCase {
 	 * @see #getComponent()
 	 * @generated
 	 */
-	void setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent value);
+	void setComponent(IECComponent value);
 
 } // IECIntegrationTestCase

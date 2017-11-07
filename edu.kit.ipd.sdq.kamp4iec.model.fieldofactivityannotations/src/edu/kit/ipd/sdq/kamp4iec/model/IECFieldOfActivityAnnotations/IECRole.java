@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -112,6 +113,6 @@ public interface IECRole extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent> getComponents();
+	EList<IECComponent> getComponents();
 
 } // IECRole

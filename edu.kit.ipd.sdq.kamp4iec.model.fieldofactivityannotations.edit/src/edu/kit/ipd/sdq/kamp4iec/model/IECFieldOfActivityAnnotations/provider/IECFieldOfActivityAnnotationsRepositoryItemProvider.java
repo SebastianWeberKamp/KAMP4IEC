@@ -79,7 +79,6 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEVELOPMENT_ARTEFACT_SPECIFICATION);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION);
-			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION);
 			childrenFeatures.add(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION);
 		}
 		return childrenFeatures;
@@ -135,7 +134,6 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 		switch (notification.getFeatureID(IECFieldOfActivityAnnotationsRepository.class)) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEVELOPMENT_ARTEFACT_SPECIFICATION:
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -163,11 +161,6 @@ public class IECFieldOfActivityAnnotationsRepositoryItemProvider
 			(createChildParameter
 				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION,
 				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECTestSpecification()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECFieldOfActivityAnnotationsPackage.Literals.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION,
-				 IECFieldOfActivityAnnotationsFactory.eINSTANCE.createIECDeploymentSpecification()));
 
 		newChildDescriptors.add
 			(createChildParameter

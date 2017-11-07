@@ -5,6 +5,7 @@ import java.util.function.Function;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
+import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECPerson;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECSourceFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
@@ -33,7 +34,8 @@ public enum IECActivityElementType implements AbstractActivityElementType {
 	SOURCECODEFILES(IECSourceFile.class),
 	METADATAFILES(IECMetadataFile.class),
 	TESTCASE(IECTestCase.class), 
-	DEPLOYMENTCONFIGURATION(IECDeploymentSpecification.class);
+	DEPLOYMENTCONFIGURATION(IECDeploymentSpecification.class),
+	PERSON(IECPerson.class);
 	private final Class<?> clazz;
 	private final String name;
 	

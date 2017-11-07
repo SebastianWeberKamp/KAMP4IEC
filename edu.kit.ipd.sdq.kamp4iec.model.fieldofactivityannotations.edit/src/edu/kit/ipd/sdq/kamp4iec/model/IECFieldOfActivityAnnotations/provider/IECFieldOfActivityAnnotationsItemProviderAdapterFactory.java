@@ -233,75 +233,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECDeploymentSpecificationItemProvider iecDeploymentSpecificationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECDeploymentSpecificationAdapter() {
-		if (iecDeploymentSpecificationItemProvider == null) {
-			iecDeploymentSpecificationItemProvider = new IECDeploymentSpecificationItemProvider(this);
-		}
-
-		return iecDeploymentSpecificationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECRuntimeInstanceItemProvider iecRuntimeInstanceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECRuntimeInstanceAdapter() {
-		if (iecRuntimeInstanceItemProvider == null) {
-			iecRuntimeInstanceItemProvider = new IECRuntimeInstanceItemProvider(this);
-		}
-
-		return iecRuntimeInstanceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECRuntimeInstanceAggregationItemProvider iecRuntimeInstanceAggregationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECRuntimeInstanceAggregationAdapter() {
-		if (iecRuntimeInstanceAggregationItemProvider == null) {
-			iecRuntimeInstanceAggregationItemProvider = new IECRuntimeInstanceAggregationItemProvider(this);
-		}
-
-		return iecRuntimeInstanceAggregationItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -414,29 +345,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		}
 
 		return iecAcceptanceTestCaseAggregationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECIntegrationTestCaseAggregationItemProvider iecIntegrationTestCaseAggregationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECIntegrationTestCaseAggregationAdapter() {
-		if (iecIntegrationTestCaseAggregationItemProvider == null) {
-			iecIntegrationTestCaseAggregationItemProvider = new IECIntegrationTestCaseAggregationItemProvider(this);
-		}
-
-		return iecIntegrationTestCaseAggregationItemProvider;
 	}
 
 	/**
@@ -729,15 +637,11 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		if (iecMetadataFileItemProvider != null) iecMetadataFileItemProvider.dispose();
 		if (iecMetadataFileAggregationItemProvider != null) iecMetadataFileAggregationItemProvider.dispose();
 		if (iecTestSpecificationItemProvider != null) iecTestSpecificationItemProvider.dispose();
-		if (iecDeploymentSpecificationItemProvider != null) iecDeploymentSpecificationItemProvider.dispose();
-		if (iecRuntimeInstanceItemProvider != null) iecRuntimeInstanceItemProvider.dispose();
-		if (iecRuntimeInstanceAggregationItemProvider != null) iecRuntimeInstanceAggregationItemProvider.dispose();
 		if (iecUnitTestCaseItemProvider != null) iecUnitTestCaseItemProvider.dispose();
 		if (iecAcceptanceTestCaseItemProvider != null) iecAcceptanceTestCaseItemProvider.dispose();
 		if (iecIntegrationTestCaseItemProvider != null) iecIntegrationTestCaseItemProvider.dispose();
 		if (iecUnitTestCaseAggregationItemProvider != null) iecUnitTestCaseAggregationItemProvider.dispose();
 		if (iecAcceptanceTestCaseAggregationItemProvider != null) iecAcceptanceTestCaseAggregationItemProvider.dispose();
-		if (iecIntegrationTestCaseAggregationItemProvider != null) iecIntegrationTestCaseAggregationItemProvider.dispose();
 		if (iecStaffSpecificationItemProvider != null) iecStaffSpecificationItemProvider.dispose();
 		if (iecPersonListItemProvider != null) iecPersonListItemProvider.dispose();
 		if (iecPersonItemProvider != null) iecPersonItemProvider.dispose();

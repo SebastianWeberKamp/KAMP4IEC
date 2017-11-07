@@ -96,18 +96,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 				return createIECTestSpecificationAdapter();
 			}
 			@Override
-			public Adapter caseIECDeploymentSpecification(IECDeploymentSpecification object) {
-				return createIECDeploymentSpecificationAdapter();
-			}
-			@Override
-			public Adapter caseIECRuntimeInstance(IECRuntimeInstance object) {
-				return createIECRuntimeInstanceAdapter();
-			}
-			@Override
-			public Adapter caseIECRuntimeInstanceAggregation(IECRuntimeInstanceAggregation object) {
-				return createIECRuntimeInstanceAggregationAdapter();
-			}
-			@Override
 			public Adapter caseIECUnitTestCase(IECUnitTestCase object) {
 				return createIECUnitTestCaseAdapter();
 			}
@@ -126,10 +114,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 			@Override
 			public Adapter caseIECAcceptanceTestCaseAggregation(IECAcceptanceTestCaseAggregation object) {
 				return createIECAcceptanceTestCaseAggregationAdapter();
-			}
-			@Override
-			public Adapter caseIECIntegrationTestCaseAggregation(IECIntegrationTestCaseAggregation object) {
-				return createIECIntegrationTestCaseAggregationAdapter();
 			}
 			@Override
 			public Adapter caseIECStaffSpecification(IECStaffSpecification object) {
@@ -302,48 +286,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification <em>IEC Deployment Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification
-	 * @generated
-	 */
-	public Adapter createIECDeploymentSpecificationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance <em>IEC Runtime Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance
-	 * @generated
-	 */
-	public Adapter createIECRuntimeInstanceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation <em>IEC Runtime Instance Aggregation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation
-	 * @generated
-	 */
-	public Adapter createIECRuntimeInstanceAggregationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase <em>IEC Unit Test Case</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -410,20 +352,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	 * @generated
 	 */
 	public Adapter createIECAcceptanceTestCaseAggregationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation <em>IEC Integration Test Case Aggregation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation
-	 * @generated
-	 */
-	public Adapter createIECIntegrationTestCaseAggregationAdapter() {
 		return null;
 	}
 

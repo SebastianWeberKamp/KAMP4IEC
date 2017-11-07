@@ -85,22 +85,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Deployment Specification</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION = 2;
-
-	/**
 	 * The feature id for the '<em><b>Staff Specification</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION = 3;
+	int IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION = 2;
 
 	/**
 	 * The number of structural features of the '<em>Repository</em>' class.
@@ -109,7 +100,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY_FEATURE_COUNT = 4;
+	int IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Repository</em>' class.
@@ -201,7 +192,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECFile()
 	 * @generated
 	 */
-	int IEC_FILE = 25;
+	int IEC_FILE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -311,7 +302,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECFileAggregation()
 	 * @generated
 	 */
-	int IEC_FILE_AGGREGATION = 26;
+	int IEC_FILE_AGGREGATION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Files</b></em>' attribute.
@@ -579,22 +570,13 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Integration Test Cases</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES = 3;
-
-	/**
 	 * The feature id for the '<em><b>Unit Test Case Aggregations</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS = 4;
+	int IEC_TEST_SPECIFICATION__UNIT_TEST_CASE_AGGREGATIONS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Acceptance Test Case Aggregations</b></em>' containment reference list.
@@ -603,16 +585,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS = 5;
-
-	/**
-	 * The feature id for the '<em><b>Integration Test Case Aggregations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS = 6;
+	int IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS = 4;
 
 	/**
 	 * The number of structural features of the '<em>IEC Test Specification</em>' class.
@@ -621,7 +594,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_TEST_SPECIFICATION_FEATURE_COUNT = 7;
+	int IEC_TEST_SPECIFICATION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>IEC Test Specification</em>' class.
@@ -633,189 +606,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_TEST_SPECIFICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECDeploymentSpecificationImpl <em>IEC Deployment Specification</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECDeploymentSpecificationImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECDeploymentSpecification()
-	 * @generated
-	 */
-	int IEC_DEPLOYMENT_SPECIFICATION = 7;
-
-	/**
-	 * The feature id for the '<em><b>Runtime Instances</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_DEPLOYMENT_SPECIFICATION__RUNTIME_INSTANCES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Runtime Instance Aggregations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_DEPLOYMENT_SPECIFICATION__RUNTIME_INSTANCE_AGGREGATIONS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_DEPLOYMENT_SPECIFICATION__PARENT = 2;
-
-	/**
-	 * The number of structural features of the '<em>IEC Deployment Specification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_DEPLOYMENT_SPECIFICATION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>IEC Deployment Specification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_DEPLOYMENT_SPECIFICATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceImpl <em>IEC Runtime Instance</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECRuntimeInstance()
-	 * @generated
-	 */
-	int IEC_RUNTIME_INSTANCE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE__PARENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE__DESCRIPTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE__COMPONENTS = 3;
-
-	/**
-	 * The number of structural features of the '<em>IEC Runtime Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>IEC Runtime Instance</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceAggregationImpl <em>IEC Runtime Instance Aggregation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceAggregationImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECRuntimeInstanceAggregation()
-	 * @generated
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION__PARENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Instances</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION__NUMBER_OF_INSTANCES = 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION__DESCRIPTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION__COMPONENTS = 3;
-
-	/**
-	 * The number of structural features of the '<em>IEC Runtime Instance Aggregation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>IEC Runtime Instance Aggregation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_RUNTIME_INSTANCE_AGGREGATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECTestCaseImpl <em>IEC Test Case</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -823,7 +613,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECTestCase()
 	 * @generated
 	 */
-	int IEC_TEST_CASE = 27;
+	int IEC_TEST_CASE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name Of Test</b></em>' attribute.
@@ -860,7 +650,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECUnitTestCase()
 	 * @generated
 	 */
-	int IEC_UNIT_TEST_CASE = 10;
+	int IEC_UNIT_TEST_CASE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name Of Test</b></em>' attribute.
@@ -915,7 +705,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECAcceptanceTestCase()
 	 * @generated
 	 */
-	int IEC_ACCEPTANCE_TEST_CASE = 11;
+	int IEC_ACCEPTANCE_TEST_CASE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name Of Test</b></em>' attribute.
@@ -970,7 +760,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECIntegrationTestCase()
 	 * @generated
 	 */
-	int IEC_INTEGRATION_TEST_CASE = 12;
+	int IEC_INTEGRATION_TEST_CASE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name Of Test</b></em>' attribute.
@@ -982,7 +772,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_INTEGRATION_TEST_CASE__NAME_OF_TEST = IEC_TEST_CASE__NAME_OF_TEST;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1025,7 +815,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECTestCaseAggregation()
 	 * @generated
 	 */
-	int IEC_TEST_CASE_AGGREGATION = 28;
+	int IEC_TEST_CASE_AGGREGATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Testcases</b></em>' attribute.
@@ -1071,7 +861,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECUnitTestCaseAggregation()
 	 * @generated
 	 */
-	int IEC_UNIT_TEST_CASE_AGGREGATION = 13;
+	int IEC_UNIT_TEST_CASE_AGGREGATION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Testcases</b></em>' attribute.
@@ -1135,7 +925,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECAcceptanceTestCaseAggregation()
 	 * @generated
 	 */
-	int IEC_ACCEPTANCE_TEST_CASE_AGGREGATION = 14;
+	int IEC_ACCEPTANCE_TEST_CASE_AGGREGATION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Number Of Testcases</b></em>' attribute.
@@ -1192,70 +982,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	int IEC_ACCEPTANCE_TEST_CASE_AGGREGATION_OPERATION_COUNT = IEC_TEST_CASE_AGGREGATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl <em>IEC Integration Test Case Aggregation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECIntegrationTestCaseAggregation()
-	 * @generated
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION = 15;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Testcases</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__NUMBER_OF_TESTCASES = IEC_TEST_CASE_AGGREGATION__NUMBER_OF_TESTCASES;
-
-	/**
-	 * The feature id for the '<em><b>Name Of Test Suite</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__NAME_OF_TEST_SUITE = IEC_TEST_CASE_AGGREGATION__NAME_OF_TEST_SUITE;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>IEC Integration Test Case Aggregation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION_FEATURE_COUNT = IEC_TEST_CASE_AGGREGATION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>IEC Integration Test Case Aggregation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IEC_INTEGRATION_TEST_CASE_AGGREGATION_OPERATION_COUNT = IEC_TEST_CASE_AGGREGATION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECStaffSpecificationImpl <em>IEC Staff Specification</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1263,7 +989,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECStaffSpecification()
 	 * @generated
 	 */
-	int IEC_STAFF_SPECIFICATION = 16;
+	int IEC_STAFF_SPECIFICATION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1318,7 +1044,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECPersonList()
 	 * @generated
 	 */
-	int IEC_PERSON_LIST = 17;
+	int IEC_PERSON_LIST = 13;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1364,7 +1090,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECPerson()
 	 * @generated
 	 */
-	int IEC_PERSON = 18;
+	int IEC_PERSON = 14;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1419,7 +1145,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECRole()
 	 * @generated
 	 */
-	int IEC_ROLE = 19;
+	int IEC_ROLE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1483,7 +1209,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECRoleList()
 	 * @generated
 	 */
-	int IEC_ROLE_LIST = 20;
+	int IEC_ROLE_LIST = 16;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1529,7 +1255,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECDeveloper()
 	 * @generated
 	 */
-	int IEC_DEVELOPER = 21;
+	int IEC_DEVELOPER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1593,7 +1319,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECTestDeveloper()
 	 * @generated
 	 */
-	int IEC_TEST_DEVELOPER = 22;
+	int IEC_TEST_DEVELOPER = 18;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1657,7 +1383,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECTester()
 	 * @generated
 	 */
-	int IEC_TESTER = 23;
+	int IEC_TESTER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1721,7 +1447,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECDeployer()
 	 * @generated
 	 */
-	int IEC_DEPLOYER = 24;
+	int IEC_DEPLOYER = 20;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -1809,17 +1535,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIECFieldOfActivityAnnotationsRepository_TestSpecification();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository#getDeploymentSpecification <em>Deployment Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Deployment Specification</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository#getDeploymentSpecification()
-	 * @see #getIECFieldOfActivityAnnotationsRepository()
-	 * @generated
-	 */
-	EReference getIECFieldOfActivityAnnotationsRepository_DeploymentSpecification();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository#getStaffSpecification <em>Staff Specification</em>}'.
@@ -2069,17 +1784,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EReference getIECTestSpecification_AcceptanceTestCases();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getIntegrationTestCases <em>Integration Test Cases</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Integration Test Cases</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getIntegrationTestCases()
-	 * @see #getIECTestSpecification()
-	 * @generated
-	 */
-	EReference getIECTestSpecification_IntegrationTestCases();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getUnitTestCaseAggregations <em>Unit Test Case Aggregations</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2100,168 +1804,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIECTestSpecification_AcceptanceTestCaseAggregations();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getIntegrationTestCaseAggregations <em>Integration Test Case Aggregations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Integration Test Case Aggregations</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification#getIntegrationTestCaseAggregations()
-	 * @see #getIECTestSpecification()
-	 * @generated
-	 */
-	EReference getIECTestSpecification_IntegrationTestCaseAggregations();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification <em>IEC Deployment Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IEC Deployment Specification</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification
-	 * @generated
-	 */
-	EClass getIECDeploymentSpecification();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification#getRuntimeInstances <em>Runtime Instances</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Runtime Instances</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification#getRuntimeInstances()
-	 * @see #getIECDeploymentSpecification()
-	 * @generated
-	 */
-	EReference getIECDeploymentSpecification_RuntimeInstances();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification#getRuntimeInstanceAggregations <em>Runtime Instance Aggregations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Runtime Instance Aggregations</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification#getRuntimeInstanceAggregations()
-	 * @see #getIECDeploymentSpecification()
-	 * @generated
-	 */
-	EReference getIECDeploymentSpecification_RuntimeInstanceAggregations();
-
-	/**
-	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification#getParent()
-	 * @see #getIECDeploymentSpecification()
-	 * @generated
-	 */
-	EReference getIECDeploymentSpecification_Parent();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance <em>IEC Runtime Instance</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IEC Runtime Instance</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance
-	 * @generated
-	 */
-	EClass getIECRuntimeInstance();
-
-	/**
-	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getParent()
-	 * @see #getIECRuntimeInstance()
-	 * @generated
-	 */
-	EReference getIECRuntimeInstance_Parent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getName()
-	 * @see #getIECRuntimeInstance()
-	 * @generated
-	 */
-	EAttribute getIECRuntimeInstance_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getDescription()
-	 * @see #getIECRuntimeInstance()
-	 * @generated
-	 */
-	EAttribute getIECRuntimeInstance_Description();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Components</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstance#getComponents()
-	 * @see #getIECRuntimeInstance()
-	 * @generated
-	 */
-	EReference getIECRuntimeInstance_Components();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation <em>IEC Runtime Instance Aggregation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IEC Runtime Instance Aggregation</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation
-	 * @generated
-	 */
-	EClass getIECRuntimeInstanceAggregation();
-
-	/**
-	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getParent()
-	 * @see #getIECRuntimeInstanceAggregation()
-	 * @generated
-	 */
-	EReference getIECRuntimeInstanceAggregation_Parent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getNumberOfInstances <em>Number Of Instances</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Instances</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getNumberOfInstances()
-	 * @see #getIECRuntimeInstanceAggregation()
-	 * @generated
-	 */
-	EAttribute getIECRuntimeInstanceAggregation_NumberOfInstances();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getDescription()
-	 * @see #getIECRuntimeInstanceAggregation()
-	 * @generated
-	 */
-	EAttribute getIECRuntimeInstanceAggregation_Description();
-
-	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Components</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRuntimeInstanceAggregation#getComponents()
-	 * @see #getIECRuntimeInstanceAggregation()
-	 * @generated
-	 */
-	EReference getIECRuntimeInstanceAggregation_Components();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase <em>IEC Unit Test Case</em>}'.
@@ -2338,10 +1880,10 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	EClass getIECIntegrationTestCase();
 
 	/**
-	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @return the meta object for the reference '<em>Parent</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase#getParent()
 	 * @see #getIECIntegrationTestCase()
 	 * @generated
@@ -2422,38 +1964,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getIECAcceptanceTestCaseAggregation_Component();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation <em>IEC Integration Test Case Aggregation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>IEC Integration Test Case Aggregation</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation
-	 * @generated
-	 */
-	EClass getIECIntegrationTestCaseAggregation();
-
-	/**
-	 * Returns the meta object for the container reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getParent()
-	 * @see #getIECIntegrationTestCaseAggregation()
-	 * @generated
-	 */
-	EReference getIECIntegrationTestCaseAggregation_Parent();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getComponent <em>Component</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Component</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCaseAggregation#getComponent()
-	 * @see #getIECIntegrationTestCaseAggregation()
-	 * @generated
-	 */
-	EReference getIECIntegrationTestCaseAggregation_Component();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECStaffSpecification <em>IEC Staff Specification</em>}'.
@@ -2866,14 +2376,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION = eINSTANCE.getIECFieldOfActivityAnnotationsRepository_TestSpecification();
 
 		/**
-		 * The meta object literal for the '<em><b>Deployment Specification</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION = eINSTANCE.getIECFieldOfActivityAnnotationsRepository_DeploymentSpecification();
-
-		/**
 		 * The meta object literal for the '<em><b>Staff Specification</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3070,14 +2572,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EReference IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASES = eINSTANCE.getIECTestSpecification_AcceptanceTestCases();
 
 		/**
-		 * The meta object literal for the '<em><b>Integration Test Cases</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES = eINSTANCE.getIECTestSpecification_IntegrationTestCases();
-
-		/**
 		 * The meta object literal for the '<em><b>Unit Test Case Aggregations</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3092,132 +2586,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_TEST_SPECIFICATION__ACCEPTANCE_TEST_CASE_AGGREGATIONS = eINSTANCE.getIECTestSpecification_AcceptanceTestCaseAggregations();
-
-		/**
-		 * The meta object literal for the '<em><b>Integration Test Case Aggregations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASE_AGGREGATIONS = eINSTANCE.getIECTestSpecification_IntegrationTestCaseAggregations();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECDeploymentSpecificationImpl <em>IEC Deployment Specification</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECDeploymentSpecificationImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECDeploymentSpecification()
-		 * @generated
-		 */
-		EClass IEC_DEPLOYMENT_SPECIFICATION = eINSTANCE.getIECDeploymentSpecification();
-
-		/**
-		 * The meta object literal for the '<em><b>Runtime Instances</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_DEPLOYMENT_SPECIFICATION__RUNTIME_INSTANCES = eINSTANCE.getIECDeploymentSpecification_RuntimeInstances();
-
-		/**
-		 * The meta object literal for the '<em><b>Runtime Instance Aggregations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_DEPLOYMENT_SPECIFICATION__RUNTIME_INSTANCE_AGGREGATIONS = eINSTANCE.getIECDeploymentSpecification_RuntimeInstanceAggregations();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_DEPLOYMENT_SPECIFICATION__PARENT = eINSTANCE.getIECDeploymentSpecification_Parent();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceImpl <em>IEC Runtime Instance</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECRuntimeInstance()
-		 * @generated
-		 */
-		EClass IEC_RUNTIME_INSTANCE = eINSTANCE.getIECRuntimeInstance();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_RUNTIME_INSTANCE__PARENT = eINSTANCE.getIECRuntimeInstance_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_RUNTIME_INSTANCE__NAME = eINSTANCE.getIECRuntimeInstance_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_RUNTIME_INSTANCE__DESCRIPTION = eINSTANCE.getIECRuntimeInstance_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_RUNTIME_INSTANCE__COMPONENTS = eINSTANCE.getIECRuntimeInstance_Components();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceAggregationImpl <em>IEC Runtime Instance Aggregation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECRuntimeInstanceAggregationImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECRuntimeInstanceAggregation()
-		 * @generated
-		 */
-		EClass IEC_RUNTIME_INSTANCE_AGGREGATION = eINSTANCE.getIECRuntimeInstanceAggregation();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_RUNTIME_INSTANCE_AGGREGATION__PARENT = eINSTANCE.getIECRuntimeInstanceAggregation_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Instances</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_RUNTIME_INSTANCE_AGGREGATION__NUMBER_OF_INSTANCES = eINSTANCE.getIECRuntimeInstanceAggregation_NumberOfInstances();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_RUNTIME_INSTANCE_AGGREGATION__DESCRIPTION = eINSTANCE.getIECRuntimeInstanceAggregation_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_RUNTIME_INSTANCE_AGGREGATION__COMPONENTS = eINSTANCE.getIECRuntimeInstanceAggregation_Components();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECUnitTestCaseImpl <em>IEC Unit Test Case</em>}' class.
@@ -3282,7 +2650,7 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		EClass IEC_INTEGRATION_TEST_CASE = eINSTANCE.getIECIntegrationTestCase();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3348,32 +2716,6 @@ public interface IECFieldOfActivityAnnotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference IEC_ACCEPTANCE_TEST_CASE_AGGREGATION__COMPONENT = eINSTANCE.getIECAcceptanceTestCaseAggregation_Component();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl <em>IEC Integration Test Case Aggregation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECIntegrationTestCaseAggregationImpl
-		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsPackageImpl#getIECIntegrationTestCaseAggregation()
-		 * @generated
-		 */
-		EClass IEC_INTEGRATION_TEST_CASE_AGGREGATION = eINSTANCE.getIECIntegrationTestCaseAggregation();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_INTEGRATION_TEST_CASE_AGGREGATION__PARENT = eINSTANCE.getIECIntegrationTestCaseAggregation_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IEC_INTEGRATION_TEST_CASE_AGGREGATION__COMPONENT = eINSTANCE.getIECIntegrationTestCaseAggregation_Component();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECStaffSpecificationImpl <em>IEC Staff Specification</em>}' class.

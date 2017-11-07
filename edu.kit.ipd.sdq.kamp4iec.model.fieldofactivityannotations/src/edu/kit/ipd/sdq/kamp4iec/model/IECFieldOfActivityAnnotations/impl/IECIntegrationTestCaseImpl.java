@@ -5,15 +5,12 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +28,15 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIntegrationTestCase {
 	/**
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParent()
+	 * @generated
+	 * @ordered
+	 */
+	protected IECTestSpecification parent;
+	/**
 	 * The cached value of the '{@link #getComponent() <em>Component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -38,7 +44,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * @generated
 	 * @ordered
 	 */
-	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent component;
+	protected IECComponent component;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,8 +71,15 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * @generated
 	 */
 	public IECTestSpecification getParent() {
-		if (eContainerFeatureID() != IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT) return null;
-		return (IECTestSpecification)eInternalContainer();
+		if (parent != null && parent.eIsProxy()) {
+			InternalEObject oldParent = (InternalEObject)parent;
+			parent = (IECTestSpecification)eResolveProxy(oldParent);
+			if (parent != oldParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT, oldParent, parent));
+			}
+		}
+		return parent;
 	}
 
 	/**
@@ -74,9 +87,8 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParent(IECTestSpecification newParent, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParent, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT, msgs);
-		return msgs;
+	public IECTestSpecification basicGetParent() {
+		return parent;
 	}
 
 	/**
@@ -85,19 +97,10 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * @generated
 	 */
 	public void setParent(IECTestSpecification newParent) {
-		if (newParent != eInternalContainer() || (eContainerFeatureID() != IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT && newParent != null)) {
-			if (EcoreUtil.isAncestor(this, newParent))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES, IECTestSpecification.class, msgs);
-			msgs = basicSetParent(newParent, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT, newParent, newParent));
+		IECTestSpecification oldParent = parent;
+		parent = newParent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT, oldParent, parent));
 	}
 
 	/**
@@ -105,10 +108,10 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent getComponent() {
+	public IECComponent getComponent() {
 		if (component != null && component.eIsProxy()) {
 			InternalEObject oldComponent = (InternalEObject)component;
-			component = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)eResolveProxy(oldComponent);
+			component = (IECComponent)eResolveProxy(oldComponent);
 			if (component != oldComponent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT, oldComponent, component));
@@ -122,7 +125,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent basicGetComponent() {
+	public IECComponent basicGetComponent() {
 		return component;
 	}
 
@@ -131,8 +134,8 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setComponent(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent newComponent) {
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent oldComponent = component;
+	public void setComponent(IECComponent newComponent) {
+		IECComponent oldComponent = component;
 		component = newComponent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT, oldComponent, component));
@@ -144,54 +147,11 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParent((IECTestSpecification)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT:
-				return basicSetParent(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT:
-				return eInternalContainer().eInverseRemove(this, IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION__INTEGRATION_TEST_CASES, IECTestSpecification.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT:
-				return getParent();
+				if (resolve) return getParent();
+				return basicGetParent();
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT:
 				if (resolve) return getComponent();
 				return basicGetComponent();
@@ -211,7 +171,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 				setParent((IECTestSpecification)newValue);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT:
-				setComponent((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)newValue);
+				setComponent((IECComponent)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,7 +189,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 				setParent((IECTestSpecification)null);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT:
-				setComponent((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent)null);
+				setComponent((IECComponent)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -244,7 +204,7 @@ public class IECIntegrationTestCaseImpl extends IECTestCaseImpl implements IECIn
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__PARENT:
-				return getParent() != null;
+				return parent != null;
 			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE__COMPONENT:
 				return component != null;
 		}

@@ -2,7 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeploymentSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDevelopmentArtefactSpecification;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
@@ -28,7 +27,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsRepositoryImpl#getDevelopmentArtefactSpecification <em>Development Artefact Specification</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsRepositoryImpl#getTestSpecification <em>Test Specification</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsRepositoryImpl#getDeploymentSpecification <em>Deployment Specification</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFieldOfActivityAnnotationsRepositoryImpl#getStaffSpecification <em>Staff Specification</em>}</li>
  * </ul>
  *
@@ -54,16 +52,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 	 * @ordered
 	 */
 	protected IECTestSpecification testSpecification;
-
-	/**
-	 * The cached value of the '{@link #getDeploymentSpecification() <em>Deployment Specification</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDeploymentSpecification()
-	 * @generated
-	 * @ordered
-	 */
-	protected IECDeploymentSpecification deploymentSpecification;
 
 	/**
 	 * The cached value of the '{@link #getStaffSpecification() <em>Staff Specification</em>}' containment reference.
@@ -185,49 +173,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECDeploymentSpecification getDeploymentSpecification() {
-		return deploymentSpecification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDeploymentSpecification(IECDeploymentSpecification newDeploymentSpecification, NotificationChain msgs) {
-		IECDeploymentSpecification oldDeploymentSpecification = deploymentSpecification;
-		deploymentSpecification = newDeploymentSpecification;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION, oldDeploymentSpecification, newDeploymentSpecification);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDeploymentSpecification(IECDeploymentSpecification newDeploymentSpecification) {
-		if (newDeploymentSpecification != deploymentSpecification) {
-			NotificationChain msgs = null;
-			if (deploymentSpecification != null)
-				msgs = ((InternalEObject)deploymentSpecification).eInverseRemove(this, IECFieldOfActivityAnnotationsPackage.IEC_DEPLOYMENT_SPECIFICATION__PARENT, IECDeploymentSpecification.class, msgs);
-			if (newDeploymentSpecification != null)
-				msgs = ((InternalEObject)newDeploymentSpecification).eInverseAdd(this, IECFieldOfActivityAnnotationsPackage.IEC_DEPLOYMENT_SPECIFICATION__PARENT, IECDeploymentSpecification.class, msgs);
-			msgs = basicSetDeploymentSpecification(newDeploymentSpecification, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION, newDeploymentSpecification, newDeploymentSpecification));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IECStaffSpecification getStaffSpecification() {
 		return staffSpecification;
 	}
@@ -282,10 +227,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 				if (testSpecification != null)
 					msgs = ((InternalEObject)testSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION, null, msgs);
 				return basicSetTestSpecification((IECTestSpecification)otherEnd, msgs);
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
-				if (deploymentSpecification != null)
-					msgs = ((InternalEObject)deploymentSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION, null, msgs);
-				return basicSetDeploymentSpecification((IECDeploymentSpecification)otherEnd, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				if (staffSpecification != null)
 					msgs = ((InternalEObject)staffSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION, null, msgs);
@@ -306,8 +247,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 				return basicSetDevelopmentArtefactSpecification(null, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
 				return basicSetTestSpecification(null, msgs);
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
-				return basicSetDeploymentSpecification(null, msgs);
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				return basicSetStaffSpecification(null, msgs);
 		}
@@ -326,8 +265,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 				return getDevelopmentArtefactSpecification();
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
 				return getTestSpecification();
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
-				return getDeploymentSpecification();
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				return getStaffSpecification();
 		}
@@ -347,9 +284,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
 				setTestSpecification((IECTestSpecification)newValue);
-				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
-				setDeploymentSpecification((IECDeploymentSpecification)newValue);
 				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				setStaffSpecification((IECStaffSpecification)newValue);
@@ -372,9 +306,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
 				setTestSpecification((IECTestSpecification)null);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
-				setDeploymentSpecification((IECDeploymentSpecification)null);
-				return;
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				setStaffSpecification((IECStaffSpecification)null);
 				return;
@@ -394,8 +325,6 @@ public class IECFieldOfActivityAnnotationsRepositoryImpl extends MinimalEObjectI
 				return developmentArtefactSpecification != null;
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__TEST_SPECIFICATION:
 				return testSpecification != null;
-			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__DEPLOYMENT_SPECIFICATION:
-				return deploymentSpecification != null;
 			case IECFieldOfActivityAnnotationsPackage.IEC_FIELD_OF_ACTIVITY_ANNOTATIONS_REPOSITORY__STAFF_SPECIFICATION:
 				return staffSpecification != null;
 		}
