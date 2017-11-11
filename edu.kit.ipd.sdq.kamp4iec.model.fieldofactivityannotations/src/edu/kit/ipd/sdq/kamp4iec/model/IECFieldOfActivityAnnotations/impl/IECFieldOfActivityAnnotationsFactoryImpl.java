@@ -65,7 +65,6 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 			case IECFieldOfActivityAnnotationsPackage.IEC_TEST_SPECIFICATION: return createIECTestSpecification();
 			case IECFieldOfActivityAnnotationsPackage.IEC_UNIT_TEST_CASE: return createIECUnitTestCase();
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE: return createIECAcceptanceTestCase();
-			case IECFieldOfActivityAnnotationsPackage.IEC_INTEGRATION_TEST_CASE: return createIECIntegrationTestCase();
 			case IECFieldOfActivityAnnotationsPackage.IEC_UNIT_TEST_CASE_AGGREGATION: return createIECUnitTestCaseAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_ACCEPTANCE_TEST_CASE_AGGREGATION: return createIECAcceptanceTestCaseAggregation();
 			case IECFieldOfActivityAnnotationsPackage.IEC_STAFF_SPECIFICATION: return createIECStaffSpecification();
@@ -169,16 +168,6 @@ public class IECFieldOfActivityAnnotationsFactoryImpl extends EFactoryImpl imple
 	public IECAcceptanceTestCase createIECAcceptanceTestCase() {
 		IECAcceptanceTestCaseImpl iecAcceptanceTestCase = new IECAcceptanceTestCaseImpl();
 		return iecAcceptanceTestCase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECIntegrationTestCase createIECIntegrationTestCase() {
-		IECIntegrationTestCaseImpl iecIntegrationTestCase = new IECIntegrationTestCaseImpl();
-		return iecIntegrationTestCase;
 	}
 
 	/**

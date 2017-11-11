@@ -65,11 +65,6 @@
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/acceptanceTestCases"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECComponent"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IECIntegrationTestCase" eSuperTypes="#//IECTestCase">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//IECTestSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//IECComponent"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECUnitTestCaseAggregation" eSuperTypes="#//IECTestCaseAggregation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//IECTestSpecification" eOpposite="#//IECTestSpecification/unitTestCaseAggregations"/>
@@ -122,11 +117,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="IECDeployer" eSuperTypes="#//IECRole"/>
   <eClassifiers xsi:type="ecore:EClass" name="IECFile" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="technology" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECFileAggregation" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberOfFiles" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="technology" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IECTestCase" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameOfTest" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

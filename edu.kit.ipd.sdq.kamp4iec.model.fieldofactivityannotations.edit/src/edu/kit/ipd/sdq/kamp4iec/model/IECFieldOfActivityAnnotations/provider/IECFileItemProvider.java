@@ -61,7 +61,6 @@ public class IECFileItemProvider
 			super.getPropertyDescriptors(object);
 
 			addFilenamePropertyDescriptor(object);
-			addTechnologyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -80,28 +79,6 @@ public class IECFileItemProvider
 				 getString("_UI_IECFile_filename_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_IECFile_filename_feature", "_UI_IECFile_type"),
 				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_FILE__FILENAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Technology feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTechnologyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECFile_technology_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECFile_technology_feature", "_UI_IECFile_type"),
-				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_FILE__TECHNOLOGY,
 				 true,
 				 false,
 				 false,
@@ -138,7 +115,6 @@ public class IECFileItemProvider
 
 		switch (notification.getFeatureID(IECFile.class)) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FILE__FILENAME:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FILE__TECHNOLOGY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

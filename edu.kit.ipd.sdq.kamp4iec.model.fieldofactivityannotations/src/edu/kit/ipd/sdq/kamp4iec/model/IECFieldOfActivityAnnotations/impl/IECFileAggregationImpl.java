@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFileAggregationImpl#getNumberOfFiles <em>Number Of Files</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl.IECFileAggregationImpl#getTechnology <em>Technology</em>}</li>
  * </ul>
  *
  * @generated
@@ -46,26 +45,6 @@ public abstract class IECFileAggregationImpl extends MinimalEObjectImpl.Containe
 	 * @ordered
 	 */
 	protected int numberOfFiles = NUMBER_OF_FILES_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTechnology() <em>Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TECHNOLOGY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTechnology() <em>Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTechnology()
-	 * @generated
-	 * @ordered
-	 */
-	protected String technology = TECHNOLOGY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,34 +91,11 @@ public abstract class IECFileAggregationImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTechnology() {
-		return technology;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTechnology(String newTechnology) {
-		String oldTechnology = technology;
-		technology = newTechnology;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__TECHNOLOGY, oldTechnology, technology));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__NUMBER_OF_FILES:
 				return getNumberOfFiles();
-			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__TECHNOLOGY:
-				return getTechnology();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,9 +110,6 @@ public abstract class IECFileAggregationImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__NUMBER_OF_FILES:
 				setNumberOfFiles((Integer)newValue);
-				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__TECHNOLOGY:
-				setTechnology((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,9 +126,6 @@ public abstract class IECFileAggregationImpl extends MinimalEObjectImpl.Containe
 			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__NUMBER_OF_FILES:
 				setNumberOfFiles(NUMBER_OF_FILES_EDEFAULT);
 				return;
-			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__TECHNOLOGY:
-				setTechnology(TECHNOLOGY_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -190,8 +140,6 @@ public abstract class IECFileAggregationImpl extends MinimalEObjectImpl.Containe
 		switch (featureID) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__NUMBER_OF_FILES:
 				return numberOfFiles != NUMBER_OF_FILES_EDEFAULT;
-			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__TECHNOLOGY:
-				return TECHNOLOGY_EDEFAULT == null ? technology != null : !TECHNOLOGY_EDEFAULT.equals(technology);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -208,8 +156,6 @@ public abstract class IECFileAggregationImpl extends MinimalEObjectImpl.Containe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (numberOfFiles: ");
 		result.append(numberOfFiles);
-		result.append(", technology: ");
-		result.append(technology);
 		result.append(')');
 		return result.toString();
 	}

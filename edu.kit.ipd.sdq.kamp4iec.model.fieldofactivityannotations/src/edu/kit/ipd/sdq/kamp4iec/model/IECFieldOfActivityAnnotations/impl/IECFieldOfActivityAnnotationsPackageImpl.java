@@ -12,7 +12,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfAc
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFileAggregation;
-import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFile;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECMetadataFileAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECPerson;
@@ -111,13 +110,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * @generated
 	 */
 	private EClass iecAcceptanceTestCaseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass iecIntegrationTestCaseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -600,33 +592,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIECIntegrationTestCase() {
-		return iecIntegrationTestCaseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECIntegrationTestCase_Parent() {
-		return (EReference)iecIntegrationTestCaseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getIECIntegrationTestCase_Component() {
-		return (EReference)iecIntegrationTestCaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIECUnitTestCaseAggregation() {
 		return iecUnitTestCaseAggregationEClass;
 	}
@@ -906,15 +871,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIECFile_Technology() {
-		return (EAttribute)iecFileEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIECFileAggregation() {
 		return iecFileAggregationEClass;
 	}
@@ -926,15 +882,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 	 */
 	public EAttribute getIECFileAggregation_NumberOfFiles() {
 		return (EAttribute)iecFileAggregationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getIECFileAggregation_Technology() {
-		return (EAttribute)iecFileAggregationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1053,10 +1000,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		createEReference(iecAcceptanceTestCaseEClass, IEC_ACCEPTANCE_TEST_CASE__PARENT);
 		createEReference(iecAcceptanceTestCaseEClass, IEC_ACCEPTANCE_TEST_CASE__COMPONENT);
 
-		iecIntegrationTestCaseEClass = createEClass(IEC_INTEGRATION_TEST_CASE);
-		createEReference(iecIntegrationTestCaseEClass, IEC_INTEGRATION_TEST_CASE__PARENT);
-		createEReference(iecIntegrationTestCaseEClass, IEC_INTEGRATION_TEST_CASE__COMPONENT);
-
 		iecUnitTestCaseAggregationEClass = createEClass(IEC_UNIT_TEST_CASE_AGGREGATION);
 		createEReference(iecUnitTestCaseAggregationEClass, IEC_UNIT_TEST_CASE_AGGREGATION__PARENT);
 		createEReference(iecUnitTestCaseAggregationEClass, IEC_UNIT_TEST_CASE_AGGREGATION__COMPONENT);
@@ -1099,11 +1042,9 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 
 		iecFileEClass = createEClass(IEC_FILE);
 		createEAttribute(iecFileEClass, IEC_FILE__FILENAME);
-		createEAttribute(iecFileEClass, IEC_FILE__TECHNOLOGY);
 
 		iecFileAggregationEClass = createEClass(IEC_FILE_AGGREGATION);
 		createEAttribute(iecFileAggregationEClass, IEC_FILE_AGGREGATION__NUMBER_OF_FILES);
-		createEAttribute(iecFileAggregationEClass, IEC_FILE_AGGREGATION__TECHNOLOGY);
 
 		iecTestCaseEClass = createEClass(IEC_TEST_CASE);
 		createEAttribute(iecTestCaseEClass, IEC_TEST_CASE__NAME_OF_TEST);
@@ -1150,7 +1091,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		iecMetadataFileAggregationEClass.getESuperTypes().add(this.getIECFileAggregation());
 		iecUnitTestCaseEClass.getESuperTypes().add(this.getIECTestCase());
 		iecAcceptanceTestCaseEClass.getESuperTypes().add(this.getIECTestCase());
-		iecIntegrationTestCaseEClass.getESuperTypes().add(this.getIECTestCase());
 		iecUnitTestCaseAggregationEClass.getESuperTypes().add(this.getIECTestCaseAggregation());
 		iecAcceptanceTestCaseAggregationEClass.getESuperTypes().add(this.getIECTestCaseAggregation());
 		iecDeveloperEClass.getESuperTypes().add(this.getIECRole());
@@ -1202,10 +1142,6 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		initEReference(getIECAcceptanceTestCase_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_AcceptanceTestCases(), "parent", null, 1, 1, IECAcceptanceTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECAcceptanceTestCase_Component(), theIECRepositoryPackage.getIECComponent(), null, "component", null, 0, 1, IECAcceptanceTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(iecIntegrationTestCaseEClass, IECIntegrationTestCase.class, "IECIntegrationTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getIECIntegrationTestCase_Parent(), this.getIECTestSpecification(), null, "parent", null, 1, 1, IECIntegrationTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIECIntegrationTestCase_Component(), theIECRepositoryPackage.getIECComponent(), null, "component", null, 0, 1, IECIntegrationTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(iecUnitTestCaseAggregationEClass, IECUnitTestCaseAggregation.class, "IECUnitTestCaseAggregation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIECUnitTestCaseAggregation_Parent(), this.getIECTestSpecification(), this.getIECTestSpecification_UnitTestCaseAggregations(), "parent", null, 1, 1, IECUnitTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIECUnitTestCaseAggregation_Component(), theIECRepositoryPackage.getIECComponent(), null, "component", null, 0, 1, IECUnitTestCaseAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1248,11 +1184,9 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 
 		initEClass(iecFileEClass, IECFile.class, "IECFile", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIECFile_Filename(), ecorePackage.getEString(), "filename", null, 0, 1, IECFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIECFile_Technology(), ecorePackage.getEString(), "technology", null, 0, 1, IECFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecFileAggregationEClass, IECFileAggregation.class, "IECFileAggregation", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIECFileAggregation_NumberOfFiles(), ecorePackage.getEInt(), "numberOfFiles", null, 0, 1, IECFileAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getIECFileAggregation_Technology(), ecorePackage.getEString(), "technology", null, 0, 1, IECFileAggregation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(iecTestCaseEClass, IECTestCase.class, "IECTestCase", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIECTestCase_NameOfTest(), ecorePackage.getEString(), "nameOfTest", null, 0, 1, IECTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

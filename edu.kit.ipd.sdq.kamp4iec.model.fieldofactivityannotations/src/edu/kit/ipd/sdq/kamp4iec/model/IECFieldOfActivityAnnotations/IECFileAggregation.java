@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFileAggregation#getNumberOfFiles <em>Number Of Files</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFileAggregation#getTechnology <em>Technology</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECFileAggregation()
@@ -47,31 +46,5 @@ public interface IECFileAggregation extends EObject {
 	 * @generated
 	 */
 	void setNumberOfFiles(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Technology</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Technology</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Technology</em>' attribute.
-	 * @see #setTechnology(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage#getIECFileAggregation_Technology()
-	 * @model
-	 * @generated
-	 */
-	String getTechnology();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFileAggregation#getTechnology <em>Technology</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Technology</em>' attribute.
-	 * @see #getTechnology()
-	 * @generated
-	 */
-	void setTechnology(String value);
 
 } // IECFileAggregation

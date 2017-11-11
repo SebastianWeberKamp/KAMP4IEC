@@ -279,29 +279,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECIntegrationTestCaseItemProvider iecIntegrationTestCaseItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIECIntegrationTestCaseAdapter() {
-		if (iecIntegrationTestCaseItemProvider == null) {
-			iecIntegrationTestCaseItemProvider = new IECIntegrationTestCaseItemProvider(this);
-		}
-
-		return iecIntegrationTestCaseItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -639,7 +616,6 @@ public class IECFieldOfActivityAnnotationsItemProviderAdapterFactory extends IEC
 		if (iecTestSpecificationItemProvider != null) iecTestSpecificationItemProvider.dispose();
 		if (iecUnitTestCaseItemProvider != null) iecUnitTestCaseItemProvider.dispose();
 		if (iecAcceptanceTestCaseItemProvider != null) iecAcceptanceTestCaseItemProvider.dispose();
-		if (iecIntegrationTestCaseItemProvider != null) iecIntegrationTestCaseItemProvider.dispose();
 		if (iecUnitTestCaseAggregationItemProvider != null) iecUnitTestCaseAggregationItemProvider.dispose();
 		if (iecAcceptanceTestCaseAggregationItemProvider != null) iecAcceptanceTestCaseAggregationItemProvider.dispose();
 		if (iecStaffSpecificationItemProvider != null) iecStaffSpecificationItemProvider.dispose();

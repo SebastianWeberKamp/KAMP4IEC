@@ -104,10 +104,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 				return createIECAcceptanceTestCaseAdapter();
 			}
 			@Override
-			public Adapter caseIECIntegrationTestCase(IECIntegrationTestCase object) {
-				return createIECIntegrationTestCaseAdapter();
-			}
-			@Override
 			public Adapter caseIECUnitTestCaseAggregation(IECUnitTestCaseAggregation object) {
 				return createIECUnitTestCaseAggregationAdapter();
 			}
@@ -310,20 +306,6 @@ public class IECFieldOfActivityAnnotationsAdapterFactory extends AdapterFactoryI
 	 * @generated
 	 */
 	public Adapter createIECAcceptanceTestCaseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase <em>IEC Integration Test Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECIntegrationTestCase
-	 * @generated
-	 */
-	public Adapter createIECIntegrationTestCaseAdapter() {
 		return null;
 	}
 

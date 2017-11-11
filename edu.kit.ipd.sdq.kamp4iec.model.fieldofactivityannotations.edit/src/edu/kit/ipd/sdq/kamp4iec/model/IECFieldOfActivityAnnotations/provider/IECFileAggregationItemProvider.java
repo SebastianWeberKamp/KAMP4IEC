@@ -61,7 +61,6 @@ public class IECFileAggregationItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNumberOfFilesPropertyDescriptor(object);
-			addTechnologyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,28 +83,6 @@ public class IECFileAggregationItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Technology feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTechnologyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECFileAggregation_technology_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECFileAggregation_technology_feature", "_UI_IECFileAggregation_type"),
-				 IECFieldOfActivityAnnotationsPackage.Literals.IEC_FILE_AGGREGATION__TECHNOLOGY,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -136,7 +113,6 @@ public class IECFileAggregationItemProvider
 
 		switch (notification.getFeatureID(IECFileAggregation.class)) {
 			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__NUMBER_OF_FILES:
-			case IECFieldOfActivityAnnotationsPackage.IEC_FILE_AGGREGATION__TECHNOLOGY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

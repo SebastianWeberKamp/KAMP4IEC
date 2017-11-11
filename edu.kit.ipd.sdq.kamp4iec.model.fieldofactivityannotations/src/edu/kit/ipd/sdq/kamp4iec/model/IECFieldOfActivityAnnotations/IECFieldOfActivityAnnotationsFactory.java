@@ -103,15 +103,6 @@ public interface IECFieldOfActivityAnnotationsFactory extends EFactory {
 	IECAcceptanceTestCase createIECAcceptanceTestCase();
 
 	/**
-	 * Returns a new object of class '<em>IEC Integration Test Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>IEC Integration Test Case</em>'.
-	 * @generated
-	 */
-	IECIntegrationTestCase createIECIntegrationTestCase();
-
-	/**
 	 * Returns a new object of class '<em>IEC Unit Test Case Aggregation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
