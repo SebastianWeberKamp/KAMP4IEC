@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 9 resources" deleteContents="false" description="Delete 9 resources" element1="/edu.kit.ipd.sdq.kamp" element2="/edu.kit.ipd.sdq.kamp.buckminster" element3="/edu.kit.ipd.sdq.kamp.feature" element4="/edu.kit.ipd.sdq.kamp.model.modificationmarks" element5="/edu.kit.ipd.sdq.kamp.model.modificationmarks.edit" element6="/edu.kit.ipd.sdq.kamp.model.modificationmarks.editor" element7="/edu.kit.ipd.sdq.kamp.model.modificationmarks.tests" element8="/edu.kit.ipd.sdq.kamp.tests" element9="/edu.kit.ipd.sdq.kamp.updatesite" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="9" stamp="1510844497781"/>
+</session>
