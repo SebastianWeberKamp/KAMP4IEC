@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore&apos; to &apos;Modificationmarks.ecore&apos;" description="Rename resource &apos;modificationmarks.ecore&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="model/modificationmarks.ecore" name="Modificationmarks.ecore" stamp="1499329423554" updateReferences="true"/>
-</session>
