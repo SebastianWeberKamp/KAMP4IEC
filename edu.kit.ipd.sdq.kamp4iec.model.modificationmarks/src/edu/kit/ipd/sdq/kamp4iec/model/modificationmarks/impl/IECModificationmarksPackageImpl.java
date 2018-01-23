@@ -194,6 +194,7 @@ public class IECModificationmarksPackageImpl extends EPackageImpl implements IEC
 
 		// Initialize simple dependencies
 		IECModelPackage.eINSTANCE.eClass();
+		IECRepositoryPackage.eINSTANCE.eClass();
 		ModificationmarksPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

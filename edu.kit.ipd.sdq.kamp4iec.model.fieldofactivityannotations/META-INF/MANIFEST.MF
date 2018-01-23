@@ -14,8 +14,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
- de.uka.ipd.sdq.probfunction;visibility:=reexport,
- de.uka.ipd.sdq.stoex;visibility:=reexport,
- de.uka.ipd.sdq.units;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport
 Bundle-ActivationPolicy: lazy
