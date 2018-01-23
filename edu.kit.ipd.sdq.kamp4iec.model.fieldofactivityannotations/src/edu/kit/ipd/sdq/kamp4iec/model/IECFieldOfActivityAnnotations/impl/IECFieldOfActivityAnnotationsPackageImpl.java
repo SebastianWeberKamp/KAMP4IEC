@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 
-import de.uka.ipd.sdq.identifier.IdentifierPackage;
-import de.uka.ipd.sdq.probfunction.ProbfunctionPackage;
-import de.uka.ipd.sdq.stoex.StoexPackage;
-import de.uka.ipd.sdq.units.UnitsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCaseAggregation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECDeployer;
@@ -33,17 +29,14 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTester;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECUnitTestCaseAggregation;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.palladiosimulator.pcm.PcmPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -267,13 +260,7 @@ public class IECFieldOfActivityAnnotationsPackageImpl extends EPackageImpl imple
 		isInited = true;
 
 		// Initialize simple dependencies
-		IdentifierPackage.eINSTANCE.eClass();
-		IECModelPackage.eINSTANCE.eClass();
 		IECRepositoryPackage.eINSTANCE.eClass();
-		PcmPackage.eINSTANCE.eClass();
-		ProbfunctionPackage.eINSTANCE.eClass();
-		StoexPackage.eINSTANCE.eClass();
-		UnitsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theIECFieldOfActivityAnnotationsPackage.createPackageContents();

@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;

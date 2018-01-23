@@ -6,7 +6,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfAc
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECPerson;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRole;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECRoleList;
+
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

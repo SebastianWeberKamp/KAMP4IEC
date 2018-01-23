@@ -12,18 +12,6 @@ Export-Package: edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.pro
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- de.uka.ipd.sdq.identifier;visibility:=reexport,
- de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport,
- org.palladiosimulator.pcm;visibility:=reexport,
- org.palladiosimulator.pcm.edit;visibility:=reexport,
- de.uka.ipd.sdq.probfunction;visibility:=reexport,
- de.uka.ipd.sdq.probfunction.edit;visibility:=reexport,
- de.uka.ipd.sdq.stoex;visibility:=reexport,
- de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
- de.uka.ipd.sdq.units;visibility:=reexport,
- de.uka.ipd.sdq.units.edit;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

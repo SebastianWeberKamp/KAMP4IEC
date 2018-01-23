@@ -5,7 +5,9 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECAcceptanceTestCase;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECTestSpecification;
+
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 

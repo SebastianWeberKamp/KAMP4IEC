@@ -39,9 +39,6 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 		deriveUnitTestExecutionActivities(subVersion, result);
 		deriveAcceptanceTestDevelopmentActivities(baseArchitectureVersion, subVersion, result);
 		deriveAcceptanceTestExecutionActivities(subVersion, result);
-		deriveDeploymentExecutionActivities(subVersion, result);		
-		//TODO staff
-
 		return result;
 	}
 
@@ -291,22 +288,6 @@ public class IECEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 				}
 			}
 			deriveUnitTestExecutionActivities(target, activity.getSubActivities());
-		}
-	}
-
-	private static void deriveDeploymentExecutionActivities(
-			IECArchitectureVersion target, List<Activity> baseActivityList) {
-		for (Activity activity : baseActivityList) {
-			Activity newActivity = new Activity(IECActivityType.DEPLOYMENTEXECUTION, 
-					IECActivityElementType.DEPLOYMENTCONFIGURATION, activity.getElement(),
-					"one run-time instance", null, BasicActivity.EXECUTE, 
-					"Deployment execution: Perform deployment.");
-			if (activity.getType() == IECActivityType.RELEASEEXECUTION && 
-					activity.getBasicActivity() == BasicActivity.EXECUTE) {
-				activity.addFollowupActivity(newActivity);
-				deriveStaffActivity(target, newActivity, IECRoleType.DEPLOYER);
-			} 
-			deriveDeploymentExecutionActivities(target, activity.getFollowupActivities());
 		}
 	}
 	

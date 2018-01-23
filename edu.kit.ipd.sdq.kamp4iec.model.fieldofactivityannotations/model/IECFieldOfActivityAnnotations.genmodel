@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations/src"
     modelPluginID="edu.kit.ipd.sdq.kamp4iec.model.fieldofactivityannotations" modelName="IECFieldOfActivityAnnotations"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
     operationReflection="true" importOrganizing="true">
   <foreignModel>IECFieldOfActivityAnnotations.ecore</foreignModel>
   <genPackages prefix="IECFieldOfActivityAnnotations" basePackage="edu.kit.ipd.sdq.kamp4iec.model"
@@ -11,7 +11,6 @@
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECFieldOfActivityAnnotationsRepository">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECFieldOfActivityAnnotationsRepository/developmentArtefactSpecification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECFieldOfActivityAnnotationsRepository/testSpecification"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECFieldOfActivityAnnotationsRepository/deploymentSpecification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECFieldOfActivityAnnotationsRepository/staffSpecification"/>
     </genClasses>
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECDevelopmentArtefactSpecification">
@@ -41,27 +40,8 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/parent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/unitTestCases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/acceptanceTestCases"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/integrationTestCases"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/unitTestCaseAggregations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/acceptanceTestCaseAggregations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECTestSpecification/integrationTestCaseAggregations"/>
-    </genClasses>
-    <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECDeploymentSpecification">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECDeploymentSpecification/runtimeInstances"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECDeploymentSpecification/runtimeInstanceAggregations"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECDeploymentSpecification/parent"/>
-    </genClasses>
-    <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstance">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstance/parent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstance/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstance/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstance/components"/>
-    </genClasses>
-    <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstanceAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstanceAggregation/parent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstanceAggregation/numberOfInstances"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstanceAggregation/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECRuntimeInstanceAggregation/components"/>
     </genClasses>
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECUnitTestCase">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECUnitTestCase/parent"/>
@@ -71,10 +51,6 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECAcceptanceTestCase/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECAcceptanceTestCase/component"/>
     </genClasses>
-    <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECIntegrationTestCase">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECIntegrationTestCase/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECIntegrationTestCase/component"/>
-    </genClasses>
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECUnitTestCaseAggregation">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECUnitTestCaseAggregation/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECUnitTestCaseAggregation/component"/>
@@ -82,10 +58,6 @@
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECAcceptanceTestCaseAggregation">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECAcceptanceTestCaseAggregation/parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECAcceptanceTestCaseAggregation/component"/>
-    </genClasses>
-    <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECIntegrationTestCaseAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECIntegrationTestCaseAggregation/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECIntegrationTestCaseAggregation/component"/>
     </genClasses>
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECStaffSpecification">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference IECFieldOfActivityAnnotations.ecore#//IECStaffSpecification/parent"/>
@@ -117,11 +89,9 @@
     <genClasses ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECDeployer"/>
     <genClasses image="false" ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECFile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECFile/filename"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECFile/technology"/>
     </genClasses>
     <genClasses image="false" ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECFileAggregation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECFileAggregation/numberOfFiles"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECFileAggregation/technology"/>
     </genClasses>
     <genClasses image="false" ecoreClass="IECFieldOfActivityAnnotations.ecore#//IECTestCase">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IECFieldOfActivityAnnotations.ecore#//IECTestCase/nameOfTest"/>
