@@ -7,8 +7,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
 
 import java.util.Collection;
@@ -20,6 +18,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -51,8 +51,31 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDeclaresGlobalVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Declares Global Variable feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDeclaresGlobalVariablePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Configuration_DeclaresGlobalVariable_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Configuration_DeclaresGlobalVariable_feature", "_UI_Configuration_type"),
+				 IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
 	}
 
 	/**
@@ -68,7 +91,6 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__INSTANTIATES_PROGRAM);
-			childrenFeatures.add(IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
 		}
 		return childrenFeatures;
 	}
@@ -125,7 +147,6 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 
 		switch (notification.getFeatureID(Configuration.class)) {
 			case IECModelPackage.CONFIGURATION__INSTANTIATES_PROGRAM:
-			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -147,11 +168,6 @@ public class ConfigurationItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(IECModelPackage.Literals.CONFIGURATION__INSTANTIATES_PROGRAM,
 				 IECModelFactory.eINSTANCE.createProgram()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECModelPackage.Literals.CONFIGURATION__DECLARES_GLOBAL_VARIABLE,
-				 IECRepositoryFactory.eINSTANCE.createGlobalVariable()));
 	}
 
 	/**

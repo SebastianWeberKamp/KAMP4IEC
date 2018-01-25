@@ -41,7 +41,7 @@ public interface Configuration extends IECComponent {
 	EList<Program> getInstantiatesProgram();
 
 	/**
-	 * Returns the value of the '<em><b>Declares Global Variable</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Declares Global Variable</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -49,9 +49,9 @@ public interface Configuration extends IECComponent {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Declares Global Variable</em>' containment reference list.
+	 * @return the value of the '<em>Declares Global Variable</em>' reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getConfiguration_DeclaresGlobalVariable()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
 	EList<GlobalVariable> getDeclaresGlobalVariable();

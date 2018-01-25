@@ -94,13 +94,22 @@ public interface IECRepositoryPackage extends EPackage {
 	int REPOSITORY__CONTAINS_FUNCTION = 2;
 
 	/**
+	 * The feature id for the '<em><b>Contains Global Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__CONTAINS_GLOBAL_VARIABLE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Repository</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_COUNT = 3;
+	int REPOSITORY_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Repository</em>' class.
@@ -998,6 +1007,17 @@ public interface IECRepositoryPackage extends EPackage {
 	EReference getRepository_ContainsFunction();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsGlobalVariable <em>Contains Global Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contains Global Variable</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsGlobalVariable()
+	 * @see #getRepository()
+	 * @generated
+	 */
+	EReference getRepository_ContainsGlobalVariable();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock <em>Function Block</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1568,6 +1588,14 @@ public interface IECRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REPOSITORY__CONTAINS_FUNCTION = eINSTANCE.getRepository_ContainsFunction();
+
+		/**
+		 * The meta object literal for the '<em><b>Contains Global Variable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REPOSITORY__CONTAINS_GLOBAL_VARIABLE = eINSTANCE.getRepository_ContainsGlobalVariable();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionBlockImpl <em>Function Block</em>}' class.

@@ -1173,7 +1173,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		}
 	}
 	
-	protected void calculateAndMarkInterfaceToGlobalVariablePropagation(IECArchitectureVersion version,
+	protected void calculateAndMarkInterfaceToGlobalVariablePropagation(IECArchitectureVersion version, //marker
 			List<IECComponent> elementsMarkedInThisStep, IECModificationType lastModification) {
 		List<IECInterface> markedInterfaces = new ArrayList<>();
 		if(lastModification.equals(IECModificationType.SEED)) {

@@ -4,8 +4,8 @@
     <semanticResources>model/IECModel.ecore</semanticResources>
     <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore</semanticResources>
     <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
-    <semanticResources>model/IECModel.genmodel</semanticResources>
     <semanticResources>platform:/resource/edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel</semanticResources>
+    <semanticResources>model/IECModel.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_YXGxgI7nEee4qajycrQWFA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_ZYumkI7nEee4qajycrQWFA" name="IECModel class diagram" repPath="#_ZYvNoI7nEee4qajycrQWFA">

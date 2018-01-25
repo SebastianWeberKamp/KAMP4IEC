@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsInterface <em>Contains Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsFunctionBlock <em>Contains Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsFunction <em>Contains Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsGlobalVariable <em>Contains Global Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,6 +69,16 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	 * @ordered
 	 */
 	protected EList<Function> containsFunction;
+
+	/**
+	 * The cached value of the '{@link #getContainsGlobalVariable() <em>Contains Global Variable</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContainsGlobalVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GlobalVariable> containsGlobalVariable;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,6 +140,18 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<GlobalVariable> getContainsGlobalVariable() {
+		if (containsGlobalVariable == null) {
+			containsGlobalVariable = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE);
+		}
+		return containsGlobalVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -137,6 +161,8 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				return ((InternalEList<?>)getContainsFunctionBlock()).basicRemove(otherEnd, msgs);
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION:
 				return ((InternalEList<?>)getContainsFunction()).basicRemove(otherEnd, msgs);
+			case IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE:
+				return ((InternalEList<?>)getContainsGlobalVariable()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -155,6 +181,8 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				return getContainsFunctionBlock();
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION:
 				return getContainsFunction();
+			case IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE:
+				return getContainsGlobalVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,6 +208,10 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				getContainsFunction().clear();
 				getContainsFunction().addAll((Collection<? extends Function>)newValue);
 				return;
+			case IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE:
+				getContainsGlobalVariable().clear();
+				getContainsGlobalVariable().addAll((Collection<? extends GlobalVariable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -201,6 +233,9 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION:
 				getContainsFunction().clear();
 				return;
+			case IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE:
+				getContainsGlobalVariable().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -219,6 +254,8 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				return containsFunctionBlock != null && !containsFunctionBlock.isEmpty();
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION:
 				return containsFunction != null && !containsFunction.isEmpty();
+			case IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE:
+				return containsGlobalVariable != null && !containsGlobalVariable.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

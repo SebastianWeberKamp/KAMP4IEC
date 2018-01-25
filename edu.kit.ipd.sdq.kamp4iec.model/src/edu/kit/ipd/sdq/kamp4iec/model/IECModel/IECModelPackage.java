@@ -222,7 +222,7 @@ public interface IECModelPackage extends EPackage {
 	int CONFIGURATION__INSTANTIATES_PROGRAM = IECRepositoryPackage.IEC_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Declares Global Variable</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Declares Global Variable</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -380,10 +380,10 @@ public interface IECModelPackage extends EPackage {
 	EReference getConfiguration_InstantiatesProgram();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getDeclaresGlobalVariable <em>Declares Global Variable</em>}'.
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getDeclaresGlobalVariable <em>Declares Global Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Declares Global Variable</em>'.
+	 * @return the meta object for the reference list '<em>Declares Global Variable</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration#getDeclaresGlobalVariable()
 	 * @see #getConfiguration()
 	 * @generated
@@ -514,7 +514,7 @@ public interface IECModelPackage extends EPackage {
 		EReference CONFIGURATION__INSTANTIATES_PROGRAM = eINSTANCE.getConfiguration_InstantiatesProgram();
 
 		/**
-		 * The meta object literal for the '<em><b>Declares Global Variable</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Declares Global Variable</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

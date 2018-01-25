@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsInterface <em>Contains Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsFunctionBlock <em>Contains Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsFunction <em>Contains Function</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsGlobalVariable <em>Contains Global Variable</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getRepository()
@@ -72,5 +73,21 @@ public interface Repository extends EObject {
 	 * @generated
 	 */
 	EList<Function> getContainsFunction();
+
+	/**
+	 * Returns the value of the '<em><b>Contains Global Variable</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Contains Global Variable</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Contains Global Variable</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getRepository_ContainsGlobalVariable()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<GlobalVariable> getContainsGlobalVariable();
 
 } // Repository

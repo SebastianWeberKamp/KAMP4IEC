@@ -80,6 +80,7 @@ public class RepositoryItemProvider
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_INTERFACE);
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION_BLOCK);
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION);
+			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_GLOBAL_VARIABLE);
 		}
 		return childrenFeatures;
 	}
@@ -135,6 +136,7 @@ public class RepositoryItemProvider
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_INTERFACE:
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION_BLOCK:
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION:
+			case IECRepositoryPackage.REPOSITORY__CONTAINS_GLOBAL_VARIABLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -166,6 +168,11 @@ public class RepositoryItemProvider
 			(createChildParameter
 				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION,
 				 IECRepositoryFactory.eINSTANCE.createFunction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_GLOBAL_VARIABLE,
+				 IECRepositoryFactory.eINSTANCE.createGlobalVariable()));
 	}
 
 	/**

@@ -233,6 +233,15 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRepository_ContainsGlobalVariable() {
+		return (EReference)repositoryEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFunctionBlock() {
 		return functionBlockEClass;
 	}
@@ -692,6 +701,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		createEReference(repositoryEClass, REPOSITORY__CONTAINS_INTERFACE);
 		createEReference(repositoryEClass, REPOSITORY__CONTAINS_FUNCTION_BLOCK);
 		createEReference(repositoryEClass, REPOSITORY__CONTAINS_FUNCTION);
+		createEReference(repositoryEClass, REPOSITORY__CONTAINS_GLOBAL_VARIABLE);
 
 		functionBlockEClass = createEClass(FUNCTION_BLOCK);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__HAS_METHOD);
@@ -804,6 +814,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		initEReference(getRepository_ContainsInterface(), this.getIECInterface(), null, "ContainsInterface", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRepository_ContainsFunctionBlock(), this.getFunctionBlock(), null, "ContainsFunctionBlock", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRepository_ContainsFunction(), this.getFunction(), null, "ContainsFunction", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRepository_ContainsGlobalVariable(), this.getGlobalVariable(), null, "ContainsGlobalVariable", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFunctionBlock_HasMethod(), this.getIECMethod(), null, "HasMethod", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

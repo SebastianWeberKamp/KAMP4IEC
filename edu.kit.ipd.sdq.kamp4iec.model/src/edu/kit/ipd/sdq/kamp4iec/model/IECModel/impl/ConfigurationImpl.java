@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -47,7 +48,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	protected EList<Program> instantiatesProgram;
 
 	/**
-	 * The cached value of the '{@link #getDeclaresGlobalVariable() <em>Declares Global Variable</em>}' containment reference list.
+	 * The cached value of the '{@link #getDeclaresGlobalVariable() <em>Declares Global Variable</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDeclaresGlobalVariable()
@@ -94,7 +95,7 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 	 */
 	public EList<GlobalVariable> getDeclaresGlobalVariable() {
 		if (declaresGlobalVariable == null) {
-			declaresGlobalVariable = new EObjectContainmentEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
+			declaresGlobalVariable = new EObjectResolvingEList<GlobalVariable>(GlobalVariable.class, this, IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE);
 		}
 		return declaresGlobalVariable;
 	}
@@ -109,8 +110,6 @@ public class ConfigurationImpl extends IdentifierImpl implements Configuration {
 		switch (featureID) {
 			case IECModelPackage.CONFIGURATION__INSTANTIATES_PROGRAM:
 				return ((InternalEList<?>)getInstantiatesProgram()).basicRemove(otherEnd, msgs);
-			case IECModelPackage.CONFIGURATION__DECLARES_GLOBAL_VARIABLE:
-				return ((InternalEList<?>)getDeclaresGlobalVariable()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

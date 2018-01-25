@@ -26,7 +26,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="InstantiatesProgram" upperBound="-1"
         eType="#//Program" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresGlobalVariable"
-        upperBound="-1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//GlobalVariable"
-        containment="true"/>
+        upperBound="-1" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//GlobalVariable"/>
   </eClassifiers>
 </ecore:EPackage>
