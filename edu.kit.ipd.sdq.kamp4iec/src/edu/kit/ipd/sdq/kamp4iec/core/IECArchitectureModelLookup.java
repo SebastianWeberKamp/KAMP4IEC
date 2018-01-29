@@ -52,17 +52,15 @@ public class IECArchitectureModelLookup {
 	public static Map<FunctionBlock, Set<IECInterface>> lookUpFunctionBlocksOfInterface(
 			IECArchitectureVersion version, Collection<IECInterface> interfaces) {
 		Map<FunctionBlock, Set<IECInterface>> results = new HashMap<FunctionBlock, Set<IECInterface>>();
-		for (Program program : version.getConfiguration().getInstantiatesProgram()) {
-			for(FunctionBlock functionBlock : program.getInstantiatesFunctionBlock()) {
-				for(IECInterface accessed : functionBlock.getInstantiatesInterface()) {
-					for(IECInterface interf : interfaces) {
-						putOrAddToMap(results, functionBlock, accessed, interf);
-					}
+		for(FunctionBlock functionBlock : version.getIECRepository().getContainsFunctionBlock()) {
+			for(IECInterface accessed : functionBlock.getInstantiatesInterface()) {
+				for(IECInterface interf : interfaces) {
+					putOrAddToMap(results, functionBlock, accessed, interf);
 				}
-				for(IECInterface accessed : functionBlock.getImplements()) {
-					for(IECInterface interf : interfaces) {
-						putOrAddToMap(results, functionBlock, accessed, interf);
-					}
+			}
+			for(IECInterface accessed : functionBlock.getImplements()) {
+				for(IECInterface interf : interfaces) {
+					putOrAddToMap(results, functionBlock, accessed, interf);
 				}
 			}
 		}
