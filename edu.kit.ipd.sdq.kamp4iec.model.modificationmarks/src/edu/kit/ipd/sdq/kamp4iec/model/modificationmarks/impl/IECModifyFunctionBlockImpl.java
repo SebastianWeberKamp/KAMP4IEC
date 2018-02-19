@@ -3,10 +3,9 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
-
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -33,7 +32,7 @@ public class IECModifyFunctionBlockImpl extends IECModifyComponentImpl<FunctionB
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IECModificationmarksPackage.Literals.IEC_MODIFY_FUNCTION_BLOCK;
+		return ModificationmarksPackage.Literals.IEC_MODIFY_FUNCTION_BLOCK;
 	}
 
 } //IECModifyFunctionBlockImpl

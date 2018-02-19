@@ -3,10 +3,9 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
-
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -33,7 +32,7 @@ public class IECModifyConfigurationImpl extends IECModifyComponentImpl<Configura
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IECModificationmarksPackage.Literals.IEC_MODIFY_CONFIGURATION;
+		return ModificationmarksPackage.Literals.IEC_MODIFY_CONFIGURATION;
 	}
 
 } //IECModifyConfigurationImpl

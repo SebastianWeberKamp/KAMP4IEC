@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECModifyComponent()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECModifyComponent()
  * @model
  * @generated
  */

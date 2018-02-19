@@ -3,10 +3,9 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractProperty;
-
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -33,7 +32,7 @@ public class IECModifyAbstractPropertyImpl extends IECModifyComponentImpl<IECAbs
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IECModificationmarksPackage.Literals.IEC_MODIFY_ABSTRACT_PROPERTY;
+		return ModificationmarksPackage.Literals.IEC_MODIFY_ABSTRACT_PROPERTY;
 	}
 
 } //IECModifyAbstractPropertyImpl

@@ -3,8 +3,7 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.tests;
 
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
-
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksFactory;
 import junit.textui.TestRunner;
 
 /**
@@ -53,7 +52,7 @@ public class IECModificationRepositoryTest extends AbstractKAMP4IECModificationR
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(IECModificationmarksFactory.eINSTANCE.createIECModificationRepository());
+		setFixture(ModificationmarksFactory.eINSTANCE.createIECModificationRepository());
 	}
 
 	/**

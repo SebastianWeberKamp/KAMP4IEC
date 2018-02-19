@@ -10,7 +10,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECModifyFunctionBlock()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECModifyFunctionBlock()
  * @model
  * @generated
  */

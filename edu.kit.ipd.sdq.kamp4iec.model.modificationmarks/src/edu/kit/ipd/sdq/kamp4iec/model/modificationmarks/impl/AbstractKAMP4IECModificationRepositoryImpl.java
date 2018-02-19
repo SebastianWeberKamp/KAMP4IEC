@@ -7,9 +7,9 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractModificationRepositoryImpl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.AbstractKAMP4IECModificationRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -42,7 +42,7 @@ public abstract class AbstractKAMP4IECModificationRepositoryImpl<T extends IECSe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IECModificationmarksPackage.Literals.ABSTRACT_KAMP4IEC_MODIFICATION_REPOSITORY;
+		return ModificationmarksPackage.Literals.ABSTRACT_KAMP4IEC_MODIFICATION_REPOSITORY;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public abstract class AbstractKAMP4IECModificationRepositoryImpl<T extends IECSe
 	@Override
 	public EList<ChangePropagationStep> getChangePropagationSteps() {
 		if (changePropagationSteps == null) {
-			changePropagationSteps = new EObjectContainmentEList<ChangePropagationStep>(ChangePropagationStep.class, this, IECModificationmarksPackage.ABSTRACT_KAMP4IEC_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS);
+			changePropagationSteps = new EObjectContainmentEList<ChangePropagationStep>(ChangePropagationStep.class, this, ModificationmarksPackage.ABSTRACT_KAMP4IEC_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS);
 		}
 		return changePropagationSteps;
 	}

@@ -10,7 +10,7 @@
       <!-- @generated IECModificationmarks -->
       <package
             uri="http://sdq.ipd.kit.edu/modificationmarks"
-            class="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage"
+            class="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage"
             genModel="model/IECModificationmarks.genmodel"/>
    </extension>
 

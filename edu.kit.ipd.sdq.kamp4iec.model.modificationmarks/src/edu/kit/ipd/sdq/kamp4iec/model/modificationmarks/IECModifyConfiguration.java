@@ -10,7 +10,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECModifyConfiguration()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECModifyConfiguration()
  * @model
  * @generated
  */

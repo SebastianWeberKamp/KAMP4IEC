@@ -10,7 +10,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECModifyGlobalVariable()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECModifyGlobalVariable()
  * @model
  * @generated
  */

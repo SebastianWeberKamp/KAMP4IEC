@@ -10,7 +10,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECAbstractMethod;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECModifyAbstractMethod()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECModifyAbstractMethod()
  * @model
  * @generated
  */

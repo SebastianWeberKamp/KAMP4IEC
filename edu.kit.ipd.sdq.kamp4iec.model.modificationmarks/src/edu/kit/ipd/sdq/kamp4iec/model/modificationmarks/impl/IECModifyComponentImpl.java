@@ -5,10 +5,9 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractModificationImpl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
-
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 
@@ -36,7 +35,7 @@ public class IECModifyComponentImpl<T extends IECComponent> extends AbstractModi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IECModificationmarksPackage.Literals.IEC_MODIFY_COMPONENT;
+		return ModificationmarksPackage.Literals.IEC_MODIFY_COMPONENT;
 	}
 
 	/**

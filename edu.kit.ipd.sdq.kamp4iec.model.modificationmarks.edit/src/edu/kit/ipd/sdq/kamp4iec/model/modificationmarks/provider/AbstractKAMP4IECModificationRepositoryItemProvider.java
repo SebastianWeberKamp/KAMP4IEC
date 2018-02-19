@@ -6,9 +6,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.provider;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationRepositoryItemProvider;
-
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
-
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -90,12 +88,12 @@ public class AbstractKAMP4IECModificationRepositoryItemProvider extends Abstract
 		newChildDescriptors.add
 			(createChildParameter
 				(ModificationmarksPackage.Literals.ABSTRACT_MODIFICATION_REPOSITORY__SEED_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECSeedModifications()));
+				 ModificationmarksFactory.eINSTANCE.createIECSeedModifications()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ModificationmarksPackage.Literals.ABSTRACT_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS,
-				 IECModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency()));
+				 ModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency()));
 	}
 
 	/**

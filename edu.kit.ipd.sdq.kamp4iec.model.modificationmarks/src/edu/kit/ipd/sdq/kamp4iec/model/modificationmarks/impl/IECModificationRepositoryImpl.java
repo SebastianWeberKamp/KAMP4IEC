@@ -3,9 +3,9 @@
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationRepository;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -32,7 +32,7 @@ public class IECModificationRepositoryImpl extends AbstractKAMP4IECModificationR
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IECModificationmarksPackage.Literals.IEC_MODIFICATION_REPOSITORY;
+		return ModificationmarksPackage.Literals.IEC_MODIFICATION_REPOSITORY;
 	}
 
 } //IECModificationRepositoryImpl

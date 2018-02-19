@@ -4,10 +4,10 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.provider;
 
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractSeedModificationsItemProvider;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage;
 import java.util.Collection;
 import java.util.List;
 
@@ -65,15 +65,15 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS);
-			childrenFeatures.add(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -126,15 +126,15 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IECSeedModifications.class)) {
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
-			case IECModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS:
+			case ModificationmarksPackage.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -154,48 +154,48 @@ public class IECSeedModificationsItemProvider extends AbstractSeedModificationsI
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__GLOBAL_VARIABLE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyInterface()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyInterface()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyAbstractMethod()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_METHOD_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyAbstractMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyAbstractProperty()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__ABSTRACT_PROPERTY_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyAbstractProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyFunctionBlock()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_BLOCK_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyFunctionBlock()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyMethod()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__METHOD_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyMethod()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyProperty()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROPERTY_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyProperty()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyFunction()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__FUNCTION_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS,
-				 IECModificationmarksFactory.eINSTANCE.createIECModifyProgram()));
+				(ModificationmarksPackage.Literals.IEC_SEED_MODIFICATIONS__PROGRAM_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createIECModifyProgram()));
 	}
 
 	/**

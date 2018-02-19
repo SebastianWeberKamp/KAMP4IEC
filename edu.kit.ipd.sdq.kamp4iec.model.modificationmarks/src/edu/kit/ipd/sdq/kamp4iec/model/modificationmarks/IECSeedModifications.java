@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECSeedModifications#getProgramModifications <em>Program Modifications</em>}</li>
  * </ul>
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications()
  * @model
  * @generated
  */
@@ -40,7 +40,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Global Variable Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_GlobalVariableModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_GlobalVariableModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -56,7 +56,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interface Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_InterfaceModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_InterfaceModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -72,7 +72,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Method Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_AbstractMethodModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_AbstractMethodModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -88,7 +88,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstract Property Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_AbstractPropertyModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_AbstractPropertyModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -104,7 +104,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Function Block Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_FunctionBlockModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_FunctionBlockModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -120,7 +120,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_MethodModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_MethodModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -136,7 +136,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Property Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_PropertyModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_PropertyModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -152,7 +152,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Function Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_FunctionModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_FunctionModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -168,7 +168,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Program Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECSeedModifications_ProgramModifications()
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECSeedModifications_ProgramModifications()
 	 * @model containment="true"
 	 * @generated
 	 */

@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.tests;
 
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
 
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksFactory;
 import junit.textui.TestRunner;
 
 /**
@@ -53,7 +53,7 @@ public class IECModifyConfigurationTest extends IECModifyComponentTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(IECModificationmarksFactory.eINSTANCE.createIECModifyConfiguration());
+		setFixture(ModificationmarksFactory.eINSTANCE.createIECModifyConfiguration());
 	}
 
 	/**

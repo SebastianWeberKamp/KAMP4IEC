@@ -9,7 +9,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksPackage#getIECModificationRepository()
+ * @see edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.ModificationmarksPackage#getIECModificationRepository()
  * @model
  * @generated
  */
