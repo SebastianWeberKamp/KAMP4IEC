@@ -6,7 +6,7 @@
     complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.genmodel#//modificationmarks"
     operationReflection="true" importOrganizing="true">
   <foreignModel>IECModificationmarks.ecore</foreignModel>
-  <genPackages prefix="Modificationmarks" basePackage="edu.kit.ipd.sdq.kamp4iec.model"
+  <genPackages prefix="IECModificationmarks" basePackage="edu.kit.ipd.sdq.kamp4iec.model"
       disposableProviderFactory="true" ecorePackage="IECModificationmarks.ecore#/">
     <genClasses image="false" ecoreClass="IECModificationmarks.ecore#//AbstractKAMP4IECModificationRepository">
       <genTypeParameters ecoreTypeParameter="IECModificationmarks.ecore#//AbstractKAMP4IECModificationRepository/T"/>

@@ -9,7 +9,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: edu.kit.ipd.sdq.kamp4iec.model.modificationmarks,
  edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.impl,
- edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.util
+ edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.util,
+ edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks,
+ edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.impl,
+ edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
