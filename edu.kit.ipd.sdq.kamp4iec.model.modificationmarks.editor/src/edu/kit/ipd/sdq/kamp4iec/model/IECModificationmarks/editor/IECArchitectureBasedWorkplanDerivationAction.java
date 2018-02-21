@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.editor;
+package edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.editor;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;

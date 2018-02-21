@@ -25,19 +25,19 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyAbstractProperty;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyComponent;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyConfiguration;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunction;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyFunctionBlock;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyInterface;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyMethod;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
-import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECChangePropagationDueToDataDependency;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyAbstractProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyComponent;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyConfiguration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunction;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyGlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProperty;
 
 /**
  * The change propagation analysis of KAPS
