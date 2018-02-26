@@ -23,7 +23,6 @@ public class IECArchitectureVersionPersistency extends AbstractKAMP4IECArchitect
 		String internalFieldOfActivityFilePath = filename + "." + FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS;
 		String internalIecRepositoryFilePath = filename + "." + FILEEXTENSION_REPOSITORY;
 		String internalConfigurationFilePath = filename + "." + FILEEXTENSION_CONFIGURATION;
-		String internalComponentInternalDependencyRepositoryFilePath = filename + "." + FILEEXTENSION_COMPONENTINTERNALDEPENDENCIES;
 		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARK;
 		
 		archParams.name = versionname;
@@ -41,7 +40,6 @@ public class IECArchitectureVersionPersistency extends AbstractKAMP4IECArchitect
 		IFile internalFieldOfActivityFile = FileAndFolderManagement.retrieveFileWithExtension(folder, FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS);
 		IFile internalIecRepositoryFile = FileAndFolderManagement.retrieveFileWithExtension(folder, FILEEXTENSION_REPOSITORY);
 		IFile internalConfigurationFile = FileAndFolderManagement.retrieveFileWithExtension(folder, FILEEXTENSION_CONFIGURATION);
-		IFile internalComponentInternalDependencyRepositoryFile = FileAndFolderManagement.retrieveFileWithExtension(folder, FILEEXTENSION_COMPONENTINTERNALDEPENDENCIES);
 		IFile internalModFile = FileAndFolderManagement.retrieveFileWithExtension(folder, FILEEXTENSION_MODIFICATIONMARK);
 		
 		archParams.fieldOfActivityRepository = null;
