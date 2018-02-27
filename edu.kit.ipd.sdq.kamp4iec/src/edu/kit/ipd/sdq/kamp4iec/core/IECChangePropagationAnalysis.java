@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
@@ -26,7 +27,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECChangePropagationDueToDataDependency;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyAbstractMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyAbstractProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyComponent;
@@ -38,6 +41,10 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECSeedModifications;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.impl.IECModificationRepositoryImpl;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.impl.IECModificationmarksFactoryImpl;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.impl.IECSeedModificationsImpl;
 
 /**
  * The change propagation analysis of KAPS
@@ -55,7 +62,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProperty;
  */
 public class IECChangePropagationAnalysis implements AbstractChangePropagationAnalysis<IECArchitectureVersion> {
 
-	private Collection<IECComponent> seedModifications;
+	private Collection<IECComponent> seedModifications = new HashSet<IECComponent>();
 	private IECChangePropagationDueToDataDependency changePropagationDueToDataDependencies;
 
 	@Override
@@ -72,21 +79,62 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	}
 	
 	private void prepareAnalysis(IECArchitectureVersion version) {
-		this.setIECChangePropagationDueToDataDependency(IECModificationmarksFactory.eINSTANCE.
-				createIECChangePropagationDueToDataDependency());
-		/* Link calculated data dependency propagation steps to propagation steps of version,
-		 * so the already marked elements are up to date for all sub-steps of the algorithm*/	
+		this.setIECChangePropagationDueToDataDependencies(IECModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency());
+		
 		version.getModificationMarkRepository().getChangePropagationSteps().add(
 				this.getIECChangePropagationDueToDataDependencies());
-		// Store marked model elements to reduce model traversal in calculation methods
-		//double cast to avoid type-mismatch
-		this.setSeedModifications(edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, IECComponent.class));
+		
+		markSeedModifications(version);
+	}
+	
+	protected void markSeedModifications(IECArchitectureVersion version) {
+		//If there is no seedmodifications, create a new one
+		if(version.getModificationMarkRepository().getSeedModifications() == null) {
+			IECModificationRepositoryImpl repo = (IECModificationRepositoryImpl) version.getModificationMarkRepository();
+			repo.setSeedModifications(IECModificationmarksFactory.eINSTANCE.createIECSeedModifications());
+		}
+		//add existing seedmodifications to local list of seedmods
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, GlobalVariable.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, FunctionBlock.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Function.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECProperty.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECMethod.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractProperty.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractMethod.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECInterface.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Program.class));
+		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Configuration.class));
+		//add local seedmodifications to modificationmarks model
+		IECSeedModifications seedMods = version.getModificationMarkRepository().getSeedModifications();
+		for(IECComponent component : seedModifications) {
+			if(component instanceof GlobalVariable) {
+				seedMods.getGlobalVariableModifications().add(IECModificationFactory.createIECModification((GlobalVariable) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof FunctionBlock) {
+				seedMods.getFunctionBlockModifications().add(IECModificationFactory.createIECModification((FunctionBlock) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof Function) {
+				seedMods.getFunctionModifications().add(IECModificationFactory.createIECModification((Function) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof IECProperty) {
+				seedMods.getPropertyModifications().add(IECModificationFactory.createIECModification((IECProperty) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof IECMethod) {
+				seedMods.getMethodModifications().add(IECModificationFactory.createIECModification((IECMethod) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof IECAbstractProperty) {
+				seedMods.getAbstractPropertyModifications().add(IECModificationFactory.createIECModification((IECAbstractProperty) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof IECAbstractMethod) {
+				seedMods.getAbstractMethodModifications().add(IECModificationFactory.createIECModification((IECAbstractMethod) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof IECInterface) {
+				seedMods.getInterfaceModifications().add(IECModificationFactory.createIECModification((IECInterface) component, new HashSet<IECComponent>(), false)); 
+			} else if (component instanceof Program) {
+				seedMods.getProgramModifications().add(IECModificationFactory.createIECModification((Program) component, new HashSet<IECComponent>(), false)); 
+			}
+		}
+		((IECModificationRepository) version.getModificationMarkRepository()).setSeedModifications(seedMods);
 	}
 	
 	/**
 	 * Calculates the DataType-/DataObject-related changes.
 	 */
 	public void calculateChangePropagationDueToDataDependencies(IECArchitectureVersion version) {
+		
 		// Create only one modification mark per element in this propagation step (affects only
 		// DataTypes and DataObjects which could be marked by multiple sub-steps)
 		List<IECComponent> elementsMarkedInThisStep = 
@@ -94,8 +142,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		
 //		// Add seed modifications
 //		calculateAndMarkGlobalVariableSeedModifications(version);
-		
-		markSeedModifications(version);
 
 ////		// 1 GlobalVariable -> Configuration
 //		calculateAndMarkGlobalVariableToConfigurationPropagation(version, elementsMarkedInThisStep);
@@ -214,23 +260,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 					this.getIECChangePropagationDueToDataDependencies());	
 		}
 	}
-	
-	protected void markSeedModifications(IECArchitectureVersion version) {
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, GlobalVariable.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, FunctionBlock.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Function.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECProperty.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECMethod.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractProperty.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECAbstractMethod.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, IECInterface.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Program.class));
-		seedModifications.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, Configuration.class));
-	}
-	
-//	protected void calculateAndMarkGlobalVariableSeedModifications(IECArchitectureVersion version) {
-//		markedComponents.addAll(ArchitectureModelLookup.lookUpMarkedObjectsOfATypeInSeedModifications(version, GlobalVariable.class));
-//	}
 	
 	//GlobalVariable propagations
 	
@@ -2181,10 +2210,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		}
 		return components;
 	}
-
-	protected void setIECChangePropagationDueToDataDependency(IECChangePropagationDueToDataDependency changePropagationDueToDataDependencies) {
-		this.changePropagationDueToDataDependencies = changePropagationDueToDataDependencies;
-	}
 	
 	public IECChangePropagationDueToDataDependency getIECChangePropagationDueToDataDependencies() {
 		return changePropagationDueToDataDependencies;
@@ -2198,7 +2223,7 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		this.seedModifications = markedComponents;
 	}
 
-	public void setChangePropagationDueToDataDependencies(
+	public void setIECChangePropagationDueToDataDependencies(
 			IECChangePropagationDueToDataDependency changePropagationDueToDataDependencies) {
 		this.changePropagationDueToDataDependencies = changePropagationDueToDataDependencies;
 	}

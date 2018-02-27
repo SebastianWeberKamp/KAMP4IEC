@@ -6,6 +6,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfAc
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.AbstractKAMP4IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECSeedModifications;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 
@@ -16,14 +19,14 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 	
 	public static class ArchitectureVersionParams{
 		public String name;
-		public AbstractKAMP4IECModificationRepository<?> modificationMarkRepository;
 		public Repository iecRepository;
 		public Configuration configuration;
 		public IECFieldOfActivityAnnotationsRepository fieldOfActivityRepository;
+		public IECModificationRepository iecModificationRepository;
 	}
 	
 	public IECArchitectureVersion(ArchitectureVersionParams params) {
-		super(params.name, params.modificationMarkRepository);
+		super(params.name, params.iecModificationRepository);
 		// Some of the files describing the architecture might not exist; prevent NullPointer
 		// in propagation algorithm by setting newly created objects (whose EReferences are
 		// instantiated with empty collections, so the algorithm can handle them)
@@ -41,8 +44,7 @@ public class IECArchitectureVersion extends AbstractArchitectureVersion<Abstract
 			_fieldOfActivityRepository = IECFieldOfActivityAnnotationsFactory.eINSTANCE.
 					createIECFieldOfActivityAnnotationsRepository();
 		}
-		this._fieldOfActivityRepository = params.fieldOfActivityRepository;
-		
+		this._fieldOfActivityRepository = params.fieldOfActivityRepository;		
 	}
 
 	public Repository getIECRepository() {

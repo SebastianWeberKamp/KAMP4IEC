@@ -161,7 +161,7 @@ public interface IECSeedModifications extends AbstractSeedModifications {
 
 	/**
 	 * Returns the value of the '<em><b>Program Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram}.x
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Program Modifications</em>' containment reference list isn't clear,

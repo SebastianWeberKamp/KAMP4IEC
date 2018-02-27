@@ -12,7 +12,7 @@ public class IECArchitectureModelFactoryFacade {
 	public static IECArchitectureVersion createEmptyModel(String name) {
 		archParams.name = name;
 
-		archParams.modificationMarkRepository = IECArchitectureModelFactoryFacade.createIECModificationMarkRepository();
+		archParams.iecModificationRepository = IECArchitectureModelFactoryFacade.createIECModificationMarkRepository();
 
 		return new IECArchitectureVersion(archParams);
 	}
