@@ -76,5 +76,14 @@ public class IECDifferenceCalculation extends AbstractDifferenceCalculation<IECA
 	public static String createRemoveComponentDescription(Identifier element) {
 		return "Remove " + element.eClass().getName() + " " + element.getId() + ".";
 	}
+	
+	@Override
+	public List<Activity> deriveAddAndRemoveActivities(List<Diff> diff) {
+		return super.deriveAddAndRemoveActivities(diff);
+	}
+
+	public IECInternalModificationDerivation getArchitectureInternalModificationDerivation() {
+		return architectureInternalModificationDerivation;
+	}
 
 }

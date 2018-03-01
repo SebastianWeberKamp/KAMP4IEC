@@ -72,9 +72,8 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		
 		// Calculate
 		this.calculateChangePropagationDueToDataDependencies(version);		
-			
-		// Update
-
+		
+		this.postAnalysis(version);
 		
 	}
 	
@@ -2209,6 +2208,10 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 			components.add(component.getAffectedElement());
 		}
 		return components;
+	}
+	
+	public void postAnalysis(IECArchitectureVersion version) {
+		
 	}
 	
 	public IECChangePropagationDueToDataDependency getIECChangePropagationDueToDataDependencies() {

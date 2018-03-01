@@ -30,7 +30,7 @@ public class IECArchitectureAnnotationLookup {
 		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECSourceFile sourceFile : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getSourceFiles()) {
-				if (sourceFile.getComponent()==component) {
+				if (sourceFile.getComponent().getId().equals(component.getId())) {
 					sourceFiles.add(sourceFile);
 				}
 			}
@@ -44,7 +44,7 @@ public class IECArchitectureAnnotationLookup {
 		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECSourceFileAggregation sourceFileAggregation : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getSourceFileAggregations()) {
-				if (sourceFileAggregation.getComponent()==component) {
+				if (sourceFileAggregation.getComponent().getId().equals(component.getId())) {
 					return sourceFileAggregation;
 				}
 			}
@@ -60,7 +60,7 @@ public class IECArchitectureAnnotationLookup {
 		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECMetadataFile metadataFile : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getMetadataFiles()) {
-				if (metadataFile.getComponent()==component) {
+				if (metadataFile.getComponent().getId().equals(component.getId())) {
 					metadataFiles.add(metadataFile);
 				}
 			}
@@ -74,7 +74,7 @@ public class IECArchitectureAnnotationLookup {
 		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getDevelopmentArtefactSpecification() != null) {
 			for (IECMetadataFileAggregation metadataFileAggregation : version.getFieldOfActivityRepository().
 					getDevelopmentArtefactSpecification().getMetadataFileAggregations()) {
-				if (metadataFileAggregation.getComponent()==component) {
+				if (metadataFileAggregation.getComponent().getId().equals(component.getId())) {
 					return metadataFileAggregation;
 				}
 			}
@@ -88,7 +88,7 @@ public class IECArchitectureAnnotationLookup {
 		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getTestSpecification() != null) {
 			for (IECUnitTestCaseAggregation testAggregation : version.getFieldOfActivityRepository().
 					getTestSpecification().getUnitTestCaseAggregations()) {
-				if (testAggregation.getComponent()==component) {
+				if (testAggregation.getComponent().getId().equals(component.getId())) {
 					return testAggregation;
 				}
 			}
@@ -104,7 +104,7 @@ public class IECArchitectureAnnotationLookup {
 		if (version.getFieldOfActivityRepository() != null && version.getFieldOfActivityRepository().getTestSpecification() != null) {
 			for (IECUnitTestCase testcase : version.getFieldOfActivityRepository().
 					getTestSpecification().getUnitTestCases()) {
-				if (testcase.getComponent()==component) {
+				if (testcase.getComponent().getId().equals(component.getId())) {
 					testCases.add(testcase);
 				}
 			}
