@@ -1,19 +1,23 @@
 package edu.kit.ipd.sdq.kamp4iec.core;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
@@ -2211,7 +2215,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	}
 	
 	public void postAnalysis(IECArchitectureVersion version) {
-		
 	}
 	
 	public IECChangePropagationDueToDataDependency getIECChangePropagationDueToDataDependencies() {
