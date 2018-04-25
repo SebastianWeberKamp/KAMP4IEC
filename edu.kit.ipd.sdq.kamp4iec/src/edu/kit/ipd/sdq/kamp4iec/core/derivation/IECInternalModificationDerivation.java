@@ -11,6 +11,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyActorStep;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
@@ -58,6 +59,7 @@ public class IECInternalModificationDerivation {
 			this.deriveAbstractPropertyModifications(targetVersion, activityList);
 			this.derivePropertyModifications(targetVersion, activityList);
 			this.deriveInterfaceModifications(targetVersion, activityList);
+//			this.deriveHMIModifications(targetVersion, activityList);
 		}
 		return activityList;
 	}
@@ -160,6 +162,15 @@ public class IECInternalModificationDerivation {
 			activityList.add(componentActivity);
 		}
 	}
+	
+//	private void deriveHMIModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
+//		Collection<HMIModifyActorStep> modifyComponents = ArchitectureModelLookup.lookUpAllModificationMarksOfAType(targetVersion, HMIModifyActorStep.class);
+//		for (HMIModifyActorStep modifyComponent : modifyComponents) {
+//			Activity componentActivity = createModificationActivity(modifyComponent, 
+//					   IECActivityElementType.INTERFACE);
+//			activityList.add(componentActivity);
+//		}
+//	}
 
 	public static List<String> getCausingElementsNames(AbstractModification<?, ?> modification) {
 		List<String> causingElementNames = new LinkedList<String>();
