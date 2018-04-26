@@ -1971,7 +1971,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 //			this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
 			this.getHMIChangePropagationDueToSoftwareDependency().getSystemStepModification().
 					add(modification);
-			continueHMIPropagation(version, elementsToBeMarkedEntry.getKey(), elementsMarkedInThisStep, lastModification);
 		 }
 		}
 	}
@@ -2005,7 +2004,6 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 //			this.getMarkedComponents().add(elementsToBeMarkedEntry.getKey());
 			this.getHMIChangePropagationDueToSoftwareDependency().getSystemStepModification().
 					add(modification);
-			continueHMIPropagation(version, elementsToBeMarkedEntry.getKey(), elementsMarkedInThisStep, lastModification);
 		 }
 		}
 	}
@@ -2049,11 +2047,11 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 				steps.add((ActorStep) marked);
 			}
 		}
-		Map<ActorStep, Set<ActorStep>> elementsToBeMarked = IECArchitectureModelLookup.
+		Map<ActorStep, Set<HMIElement>> elementsToBeMarked = IECArchitectureModelLookup.
 				lookUpActorStepsOfActorStep(version, steps);
 
 		lastModification = IECModificationType.ACTORSTEP;
-		for(Map.Entry<ActorStep, Set<ActorStep>> elementsToBeMarkedEntry: 
+		for(Map.Entry<ActorStep, Set<HMIElement>> elementsToBeMarkedEntry: 
 		 	elementsToBeMarked.entrySet()) {
 		 if(componentAlreadyMarked(elementsToBeMarkedEntry.getKey())) {
 			 getSystemStepModification(elementsToBeMarkedEntry.getKey()).getCausingElements().addAll(elementsToBeMarkedEntry.getValue());
@@ -2085,13 +2083,17 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	
 	public  <T extends HMIElement>void continueHMIPropagation(IECArchitectureVersion version, T entry, List<HMIElement> elementsMarkedInThisStep, IECModificationType lastModification) {
 		switch (lastModification) {
+		case FUNCTIONBLOCK:
+		case METHOD:
 		case SEED:
+			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
+			calculateAndMarkSystemStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
 			break;
 		case ACTORSTEP:
-			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
+			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
 			break;
 		case SYSTEMSTEP:
-			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, IECModificationType.SEED);
+			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
 			break;
 		default:
 			break;

@@ -1029,30 +1029,58 @@ public class IECArchitectureModelLookup {
 		return results;
 	}
 
-	public static Map<ActorStep, Set<ActorStep>> lookUpActorStepsOfActorStep(
+	public static Map<ActorStep, Set<HMIElement>> lookUpActorStepsOfActorStep(
 			IECArchitectureVersion version, Collection<ActorStep> actorSteps) {
-		Map<ActorStep, Set<ActorStep>> results = new HashMap<ActorStep, Set<ActorStep>>();
+		Map<ActorStep, Set<HMIElement>> results = new HashMap<ActorStep, Set<HMIElement>>();
 		for(ActorStep toCompare : actorSteps) {
-			if(toCompare.getSuccessor() instanceof ActorStep) {
-				if(toCompare.getSuccessor() instanceof If) {
-					HMIElement tSuccessor = ((If)toCompare).getTrueSuccessor();
-					HMIElement fSuccessor = ((If)toCompare).getFalseSuccessor();
+			if(toCompare.getSuccessor() instanceof If) {
+					HMIElement tSuccessor = ((If)toCompare.getSuccessor()).getTrueSuccessor();
+					HMIElement fSuccessor = ((If)toCompare.getSuccessor()).getFalseSuccessor();
 					if(tSuccessor instanceof ActorStep)
-						putOrAddToMap(results, (ActorStep)tSuccessor, toCompare, toCompare);
+						putOrAddToMap(results, (ActorStep)tSuccessor, toCompare.getSuccessor(), toCompare.getSuccessor());
+					if(fSuccessor instanceof ActorStep)
+						putOrAddToMap(results, (ActorStep)fSuccessor, toCompare.getSuccessor(), toCompare.getSuccessor());
+			} else if (toCompare.getSuccessor() instanceof For) {
+					HMIElement tSuccessor = ((For)toCompare.getSuccessor()).getLoopSuccessor();
+					HMIElement fSuccessor = ((For)toCompare.getSuccessor()).getLoopEndSuccessor();
+					if(tSuccessor instanceof ActorStep)
+						putOrAddToMap(results, (ActorStep)tSuccessor, toCompare.getSuccessor(), toCompare.getSuccessor());
+					else if (!(tSuccessor instanceof SystemStep)) {
+						results.putAll(lookUpActorStepsOfHMIElement(version, tSuccessor));
+					}
 					if(fSuccessor instanceof ActorStep)
 						putOrAddToMap(results, (ActorStep)fSuccessor, toCompare, toCompare);
-				} else if (toCompare.getSuccessor() instanceof For) {
-					HMIElement tSuccessor = ((For)toCompare).getLoopSuccessor();
-					HMIElement fSuccessor = ((For)toCompare).getLoopEndSuccessor();
-					if(tSuccessor instanceof ActorStep)
-						putOrAddToMap(results, (ActorStep)tSuccessor, toCompare, toCompare);
-					if(fSuccessor instanceof ActorStep)
-						putOrAddToMap(results, (ActorStep)fSuccessor, toCompare, toCompare);
-				} else if (toCompare.getSuccessor() instanceof ActorStep) {
+					else if (!(tSuccessor instanceof SystemStep)) {
+						results.putAll(lookUpActorStepsOfHMIElement(version, fSuccessor));
+					}
+			} else if (toCompare.getSuccessor() instanceof ActorStep) {
 					putOrAddToMap(results, (ActorStep)toCompare.getSuccessor(), toCompare, toCompare);
-				}
 			}
 		}
+		return results;
+	}
+	
+	public static Map<ActorStep, Set<HMIElement>> lookUpActorStepsOfHMIElement(
+			IECArchitectureVersion version, HMIElement hmiElement) {
+		Map<ActorStep, Set<HMIElement>> results = new HashMap<ActorStep, Set<HMIElement>>();
+		if(hmiElement instanceof If) {
+			HMIElement tSuccessor = ((If)hmiElement).getTrueSuccessor();
+			HMIElement fSuccessor = ((If)hmiElement).getFalseSuccessor();
+			if(tSuccessor instanceof ActorStep) {
+				putOrAddToMap(results, (ActorStep)tSuccessor, hmiElement, hmiElement);
+			} else if (!(tSuccessor instanceof SystemStep)) {
+				results.putAll(lookUpActorStepsOfHMIElement(version, fSuccessor));
+			}
+		} else 
+			if(hmiElement instanceof For) {
+				HMIElement tSuccessor = ((For)hmiElement).getLoopSuccessor();
+				HMIElement fSuccessor = ((For)hmiElement).getLoopEndSuccessor();
+				if(tSuccessor instanceof ActorStep) {
+					putOrAddToMap(results, (ActorStep)tSuccessor, hmiElement, hmiElement);
+				} else if (!(tSuccessor instanceof SystemStep)) {
+					results.putAll(lookUpActorStepsOfHMIElement(version, fSuccessor));
+				}
+			}
 		return results;
 	}
 	
