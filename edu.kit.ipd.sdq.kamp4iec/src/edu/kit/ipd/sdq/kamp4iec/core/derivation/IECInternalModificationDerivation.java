@@ -2,8 +2,11 @@ package edu.kit.ipd.sdq.kamp4iec.core.derivation;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
@@ -12,6 +15,9 @@ import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifyActorStep;
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModifySystemStep;
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.ActorStep;
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.SystemStep;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityElementType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECActivityType;
 import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
@@ -59,7 +65,7 @@ public class IECInternalModificationDerivation {
 			this.deriveAbstractPropertyModifications(targetVersion, activityList);
 			this.derivePropertyModifications(targetVersion, activityList);
 			this.deriveInterfaceModifications(targetVersion, activityList);
-//			this.deriveHMIModifications(targetVersion, activityList);
+			this.deriveHMIModifications(targetVersion, activityList);
 		}
 		return activityList;
 	}
@@ -163,14 +169,28 @@ public class IECInternalModificationDerivation {
 		}
 	}
 	
-//	private void deriveHMIModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
-//		Collection<HMIModifyActorStep> modifyComponents = ArchitectureModelLookup.lookUpAllModificationMarksOfAType(targetVersion, HMIModifyActorStep.class);
-//		for (HMIModifyActorStep modifyComponent : modifyComponents) {
-//			Activity componentActivity = createModificationActivity(modifyComponent, 
-//					   IECActivityElementType.INTERFACE);
-//			activityList.add(componentActivity);
-//		}
-//	}
+	private void deriveHMIModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
+		deriveActorStepModifications(targetVersion, activityList);
+		deriveSystemStepModifications(targetVersion, activityList);
+	}
+	
+	private void deriveActorStepModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
+		Collection<HMIModifyActorStep> modifyComponents = ArchitectureModelLookup.lookUpAllModificationMarksOfAType(targetVersion.getHMIModificationRepository(), HMIModifyActorStep.class);
+		for (HMIModifyActorStep modifyComponent : modifyComponents) {
+			Activity componentActivity = createModificationActivity(modifyComponent, 
+					   IECActivityElementType.ACTORSTEP);
+			activityList.add(componentActivity);
+		}
+	}
+	
+	private void deriveSystemStepModifications(IECArchitectureVersion targetVersion, List<Activity> activityList) {
+		Collection<HMIModifySystemStep> modifyComponents = ArchitectureModelLookup.lookUpAllModificationMarksOfAType(targetVersion.getHMIModificationRepository(), HMIModifySystemStep.class);
+		for (HMIModifySystemStep modifyComponent : modifyComponents) {
+			Activity componentActivity = createModificationActivity(modifyComponent, 
+					   IECActivityElementType.SYSTEMSTEP);
+			activityList.add(componentActivity);
+		}
+	}
 
 	public static List<String> getCausingElementsNames(AbstractModification<?, ?> modification) {
 		List<String> causingElementNames = new LinkedList<String>();
@@ -234,6 +254,14 @@ public class IECInternalModificationDerivation {
 			IECInterface iecInterface = ((IECModifyInterface) modification).getAffectedElement();
 			return new Activity(IECActivityType.INTERNALMODIFICATIONMARK, activityElementType, iecInterface, iecInterface.getName(), 
 					causingElementNames, BasicActivity.MODIFY, "Modify " + iecInterface.eClass().getName() + ".");
+		} else if (modification instanceof HMIModifyActorStep){
+			ActorStep actorStep = ((HMIModifyActorStep) modification).getAffectedElement();
+			return new Activity(IECActivityType.HMIMODIFICATIONMARK, activityElementType, actorStep, actorStep.getName(), 
+					causingElementNames, BasicActivity.MODIFY, "Modify " + actorStep.eClass().getName() + ".");
+		} else if (modification instanceof HMIModifySystemStep){
+			SystemStep systemStep = ((HMIModifySystemStep) modification).getAffectedElement();
+			return new Activity(IECActivityType.HMIMODIFICATIONMARK, activityElementType, systemStep, systemStep.getName(), 
+					causingElementNames, BasicActivity.MODIFY, "Modify " + systemStep.eClass().getName() + ".");
 		} else {
 			return null;
 		}

@@ -100,13 +100,15 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		this.setIECChangePropagationDueToDataDependencies(IECModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency());
 		this.setHMIChangePropagationDueToSoftwareDependencies(HMIModificationmarksFactory.eINSTANCE.createHMIChangePropagationDueToSoftwareDependency());
 
-		if(version.getModificationMarkRepository().getChangePropagationSteps() != null) {
+		if(version.getModificationMarkRepository() != null && version.getModificationMarkRepository().getChangePropagationSteps() != null) {
 			version.getModificationMarkRepository().getChangePropagationSteps().add(
 					this.getIECChangePropagationDueToDataDependencies());
 		}
-		if(version.getHMIModificationRepository().getChangePropagationSteps() != null) {
-			version.getHMIModificationRepository().getChangePropagationSteps().add(
-					this.getHMIChangePropagationDueToSoftwareDependency());
+		if(version.getHMIRepository() != null && version.getHMIModificationRepository() != null) {
+			if(version.getHMIModificationRepository().getChangePropagationSteps() != null) {
+				version.getHMIModificationRepository().getChangePropagationSteps().add(
+						this.getHMIChangePropagationDueToSoftwareDependency());
+			}			
 		}
 		
 		markSeedModifications(version);
@@ -162,22 +164,24 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		}
 		((IECModificationRepository) version.getModificationMarkRepository()).setSeedModifications(seedMods);
 
-		for(HMIModifyActorStep actorStep : version.getHMIModificationRepository().getSeedModifications().getActorStepModification())
-			hmiSeedModifications.add(actorStep.getAffectedElement());
-		for(HMIModifySystemStep systemStep : version.getHMIModificationRepository().getSeedModifications().getSystemStepModification())
-			hmiSeedModifications.add(systemStep.getAffectedElement());
-		
-		HMISeedModifications hmiSeedMods = version.getHMIModificationRepository().getSeedModifications();
-		for(HMIElement element : hmiSeedModifications) {
-			if(element instanceof ActorStep) {
-				if(!modificationListContainsElement(hmiSeedMods.getActorStepModification(), (ActorStep)element))
-				hmiSeedMods.getActorStepModification().add(IECModificationFactory.createHMIModification((ActorStep)element, new HashSet<Identifier>(), false));
-			} else if(element instanceof SystemStep) {
-				if(!modificationListContainsElement(hmiSeedMods.getSystemStepModification(), (SystemStep)element))
-				hmiSeedMods.getSystemStepModification().add(IECModificationFactory.createHMIModification((SystemStep)element, new HashSet<Identifier>(), false));
+		if(version.getHMIRepository() != null && version.getHMIModificationRepository() != null) {
+			for(HMIModifyActorStep actorStep : version.getHMIModificationRepository().getSeedModifications().getActorStepModification())
+				hmiSeedModifications.add(actorStep.getAffectedElement());
+			for(HMIModifySystemStep systemStep : version.getHMIModificationRepository().getSeedModifications().getSystemStepModification())
+				hmiSeedModifications.add(systemStep.getAffectedElement());
+			
+			HMISeedModifications hmiSeedMods = version.getHMIModificationRepository().getSeedModifications();
+			for(HMIElement element : hmiSeedModifications) {
+				if(element instanceof ActorStep) {
+					if(!modificationListContainsElement(hmiSeedMods.getActorStepModification(), (ActorStep)element))
+					hmiSeedMods.getActorStepModification().add(IECModificationFactory.createHMIModification((ActorStep)element, new HashSet<Identifier>(), false));
+				} else if(element instanceof SystemStep) {
+					if(!modificationListContainsElement(hmiSeedMods.getSystemStepModification(), (SystemStep)element))
+					hmiSeedMods.getSystemStepModification().add(IECModificationFactory.createHMIModification((SystemStep)element, new HashSet<Identifier>(), false));
+				}
 			}
+			((HMIModificationMarksRepository) version.getHMIModificationRepository()).setSeedModifications(hmiSeedMods);
 		}
-		((HMIModificationMarksRepository) version.getHMIModificationRepository()).setSeedModifications(hmiSeedMods);
 	}
 	
 	/**
@@ -305,25 +309,28 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		elementsMarkedInThisStep = new ArrayList<IECComponent>();
 		
 		//HMI propagation
+
+		if(version.getHMIRepository() != null && version.getHMIModificationRepository() != null) {
 		
-		ArrayList<HMIElement> hmiElementsMarkedInThisStep = new ArrayList<HMIElement>();
-		calculateAndMarkFunctionBlockToSystemStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
-		calculateAndMarkMethodToSystemStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
-		for(HMIModifyActorStep mod : version.getHMIModificationRepository().getSeedModifications().getActorStepModification()) {
-			hmiElementsMarkedInThisStep.add(mod.getAffectedElement());
-		}
-		for(HMIModifySystemStep mod : version.getHMIModificationRepository().getSeedModifications().getSystemStepModification()) {
-			hmiElementsMarkedInThisStep.add(mod.getAffectedElement());
-		}
-		this.setHmiSeedModifications(hmiElementsMarkedInThisStep);
-		calculateAndMarkSystemStepToActorStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
-		calculateAndMarkActorStepToActorStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
-		
-		
-		//If no at all changes: remove top-level element from tree
-		if (this.getIECChangePropagationDueToDataDependencies().eContents().isEmpty()) {			
-			version.getModificationMarkRepository().getChangePropagationSteps().remove(
-					this.getIECChangePropagationDueToDataDependencies());	
+			ArrayList<HMIElement> hmiElementsMarkedInThisStep = new ArrayList<HMIElement>();
+			calculateAndMarkFunctionBlockToSystemStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
+			calculateAndMarkMethodToSystemStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
+			for(HMIModifyActorStep mod : version.getHMIModificationRepository().getSeedModifications().getActorStepModification()) {
+				hmiElementsMarkedInThisStep.add(mod.getAffectedElement());
+			}
+			for(HMIModifySystemStep mod : version.getHMIModificationRepository().getSeedModifications().getSystemStepModification()) {
+				hmiElementsMarkedInThisStep.add(mod.getAffectedElement());
+			}
+			this.setHmiSeedModifications(hmiElementsMarkedInThisStep);
+			calculateAndMarkSystemStepToActorStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
+			calculateAndMarkActorStepToActorStepPropagation(version, hmiElementsMarkedInThisStep, IECModificationType.SEED);
+			
+			
+			//If no at all changes: remove top-level element from tree
+			if (this.getIECChangePropagationDueToDataDependencies().eContents().isEmpty()) {			
+				version.getModificationMarkRepository().getChangePropagationSteps().remove(
+						this.getIECChangePropagationDueToDataDependencies());	
+			}
 		}
 	}
 	
