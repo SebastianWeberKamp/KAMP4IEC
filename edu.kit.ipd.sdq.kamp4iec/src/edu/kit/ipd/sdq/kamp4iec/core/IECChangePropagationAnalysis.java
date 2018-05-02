@@ -99,16 +99,22 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 	private void prepareAnalysis(IECArchitectureVersion version) {
 		this.setIECChangePropagationDueToDataDependencies(IECModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency());
 		this.setHMIChangePropagationDueToSoftwareDependencies(HMIModificationmarksFactory.eINSTANCE.createHMIChangePropagationDueToSoftwareDependency());
+		
 
-		if(version.getModificationMarkRepository() != null && version.getModificationMarkRepository().getChangePropagationSteps() != null) {
+		if(version.getModificationMarkRepository() != null && version.getModificationMarkRepository().getChangePropagationSteps() != null) {			
 			version.getModificationMarkRepository().getChangePropagationSteps().add(
 					this.getIECChangePropagationDueToDataDependencies());
 		}
 		if(version.getHMIRepository() != null && version.getHMIModificationRepository() != null) {
 			if(version.getHMIModificationRepository().getChangePropagationSteps() != null) {
+				//remove old modifications
+				for (Iterator<ChangePropagationStep> it = version.getHMIModificationRepository().getChangePropagationSteps().iterator(); it.hasNext(); ) {
+					ChangePropagationStep step = it.next();
+					it.remove();
+				}
 				version.getHMIModificationRepository().getChangePropagationSteps().add(
 						this.getHMIChangePropagationDueToSoftwareDependency());
-			}			
+			}
 		}
 		
 		markSeedModifications(version);
