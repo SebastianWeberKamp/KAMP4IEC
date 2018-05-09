@@ -2092,14 +2092,11 @@ public class IECChangePropagationAnalysis implements AbstractChangePropagationAn
 		case FUNCTIONBLOCK:
 		case METHOD:
 		case SEED:
-			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
-			calculateAndMarkSystemStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
 			break;
 		case ACTORSTEP:
 			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
 			break;
 		case SYSTEMSTEP:
-			calculateAndMarkActorStepToActorStepPropagation(version, elementsMarkedInThisStep, lastModification);
 			break;
 		default:
 			break;
